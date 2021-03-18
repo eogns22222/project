@@ -1,0 +1,39 @@
+main{
+    width:120rem;
+    margin:0 auto;
+}
+main>div{
+    margin-top:7.5rem;
+    text-align: center;
+}
+main>div>h1{
+    margin-bottom:5rem;
+    font-size:3rem;
+}
+main>div>ul{
+    display:flex;
+    justify-content: center;
+}
+main>div>ul>li{
+    font-size:1.5rem;
+}
+main>div>ul>li>span{
+    
+}
+
+main>section{}
+main>section>h1{}
+main>section>p{}
+main>section>form{}
+main>section>form>div.field{}
+main>section>form>div.field>div{}
+main>section>form>div.field>div>p{}
+main>section>form>div.field>div>p>label{}
+main>section>form>div.field>div>p>input{}
+main>section>form>div.field>div>p>select{}
+main>section>form>div.field>div>p>select>option{}
+
+main>section>form>div.btn{}
+main>section>form>div.btn>input{}
+
+

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>osc_회원가입</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- <link rel="stylesheet" href="../common/css/common.css"> -->
+    <style>
+        html,body{
+            font-size:62.5%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <ul>
+                <li><a href="#">로그인</a></li>
+                <li><a href="#"> 회원가입</a></li>
+                <li><a href="#"> 마이페이지</a></li>
+            </ul>
+            <div>
+                <h1><a href="#"><img src="../common/image/logo.png" alt="로고"></a></h1>
+                <form action="">
+                    <p>
+                        <input type="search" id="srch" name="srch">
+                        <input type="image" src="../common/image/search.png">
+                    </p>
+                </form>
+            </div>
+        </div>
+        <nav>
+            <div>
+                <ul>
+                    <li><a href="#"><span class="menuIcon"></span>카테고리</a></li>
+                    <li><a href="#">훈련과정</a></li>
+                    <li><a href="#">고객센터</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div>
+            <h1>원스톱캠퍼스 회원가입</h1>
+            <ul>
+                <li><span>1</span>약관동의</li>
+                <li><span>2</span>본인확인</li>
+                <li><span>3</span>가입완료</li>
+            </ul>           
+        </div>
+        <section>
+            <h1>기본정보</h1>
+            <p>필수항목입니다.</p>
+            <form action="" method="">
+                <div class="field">
+                    <div>
+                        <p>
+                            <label for="name">이름</label>
+                            <input type="text" id="nm" name="name">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="nikname">아이디</label>
+                            <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$">
+                            <input type="submit" value="중복확인">
+                        </p>
+                        <p>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="pwd">비밀번호</label>
+                            <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$">
+                        </p>
+                        <p>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</p>
+                    </div>
+                    <div>
+                        <label for="pwd2">비밀번호 재입력</label>
+                        <input type="password" id="pwd2" name="pwd2" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$">
+                        <p>비밀번호가 일치하지 않습니다.</p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="user_name">이메일</label>
+                            <input type="text" id="user_name" name="user_name">
+                            <label for="user_email">@</label>
+                            <input type="text" id="user_email" name="user_email">
+                            <select name="user_email" id="user_email">
+                                <option value="write">직접입력</option>
+                            </select>
+                            <input type="submit" value="중복확인">
+                            <input type="submit" value="인증번호전송">
+                            <input type="submit" value="재전송">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="email_check">이메일 인증</label>
+                            <input type="email" id="email_check" name="email_check">
+                            <input type="submit" value="확인">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="">연락처</label>
+                            <select name="phone" id="phone">
+                                <option value="010">010</option>
+                            </select>
+                            <label for="phoneNumber1">-</label>
+                            <input type="tel" id="" name="phoneNumber1">
+                            <label for="phoneNumber2">-</label>
+                            <input type="tel" id="" name="phoneNumber2">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="zipcode">우편번호</label>
+                            <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
+                            <input type="submit" value="우편번호검색">
+                        </p>
+                        <p>
+                            <input type="text" id="address" name="address" placeholder="법원로 128">
+                        </p>
+                        <p>
+                            <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
+                        </p>
+                        <p>
+                            <input type="text" id="Reference" name="Reference" placeholder="참고항목">
+                        </p>
+                        <p>
+                            <input type="text" id="" name="Detailed" placeholder="Detailed" placeholder="상세주소">
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <label for="RecommenderId">추천인 ID</label>
+                            <input type="text" id="RecommenderId" name="RecommenderId">
+                            <input type="submit" value="확인">
+                        </p>
+                    </div>
+                </div>
+                <div class="btn">
+                    <input type="submit" value="이전">
+                    <input type="submit" value="다음">
+                </div>
+            </form>
+
+        </section>
+    </main>
+    <footer>
+        <div>
+            <h1><a href="#"><img src="../common/image/logo.png" alt="로고"></a></h1>
+            <div>
+                <ul>
+                    <li class="hidden">하단 유틸메뉴</li>
+                    <li>이용약괸</li>
+                    <li>개인정보 처리방침</li>
+                    <li>이메일주소 무단수집거부</li>
+                    <li>제휴문의</li>
+                </ul>
+                <address>
+                    <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612</p>
+                    <p>고객센터:02 - 6269 - 0631</p>
+                    <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
+                </address>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
