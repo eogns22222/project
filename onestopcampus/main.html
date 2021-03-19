@@ -226,52 +226,8 @@
                                     </div>
                                 </div>
                             </div>
-                            <script>
-                                if (!window.location.origin) {
-                                    window.location.origin = window.location.protocol + '//' + window.location.hostname + (
-                                        window.location.port
-                                            ? ':' + window.location.port
-                                            : ''
-                                    );
-                                }
-                                var domain = window.location.origin;
-                                Snap.VARS.autoComplate = {
-                                    /* 언어 변환시 스크립트에서 그려주는 text 변수 */
-                                    // ajaxType : "POST",
-                                    i18n: {
-                                        firstText: '교육과정',
-                                        isHelper_open: '켜기',
-                                        isHelper_close: '닫기',
-                                        newlytit: '최근 검색키워드',
-                                        resenttit: '추천 검색키워드',
-                                        newlyEmpty: '최근 검색어 내역이 없습니다.',
-                                        autoEmpty: '자동완성 내역이 없습니다.',
-                                        eduEmpty: '해당 교육과정이 없습니다.',
-                                        conEmpty: '해당 콘텐츠가 없습니다.'
-                                    },
-                                    complete: {
-                                        url: domain + "/search/ksf/akc?target=complete", // 자동완성 URL
-                                        domain_no: 0, // API domain_no
-                                        maxCount: 5, // API max_count
-                                        mode: "s" // API mode
-                                    },
-                                    related: {
-                                        url: domain + "/search/curation", // 추천검색어 호출 URL
-                                    },
-                                    tabauto: [
-                                        {
-                                            txt: '콘텐츠',
-                                            url: domain + "/search/cursSearch?kwd=", // 교육과정
-                                        }, {
-                                            txt: '자동완성 키워드',
-                                            url: domain + "/search/loSearch?kwd=", // LO콘텐츠
-                                        }
-                                    ]
-                                }
-                            </script>
                         </div>
                         <ul class="utility">
-                            <!-- Util Menu::UTIL -->
 
                             <li class="gnb-utility" data-js="toggle">
                                 <button
@@ -290,14 +246,12 @@
                                     style="display: none;">
                                     <!-- Util Menu::INFO1 -->
                                     <ul>
-
                                         <li>
                                             <a
                                                 class="list__link"
                                                 href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
                                                 target="_self">공지사항</a>
                                         </li>
-
                                         <li>
                                             <a
                                                 class="list__link"
@@ -580,7 +534,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <nav class="gnb_nav">
                             <!-- MENU::JSTL -->
                             <ul class="demo-menus">
