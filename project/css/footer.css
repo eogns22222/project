@@ -1,8 +1,48 @@
-footer{}
-footer>div{}
+footer{
+    margin:0 auto;
+    width:120rem;
+    border-top:1px solid #000;
+}
+
+footer>div{
+    display: flex;
+    justify-content: space-between;
+    padding:6rem 0;
+    width:88rem;
+    margin:0 auto;
+}
 footer>div>h1{}
 footer>div>div{}
-footer>div>div>ul{}
-footer>div>div>ul>li{}
+footer>div>div>ul{
+    display:flex;
+    margin-bottom:4rem;
+}
+footer>div>div>ul>li{
+    position:relative;
+}
+footer>div>div>ul>li:not(:nth-child(2)){
+    padding:0 1rem;
+    font-size:1.2rem;
+}
+footer>div>div>ul>li:nth-child(2){
+    padding-right:1rem;
+}
+footer>div>div>ul>li:not(:last-child):before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:0;
+    height:1rem;
+    border:1px solid #999999;
+}
 footer>div>div>address{}
-footer>div>div>address>p{}
+
+footer>div>div>address>p{
+    font-size:1.4rem;
+    line-height: 3rem;
+    color:#999999;
+}
+footer>div>div>address>p>span{
+    padding-left:1rem;
+}

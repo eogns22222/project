@@ -8,6 +8,7 @@ header>div{
 header>div>ul{
     display: flex;
     justify-content:flex-end;
+    padding-top:4.4rem;
     height:6rem;
 }
 header>div>ul>li{

@@ -48,6 +48,7 @@
     <main>
         <div>
             <h1>원스톱캠퍼스 회원가입</h1>
+            <p><span class="hidden">기준선</span></p>
             <ul>
                 <li><span>1</span>약관동의</li>
                 <li><span>2</span>본인확인</li>
@@ -56,93 +57,115 @@
         </div>
         <section>
             <h1>기본정보</h1>
-            <p>필수항목입니다.</p>
+            <p><span>*</span> 필수항목입니다.</p>
             <form action="" method="">
                 <div class="field">
                     <div>
-                        <p>
-                            <label for="name">이름</label>
-                            <input type="text" id="nm" name="name">
-                        </p>
+                        <div>
+                            <label for="name" class="mainLabel"><span>*</span> 이름</label>
+                            <p>
+                                <input type="text" id="nm" name="name" class="nik_pwd">
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="nikname">아이디</label>
-                            <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$">
-                            <input type="submit" value="중복확인">
-                        </p>
-                        <p>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</p>
+                        <div>
+                            <label for="nikname" class="mainLabel"><span>*</span> 아이디</label>
+                            <p>
+                                <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$" class="nik_pwd">
+                                <input type="submit" value="중복확인" class="btn2 btnCheck" style="background-color: #2c40af; ">
+                                <span>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</span>
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="pwd">비밀번호</label>
-                            <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$">
-                        </p>
-                        <p>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</p>
+                        <div>
+                            <label for="pwd" class="mainLabel"><span>*</span> 비밀번호</label>
+                            <p>
+                                <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <label for="pwd2">비밀번호 재입력</label>
-                        <input type="password" id="pwd2" name="pwd2" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$">
-                        <p>비밀번호가 일치하지 않습니다.</p>
+                        <div>
+                            <label for="pwd2" class="mainLabel"><span>*</span> 비밀번호 재입력</label>
+                            <p>
+                                <input type="password" id="pwd2" name="pwd2" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <span class="check">비밀번호가 일치하지 않습니다.</span>
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="user_name">이메일</label>
-                            <input type="text" id="user_name" name="user_name">
-                            <label for="user_email">@</label>
-                            <input type="text" id="user_email" name="user_email">
-                            <select name="user_email" id="user_email">
-                                <option value="write">직접입력</option>
-                            </select>
-                            <input type="submit" value="중복확인">
-                            <input type="submit" value="인증번호전송">
-                            <input type="submit" value="재전송">
-                        </p>
+                        <div>
+                            <label for="user_name" class="mainLabel"><span>*</span> 이메일</label>
+                            <p>
+                                <input type="text" id="user_name" name="user_name">
+                                <label for="user_email">@</label>
+                                <input type="text" id="user_email" name="user_email">
+                                <select name="user_email" id="user_email">
+                                    <option value="write">직접입력</option>
+                                </select>
+                                <input type="submit" value="중복확인" class="btn2  btnCheck" style="background-color: #2c40af;">
+                                <input type="submit" value="인증번호전송" class="btn2">
+                                <input type="submit" value="재전송" class="btn2">
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="email_check">이메일 인증</label>
-                            <input type="email" id="email_check" name="email_check">
-                            <input type="submit" value="확인">
-                        </p>
+                        <div>
+                            <label for="email_check" class="mainLabel"><span>*</span> 이메일 인증</label>
+                            <p>
+                                <input type="email" id="email_check" name="email_check">
+                                <input type="submit" value="확인" class="btn2" style="background-color: #2c40af;">
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="">연락처</label>
-                            <select name="phone" id="phone">
-                                <option value="010">010</option>
-                            </select>
-                            <label for="phoneNumber1">-</label>
-                            <input type="tel" id="" name="phoneNumber1">
-                            <label for="phoneNumber2">-</label>
-                            <input type="tel" id="" name="phoneNumber2">
-                        </p>
+                        <div>
+                            <label for="" class="mainLabel">연락처</label>
+                            <p>
+                                <select name="phone" id="phone">
+                                    <option value="010">010</option>
+                                </select>
+                                <label for="phoneNumber1">-</label>
+                                <input type="tel" id="" name="phoneNumber1">
+                                <label for="phoneNumber2">-</label>
+                                <input type="tel" id="" name="phoneNumber2">
+                            </p>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="zipcode">우편번호</label>
-                            <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
-                            <input type="submit" value="우편번호검색">
-                        </p>
-                        <p>
-                            <input type="text" id="address" name="address" placeholder="법원로 128">
-                        </p>
-                        <p>
-                            <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
-                        </p>
-                        <p>
-                            <input type="text" id="Reference" name="Reference" placeholder="참고항목">
-                        </p>
-                        <p>
-                            <input type="text" id="" name="Detailed" placeholder="Detailed" placeholder="상세주소">
-                        </p>
+                        <div>
+                            <label for="zipcode" class="mainLabel">우편번호</label>
+                            <div>
+                                <p class="address_zip">
+                                    <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
+                                    <input type="submit" value="우편번호검색" class="btn2" style="background-color: #B3B3B3;">
+                                </p>
+                                <p>
+                                    <input type="text" id="address" name="address" placeholder="법원로 128">
+                                </p>
+                                <p>
+                                    <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
+                                </p>
+                                <p>
+                                    <input type="text" id="Reference" name="Reference" placeholder="참고항목">
+                                </p>
+                                <p>
+                                    <input type="text" id="" name="Detailed" placeholder="상세주소">
+                                </p>
+                            </div>
+                        </div>
                     </div>
                     <div>
-                        <p>
-                            <label for="RecommenderId">추천인 ID</label>
-                            <input type="text" id="RecommenderId" name="RecommenderId">
-                            <input type="submit" value="확인">
-                        </p>
+                        <div>
+                            <label for="RecommenderId" class="mainLabel">추천인 ID</label>
+                            <p>
+                                <input type="text" id="RecommenderId" name="RecommenderId">
+                                <input type="submit" value="확인" class="btn2" style="background-color: #2c40af;">
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <div class="btn">
@@ -159,14 +182,13 @@
             <div>
                 <ul>
                     <li class="hidden">하단 유틸메뉴</li>
-                    <li>이용약괸</li>
+                    <li>이용약관</li>
                     <li>개인정보 처리방침</li>
                     <li>이메일주소 무단수집거부</li>
                     <li>제휴문의</li>
                 </ul>
                 <address>
-                    <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612</p>
-                    <p>고객센터:02 - 6269 - 0631</p>
+                    <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612 <span>고객센터:02 - 6269 - 0631</span></p>
                     <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
                 </address>
             </div>
