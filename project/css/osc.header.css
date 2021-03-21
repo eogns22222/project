@@ -26,7 +26,6 @@ header>div>ul>li:not(:nth-of-type(3)):after{
     border:1px solid rgb(143, 142, 142);
 
 }
-header>div>ul>li>a{}
 
 header>div>div{
     display:flex;
@@ -37,18 +36,11 @@ header>div>div{
 header>div>div>h1{
     flex:0 0 40rem;
 }
-header>div>div>h1>a{}
-header>div>div>h1>a>img{}
 
-header>div>div>form{
-    
-}
 header>div>div>form>p{
     position:relative;
 }
-header>div>div>form>p>input{
-    
-}
+
 header>div>div>form>p>input:nth-child(1){
     width:40rem;
     height:3.7rem;
