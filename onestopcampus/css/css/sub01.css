@@ -1,0 +1,59 @@
+main{}
+main>section{
+    margin:0 auto;
+    width:350px;
+}
+main>section>div{
+    padding:150px 0;
+    
+}
+main>section>div>h1{
+    margin-bottom:66px;
+    font-size:30px;
+    text-align: center;
+}
+main>section>div>form{}
+main>section>div>form>p{
+    border-bottom:1px solid #999999;
+    font-size:15px;
+}
+main>section>div>form>p:nth-child(1){
+    margin-bottom:33px;
+}
+main>section>div>form>p:nth-child(2){
+    margin-bottom:24px;
+}
+main>section>div>form>input{
+    margin-bottom:15px;
+    width:100%;
+    height:50px;
+    background:#1428A0;
+    color:white;
+}
+main>section>div>form>p>input{
+    width:100%;
+}
+main>section>div>ul{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:70px;
+}
+main>section>div>ul>li{
+    font-size:14px;
+}
+main>section>div>ul>li>a{}
+main>section>div>div{
+    margin:0 auto;
+    width:240px;
+}
+main>section>div>div>p{
+    margin-bottom:20px;
+    text-align: center;
+}
+main>section>div>div>ul{
+    display:flex;
+    justify-content: space-between;
+}
+main>section>div>div>ul>li{}
+main>section>div>div>ul>li>a{}
+main>section>div>div>ul>li>a>img{}
