@@ -158,11 +158,11 @@
 .gnb.type2 .gnb_nav > ul > li:first-child > a {position: relative; padding-right: 30px;     margin-right: 27px; 
 }
 .gnb.type2 .gnb_nav > ul > li > a{
-    line-height: 50px;
+    
 }
-.gnb.type2 .gnb_nav > ul > li > a:hover+div{
+/* .gnb.type2 .gnb_nav > ul > li > a:hover+div{
     display:block;
-}
+} */
 .gnb.type2 .gnb_nav > ul > li:first-child > a:before,
 .gnb.type2 .gnb_nav > ul > li:first-child > a:after {content:''; position: absolute; margin-top: -2px; display: block; width: 7px; height: 2px; top: 50% !important; left: 94px; background: none; background-color: #b1b1b1;}
 .gnb.type2 .gnb_nav > ul > li:first-child > a:after {margin-left: -4px; 	-webkit-transform: rotate(45deg); -khtml-transform: rotate(45deg); transform: rotate(45deg);}
