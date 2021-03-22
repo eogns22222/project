@@ -30,16 +30,23 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            // $(function(){
-            //     $(".gnb_nav").children("ul.demo-menus").children("li").children("a").mouseover(function(){
-            //         $(this).next().addClass("is-active").addClass("has-scroll");
-            //     })
-            // });
-            // $(function(){
-            //     $(".gnb_nav").children("ul.demo-menus").children("li").children("a").mouseleave(function(){
-            //         $(this).next().removeClass("is-active").removeClass("has-scroll");
-            //     })
-            // });
+            var enter = true
+            $(function(){
+                $(".gnb_nav").children("ul.demo-menus").children("li").children("a").mouseover(function(){
+                    $(this).next().addClass("is-active").addClass("has-scroll");
+                    
+                })
+            });
+            $(function(){
+                $(".gnb_nav").children("ul.demo-menus").children("li").children("a").mouseleave(function(){
+                    
+                        $(this).next().removeClass("is-active").removeClass("has-scroll");
+                    
+                    
+                })
+            });// gnbover
+
+            $(function)
         </script>
     </head>
     <body>
@@ -319,7 +326,7 @@
                                 data-js="gnb_cate__panel"
                                 id="uiToggle-2"
                                 aria-hidden="true"
-                                style="display: none; top: 20px;">
+                                style="display: block; top: 20px;">
                                 <div class="gnb_cate__menuinner" data-js="panel-cat">
                                     <div
                                         class="scroll-wrapper gnb_cate__scroll-area scrollbar-inner"
