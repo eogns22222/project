@@ -5,17 +5,18 @@
     position: relative;
     vertical-align: top;
 }
-.gnb.global .utility > li:nth-last-child(2) a:after {
-    content: '';
-    width: 46px;
-    height: 20px;
-    background: url(../img/ico-global-recruit.png) no-repeat 0 0;
-    display: inline-block;
-    position: relative;
-    top: -4px !important;
-    vertical-align: top;
-    margin-left: 7px;
+.gnb.global .utility li .text_link{
+    position:relative;
 }
+.gnb.global .utility li:not(:last-child) .text_link:before{
+    content:"";
+    position:absolute;
+    top:-0.1rem;
+    right:-1.3rem;
+    border:1px solid rgb(165, 162, 162);
+    height:1rem;
+}
+
 
 /*gnb메뉴 1번쨰 - 이러닝 : 디자인 말풍선 pick*/
 /*.gnb.type2 .gnb_nav>ul>li:nth-child(1)>a {
@@ -164,9 +165,9 @@
     display:block;
 } */
 .gnb.type2 .gnb_nav > ul > li:first-child > a:before,
-.gnb.type2 .gnb_nav > ul > li:first-child > a:after {content:''; position: absolute; margin-top: -2px; display: block; width: 7px; height: 2px; top: 50% !important; left: 94px; background: none; background-color: #b1b1b1;}
-.gnb.type2 .gnb_nav > ul > li:first-child > a:after {margin-left: -4px; 	-webkit-transform: rotate(45deg); -khtml-transform: rotate(45deg); transform: rotate(45deg);}
-.gnb.type2 .gnb_nav > ul > li:first-child > a:before {-webkit-transform: rotate(-45deg); -khtml-transform: rotate(-45deg); transform: rotate(-45deg);}
+.gnb.type2 .gnb_nav > ul > li:first-child > a:after {}
+.gnb.type2 .gnb_nav > ul > li:first-child > a:after {}
+.gnb.type2 .gnb_nav > ul > li:first-child > a:before {}
 
 /* 20201223 */
 .footer .b2b .fo_comp_wrap ul li.end img {margin-top: -7px;}

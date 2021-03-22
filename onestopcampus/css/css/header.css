@@ -128,7 +128,7 @@
 
 .gnb:not(.global) .utility > li > button:active, .gnb:not(.global) .utility > li > button.is-active { background-color: #e2e2e2; }
 
-.btn_gnb_search { width: 28px; height: 28px; background: url("../../img/common/ic_search.png") no-repeat 50% 50%; text-indent: -9999px; overflow: hidden; }
+.btn_gnb_search { width: 28px; height: 28px; background: url("../../img/imgs/search.png") no-repeat 50% 50%; text-indent: -9999px; overflow: hidden; }
 
 .is-wide .btn_gnb_search { background: url("../../img/common/ic_search_wide.png") no-repeat 50% 50%; }
 
@@ -160,7 +160,7 @@
 
 .gnb_cate { position: relative; display: inline-block; height: 20px; margin: 0 0 0 35px; padding: 0 30px 0 0; border-right: 1px solid #e6e6e6; }
 
-.gnb_cate .ic_arr { display: inline-block; padding: 0 27px 0 32px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
+.gnb_cate .ic_arr { display: inline-block; padding: 0 40px 0 60px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
 
 .gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 2px; }
 
@@ -172,7 +172,7 @@
 
 .gnb_cate .ic_arr > span:after { top: 6px; }
 
-.gnb_cate .ic_arr:after, .gnb_cate .ic_arr:before { content: ''; display: block; width: 7px; height: 2px; top: 50%; left: 113px; position: absolute; margin-top: -2px; background-color: #b1b1b1; }
+.gnb_cate .ic_arr:after, .gnb_cate .ic_arr:before {  }
 
 .gnb_cate .ic_arr.is-active:before { -webkit-transform: rotate(45deg); -khtml-transform: rotate(45deg); transform: rotate(45deg); }
 
@@ -180,7 +180,7 @@
 
 .gnb_cate .ic_arr:before { -webkit-transform: rotate(-45deg); -khtml-transform: rotate(-45deg); transform: rotate(-45deg); }
 
-.gnb_cate .ic_arr:after { margin-left: -4px; -webkit-transform: rotate(45deg); -khtml-transform: rotate(45deg); transform: rotate(45deg); }
+.gnb_cate .ic_arr:after {  }
 
 .gnb_cate__menu { padding: 0; cursor: pointer; border: none; background-color: #fff; white-space: nowrap; font-size: 0; max-width: 660px; height: 402px; position: absolute; left: 0; top: 58px; z-index: 1; background-color: #fff; border-width: 1px 1px 1px 1px; border-style: solid; border-color: #666; overflow: hidden; display: none; }
 
@@ -368,7 +368,7 @@
 
 .gnb.type2 .gnb_nav { top: 50%; left: 0; min-height: 26px; margin-left: 0; width: 100%; position: absolute; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-.gnb.type2 .gnb_nav > ul { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.gnb.type2 .gnb_nav > ul {  }
 
 .gnb.type2 .gnb_nav > ul > li:first-child > div[data-js="menu__panel-content"] { left: 0; margin-left: 0; background-position: -164px top; }
 

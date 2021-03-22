@@ -62,7 +62,7 @@ button { background: transparent; cursor: pointer; vertical-align: middle; font-
 
 button, input[type="submit"], input[type="button"], input[type="reset"] { cursor: pointer; -webkit-appearance: none; }
 
-section, nav, article, aside, header, footer, main { display: block; }
+section, nav, article, aside, header, footer, main { }
 
 input[type="date"]::-webkit-calendar-picker-indicator, input[type="date"]::-webkit-inner-spin-button { display: none; }
 

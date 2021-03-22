@@ -172,7 +172,7 @@
 
 .gnb_cate .ic_arr > span:after { top: 6px; }
 
-.gnb_cate .ic_arr:after, .gnb_cate .ic_arr:before { content: ''; display: block; width: 7px; height: 2px; top: 50%; left: 113px; position: absolute; margin-top: -2px; background-color: #b1b1b1; }
+.gnb_cate .ic_arr:after, .gnb_cate .ic_arr:before { display:block;}
 
 .gnb_cate .ic_arr.is-active:before { -webkit-transform: rotate(45deg); -khtml-transform: rotate(45deg); transform: rotate(45deg); }
 
@@ -368,7 +368,7 @@
 
 .gnb.type2 .gnb_nav { top: 50%; left: 0; min-height: 26px; margin-left: 0; width: 100%; position: absolute; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
-.gnb.type2 .gnb_nav > ul { -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; }
+.gnb.type2 .gnb_nav > ul { }
 
 .gnb.type2 .gnb_nav > ul > li:first-child > div[data-js="menu__panel-content"] { left: 0; margin-left: 0; background-position: -164px top; }
 
