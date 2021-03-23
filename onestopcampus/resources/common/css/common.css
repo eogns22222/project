@@ -78,7 +78,7 @@
 
 .portlet_wrap .slick-dots li.slick-active, .netplex_detail_popup .slick-dots li.slick-active { width: 30px; }
 
-.portlet_wrap .slick-dots li.slick-active button, .netplex_detail_popup .slick-dots li.slick-active button { width: 100%; background: #21277d; }
+.portlet_wrap .slick-dots li.slick-active button, .netplex_detail_popup .slick-dots li.slick-active button { width: 100%; background: #1428A0; }
 
 .star_info { display: -webkit-box; display: flex; display: -ms-flexbox; }
 
@@ -777,11 +777,11 @@
 
 .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item strong { font-size: 15px; color: #fff; }
 
-.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item p { font-size: 20px; color:blue; font-weight: 700; }
+.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item p { font-size: 20px; color:#1428A0; font-weight: 700; }
 
 .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:after, .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:before { }
 
-.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:after { border-color: rgba(33, 39, 125, 0); border-bottom-color: #21277d; border-width: 10px; margin-left: -10px; }
+.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:after { border-color: rgba(33, 39, 125, 0); border-bottom-color: #1428A0; border-width: 10px; margin-left: -10px; }
 
 .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:before { border-color: rgba(33, 39, 125, 0); border-bottom-color: #21277d; border-width: 11px; margin-left: -11px; }
 
@@ -1357,7 +1357,7 @@
 
 .portlet_wrap .portlet_row .netplexcuration .nex_wrap .nex_slider .thum_item dl dd { height: 108px; }
 
-.portlet_wrap .portlet_row .netplexcuration .nex_wrap .nex_slider .thum_item dl dd .p_cate { display: inline-block; margin: 24px 0 8px; font-size: 15px; color: #4e51d4; font-weight: 500; }
+.portlet_wrap .portlet_row .netplexcuration .nex_wrap .nex_slider .thum_item dl dd .p_cate { display: inline-block; margin: 24px 0 8px; font-size: 15px; color: #1428A0; font-weight: 500; }
 
 .portlet_wrap .portlet_row .netplexcuration .nex_wrap .nex_slider .thum_item dl dd a { display: inline-block; height: 54px; padding-right: 10px; font-size: 18px; color: #1e1e1e; line-height: 27px; overflow: hidden; font-weight: 500; }
 

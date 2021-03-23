@@ -3,7 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 
+  maximum-scale=1.0, minimum-scale=1.0">
         <title>Document</title>
         <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
@@ -36,8 +37,7 @@
             $(function () {
                 $(".gnb_nav")
                     .children("ul.demo-menus")
-                    .children("li")
-                    .children("a")
+                    .find(".nav2depth")
                     .mouseover(function () {
                         $(this)
                             .next()
@@ -49,8 +49,7 @@
             $(function () {
                 $(".gnb_nav")
                     .children("ul.demo-menus")
-                    .children("li")
-                    .children("a")
+                    .find(".nav2depth")
                     .mouseleave(function () {
                         $(this)
                             .next()
@@ -506,12 +505,13 @@
                             <!-- MENU::JSTL -->
                             <ul class="demo-menus">
                                 <li>
-                                    <a
+                                    <a 
+                                        class="nav2depth"
                                         data-js="menu__anchor"
                                         href="/course/em/corsList/corsListCommon?p_menu=OTQjTUFJTg==&amp;p_gubun=Qw==&amp;param2=102000000000000"
                                         target="_self">훈련과정</a>
 
-                                    <div data-js="menu__panel-content" style="">
+                                    <div data-js="menu__panel-content" class="nav2depth" style="">
                                         <div
                                             class="scroll-wrapper nav__2depth scrollbar-inner"
                                             style="position: relative; height: 400px;">

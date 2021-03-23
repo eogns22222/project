@@ -45,8 +45,11 @@ main>div>ul>li>span{
    background-color:rgb(219, 218, 218);
 }
 main>div>ul>li:nth-child(2)>span{
-    background-color:#2c40af;
+    background-color:#1428A0;
     color:white;
+    width:4rem;
+    height:4rem;
+    line-height: 4rem;
 }
 main>section{
     padding-top:10rem;
@@ -105,9 +108,11 @@ main>section>form>div.field>div:nth-child(2)>div>label+p>input{
 }
 main>section>form>div.field>div:nth-child(2)>div>label+p>input.btnCheck{
     width:7rem;
+    color:white;
 }
 main>section>form>div.field>div:nth-child(6)>div>label+p>input.btnCheck{
     width:7rem;
+    color:white;
 }
 main>section>form>div.field>div:nth-child(6)>div>label+p>input:nth-child(1){
     width:11rem;
@@ -120,12 +125,14 @@ main>section>form>div.field>div:nth-child(6)>div>label+p>input:nth-child(3){
 }
 main>section>form>div.field>div:nth-child(6)>div>label+p>input:nth-child(6){
     background-color: #B3B3B3;
+    width:10rem;
 }
 main>section>form>div.field>div:nth-child(6)>div>label+p>input:nth-child(7){
     background-color: #B3B3B3;
 }
 main>section>form>div.field>div:nth-child(7)>div>label+p>input{
     margin-right:0.7rem;
+    color:white;
 }
 main>section>form>div.field>div:nth-child(7)>div>label+p>input:nth-child(1){
     width:19rem;
@@ -141,9 +148,13 @@ main>section>form>div.field>div:nth-child(9)>div>div>p:nth-child(1)>input:nth-ch
 }
 main>section>form>div.field>div:nth-child(10)>div>label+p>input{
     margin-right:0.7rem;
+    color:white;
 }
 main>section>form>div.field>div>div>label>span{
     color:red;
+}
+main>section>form>div.field>div:nth-child(9)>div>div>p>input.btn2{
+    width:9rem;
 }
 main>section>form>div.field>div>div>p{
     display:inline-block;
@@ -258,7 +269,7 @@ main>section>form>div.btn>input:nth-child(2){
     margin-left:0.7rem;
     border:0 none;
     background-color:#2c40af;
-    
+    color:white;
 }
 
 

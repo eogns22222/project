@@ -391,7 +391,7 @@ table.dataTable.c-table * { -webkit-box-sizing: border-box !important; box-sizin
 
 .member_wrap { margin: auto; min-width: 1200px; min-height: 600px; width: 1200px;   }
 
-.member_wrap h1.title { color: #1e1e1e; text-align: left; letter-spacing: -0.9px; font-weight: 500; font-size: 28px; margin-top: 0px; }
+.member_wrap h1.title { color: #1e1e1e; text-align: left; letter-spacing: -0.9px; font-weight: 500; font-size: 28px; margin-top: 0px;  text-align: center;}
 
 .member_wrap h1.title.ty01 { margin-top: 95px; }
 
