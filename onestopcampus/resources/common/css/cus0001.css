@@ -154,7 +154,7 @@
 
 /* 20201216 */
 .gnb.type2 .gnb_cate {border-right: 0 none;}
-.gnb.type2 .gnb_cate + .gnb_nav {padding-left: 160px;}
+.gnb.type2 .gnb_cate + .gnb_nav {padding-left: 145px;}
 .gnb.type2 .gnb_nav > ul > li:first-child {margin-right: 20px; }
 .gnb.type2 .gnb_nav > ul > li:first-child > a {position: relative;   margin-right: 27px; 
 }

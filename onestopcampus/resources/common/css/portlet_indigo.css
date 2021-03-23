@@ -95,42 +95,54 @@ div#section__opice{
     justify-content: space-between;
     margin:100px auto;
     width:1196px;
-    border:1px solid #999999;
+    border:1px solid #ccc;
 }
 
 div#section__opice>section{
+    position:relative;
     flex:1 0 auto;
     padding-left:10px;
     
 }
 div#section__opice>section:not(:last-child){
-    border-right:1px solid #999999;
+    border-right:1px solid #ccc;
 }
 div#section__opice>section>h1{
     margin-top:22px;
     margin-bottom:28px;
-    font-size:22px;
+    font-size:18px;
+    font-weight:bold;
 }
 div#section__opice>section>h1>span{}
 div#section__opice>section>ul{}
 div#section__opice>section>ul>li{
     display:flex;
     justify-content: space-between;
-    font-size:14px;
-    line-height:34px;
+    font-size:13px;
+    line-height:30px;
 }
 div#section__opice>section>ul>li:last-child{
-    padding-bottom:10px;
+    padding-bottom:22px;
 }
 div#section__opice>section>ul>li>a{}
 div#section__opice>section>ul>li>time{
     margin-right:5px;
     color:#999999;
 }
+div#section__opice>section>a.more{
+    display:block;
+    position:absolute;
+    top:20px;
+    right:20px;
+    background:url(../imgs/bg_icon.png) no-repeat 0 0;
+    width:20px;
+    height:20px;
+}
+
 footer{
     margin:0 auto;
     width: 100%;
-    border-top:1px solid #999999;
+    border-top:1px solid #ccc;
 }
 
 footer>div{
