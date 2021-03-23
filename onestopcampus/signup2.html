@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>로그인</title>
+    <title>osc_회원가입</title>
     <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -12,62 +12,66 @@
         <link rel="stylesheet" href="resources/common/css/header.css">
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <link rel="stylesheet" href="resources/common/css/common.css">
-        <link rel="stylesheet" href="resources/common/css/sub01.css">
-        <style>
-            @font-face {
-                font-family: 'nanum';
-                src: url("fonts/NanumBarunGothicSubset.woff2");
-                src: local('※'), url("fonts/NanumBarunGothicSubset.woff") format('woff'), url("fonts/NanumBarunGothicSubset.ttf") format('truetype');
-            }
+        <link rel="stylesheet" href="resources/common/css/sign2main.css">
+    <!-- <link rel="stylesheet" href="../common/css/common.css"> -->
+    <style>
+        @font-face {
+            font-family: 'nanum';
+            src: url("fonts/NanumBarunGothicSubset.woff2");
+            src: local('※'), url("fonts/NanumBarunGothicSubset.woff") format('woff'), url("fonts/NanumBarunGothicSubset.ttf") format('truetype');
+        }
 
-            @font-face {
-                font-family: 'nanum2';
-                src: url("fonts/NanumBarunGothicBoldSubset.woff2");
-                src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
-            }
-            html {
-                
-                font-family: 'nanum', 'nanum2','sans-serif';
-            }
-        </style>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-            var enter = true
-            $(function () {
-                $(".gnb_nav")
-                    .children("ul.demo-menus")
-                    .children("li")
-                    .children("a")
-                    .mouseover(function () {
-                        $(this)
-                            .next()
-                            .addClass("is-active")
-                            .addClass("has-scroll");
-
-                    })
-            });
-            $(function () {
-                $(".gnb_nav")
-                    .children("ul.demo-menus")
-                    .children("li")
-                    .children("a")
-                    .mouseleave(function () {
-                        $(this)
-                            .next()
-                            .removeClass("is-active")
-                            .removeClass("has-scroll");
-
-                    })
-            }); // gnbover
-
-            $(function () {
-                $(".ic_arr").click(function () {
+        @font-face {
+            font-family: 'nanum2';
+            src: url("fonts/NanumBarunGothicBoldSubset.woff2");
+            src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
+        }
+        html {
+            font-size:62.5%;
+            font-family: 'nanum', 'nanum2','sans-serif';
+        }
+        main{
+            margin-bottom:80px;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        var enter = true
+        $(function () {
+            $(".gnb_nav")
+                .children("ul.demo-menus")
+                .children("li")
+                .children("a")
+                .mouseover(function () {
                     $(this)
-                        .children("#uiToggle-2")
-                        .css("display", "block");
-                });
+                        .next()
+                        .addClass("is-active")
+                        .addClass("has-scroll");
+
+                })
+        });
+        $(function () {
+            $(".gnb_nav")
+                .children("ul.demo-menus")
+                .children("li")
+                .children("a")
+                .mouseleave(function () {
+                    $(this)
+                        .next()
+                        .removeClass("is-active")
+                        .removeClass("has-scroll");
+
+                })
+        }); // gnbover
+
+        $(function () {
+            $(".ic_arr").click(function () {
+                $(this)
+                    .children("#uiToggle-2")
+                    .css("display", "block");
             });
-        </script>
+        });
+    </script>
 </head>
 <body>
     <header class="header">
@@ -94,7 +98,7 @@
                             target="_blank">마이페이지</a>
                     </li>
                     <!-- Quick Link -->
-                    
+
                 </ul>
             </div>
         </div>
@@ -105,9 +109,7 @@
                 <div class="gnb__inner">
                     <h1 class="h1_logo">
                         <a href="/main">
-                            <img
-                                src="img/imgs/logo_01.png"
-                                alt="멀티캠퍼스">
+                            <img src="img/imgs/logo_01.png" alt="멀티캠퍼스">
                         </a>
                     </h1>
                     <div class="gnb_search_fd" data-js="gnb__total-search">
@@ -769,31 +771,208 @@
 
     </header>
     <main>
+        <div>
+            <h1>원스톱캠퍼스 회원가입</h1>
+            <p><span class="hidden">기준선</span></p>
+            <ul>
+                <li><span>1</span>약관동의</li>
+                <li><span>2</span>본인확인</li>
+                <li><span>3</span>가입완료</li>
+            </ul>           
+        </div>
         <section>
-            <div>
-                <h1>로그인</h1>
-                <form action="">
-                    <p>
-                        <input type="text" name="nikname" id="" placeholder="아이디를 입력하세요.">
-                    </p>
-                    <p>
-                        <input type="password" name="pwrd" id="" placeholder="비밀번호를 입력하세요.">
-                    </p>
-                    <input type="submit" value="로그인">
-                </form>
-                <ul>
-                    <li><a href="#">아이디/비밀번호 찾기</a></li>
-                    <li><a href="#">회원가입</a></li>
-                </ul>
-                <div>
-                    <p>이미 SNS 계정으로 가입하셨다면</p>
-                    <ul>
-                        <li><a href="#"><img src="img/imgs/naver_logo_sns.png" alt="네이버로고"></a></li>
-                        <li><a href="#"><img src="img/imgs/kakao_logo_sns.png" alt="카카오로고"></a></li>
-                        <li><a href="#"><img src="img/imgs/google_logo_sns.png" alt="구글로고"></a></li>
-                    </ul>
+            <h1>기본정보</h1>
+            <p><span>*</span> 필수항목입니다.</p>
+            <form action="" method="">
+                <div class="field">
+                    <div>
+                        <div>
+                            <label for="nm" class="mainLabel"><span>*</span> 이름</label>
+                            <p>
+                                <input type="text" id="nm" name="name" class="nik_pwd">
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="nikname" class="mainLabel"><span>*</span> 아이디</label>
+                            <p>
+                                <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$" class="nik_pwd">
+                                <input type="submit" value="중복확인" class="btn2 btnCheck" style="background-color: #2c40af; ">
+                                <span>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="pwd" class="mainLabel"><span>*</span> 비밀번호</label>
+                            <p>
+                                <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="pwd2" class="mainLabel"><span>*</span> 비밀번호 재입력</label>
+                            <p>
+                                <input type="password" id="pwd2" name="pwd2" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <span class="check">비밀번호가 일치하지 않습니다.</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="birth_f_male">
+                        <div>
+                            <label for="yyy" class="mainLabel"><span>*</span> 생년월일/ 성별</label>
+                            <p>
+                                <select name="year" id="yyy">
+                                    <option value="year">년</option>
+                                    <option value="1990">1990</option>
+                                    <option value="1991">1991</option>
+                                    <option value="1992">1992</option>
+                                    <option value="1993">1993</option>
+                                    <option value="1994">1994</option>
+                                    <option value="1995">1995</option>
+                                    <option value="1996">1996</option>
+                                    <option value="1997">1997</option>
+                                    <option value="1998">1998</option>
+                                    <option value="1999">1999</option>
+                                    <option value="2000">2000</option>
+                                </select>
+                                <select name="month" id="mmm">
+                                    <option value="month">월</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                <select name="date" id="ddd">
+                                    <option value="date">일</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
+                                    <option value="7">7</option>
+                                    <option value="8">8</option>
+                                    <option value="9">9</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                <input type="radio" name="f_male" id="man">
+                                <label for="f_male">남</label>
+                                <input type="radio" name="f_male" id="woman">
+                                <label for="f_male">여</label>
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="user_name" class="mainLabel"><span>*</span> 이메일</label>
+                            <p>
+                                <input type="text" id="user_name" name="user_name">
+                                <label for="user_email">@</label>
+                                <input type="text" id="user_email" name="user_email">
+                                <select name="user_email" id="user_email">
+                                    <option value="write">직접입력</option>
+                                </select>
+                                <input type="submit" value="중복확인" class="btn2  btnCheck" style="background-color: #2c40af;">
+                                <input type="submit" value="인증번호전송" class="btn2">
+                                <input type="submit" value="재전송" class="btn2">
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="email_check" class="mainLabel"><span>*</span> 이메일 인증</label>
+                            <p>
+                                <input type="email" id="email_check" name="email_check">
+                                <input type="submit" value="확인" class="btn2" style="background-color: #2c40af;">
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="phone" class="mainLabel">연락처</label>
+                            <p>
+                                <select name="phone" id="phone">
+                                    <option value="010">010</option>
+                                </select>
+                                <label for="phoneNumber1">-</label>
+                                <input type="tel" id="" name="phoneNumber1">
+                                <label for="phoneNumber2">-</label>
+                                <input type="tel" id="" name="phoneNumber2">
+                            </p>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="zipcode" class="mainLabel">우편번호</label>
+                            <div>
+                                <p class="address_zip">
+                                    <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
+                                    <input type="submit" value="우편번호검색" class="btn2" style="background-color: #B3B3B3;">
+                                </p>
+                                <p>
+                                    <input type="text" id="address" name="address" placeholder="법원로 128">
+                                </p>
+                                <p>
+                                    <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
+                                </p>
+                                <p>
+                                    <input type="text" id="Reference" name="Reference" placeholder="참고항목">
+                                </p>
+                                <p>
+                                    <input type="text" id="" name="Detailed" placeholder="상세주소">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <label for="RecommenderId" class="mainLabel">추천인 ID</label>
+                            <p>
+                                <input type="text" id="RecommenderId" name="RecommenderId">
+                                <input type="submit" value="확인" class="btn2" style="background-color: #2c40af;">
+                            </p>
+                        </div>
+                    </div>
                 </div>
-            </div>
+                <div class="btn">
+                    <input type="submit" value="이전">
+                    <input type="submit" value="다음">
+                </div>
+            </form>
+
         </section>
     </main>
     <footer>

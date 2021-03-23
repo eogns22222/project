@@ -128,7 +128,7 @@
 
 .gnb:not(.global) .utility > li > button:active, .gnb:not(.global) .utility > li > button.is-active { background-color: #e2e2e2; }
 
-.btn_gnb_search { width: 28px; height: 28px; background: url("../../img/imgs/search.png") no-repeat 50% 50%; text-indent: -9999px; overflow: hidden; }
+.btn_gnb_search { width: 28px; height: 28px; background: url("../imgs/search.png") no-repeat 50% 50%; text-indent: -9999px; overflow: hidden; }
 
 .is-wide .btn_gnb_search { background: url("../../img/common/ic_search_wide.png") no-repeat 50% 50%; }
 
@@ -160,7 +160,7 @@
 
 .gnb_cate { position: relative; display: inline-block; height: 20px; margin: 0 0 0 35px; padding: 0 30px 0 0; border-right: 1px solid #e6e6e6; }
 
-.gnb_cate .ic_arr { display: inline-block; padding: 0 40px 0 60px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
+.gnb_cate .ic_arr { display: inline-block; padding: 0 0 0 30px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
 
 .gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 2px; }
 
@@ -372,7 +372,7 @@
 
 .gnb.type2 .gnb_nav > ul > li:first-child > div[data-js="menu__panel-content"] { left: 0; margin-left: 0; background-position: -164px top; }
 
-.gnb.type2 .gnb_cate + .gnb_nav { padding-left: 193px; }
+.gnb.type2 .gnb_cate + .gnb_nav {  }
 
 .gnb.type2 .gnb_cate + .gnb_nav > ul > li:first-child > div[data-js="menu__panel-content"] { left: 50%; top:30px; margin-left: -110px; background-position: 50% top; }
 
@@ -446,7 +446,7 @@
 
 .gnb[data-opentype="box"].type2 .gnb_nav > ul > li > a.is-active:before, .gnb[data-opentype="box"].type2_2 .gnb_nav > ul > li > a.is-active:before { top: 40px; }
 
-.gnb[data-opentype="box"] [data-js="menu__panel-content"] { top: 0; left: 50%; overflow: hidden; margin-left: -110px; z-index: 1; -webkit-box-sizing: content-box; box-sizing: content-box; background: url("../../img/imgs/arr_gnb_2depth_box.png"); background-position: 50% top; background-repeat: no-repeat; background-size: auto 12px;  }
+.gnb[data-opentype="box"] [data-js="menu__panel-content"] { top: 0; left: 50%; overflow: hidden; margin-left: -110px; z-index: 1; -webkit-box-sizing: content-box; box-sizing: content-box; background: url("../imgs/arr_gnb_2depth_box.png"); background-position: 50% top; background-repeat: no-repeat; background-size: auto 12px;  }
 
 .gnb[data-opentype="box"] [data-js="menu__panel-content"].is-active { display: block; }
 
