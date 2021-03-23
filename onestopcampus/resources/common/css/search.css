@@ -62,6 +62,7 @@ main>div>div>ul>li>a{
 }
 main>div>div>ul>li>a>i{}
 main>div>div>article{
+    position:relative;
     display:flex;
     align-items: center;
     padding:3rem 0;
@@ -112,9 +113,19 @@ main>div>div>article>div.main_contents>div>ul>li>span{
     text-align: center;
 }
 main>div>div>article>div.contents_sub{
+    
     width:29.8rem;
     text-align: center;
-    border-left:1px dotted #ccc;
+    
+}
+main>div>div>article>div.contents_sub:before{
+    content:"";
+    position:absolute;
+    top:0.5rem;
+    right:29.8rem;
+    width:0;
+    height:20rem;
+    border-right:1px dotted #ccc;
 }
 main>div>div>article>div.contents_sub>ul{
     text-align: center;

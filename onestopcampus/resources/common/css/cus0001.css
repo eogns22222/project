@@ -11,10 +11,10 @@
 .gnb.global .utility li:not(:last-child) .text_link:before{
     content:"";
     position:absolute;
-    top:-0.1rem;
-    right:-1.3rem;
+    top:0rem;
+    right:-1.8rem;
     border:1px solid rgb(165, 162, 162);
-    height:1rem;
+    height:1.5rem;
 }
 
 
