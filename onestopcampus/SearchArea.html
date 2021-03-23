@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="resources/common/css/header.css">
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <link rel="stylesheet" href="resources/common/css/common.css">
+        <link rel="stylesheet" href="resources/common/css/search.css">
         <style>
             @font-face {
                 font-family: 'nanum';
@@ -25,7 +26,7 @@
                 src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
             }
             html {
-
+                font-size:62.5%;
                 font-family: 'nanum', 'nanum2','sans-serif';
             }
             main {
@@ -769,9 +770,44 @@
 
         </header>
         <main>
-            <ul>
-                <li>홈<span></span></li>
-            </ul>
+            <div>
+                <p class="searchcheck">홈<img src="resources/common/imgs/btn_right.png" alt="다음">검색결과</p>
+                <h1><strong>"입력값"</strong> 검색결과</h1>
+                <p class="searchcheck2">"입력값"에 대한 검색결과 총 <i>0</i>건이 검색 되었습니다.</p>
+                <div class="">
+                    <ul>
+                        <li><a href="#">전체(<i>0</i>)</a></li>
+                        <li><a href="#">집체(<i>0</i>)</a></li>
+                        <li><a href="#">온라인(<i>0</i>)</a></li>
+                        <li><a href="#">혼합(<i>0</i>)</a></li>
+                    </ul>
+                    <article>
+                        <p><img src="" alt="이미지"></p>
+                        <div class="main_contents">
+                            <p>집체</p>
+                            <h1>과정명이 노출됩니다.</h1>
+                            <div>
+                                <ul>
+                                    <li><span>훈련기관</span>이젠아이티(IT)아카데미학원</li>
+                                    <li><span>훈련시간</span>100일,총 795시간</li>
+                                </ul>
+                                <ul>
+                                    <li><span>훈련기간</span>2021-03-17 - 2021-08-05 (1회차)</li>
+                                    <li><span>일자리정보</span>-</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="contents_sub">
+                            <ul>
+                                <li>모집중</li>
+                                <li>5,720,460원</li>
+                            </ul>
+                            <button>스크랩</button>
+                            <button>수강신청</button>
+                        </div>
+                    </article>
+                </div>
+            </div>
         </main>
         <footer>
             <div>

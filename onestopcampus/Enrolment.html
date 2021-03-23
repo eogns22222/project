@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert title here(수강신청)</title>
+    <script type="text/javascript">
+        //보이기
+        function show() {
+         document.getElementById("show").style.display = "block";
+        }
+        
+        //숨기기
+        function hide() {
+         document.getElementById("show").style.display = "none";
+        }
+       </script>
+</head>
+<body>
+    <form action="einsert" method="post">
+        수강신청 등록하기
+        <table>
+            <tr height="40">
+            <td bgcolor="pink">훈련기관</td>
+            <td><input type="text" name="inoname" id="inoname"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">훈련과정</td>
+            <td><input type="text" name="trprname" id="trprname"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">훈련일</td>
+            <td><input type="text" name="traingdate" id="traingdate"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">훈련시간</td>
+            <td><input type="text" name="traingtime" id="traingtime"></td>
+            </tr>
+        </table>
+        수강신청 정보
+        <table>
+            <tr height="40">
+            <td bgcolor="pink">성명</td>
+            <td><input type="text" name="membername" id="membername"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">생년월일</td>
+            <td><input type="text" name="birth" id="birth"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">연락처</td>
+            <td><input type="text" name="tel" id="tel"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">이메일</td>
+            <td><input type="text" name="email" id="email"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">최종학력</td>
+            <td><input type="text" name="recommender" id="recommender"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">고용형태</td>
+            <td><input type="text" name="finaleducation" id="finaleducation"></td>
+            </tr>
+            <tr height="40">
+            <td bgcolor="pink">대상구분</td>
+            <td><input type="text" name="employmenttype" id="employmenttype"></td>
+            </tr>
+        </table>
+        <div>
+        지원대상<br>
+        <input type="radio" name="targetofsupport" value="실업자">실업자
+        <input type="radio" name="targetofsupport" value="근로자">근로자
+        <input type="radio" name="targetofsupport" value="무급휴직자">무급휴직자
+        <input type="radio" name="targetofsupport" value="자영업자">자영업자
+        <input type="radio" name="targetofsupport" value="고보미가입근로자">고보미가입근로자
+        <input type="radio" name="targetofsupport" value="특수형태근로종사자">특수형태근로종사자
+        <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자">지방관서의 장이 인정하는 자
+        </div>
+        <div>
+        신청자격 확인<br>
+        1. 신청일 현재 공무원 또는 사립학교 교직원으로 재직 중입니까?
+        <input type="radio" name="qualification1" value="false">예
+        <input type="radio" name="qualification1" value="true">아니오<br>
+        2. 「외국인근로자의 고용 등에 관한 법률」을 적용받는 외국인(E-9, H-2, F4, H2 등 임의적용자)입니까?
+        <input type="radio" name="qualification2" value="false">예
+        <input type="radio" name="qualification2" value="true">아니오<br>
+        3. 연 매출 1억 5천만원 이상인 자영업자(사업자등록증이 여러 개일경우 합산한 금액)입니까?
+        <input type="radio" name="qualification3" value="false">예
+        <input type="radio" name="qualification3" value="true">아니오<br>
+        4. 최근 연 4천8백만원 이상인 부동산 임대 공급자(합산)입니까?
+        <input type="radio" name="qualification4" value="false">예
+        <input type="radio" name="qualification4" value="true">아니오<br>
+        5. 월 평균임금(소득) 300만원 이상인 대규모기업근로자(만 45세 미만)· 특수형태근로종사자입니까?
+        <input type="radio" name="qualification5" value="false">예
+        <input type="radio" name="qualification5" value="true">아니오<br>
+        6. 「국민기초생활보장법」 제9조에 따라 생계급여를 수급받는 일반수급자입니까?
+        <input type="radio" name="qualification6" value="false">예
+        <input type="radio" name="qualification6" value="true">아니오<br>
+        7. 국민내일배움카드 부정행위에 따른 훈련 수강 또는 지원·융자 제한기간 중에 있거나, 지원금 등의 반환명령을 받고 그 납부의 의무를 이행하지 않은 사실이 있습니까?
+        <input type="radio" name="qualification7" value="false">예
+        <input type="radio" name="qualification7" value="true">아니오<br>
+        8. 정부(지방자치단체포함)로부터 훈련비 등을 지원받는 훈련과정 수강하고 있거나 수강할 계획이 있습니까?
+        <div id="show" style="display: none">
+        <table>
+        <tr><td>훈련명</td>
+        <td><input type="text" name="qualification8"></td></tr>
+        <tr><td>참여기간</td>
+        <td><input type="text" name="qualification8">~<input type="text" name="qualification8"></td></tr>
+        </table>
+        </div>
+        <input type="radio" name="qualification8" value="false" onclick="show();">예
+        <input type="radio" name="qualification8" value="true" onclick="hide();">아니오<br>
+        9. 최종학년 졸업예정자 아닌 재학생입니까?
+        <input type="radio" name="qualification9" value="false">예
+        <input type="radio" name="qualification9" value="true">아니오<br>
+        </div>
+        <input type="submit" value="수강신청">
+        </form>
+</body>
+</html>
