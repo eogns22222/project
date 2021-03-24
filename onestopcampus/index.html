@@ -58,11 +58,21 @@
                     })
             }); // gnbover
 
-            $(function () {
-                $(".ic_arr").click(function () {
-                    $(this)
-                        .children("#uiToggle-2")
-                        .css("display", "block");
+            var flag = true;
+            $(function(){
+                $(".ic_arr").click(function(){
+                    if(flag){
+                        $(".category_contents").css("display","block");
+                        flag = false;
+                    }else{
+                        $(".category_contents").css("display","none");
+                        flag = true;
+                    }
+                    
+                });
+
+                $(".category_contents").children("ul").children("li").mouseover(function(){
+                    $(this).addClass("on");
                 });
             });
         </script>
@@ -252,7 +262,7 @@
                             </button>
                             <div class="category_contents">
                                 <ul>
-                                    <li><a href="#">교원몰
+                                    <li class="on"><a href="#">교원몰
                                         <ul>
                                             <li><a href="#">데스크탑</a></li>
                                             <li><a href="#">정수기</a></li>
@@ -4135,7 +4145,7 @@
         </main>
         <footer>
             <div>
-                <h1><a href="#"><img src="../common/image/logo.png" alt="로고"></a></h1>
+                <h1><a href="#"><img src="resources/common/imgs/logo_01.png" alt="로고"></a></h1>
                 <div>
                     <ul>
                         <li class="hidden">하단 유틸메뉴</li>

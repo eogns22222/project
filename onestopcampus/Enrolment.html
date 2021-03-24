@@ -5,6 +5,67 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Insert title here(수강신청)</title>
+        <link rel="stylesheet" href="resources/common/css/reset.css">
+        <link rel="stylesheet" href="resources/common/css/common_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/cus0001.css">
+        <link rel="stylesheet" href="resources/common/css/layout._indigo.css">
+        <link rel="stylesheet" href="resources/common/css/header.css">
+        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/common.css">
+        
+        <style>
+            @font-face {
+                font-family: 'nanum';
+                src: url("fonts/NanumBarunGothicSubset.woff2");
+                src: local('※'), url("fonts/NanumBarunGothicSubset.woff") format('woff'), url("fonts/NanumBarunGothicSubset.ttf") format('truetype');
+            }
+
+            @font-face {
+                font-family: 'nanum2';
+                src: url("fonts/NanumBarunGothicBoldSubset.woff2");
+                src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
+            }
+            html {
+                font-size:62.5%;
+                font-family: 'nanum', 'nanum2','sans-serif';
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+            var enter = true
+            $(function () {
+                $(".gnb_nav")
+                    .children("ul.demo-menus")
+                    .find(".nav2depth")
+                    .mouseover(function () {
+                        $(this)
+                            .next()
+                            .addClass("is-active")
+                            .addClass("has-scroll");
+
+                    })
+            });
+            $(function () {
+                $(".gnb_nav")
+                    .children("ul.demo-menus")
+                    .find(".nav2depth")
+                    .mouseleave(function () {
+                        $(this)
+                            .next()
+                            .removeClass("is-active")
+                            .removeClass("has-scroll");
+
+                    })
+            }); // gnbover
+
+            $(function () {
+                $(".ic_arr").click(function () {
+                    $(this)
+                        .children("#uiToggle-2")
+                        .css("display", "block");
+                });
+            });
+        </script>
         <script type="text/javascript">
             //보이기
             function show() {
@@ -24,10 +85,409 @@
         </script>
     </head>
     <body>
-        
+        <header class="header">
+            <div class="gnb global is-ready">
+                <!-- Global Menu -->
+                <div class="gnb__inner">
+                    <ul class="utility">
+                        <li>
+                            <a
+                                class="text_link"
+                                href="loginf"
+                                target="_self">로그인</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="joinf"
+                                target="_self">회원가입</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
+                                target="_blank">마이페이지</a>
+                        </li>
+                        <!-- Quick Link -->
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MENU::JSTL -->
+            <div class="gnb type2 is-ready" data-opentype="box">
+                <div class="gnb_row" style="height: 37px;">
+                    <div class="gnb__inner">
+                        <h1 class="h1_logo">
+                            <a href="/main">
+                                <img
+                                    src="resources/common/imgs/logo_01.png"
+                                    alt="원스톱캠퍼스">
+                            </a>
+                        </h1>
+                        <div class="gnb_search_fd" data-js="gnb__total-search">
+                            <form
+                                name="topSearchForm"
+                                id="topSearchForm"
+                                method="get"
+                                onsubmit="return srchKwd(this);"
+                                action="/search">
+                                <input
+                                    type="hidden"
+                                    id="top_siteAppntSrcwdNm"
+                                    name="siteAppntSrcwdNm"
+                                    value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
+                                <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
+                                <input type="hidden" name="kwd" value="">
+
+                                <fieldset>
+                                    <legend class="screen--out">통합검색</legend>
+                                    <label class="skip" for="gnb_search">검색어 입력</label>
+                                    <input
+                                        type="text"
+                                        data-search-kwd="gnb_search"
+                                        id="gnb_search"
+                                        name="input_kwd"
+                                        role=""
+                                        class="inp_sch"
+                                        data-js="search__input"
+                                        value=""
+                                        autocomplete="off">
+                                    <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
+                                        <span class="screen--out">검색어 초기화</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
+                                        <span class="screen--out">검색도우미</span>
+                                        <span class="screen--out" data-js="helper-status">켜기</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
+                                    <input type="hidden" id="category" name="category" value="">
+                                </fieldset>
+                            </form>
+                            <div class="search__auto" data-js="gnb__total-panel" data-related="1">
+                                <div class="search__auto-container" data-js="gnb__total-content">
+                                    <div class="search__auto-content">
+                                        <p class="search__auto-tit">최근 검색키워드</p>
+                                        <p class="search__auto-empty">최근 검색어 내역이 없습니다.</p>
+                                    </div>
+                                    <div class="search__auto-content" data-js="related-list">
+                                        <p class="search__auto-tit">추천 검색키워드</p>
+                                        <ul class="search__auto-bestlist">
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#데이터</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#파이썬</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#머신러닝</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#LIVE</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#엑셀</span></button>
+                                            </li>
+                                            <li>
+                                                <button type="button" class="gnb__addbtn">
+                                                    <span class="o-label__round o-label__round--chip">#링크드인러닝</span></button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="search__auto-foot">
+                                    <button type="button" data-js="search__help-close" id="gnb__search--close">검색도우미 끄기</button>
+                                    <div class="search__close-content" aria-describedby="gnb__search--close">
+                                        <p>검색도우미 기능을 다시 켤때는
+                                            <br>검색창에서
+                                            <span class="search__close-arrow">검색도우미 열기</span>를 클릭하세요</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="utility">
+
+                            <li class="gnb-utility" data-js="toggle">
+                                <button
+                                    type="button"
+                                    class="btn_gnb_cs"
+                                    data-js="toggle__anchor"
+                                    data-autoclose="true"
+                                    aria-controls="uiToggle-1"
+                                    aria-expanded="false"
+                                    aria-label="열기">고객지원센터</button>
+                                <div
+                                    class="list list--arrow list--bbs"
+                                    data-js="toggle__panel"
+                                    id="uiToggle-1"
+                                    aria-hidden="true"
+                                    style="display: none;">
+                                    <!-- Util Menu::INFO1 -->
+                                    <ul>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_row">
+                    <div class="gnb__inner">
+                        <div
+                            class="gnb_cate"
+                            data-js="gnb_cate"
+                            data-maxheigt="466"
+                            data-cate-json="/site/menu/selectCategoryMenuList"
+                            data-ajaxtype="POST">
+                            <button
+                                type="button"
+                                class="ic_arr"
+                                data-js="gnb_cate__anchor"
+                                aria-controls="uiToggle-2"
+                                aria-expanded="false"
+                                aria-label="열기">
+                                <span>
+                                    <span></span>
+                                </span>카테고리
+                            </button>
+                            <div class="category_contents">
+                                <ul>
+                                    <li><a href="#">교원몰
+                                        <ul>
+                                            <li><a href="#">데스크탑</a></li>
+                                            <li><a href="#">정수기</a></li>
+                                            <li><a href="#">스탠드정수기</a></li>
+                                            <li><a href="#">공기청정기</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">제휴용
+                                        <ul>
+                                            <li><a href="#">데스크탑2</a></li>
+                                            <li><a href="#">정수기2</a></li>
+                                            <li><a href="#">스탠드정수기2</a></li>
+                                            <li><a href="#">공기청정기2</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">파트너몰
+                                        <ul>
+                                            <li><a href="#">데스크탑3</a></li>
+                                            <li><a href="#">정수기3</a></li>
+                                            <li><a href="#">스탠드정수기3</a></li>
+                                            <li><a href="#">공기청정기</a></li>
+                                            <li><a href="#">비데</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                    <li><a href="#">임직원몰
+                                        <ul>
+                                            <li><a href="#">데스크탑4</a></li>
+                                            <li><a href="#">정수기4</a></li>
+                                            <li><a href="#">스탠드정수기4</a></li>
+                                            <li><a href="#">공기청정기4</a></li>
+                                            <li><a href="#">비데4</a></li>
+                                            <li><a href="#">연수기</a></li>
+                                            <li><a href="#">안마의자</a></li>
+                                        </ul>
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb_nav">
+                            <!-- MENU::JSTL -->
+                            <ul class="demo-menus">
+                                <li>
+                                    <a 
+                                        class="nav2depth"
+                                        data-js="menu__anchor"
+                                        href="/course/em/corsList/corsListCommon?p_menu=OTQjTUFJTg==&amp;p_gubun=Qw==&amp;param2=102000000000000"
+                                        target="_self">훈련과정</a>
+
+                                    <div data-js="menu__panel-content" class="nav2depth" style="">
+                                        <div
+                                            class="scroll-wrapper nav__2depth scrollbar-inner"
+                                            style="position: relative; height: 400px;">
+                                            <div
+                                                data-js="menu__panel"
+                                                class="nav__2depth scrollbar-inner scroll-content"
+                                                style="height: 400px; margin-bottom: 0px; margin-right: 0px;">
+                                                <ul>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            target="_self">국민 내일배움카드 훈련과정</a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            target="_self">기업훈련 과정</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="#"
+                                                            target="_self">중장년특화훈련 과정</a>
+                                                    </li>
+                                                   
+                                                </ul>
+                                            </div>
+                                            <div class="scroll-element scroll-x" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-element scroll-y" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <a
+                                        data-js="menu__anchor"
+                                        href="/course/em/corsList/corsListCommon?p_menu=NDE3I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000"
+                                        target="_self">고객센터</a>
+
+                                    <div data-js="menu__panel-content" style="">
+                                        <div
+                                            class="scroll-wrapper nav__2depth scrollbar-inner"
+                                            style="position: relative; height: 101px;">
+                                            <div
+                                                data-js="menu__panel"
+                                                class="nav__2depth scrollbar-inner scroll-content"
+                                                style="height: 101px; margin-bottom: 0px; margin-right: 0px;">
+                                                <ul>
+
+                                                    <li>
+                                                        <a
+                                                            href="/course/em/corsList/corsListCommon?p_menu=NDE4I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127001000000000"
+                                                            target="_self">부동산/주식</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="/course/em/corsList/corsListCommon?p_menu=NDE5I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127002000000000"
+                                                            target="_self">사이드잡/창업</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="scroll-element scroll-x" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-element scroll-y" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li>
+                                    <a
+                                        data-js="menu__anchor"
+                                        href="/common/board/boardMstr/124387?p_menu=MzU2I01BSU4=&amp;p_gubun=Qw=="
+                                        target="_self">이벤트</a>
+
+                                    <div data-js="menu__panel-content" style="">
+                                        <div
+                                            class="scroll-wrapper nav__2depth scrollbar-inner"
+                                            style="position: relative; height: 151px;">
+                                            <div
+                                                data-js="menu__panel"
+                                                class="nav__2depth scrollbar-inner scroll-content"
+                                                style="height: 151px; margin-bottom: 0px; margin-right: 0px;">
+                                                <ul>
+
+                                                    <li>
+                                                        <a
+                                                            href="/common/board/boardMstr/124387?p_menu=MzU3I01BSU4=&amp;p_gubun=Qw=="
+                                                            target="_self">EVENT</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="/common/board/boardMstr/1000297?p_menu=MzU4I01BSU4=&amp;p_gubun=Qw=="
+                                                            target="_self">추천 클래스</a>
+                                                    </li>
+
+                                                    <li>
+                                                        <a
+                                                            href="https://www.multicampus.com/system/menu/iframe?p_url=L3B1Ymxpc2gvcGFnZXMvYWNhZGVteV9kYXRhc2NpZW5jZS5odG1s&amp;p_menu=MjY5I01BSU4=&amp;p_gubun=Qw==&amp;p_menu=MzY1I01BSU4=&amp;p_gubun=Qw=="
+                                                            target="_blank">Academy</a>
+                                                    </li>
+
+                                                </ul>
+                                            </div>
+                                            <div class="scroll-element scroll-x" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                            <div class="scroll-element scroll-y" style="">
+                                                <div class="scroll-element_outer">
+                                                    <div class="scroll-element_size"></div>
+                                                    <div class="scroll-element_track"></div>
+                                                    <div class="scroll-bar"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                            </ul>
+                            <!-- MENU::JSTL END -->
+                        </nav>
+                    </div>
+                </div>
+                <span class="gnb__arrow" aria-hidden="true"></span></div>
+
+        </header>
         <main>
             <form action="einsert" method="post">
-                <h2>수강신청 등록하기</h2>
+                <h1>수강신청 등록하기</h1>
                 <table>
                     <tr height="40">
                         <td bgcolor="pink">훈련기관</td>
@@ -46,7 +506,7 @@
                         <td><input type="text" name="traingtime" id="traingtime"></td>
                     </tr>
                 </table>
-                수강신청 정보
+                <h2>수강신청 정보</h2>
                 <table>
                     <tr height="40">
                         <td bgcolor="pink">성명</td>
@@ -78,40 +538,76 @@
                     </tr>
                 </table>
                 <div>
-                    지원대상<br>
-                    <input type="radio" name="targetofsupport" value="실업자">실업자
-                    <input type="radio" name="targetofsupport" value="근로자">근로자
-                    <input type="radio" name="targetofsupport" value="무급휴직자">무급휴직자
-                    <input type="radio" name="targetofsupport" value="자영업자">자영업자
-                    <input type="radio" name="targetofsupport" value="고보미가입근로자">고보미가입근로자
-                    <input type="radio" name="targetofsupport" value="특수형태근로종사자">특수형태근로종사자
-                    <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자">지방관서의 장이 인정하는 자
+                    <h3>지원대상</h3>
+                    <div>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="실업자">
+                            <label for="targetofsupport">실업자</label>
+                            <input type="radio" name="targetofsupport" value="근로자">
+                            <label for="targetofsupport">근로자</label>
+                            <input type="radio" name="targetofsupport" value="무급휴직자">
+                            <label for="targetofsupport">무급휴직자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="자영업자">
+                            <label for="targetofsupport">자영업자</label>
+                            <input type="radio" name="targetofsupport" value="고보미가입근로자">
+                            <label for="targetofsupport">고보미가입근로자</label>
+                            <input type="radio" name="targetofsupport" value="특수형태근로종사자">
+                            <label for="targetofsupport">특수형태근로종사자</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자">
+                            <label for="targetofsupport">지방관서의 장이 인정하는 자</label>
+                        </p>
+                    </div>
                 </div>
                 <div>
-                    신청자격 확인<br>
-                    1. 신청일 현재 공무원 또는 사립학교 교직원으로 재직 중입니까?
-                    <input type="radio" name="qualification1" value="false">예
-                    <input type="radio" name="qualification1" value="true">아니오<br>
-                    2. 「외국인근로자의 고용 등에 관한 법률」을 적용받는 외국인(E-9, H-2, F4, H2 등 임의적용자)입니까?
-                    <input type="radio" name="qualification2" value="false">예
-                    <input type="radio" name="qualification2" value="true">아니오<br>
-                    3. 연 매출 1억 5천만원 이상인 자영업자(사업자등록증이 여러 개일경우 합산한 금액)입니까?
-                    <input type="radio" name="qualification3" value="false">예
-                    <input type="radio" name="qualification3" value="true">아니오<br>
-                    4. 최근 연 4천8백만원 이상인 부동산 임대 공급자(합산)입니까?
-                    <input type="radio" name="qualification4" value="false">예
-                    <input type="radio" name="qualification4" value="true">아니오<br>
-                    5. 월 평균임금(소득) 300만원 이상인 대규모기업근로자(만 45세 미만)· 특수형태근로종사자입니까?
-                    <input type="radio" name="qualification5" value="false">예
-                    <input type="radio" name="qualification5" value="true">아니오<br>
-                    6. 「국민기초생활보장법」 제9조에 따라 생계급여를 수급받는 일반수급자입니까?
-                    <input type="radio" name="qualification6" value="false">예
-                    <input type="radio" name="qualification6" value="true">아니오<br>
-                    7. 국민내일배움카드 부정행위에 따른 훈련 수강 또는 지원·융자 제한기간 중에 있거나, 지원금 등의 반환명령을 받고 그 납부의 의무를 이행하지
-                    않은 사실이 있습니까?
-                    <input type="radio" name="qualification7" value="false">예
-                    <input type="radio" name="qualification7" value="true">아니오<br>
-                    8. 정부(지방자치단체포함)로부터 훈련비 등을 지원받는 훈련과정 수강하고 있거나 수강할 계획이 있습니까?
+                    <h4>신청자격 확인</h4>
+                    <p>1. 신청일 현재 공무원 또는 사립학교 교직원으로 재직 중입니까?</p>
+                    <input type="radio" name="qualification1" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification1" value="true">
+                    <label for="">아니오</label>
+
+                    <p>2. 「외국인근로자의 고용 등에 관한 법률」을 적용받는 외국인(E-9, H-2, F4, H2 등 임의적용자)입니까?</p>
+                    <input type="radio" name="qualification2" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification2" value="true">
+                    <label for="">아니오</label>
+
+                    <p>3. 연 매출 1억 5천만원 이상인 자영업자(사업자등록증이 여러 개일경우 합산한 금액)입니까?</p>
+                    <input type="radio" name="qualification3" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification3" value="true">
+                    <label for="">아니오</label>
+
+                    <p>4. 최근 연 4천8백만원 이상인 부동산 임대 공급자(합산)입니까?</p>
+                    <input type="radio" name="qualification4" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification4" value="true">
+                    <label for="">아니오</label>
+
+                    <p>5. 월 평균임금(소득) 300만원 이상인 대규모기업근로자(만 45세 미만)· 특수형태근로종사자입니까?</p>
+                    <input type="radio" name="qualification5" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification5" value="true">
+                    <label for="">아니오</label>
+
+                    <p>6. 「국민기초생활보장법」 제9조에 따라 생계급여를 수급받는 일반수급자입니까?</p>
+                    <input type="radio" name="qualification6" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification6" value="true">
+                    <label for="">아니오</label>
+
+                    <p>7. 국민내일배움카드 부정행위에 따른 훈련 수강 또는 지원·융자 제한기간 중에 있거나, 지원금 등의 반환명령을 받고 그 납부의 의무를 이행하지
+                    않은 사실이 있습니까?</p>
+                    <input type="radio" name="qualification7" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification7" value="true">
+                    <label for="">아니오</label>
+
+                    <p>8. 정부(지방자치단체포함)로부터 훈련비 등을 지원받는 훈련과정 수강하고 있거나 수강할 계획이 있습니까?</p>
                     <div id="show" style="display: none">
                         <table>
                             <tr>
@@ -124,14 +620,38 @@
                             </tr>
                         </table>
                     </div>
-                    <input type="radio" name="qualification8" value="false" onclick="show();">예
-                    <input type="radio" name="qualification8" value="true" onclick="hide();">아니오<br>
-                    9. 최종학년 졸업예정자 아닌 재학생입니까?
-                    <input type="radio" name="qualification9" value="false">예
-                    <input type="radio" name="qualification9" value="true">아니오<br>
+                    <input type="radio" name="qualification8" value="false" onclick="show();">
+                    <label for="">예</label> 
+                    <input type="radio" name="qualification8" value="true" onclick="hide();">
+                    <label for="">아니오</label> 
+
+                    <p>9. 최종학년 졸업예정자 아닌 재학생입니까?</p>
+                    <input type="radio" name="qualification9" value="false">
+                    <label for="">예</label>
+                    <input type="radio" name="qualification9" value="true">
+                    <label for="">아니오</label>
+
                 </div>
                 <input type="submit" value="수강신청">
             </form>
         </main>
+        <footer>
+            <div>
+                <h1><a href="#"><img src="resources/common/imgs/logo_01.png" alt="로고"></a></h1>
+                <div>
+                    <ul>
+                        <li class="hidden">하단 유틸메뉴</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>이메일주소 무단수집거부</li>
+                        <li>제휴문의</li>
+                    </ul>
+                    <address class="hidden">
+                        <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612 <span>고객센터:02 - 6269 - 0631</span></p>
+                        <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
+                    </address>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>

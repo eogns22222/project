@@ -155,7 +155,7 @@ main>div.sub_nav>div>article>div>ul>li:nth-child(1){
 main>div.sub_nav>div>article>div>ul>li:nth-child(2){
     margin-bottom:1.3rem;
     font-size:1.5rem;
-    
+    color:#1428A0;
 }
 
 main>div.sub_nav>div>article>div>ul>li:nth-child(3){
@@ -184,6 +184,7 @@ main>div.sub_nav>div>article>div>ul>li>span{
     font-size:1.4rem;
     border:1px solid #999;
     border-radius: 3rem;
+    color:#999;
 }
 main>div.sub_nav>div>article>div>ul>li>a{
     display:block;

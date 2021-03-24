@@ -162,24 +162,25 @@
 
 .gnb_cate .ic_arr { display: inline-block; padding: 0 0 0 30px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
 div.category_contents{
+	display:none;
 	position:absolute;
 	top:4rem;
 	left:0;
 	width:32rem;
 	height:35rem;
-	border:1px solid red;
+	border:1px solid #ccc;
 	background:white;
 }
 div.category_contents>ul{
 	position:relative;
-	padding-left:3rem;
 	width:50%;
 	height:100%;
-	border-right:1px solid red;
+	border-right:1px solid #ccc;
 	
 }
 div.category_contents>ul>li{
 	
+	padding-left:3rem;
 	font-size:1.6rem;
 	
 }
@@ -195,11 +196,13 @@ div.category_contents>ul>li>a:before{
 	bottom:0;
 	left:-3.1rem;
 	width:16rem;
-	border-bottom:1px solid red;
+	border-bottom:1px solid #ccc;
 }
-div.category_contents>ul>li:not(:nth-child(1))>ul{
+
+div.category_contents>ul>li>ul{
 	display:none;
 }
+
 div.category_contents>ul>li>ul{
 	position:absolute;
 	top:0;
@@ -207,9 +210,27 @@ div.category_contents>ul>li>ul{
 }
 div.category_contents>ul>li>ul>li{}
 div.category_contents>ul>li>ul>li>a{
+	display:block;
 	line-height: 5rem;
 }
 
+/*on*/
+div.category_contents>ul>li.on{
+	position:relative;
+	background:#E4E8F4;
+}
+div.category_contents>ul>li.on:before{
+	content:"";
+	position:absolute;
+	top:1rem;
+	right:0.5rem;
+	background:url(../imgs/btn_right.png) no-repeat 0 0;
+	width:2rem;
+	height:3rem;
+}
+div.category_contents>ul>li.on>ul{
+	display:block;
+}
 
 .gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 2px; }
 
