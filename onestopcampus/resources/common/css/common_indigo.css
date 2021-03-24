@@ -41,7 +41,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 
 *, *::after, *::before { -webkit-box-sizing: border-box; box-sizing: border-box; }
 
-div:after, section:after, article:after { display: block; clear: both; content: ''; }
+/* div:after, section:after, article:after { display: block; clear: both; content: ''; } */
 
 
 #skipNav { position: relative; }

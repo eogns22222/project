@@ -1,7 +1,7 @@
 main{
     margin:0 auto;
     margin-top:8rem;
-    width:119.6rem;
+    width:120rem;
 }
 main>div{}
 main>div>p.searchcheck{
@@ -155,4 +155,18 @@ main>div>div>article>div.contents_sub>button{
 }
 main>div>div>article>div.contents_sub>button:nth-child(2){
     margin-bottom:1rem;
+}
+
+
+/*searchAreanone*/
+main>div>div>article.searchnone{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height:42rem;
+}
+main>div>div>article>p.noneArea{
+    width:30rem;
+    height:1.6rem;
+    background:none;
 }

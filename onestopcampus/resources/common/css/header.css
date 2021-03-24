@@ -161,6 +161,55 @@
 .gnb_cate { position: relative; display: inline-block; height: 20px; margin: 0 0 0 35px; padding: 0 30px 0 0; border-right: 1px solid #e6e6e6; }
 
 .gnb_cate .ic_arr { display: inline-block; padding: 0 0 0 30px; color: #1e1e1e; font-size: 17px; position: relative; overflow: hidden; }
+div.category_contents{
+	position:absolute;
+	top:4rem;
+	left:0;
+	width:32rem;
+	height:35rem;
+	border:1px solid red;
+	background:white;
+}
+div.category_contents>ul{
+	position:relative;
+	padding-left:3rem;
+	width:50%;
+	height:100%;
+	border-right:1px solid red;
+	
+}
+div.category_contents>ul>li{
+	
+	font-size:1.6rem;
+	
+}
+div.category_contents>ul>li>a{
+	position:relative;
+	display:block;
+	line-height: 5rem;
+}
+
+div.category_contents>ul>li>a:before{
+	content:"";
+	position:absolute;
+	bottom:0;
+	left:-3.1rem;
+	width:16rem;
+	border-bottom:1px solid red;
+}
+div.category_contents>ul>li:not(:nth-child(1))>ul{
+	display:none;
+}
+div.category_contents>ul>li>ul{
+	position:absolute;
+	top:0;
+	right:-11rem;
+}
+div.category_contents>ul>li>ul>li{}
+div.category_contents>ul>li>ul>li>a{
+	line-height: 5rem;
+}
+
 
 .gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 2px; }
 

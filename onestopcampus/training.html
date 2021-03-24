@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>검색결과</title>
+        <title>훈련과정</title>
         <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="resources/common/css/header.css">
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <link rel="stylesheet" href="resources/common/css/common.css">
-        <link rel="stylesheet" href="resources/common/css/search.css">
+        <link rel="stylesheet" href="resources/common/css/training.css">
         <style>
             @font-face {
                 font-family: 'nanum';
@@ -34,6 +34,19 @@
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <link rel="stylesheet" href="resources/common/js/jquery-ui.css">
+
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+        <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
+
+
+
+
+
         <script>
             var enter = true
             $(function () {
@@ -63,14 +76,40 @@
                     })
             }); // gnbover
 
-            $(function () {
-                $(".ic_arr").click(function () {
-                    $(this)
-                        .children("#uiToggle-2")
-                        .css("display", "block");
-                });
-            });
+            
         </script>
+        <script type="text/javascript">
+
+            $(function(){
+            
+                $("#startdate").datepicker({
+            
+                    showOn: "both",
+            
+                    buttonImage: "resources/common/imgs/datepicker.png",
+            
+                    buttonImageOnly: true,
+            
+                    buttonText: "Select date"
+            
+                });
+                $("#enddate").datepicker({
+                    
+                    showOn: "both",
+            
+                    buttonImage: "resources/common/imgs/datepicker.png",
+            
+                    buttonImageOnly: true,
+            
+                    buttonText: "Select date"
+            
+                });
+            
+            });
+            
+        </script>
+            
+            
     </head>
     <body>
         <header class="header">
@@ -770,10 +809,54 @@
 
         </header>
         <main>
-            <div>
-                <p class="searchcheck">홈<img src="resources/common/imgs/btn_right.png" alt="다음">검색결과</p>
-                <h1><strong>"입력값"</strong> 검색결과</h1>
-                <p class="searchcheck2">"입력값"에 대한 검색결과 총 <i>0</i>건이 검색 되었습니다.</p>
+            <div class="trainingzone">
+                <h1>국민내일배움카드 훈련과정</h1>
+                <p>직업능력개발 훈련과정을 간편하게 검색할 수 있습니다.</p>
+                <div>
+                    <form action="">
+                        <p>
+                            <input type="text" name="training" placeholder="훈련기관">
+                            <input type="text" name="trainingT" placeholder="훈련과정">
+                            <select name="trainingCont" id="Tcont">
+                                <option value="훈련유형">훈련유형</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="areaSi">훈련지역</label>
+                            <select name="areaSi" id="areaSi">
+                                <option value="sido">시도</option>
+                            </select>
+                            <select name="areaGoo" id="areaGoo">
+                                <option value="sigoongoo">시군구</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="work">NCS직무</label>
+                            <select name="work" id="work">
+                                <option value="all">전체</option>
+                            </select>
+                            <select name="work2" id="work2">
+                                <option value="all">전체</option>
+                            </select>
+                            <select name="work3" id="work3">
+                                <option value="all">전체</option>
+                            </select>
+                        </p>
+                        <p>
+                            <label for="startdate">개강일자</label>
+                            <input type="text" name="startdate" id="startdate"placeholder="20210319"> - <input type="text" name="enddate" id="enddate"placeholder="20210419">
+                            <button>1주일</button>
+                            <button>1개월</button>
+                            <button>3개월</button>
+                        </p>
+                        <div>
+                            <input type="submit" value="조건 초기화">
+                            <input type="submit" value="검색">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sub_nav">
                 <div class="">
                     <ul>
                         <li><a href="#">전체(<i>0</i>)</a></li>
@@ -782,29 +865,29 @@
                         <li><a href="#">혼합(<i>0</i>)</a></li>
                     </ul>
                     <article>
-                        <p><img src="" alt="이미지"></p>
-                        <div class="main_contents">
-                            <p>집체</p>
-                            <h1>과정명이 노출됩니다.</h1>
-                            <div>
-                                <ul>
-                                    <li><span>훈련기관</span>이젠아이티(IT)아카데미학원</li>
-                                    <li><span>훈련시간</span>100일,총 795시간</li>
-                                </ul>
-                                <ul>
-                                    <li><span>훈련기간</span>2021-03-17 - 2021-08-05 (1회차)</li>
-                                    <li><span>일자리정보</span>-</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="contents_sub">
-                            <ul>
-                                <li>모집중</li>
-                                <li>5,720,460원</li>
+                       <div>
+                           <ul>
+                               <li><img src="" alt=""></li>
+                               <li>집체 <span>이젠아이덴티티</span> </li>
+                               <li>과정명이 노출됩니다.</li>
+                               <li>5,720,460</li>
+                               <li><a href="#">수강신청</a> </li>
+                           </ul>
+                           <ul>
+                                <li><img src="" alt=""></li>
+                                <li>집체 <span>이젠아이덴티티</span> </li>
+                                <li>과정명이 노출됩니다.</li>
+                                <li>5,720,460</li>
+                                <li><a href="#">모집완료</a> </li>
                             </ul>
-                            <button>스크랩</button>
-                            <button>수강신청</button>
-                        </div>
+                            <ul>
+                                <li><img src="" alt=""></li>
+                                <li>집체 <span>이젠아이덴티티</span> </li>
+                                <li>과정명이 노출됩니다.</li>
+                                <li>5,720,460</li>
+                                <li><a href="#">수강신청</a> </li>
+                            </ul>
+                       </div>
                     </article>
                 </div>
             </div>
