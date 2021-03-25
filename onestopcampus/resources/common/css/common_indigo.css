@@ -1153,10 +1153,6 @@ html[class*="ie11"] .o-button--search-page { padding: 10px 18px; }
 
 .c-scrollbox { height: 100%; }
 
-.scroll-wrapper { overflow: hidden !important; padding: 0 !important; position: relative; max-height: 100%; }
-
-.scroll-wrapper > .scroll-content { border: none !important; -webkit-box-sizing: content-box !important; box-sizing: content-box !important; height: auto; left: 0; margin: 0; max-height: none; max-width: none !important; overflow-y: scroll !important; overflow-x: hidden !important; padding: 0; position: relative !important; top: 0; width: auto !important; }
-
 .scroll-wrapper > .scroll-content::-webkit-scrollbar { height: 0; width: 0; }
 
 .scroll-element { display: none; }
@@ -1175,9 +1171,6 @@ html[class*="ie11"] .o-button--search-page { padding: 10px 18px; }
 .scroll-textarea > .scroll-content > textarea { border: none !important; -webkit-box-sizing: border-box; box-sizing: border-box; height: 100% !important; margin: 0; max-height: none !important; max-width: none !important; overflow-y: auto; -ms-overflow-style: none; overflow-x: hidden !important; outline: none; position: relative !important; top: 0; width: 100% !important; }
 
 .scroll-textarea > .scroll-content > textarea::-webkit-scrollbar { height: 0; width: 0; }
-
-
-.scrollbar-inner.scroll-content:not(.scroll-scrollx_visible) { margin-bottom: 0 !important; }
 
 .scrollbar-inner > .scroll-element, .scrollbar-inner > .scroll-element div { border: none; margin: 0; padding: 0; position: absolute; z-index: 1; }
 
@@ -2436,9 +2429,6 @@ span.required { display: inline-block; text-indent: -9999em; overflow: hidden; h
 
 .o-label__square--primary2 { background-color: #00adfb; }
 
-.o-label__round { border-radius: 15px; border: 1px solid #ccc; display: inline-block; vertical-align: middle; text-align: center; position: relative; }
-
-.o-label__round--chip { font-size: 12px; min-width: 52px; padding: 5px 13px; }
 
 .o-label__round--search { font-size: 14px; min-width: 72px; padding: 5px 40px 3px 13px; }
 

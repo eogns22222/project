@@ -5,6 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>원스톱캠퍼스메인</title>
+        <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
         <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -32,49 +33,47 @@
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            var enter = true
-            $(function () {
-                $(".gnb_nav")
-                    .children("ul.demo-menus")
-                    .find(".nav2depth")
-                    .mouseover(function () {
-                        $(this)
-                            .next()
-                            .addClass("is-active")
-                            .addClass("has-scroll");
-
-                    })
-            });
-            $(function () {
-                $(".gnb_nav")
-                    .children("ul.demo-menus")
-                    .find(".nav2depth")
-                    .mouseleave(function () {
-                        $(this)
-                            .next()
-                            .removeClass("is-active")
-                            .removeClass("has-scroll");
-
-                    })
-            }); // gnbover
-
+            
             var flag = true;
+            var len = 0;
             $(function(){
                 $(".ic_arr").click(function(){
                     if(flag){
                         $(".category_contents").css("display","block");
+                        $("div.searchHelp").css("display","none");
                         flag = false;
                     }else{
                         $(".category_contents").css("display","none");
+                        $("div.searchHelp").css("display","none");
                         flag = true;
                     }
                     
                 });
 
                 $(".category_contents").children("ul").children("li").mouseover(function(){
-                    $(this).addClass("on");
+                    len = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $("div.searchHelp").css("display","none");
+                    // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
+                });//nav end
+
+
+                $("#gnb_search").click(function(){
+                    $("div.searchHelp").css("display","block");
+                   
                 });
-            });
+
+                $(".searchend").click(function(){
+                    $("div.searchHelp").css("display","none");
+                });
+                
+                // $("html").click(function(){
+                //     $("div.searchHelp").css("display","none");
+                // });
+
+            }); 
+
+            
         </script>
     </head>
     <body>
@@ -157,50 +156,14 @@
                                     <input type="hidden" id="category" name="category" value="">
                                 </fieldset>
                             </form>
-                            <div class="search__auto" data-js="gnb__total-panel" data-related="1">
-                                <div class="search__auto-container" data-js="gnb__total-content">
-                                    <div class="search__auto-content">
-                                        <p class="search__auto-tit">최근 검색키워드</p>
-                                        <p class="search__auto-empty">최근 검색어 내역이 없습니다.</p>
-                                    </div>
-                                    <div class="search__auto-content" data-js="related-list">
-                                        <p class="search__auto-tit">추천 검색키워드</p>
-                                        <ul class="search__auto-bestlist">
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#데이터</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#파이썬</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#머신러닝</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#LIVE</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#엑셀</span></button>
-                                            </li>
-                                            <li>
-                                                <button type="button" class="gnb__addbtn">
-                                                    <span class="o-label__round o-label__round--chip">#링크드인러닝</span></button>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="search__auto-foot">
-                                    <button type="button" data-js="search__help-close" id="gnb__search--close">검색도우미 끄기</button>
-                                    <div class="search__close-content" aria-describedby="gnb__search--close">
-                                        <p>검색도우미 기능을 다시 켤때는
-                                            <br>검색창에서
-                                            <span class="search__close-arrow">검색도우미 열기</span>를 클릭하세요</p>
-                                    </div>
-                                </div>
+                            <div class="searchHelp">
+                                <ul>
+                                    <li>교육과정</li>
+                                    <li>콘텐츠</li>
+                                    <li>자동완성 키워드</li>
+                                </ul>
+                                <p>해당 교육과정이 없습니다.</p>
+                                <p class="searchend">검색도우미 끄기</p>
                             </div>
                         </div>
                         <ul class="utility">
@@ -311,163 +274,45 @@
                         </div>
                         <nav class="gnb_nav">
                             <!-- MENU::JSTL -->
-                            <ul class="demo-menus">
+                            <ul class="demo-menus" id="content_1depth">
                                 <li>
                                     <a 
-                                        class="nav2depth"
-                                        data-js="menu__anchor"
-                                        href="/course/em/corsList/corsListCommon?p_menu=OTQjTUFJTg==&amp;p_gubun=Qw==&amp;param2=102000000000000"
+                                        href="#"
                                         target="_self">훈련과정</a>
-
-                                    <div data-js="menu__panel-content" class="nav2depth" style="">
-                                        <div
-                                            class="scroll-wrapper nav__2depth scrollbar-inner"
-                                            style="position: relative; height: 400px;">
-                                            <div
-                                                data-js="menu__panel"
-                                                class="nav__2depth scrollbar-inner scroll-content"
-                                                style="height: 400px; margin-bottom: 0px; margin-right: 0px;">
-                                                <ul>
-                                                    <li>
-                                                        <a
-                                                            href="#"
-                                                            target="_self">국민 내일배움카드 훈련과정</a>
-                                                    </li>
-                                                    <li>
-                                                        <a
-                                                            href="#"
-                                                            target="_self">기업훈련 과정</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a
-                                                            href="#"
-                                                            target="_self">중장년특화훈련 과정</a>
-                                                    </li>
-                                                   
-                                                </ul>
-                                            </div>
-                                            <div class="scroll-element scroll-x" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="scroll-element scroll-y" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                                        <ul id="content_2depth">
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                        </ul>
 
                                 </li>
 
                                 <li>
                                     <a
-                                        data-js="menu__anchor"
-                                        href="/course/em/corsList/corsListCommon?p_menu=NDE3I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000"
+                                        href="#"
                                         target="_self">고객센터</a>
-
-                                    <div data-js="menu__panel-content" style="">
-                                        <div
-                                            class="scroll-wrapper nav__2depth scrollbar-inner"
-                                            style="position: relative; height: 101px;">
-                                            <div
-                                                data-js="menu__panel"
-                                                class="nav__2depth scrollbar-inner scroll-content"
-                                                style="height: 101px; margin-bottom: 0px; margin-right: 0px;">
-                                                <ul>
-
-                                                    <li>
-                                                        <a
-                                                            href="/course/em/corsList/corsListCommon?p_menu=NDE4I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127001000000000"
-                                                            target="_self">부동산/주식</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a
-                                                            href="/course/em/corsList/corsListCommon?p_menu=NDE5I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127002000000000"
-                                                            target="_self">사이드잡/창업</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="scroll-element scroll-x" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="scroll-element scroll-y" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                        <ul id="content_2depth">
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                        </ul>
                                 </li>
 
                                 <li>
                                     <a
-                                        data-js="menu__anchor"
-                                        href="/common/board/boardMstr/124387?p_menu=MzU2I01BSU4=&amp;p_gubun=Qw=="
+                                        href="#"
                                         target="_self">이벤트</a>
-
-                                    <div data-js="menu__panel-content" style="">
-                                        <div
-                                            class="scroll-wrapper nav__2depth scrollbar-inner"
-                                            style="position: relative; height: 151px;">
-                                            <div
-                                                data-js="menu__panel"
-                                                class="nav__2depth scrollbar-inner scroll-content"
-                                                style="height: 151px; margin-bottom: 0px; margin-right: 0px;">
-                                                <ul>
-
-                                                    <li>
-                                                        <a
-                                                            href="/common/board/boardMstr/124387?p_menu=MzU3I01BSU4=&amp;p_gubun=Qw=="
-                                                            target="_self">EVENT</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a
-                                                            href="/common/board/boardMstr/1000297?p_menu=MzU4I01BSU4=&amp;p_gubun=Qw=="
-                                                            target="_self">추천 클래스</a>
-                                                    </li>
-
-                                                    <li>
-                                                        <a
-                                                            href="https://www.multicampus.com/system/menu/iframe?p_url=L3B1Ymxpc2gvcGFnZXMvYWNhZGVteV9kYXRhc2NpZW5jZS5odG1s&amp;p_menu=MjY5I01BSU4=&amp;p_gubun=Qw==&amp;p_menu=MzY1I01BSU4=&amp;p_gubun=Qw=="
-                                                            target="_blank">Academy</a>
-                                                    </li>
-
-                                                </ul>
-                                            </div>
-                                            <div class="scroll-element scroll-x" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                            <div class="scroll-element scroll-y" style="">
-                                                <div class="scroll-element_outer">
-                                                    <div class="scroll-element_size"></div>
-                                                    <div class="scroll-element_track"></div>
-                                                    <div class="scroll-bar"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
+                                        <ul id="content_2depth">
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                        </ul>
                                 </li>
 
                             </ul>
@@ -479,7 +324,6 @@
 
         </header>
         <main>
-
             <section>
                 <div
                     id="content"

@@ -180,7 +180,7 @@ footer>div>div>ul>li:not(:last-child):before{
     right:0;
     width:0;
     height:10px;
-    border:1px solid #999999;
+    border-right:1px solid #999999;
 }
 footer>div>div>address{}
 

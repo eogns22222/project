@@ -23,7 +23,7 @@ main>div.trainingzone>div{
 main>div.trainingzone>div>form{
     margin:0 auto;
     padding:4.2rem 0;
-    width:71rem;
+    width:90rem;
     
 }
 main>div.trainingzone>div>form>p{
@@ -43,8 +43,8 @@ main>div.trainingzone>div>form>p>input{
     height:3.5rem;
 }
 main>div.trainingzone>div>form>p:nth-child(1)>input{
-    width:24rem;
-    margin-right:1rem;
+    width:24.8rem;
+    margin-right:0.2rem;
     
 }
 main>div.trainingzone>div>form>p>input::placeholder{
@@ -123,9 +123,10 @@ main>div.sub_nav>div>ul>li>a{
 }
 main>div.sub_nav>div>ul>li>a>i{}
 main>div.sub_nav>div>article{
-    position:relative;
-    display:flex;
-    align-items: center;
+    width:120rem;
+    /* position:relative; */
+    /* display:flex;
+    align-items: center; */
     padding:3rem 0;
     border-bottom:1px solid #ccc;
 }
@@ -133,13 +134,12 @@ main>div.sub_nav>div>article{
 /*  */
 main>div.sub_nav>div>article>div{
     display:flex;
-    width:100%;
     
 }
 main>div.sub_nav>div>article>div>ul{
     padding:0 4rem;
 }
-main>div.sub_nav>div>article>div>ul:not(:last-child){
+main>div.sub_nav>div>article>div>ul{
     border-right:1px solid #999;
 }
 main>div.sub_nav>div>article>div>ul>li{
