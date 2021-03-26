@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Insert title here(수강신청)</title>
         <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -16,31 +17,20 @@
         <link rel="stylesheet" href="resources/common/css/Enrolment.css">
         
         <style>
-            @font-face {
-                font-family: 'nanum';
-                src: url("fonts/NanumBarunGothicSubset.woff2");
-                src: local('※'), url("fonts/NanumBarunGothicSubset.woff") format('woff'), url("fonts/NanumBarunGothicSubset.ttf") format('truetype');
-            }
-
-            @font-face {
-                font-family: 'nanum2';
-                src: url("fonts/NanumBarunGothicBoldSubset.woff2");
-                src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
-            }
             html {
                 font-size:62.5%;
-                font-family: 'nanum', 'nanum2','sans-serif';
+                font-family: 'Noto Sans KR', sans-serif;
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <!-- date picker -->
+        
         <link rel="stylesheet" href="resources/common/js/jquery-ui.css">
 
-        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="resources/common/js/jquery-ui.js"></script>
 
-        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script src="resources/common/js/jquery-ui.min.js"></script>
 
-        <script src="./jquery-ui-1.12.1/datepicker-ko.js"></script>
+        <script src="resources/common/js/datepicker-ko.js"></script>
         <script>
             var flag = true;
             var len = 0;
@@ -66,14 +56,14 @@
                 });//nav end
 
 
-                $("#gnb_search").click(function(){
-                    $("div.searchHelp").css("display","block");
+                // $("#gnb_search").click(function(){
+                //     $("div.searchHelp").css("display","block");
                    
-                });
+                // });
 
-                $(".searchend").click(function(){
-                    $("div.searchHelp").css("display","none");
-                });
+                // $(".searchend").click(function(){
+                //     $("div.searchHelp").css("display","none");
+                // });
                 
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
@@ -209,7 +199,7 @@
                                     <input type="hidden" id="category" name="category" value="">
                                 </fieldset>
                             </form>
-                            <div class="searchHelp">
+                            <!-- <div class="searchHelp">
                                 <ul>
                                     <li>교육과정</li>
                                     <li>콘텐츠</li>
@@ -217,7 +207,7 @@
                                 </ul>
                                 <p>해당 교육과정이 없습니다.</p>
                                 <p class="searchend">검색도우미 끄기</p>
-                            </div>
+                            </div> -->
                         </div>
                         <ul class="utility">
 
@@ -390,19 +380,19 @@
                 <p class="import">필수항목입니다.</p>
                 <table>
                     <tr height="40">
-                        <td bgcolor="pink">훈련기관</td>
+                        <td>훈련기관</td>
                         <td>명진디지털 직업전문학교</td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">훈련과정</td>
+                        <td>훈련과정</td>
                         <td>컴퓨터기초실무(한글+엑셀+파워포인트)</td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">훈련일</td>
+                        <td>훈련일</td>
                         <td>2021-03-19 ~ 2021-04-22 (4회차)</td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">특화과정</td>
+                        <td>특화과정</td>
                         <td>-</td>
                     </tr>
                 </table>
@@ -410,30 +400,30 @@
                 <p class="import">필수항목입니다.</p>
                 <table>
                     <tr height="40">
-                        <td bgcolor="pink">성명</td>
-                        <td><input type="text" name="membername" id="membername"></td>
+                        <td>성명</td>
+                        <td><input type="text" name="membername" id="membername" readonly></td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">생년월일</td>
-                        <td><input type="text" name="birth" id="birth"></td>
+                        <td>생년월일</td>
+                        <td><input type="text" name="birth" id="birth" readonly></td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">연락처</td>
+                        <td>연락처</td>
                         <td>
                             <select name="phone" id="phonenom">
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="017">017</option>
                             </select> <span>-</span>
-                            <input type="text" name="tel" id="tel"> <span>-</span>
-                            <input type="text" name="tel" id="tel">
+                            <input type="text" name="tel" id="tel" required> <span>-</span>
+                            <input type="text" name="tel" id="tel" required>
                         </td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">이메일</td>
+                        <td>이메일</td>
                         <td>
-                            <input type="text" name="email" id="email"> <span>@</span>
-                            <input type="text" name="email" id="email2">
+                            <input type="text" name="email" id="email" required> <span>@</span>
+                            <input type="text" name="email" id="email2" required>
                             <select name="email" id="emailurl">
                                 <option value="직접입력">직접입력</option>
                             </select>
@@ -441,7 +431,7 @@
                         
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">최종학력</td>
+                        <td>최종학력</td>
                         <td>
                             <select name="grade" id="recommender">
                                 <option value="선택">선택</option>
@@ -450,7 +440,7 @@
                         </td>
                     </tr>
                     <tr height="40">
-                        <td bgcolor="pink">고용형태</td>
+                        <td>고용형태</td>
                         <td>
                             <input type="radio" name="finaleducation" id="finaleducation">
                             <label for="finaleducation">실업자</label>

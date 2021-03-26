@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>훈련과정</title>
+        <link
+            rel="shortcut icon"
+            type="image/x-con"
+            href="resources/common/imgs/favicon_24.png">
+            <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/common/css/reset.css">
+        <link rel="stylesheet" href="resources/common/css/common_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/cus0001.css">
+        <link rel="stylesheet" href="resources/common/css/layout._indigo.css">
+        <link rel="stylesheet" href="resources/common/css/header.css">
+        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
+        <link rel="stylesheet" href="resources/common/css/common.css">
+        <link rel="stylesheet" href="resources/common/css/trainingExample.css">
+        <style>
+            
+            html {
+                font-size:62.5%;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            main {
+                margin-bottom: 80px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+        <script>
+            var flag = true;
+            var len = 0;
+            $(function () {
+                $(".ic_arr").click(function () {
+                    if (flag) {
+                        $(".category_contents").css("display", "block");
+                        $("div.searchHelp").css("display", "none");
+                        flag = false;
+                    } else {
+                        $(".category_contents").css("display", "none");
+                        $("div.searchHelp").css("display", "none");
+                        flag = true;
+                    }
+
+                });
+
+                $(".category_contents")
+                    .children("ul")
+                    .children("li")
+                    .mouseover(function () {
+                        len = $(this).index();
+                        $(this)
+                            .addClass("on")
+                            .siblings()
+                            .removeClass("on");
+                        $("div.searchHelp").css("display", "none");
+                        // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
+                    }); //nav end
+
+                // $("#gnb_search").click(function () {
+                //     $("div.searchHelp").css("display", "block");
+
+                // });
+
+                // $(".searchend").click(function () {
+                //     $("div.searchHelp").css("display", "none");
+                // });
+
+                // $("html").click(function(){$("div.searchHelp").css("display","none");
+                // });
+
+            });
+        </script>
+
+    </head>
+    <body>
+        <header class="header">
+            <div class="gnb global is-ready">
+                <!-- Global Menu -->
+                <div class="gnb__inner">
+                    <ul class="utility">
+                        <li>
+                            <a class="text_link" href="loginf" target="_self">로그인</a>
+                        </li>
+                        <li>
+                            <a class="text_link" href="joinf" target="_self">회원가입</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
+                                target="_blank">마이페이지</a>
+                        </li>
+                        <!-- Quick Link -->
+
+                    </ul>
+                </div>
+            </div>
+
+            <!-- MENU::JSTL -->
+            <div class="gnb type2 is-ready" data-opentype="box">
+                <div class="gnb_row" style="height: 37px;">
+                    <div class="gnb__inner">
+                        <h1 class="h1_logo">
+                            <a href="home">
+                                <img src="resources/common/imgs/logo_01.png" alt="원스톱캠퍼스">
+                            </a>
+                        </h1>
+                        <div class="gnb_search_fd" data-js="gnb__total-search">
+                            <form
+                                name="topSearchForm"
+                                id="topSearchForm"
+                                method="get"
+                                onsubmit="return srchKwd(this);"
+                                action="/search">
+                                <input
+                                    type="hidden"
+                                    id="top_siteAppntSrcwdNm"
+                                    name="siteAppntSrcwdNm"
+                                    value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
+                                <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
+                                <input type="hidden" name="kwd" value="">
+
+                                <fieldset>
+                                    <legend class="screen--out">통합검색</legend>
+                                    <label class="skip" for="gnb_search">검색어 입력</label>
+                                    <input
+                                        type="text"
+                                        data-search-kwd="gnb_search"
+                                        id="gnb_search"
+                                        name="input_kwd"
+                                        role=""
+                                        class="inp_sch"
+                                        data-js="search__input"
+                                        value=""
+                                        autocomplete="off">
+                                    <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
+                                        <span class="screen--out">검색어 초기화</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
+                                        <span class="screen--out">검색도우미</span>
+                                        <span class="screen--out" data-js="helper-status">켜기</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
+                                    <input type="hidden" id="category" name="category" value="">
+                                </fieldset>
+                            </form>
+                            <!-- <div class="searchHelp">
+                                <ul>
+                                    <li>교육과정</li>
+                                    <li>콘텐츠</li>
+                                    <li>자동완성 키워드</li>
+                                </ul>
+                                <p>해당 교육과정이 없습니다.</p>
+                                <p class="searchend">검색도우미 끄기</p>
+                            </div> -->
+                        </div>
+                        <ul class="utility">
+
+                            <li class="gnb-utility" data-js="toggle">
+                                <button
+                                    type="button"
+                                    class="btn_gnb_cs"
+                                    data-js="toggle__anchor"
+                                    data-autoclose="true"
+                                    aria-controls="uiToggle-1"
+                                    aria-expanded="false"
+                                    aria-label="열기">고객지원센터</button>
+                                <div
+                                    class="list list--arrow list--bbs"
+                                    data-js="toggle__panel"
+                                    id="uiToggle-1"
+                                    aria-hidden="true"
+                                    style="display: none;">
+                                    <!-- Util Menu::INFO1 -->
+                                    <ul>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="gnb_row">
+                    <div class="gnb__inner">
+                        <div
+                            class="gnb_cate"
+                            data-js="gnb_cate"
+                            data-maxheigt="466"
+                            data-cate-json="/site/menu/selectCategoryMenuList"
+                            data-ajaxtype="POST">
+                            <button
+                                type="button"
+                                class="ic_arr"
+                                data-js="gnb_cate__anchor"
+                                aria-controls="uiToggle-2"
+                                aria-expanded="false"
+                                aria-label="열기">
+                                <span>
+                                    <span></span>
+                                </span>카테고리
+                            </button>
+                            <div class="category_contents">
+                                <ul>
+                                    <li class="on">
+                                        <a href="#">교원몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">제휴용
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">파트너몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">임직원몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb_nav">
+                            <!-- MENU::JSTL -->
+                            <ul class="demo-menus" id="content_1depth">
+                                <li>
+                                    <a href="#" target="_self">훈련과정</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_self">고객센터</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_self">이벤트</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- MENU::JSTL END -->
+                        </nav>
+                    </div>
+                </div>
+                <span class="gnb__arrow" aria-hidden="true"></span></div>
+
+        </header>
+        <main>
+            <div>
+                <h1>훈련과정 보기</h1>
+                <ul>
+                    <li>
+                        <a href="#">훈련과정 정보</a>
+                    </li>
+                    <li>
+                        <a href="#">훈련기관 정보</a>
+                    </li>
+                </ul>
+                <section class="content1">
+                    <p>명진디지털직업전문학교</p>
+                    <h1>컴퓨터기초실무(한글+엑셀+파워포인트)
+                        <i>모집중</i>
+                    </h1>
+                    <div>
+                        <article>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <th><p>훈련기관 직종별 취업률</p></th>
+                                        <td colspan="3">
+                                            <div class="prog">
+                                                <div class="progs" id="progressing">54%</div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>NCS직무분류</p></th>
+                                        <td><p>사무행정(02020302)</p></td>
+                                        <th><p>훈련유형</p></th>
+                                        <td><p>실업자계좌제</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>훈련기간</p></th>
+                                        <td><p>2021-03-19 ~ 2021-04-22 (4회차)</p></td>
+                                        <th><p>훈련시간</p></th>
+                                        <td><p>25일, 총100시간</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>담당자 전화번호</p></th>
+                                        <td><p>032-882-3908</p></td>
+                                        <th><p>담당자 성명</p></th>
+                                        <td><p>최다은</p></td>
+                                    </tr>
+                                    <tr>
+                                        <th><p>주관부처</p></th>
+                                        <td><p>인천고용센터</p></td>
+                                        <th><p>담당자 이메일</p></th>
+                                        <td><p>mjschool83@naver.com</p></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </article>
+                        <div>
+                            <p>훈련비
+                                <i>599,500</i>
+                            </p>
+                            <div>
+                                <button>수강신청</button>
+                                <button>스크랩</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="content2">
+                    <h1>훈련일정 및 수강신청 정보</h1>
+                    <div>
+                        <div>
+                            <p>1회차
+                                <i>모집마감</i>
+                            </p>
+                            <ul>
+                                <li>훈련기관
+                                    <span>2021-03-19 ~ 2021-04-22</span></li>
+                                <li>실제훈련비
+                                    <span>599,500</span></li>
+                                <li>정부지원금
+                                    <span>599,500</span></li>
+                            </ul>
+                            <p class="slide"><img src="" alt=""></p>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>모집인원</th>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <th>구직자/ 수강인원</th>
+                                    <td>23/23</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험가입 3개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험가입 6개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험미가입 3개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>훈련과정 상세정보</th>
+                                    <td><span>1회차 보러가기</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div>
+                            <p>2회차
+                                <i>모집마감</i>
+                            </p>
+                            <ul>
+                                <li>훈련기관
+                                    <span>2021-03-19 ~ 2021-04-22</span></li>
+                                <li>실제훈련비
+                                    <span>599,500</span></li>
+                                <li>정부지원금
+                                    <span>599,500</span></li>
+                            </ul>
+                            <p class="slide"><img src="" alt=""></p>
+                        </div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th>모집인원</th>
+                                    <td>24</td>
+                                </tr>
+                                <tr>
+                                    <th>구직자/ 수강인원</th>
+                                    <td>23/23</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험가입 3개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험가입 6개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>취업률 고용보험미가입 3개월</th>
+                                    <td>해당없음</td>
+                                </tr>
+                                <tr>
+                                    <th>훈련과정 상세정보</th>
+                                    <td><span>1회차 보러가기</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+                <section class="content3">
+                    <ul>
+                        <li><a href="#">훈련과정안내</a></li>
+                        <li><a href="#">훈련과정 문의</a></li>
+                    </ul>
+                    <h1>훈련과정 개요</h1>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th>훈련목표</th>
+                                <td>1. 부서 구성원들이 본연의 업무를 원활하게 수행할 수 있도록 사무행정 처리에 수반되는 컴퓨터기초 활용 능력을 함양할 수 있다.
+                                    2. 조직 내부와 외부에서 요청하거나 필요한 사무행정 업무를 지원하고 관리 할 수 있다.</td>
+                            </tr>
+                            <tr>
+                                <th>훈련대상 요건 선수학습</th>
+                                <td>해당사항없음</td>
+                            </tr>
+                            <tr>
+                                <th>훈련대상 요건 직무경력</th>
+                                <td>해당사항없음</td>
+                            </tr>
+                            <tr>
+                                <th>훈련대상 요건 기취득자격</th>
+                                <td>해당사항없음</td>
+                            </tr>
+                            <tr>
+                                <th>훈련대상 요건 훈련과정의 강점</th>
+                                <td>ㅇ워드프로세서 프로그램 활용 25시간, 스프레드시트 프로그램 활용 30시간, 데이터베이스 프로그램 활용 5시간, 프레젠테이션 프로그램 활용 20시간 배정.
+                                    ㅇ 20년이상의 경력을 갖춘 최우수의 강사진들의 체계적이고 전문적인 교육과 평가시스템을 바탕으로 훈련생들의 실력을 향상시키고 훈련목표에 도달시킴
+                                    ㅇ 인천 미추홀구 특성상 '18년 9월 연령별 인구현황 조사 결과에 따르면, 전체 거주자 41만명 중 50대 이상 고령자(16만명, 38.9%)가 다수 분포하며, 
+                                    컴퓨터 기초과정을 습득하여 재취업을 희망함
+                                    ㅇ 본교 대표 훈련과정으로 고령자 대상 맞춤형 체계화된 훈련생 상담 및 취업 연계 시스템으로 높은 훈련 수요자 만족도를 달성함</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div>
+                        <button>훈련내용보기</button>
+                        <button>이수제도보기</button>
+                    </div>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <div>
+                <h1>
+                    <a href="home"><img src="resources/common/imgs/logo_01.png" alt="로고"></a>
+                </h1>
+                <div>
+                    <ul>
+                        <li class="hidden">하단 유틸메뉴</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>이메일주소 무단수집거부</li>
+                        <li>제휴문의</li>
+                    </ul>
+                    <address class="hidden">
+                        <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612
+                            <span>고객센터:02 - 6269 - 0631</span></p>
+                        <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
+                    </address>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

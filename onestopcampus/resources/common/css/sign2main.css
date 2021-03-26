@@ -90,7 +90,7 @@ main>section>form>div.field>div>div>p>span{
     padding:1.4rem 0;
 }
 main>section>form>div.field>div>div>p>span.check{
-    display:inline-block;
+    display:none;
     padding-left:1rem;
     font-size:1.3rem;
     color:red;
@@ -144,6 +144,8 @@ main>section>form>div.field>div:nth-child(6)>div>label+p>input:nth-child(7){
 }
 main>section>form>div.field>div:nth-child(7)>div>label+p>input{
     margin-right:0.7rem;
+}
+main>section>form>div.field>div:nth-child(7)>div>label+p>input:nth-child(2){
     color:white;
 }
 main>section>form>div.field>div:nth-child(7)>div>label+p>input:nth-child(1){

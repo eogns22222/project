@@ -1,0 +1,86 @@
+main h1{
+    width: 100%;
+    height: 100%;
+    margin-top: 150px;
+    text-align: center;
+
+    font-size: 30px;
+    font-weight: 500;
+    color: #000;
+}
+main div:nth-child(2){
+    width: 1200px;
+    height: 45px;
+
+    padding: 50px 0 80px 0;
+    margin: 0 auto;
+}
+main div:nth-child(2)>ul{
+    display: flex;
+    justify-content: space-around;
+    height: 45px;
+    border-bottom:1px solid #999;
+    text-align: center;
+}
+main div:nth-child(2)>ul>li{
+    width: 600px;
+    font-size: 16px;
+    color: #000;
+    line-height: 40px;
+}
+main div:nth-child(2)>ul>.id{
+    background: #1428a0;
+}
+main div:nth-child(2)>ul>.pw{
+    border: 1px #000;
+}
+main div:nth-child(2)>ul>.id>a{
+    color: #fff;
+    font-weight: 800;
+}
+main div:nth-child(3){
+    margin: 0 auto;
+    width: 1200px;
+    margin-top: 80px;
+
+}
+main div:nth-child(3)>div{
+    margin:0 auto;
+    width:42.5rem;
+}
+main div:nth-child(3)>div>p:nth-child(1){
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+main div:nth-child(3)>div>p:nth-child(1)>span{
+    font-size: 18px;
+    font-weight: bold;
+    color: #1428a0;
+}
+main div:nth-child(3)>div>p:nth-child(2){
+    width: 420px;
+    margin-top: 40px;
+    padding: 20px;
+
+    border: 1px solid #ccc;
+    color: #000;
+}
+main div:nth-child(3)>div>p>img{
+    margin-top: 3px;
+    margin-right: 15px;
+}
+main div:nth-child(3)>div>form{
+   text-align: center;
+}
+main div:nth-child(3)>div>form>input{
+    margin: 70px 0 200px 0;
+    padding: 0 60px;
+    background: #1428a0;
+
+    text-align: center;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+}
+

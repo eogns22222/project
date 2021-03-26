@@ -106,11 +106,9 @@ main>form>table:nth-child(3)>tbody>tr>td:nth-child(2){
 }
 main>form>table:nth-child(6)>tbody>tr:nth-child(1)>td>input{
     width:10rem;
-    border:1px solid #999;
 }
 main>form>table:nth-child(6)>tbody>tr:nth-child(2)>td>input{
     width:15rem;
-    border:1px solid #999;
 }
 main>form>table>tbody>tr>td>input{
 

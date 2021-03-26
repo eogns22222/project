@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>osc_회원가입</title>
     <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -16,20 +17,9 @@
         <link rel="stylesheet" href="resources/common/css/sign2main.css">
     <!-- <link rel="stylesheet" href="../common/css/common.css"> -->
     <style>
-        @font-face {
-            font-family: 'nanum';
-            src: url("fonts/NanumBarunGothicSubset.woff2");
-            src: local('※'), url("fonts/NanumBarunGothicSubset.woff") format('woff'), url("fonts/NanumBarunGothicSubset.ttf") format('truetype');
-        }
-
-        @font-face {
-            font-family: 'nanum2';
-            src: url("fonts/NanumBarunGothicBoldSubset.woff2");
-            src: local('※'), url("fonts/NanumBarunGothicBoldSubset.woff") format('woff'), url("fonts/NanumBarunGothicBoldSubset.ttf") format('truetype');
-        }
         html {
-            font-size:62.5%;
-            font-family: 'nanum', 'nanum2','sans-serif';
+                font-size:62.5%;
+                font-family: 'Noto Sans KR', sans-serif;
         }
         main{
             margin-bottom:80px;
@@ -40,6 +30,20 @@
        var flag = true;
             var len = 0;
             $(function(){
+                $('.nik_pwd').focusout(function(){
+                    var passwd = $("#passwd").val();
+                    var pwd2 = $("#pwd2").val();
+                    if(pwd =! "" || pwd2 != ""){
+                        if(passwd == pwd2){
+                            $('#next').removeAttr('disabled');
+                            $(".check").css("display","none");
+                        }else{
+                            $(".check").css("display","inline-block");
+                            $('#next').attr('disabled','disabled');
+                        }
+                    }
+                });
+                
                 $(".ic_arr").click(function(){
                     if(flag){
                         $(".category_contents").css("display","block");
@@ -61,14 +65,14 @@
                 });//nav end
 
 
-                $("#gnb_search").click(function(){
-                    $("div.searchHelp").css("display","block");
+                // $("#gnb_search").click(function(){
+                //     $("div.searchHelp").css("display","block");
                    
-                });
+                // });
 
-                $(".searchend").click(function(){
-                    $("div.searchHelp").css("display","none");
-                });
+                // $(".searchend").click(function(){
+                //     $("div.searchHelp").css("display","none");
+                // });
                 
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
@@ -88,6 +92,27 @@
         //     $("#return2").css("display","none");
         //     $("#return").css("display","inline-block");
         // });
+    </script>
+    <script>
+
+        // $(function(){
+           
+        //     $(".next").click(function(){
+        //         if(pwd == pwd2){
+        //             $(".check").css("display","none");
+                    
+        //         }else{
+        //             $(".check").css("display","inline-block");
+        //             $(this).attr("return false");
+        //         }
+        //     });
+            
+        // });
+        
+        
+        
+
+        
     </script>
 </head>
 <body>
@@ -170,7 +195,7 @@
                                 <input type="hidden" id="category" name="category" value="">
                             </fieldset>
                         </form>
-                        <div class="searchHelp">
+                        <!-- <div class="searchHelp">
                             <ul>
                                 <li>교육과정</li>
                                 <li>콘텐츠</li>
@@ -178,7 +203,7 @@
                             </ul>
                             <p>해당 교육과정이 없습니다.</p>
                             <p class="searchend">검색도우미 끄기</p>
-                        </div>
+                        </div> -->
                     </div>
                     <ul class="utility">
 
@@ -356,7 +381,7 @@
                         <div>
                             <label for="nm" class="mainLabel"><span>*</span> 이름</label>
                             <p>
-                                <input type="text" id="nm" name="name" class="nik_pwd">
+                                <input type="text" id="nm" name="name" class="nik_pwd" required>
                             </p>
                         </div>
                     </div>
@@ -364,8 +389,8 @@
                         <div>
                             <label for="nikname" class="mainLabel"><span>*</span> 아이디</label>
                             <p>
-                                <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$" class="nik_pwd">
-                                <input type="submit" value="중복확인" class="btn2 btnCheck" style="background-color: #1428A0; ">
+                                <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$" class="nik_pwd" required>
+                                <input type="submit" value="중복확인" class="btn2 btnCheck" style="background-color: #1428A0; " required>
                                 <span>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</span>
                             </p>
                         </div>
@@ -374,7 +399,7 @@
                         <div>
                             <label for="pwd" class="mainLabel"><span>*</span> 비밀번호</label>
                             <p>
-                                <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <input type="password" id="passwd" name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,24}$" class="nik_pwd" required>
                                 <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
                             </p>
                         </div>
@@ -383,7 +408,7 @@
                         <div>
                             <label for="pwd2" class="mainLabel"><span>*</span> 비밀번호 재입력</label>
                             <p>
-                                <input type="password" id="pwd2" name="pwd2" pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$" class="nik_pwd">
+                                <input type="password" id="pwd2" name="pwd2" class="nik_pwd nik_pwd2" required>
                                 <span class="check">비밀번호가 일치하지 않습니다.</span>
                             </p>
                         </div>
@@ -455,9 +480,9 @@
                                     <option value="30">30</option>
                                     <option value="31">31</option>
                                 </select>
-                                <input type="radio" name="f_male" id="man">
+                                <input type="radio" name="f_male" id="man" required>
                                 <label for="f_male">남</label>
-                                <input type="radio" name="f_male" id="woman">
+                                <input type="radio" name="f_male" id="woman" required>
                                 <label for="f_male">여</label>
                             </p>
                         </div>
@@ -466,9 +491,9 @@
                         <div>
                             <label for="user_name" class="mainLabel"><span>*</span> 이메일</label>
                             <p>
-                                <input type="text" id="user_name" name="user_name">
+                                <input type="text" id="user_name" name="user_name" required>
                                 <label for="user_email">@</label>
-                                <input type="text" id="user_email" name="user_email">
+                                <input type="text" id="user_email" name="user_email" required>
                                 <select name="user_email" id="user_email">
                                     <option value="write">직접입력</option>
                                 </select>
@@ -482,7 +507,7 @@
                         <div>
                             <label for="email_check" class="mainLabel"><span>*</span> 이메일 인증</label>
                             <p>
-                                <input type="email" id="email_check" name="email_check">
+                                <input type="email" id="email_check" name="email_check"  required>
                                 <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
                             </p>
                         </div>
@@ -536,7 +561,7 @@
                 </div>
                 <div class="btn">
                     <input type="submit" value="이전">
-                    <input type="submit" value="다음">
+                    <input type="submit" value="다음" id='next' disabled>
                 </div>
             </form>
 
