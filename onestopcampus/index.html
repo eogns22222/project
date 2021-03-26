@@ -20,6 +20,7 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
+            div:focus{outline: none;}
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -48,14 +49,14 @@
                 });//nav end
 
 
-                // $("#gnb_search").click(function(){
-                //     $("div.searchHelp").css("display","block");
+                $("#gnb_search").click(function(){
+                    $("div.searchHelp").css("display","block");
                    
-                // });
+                });
 
-                // $(".searchend").click(function(){
-                //     $("div.searchHelp").css("display","none");
-                // });
+                $(".searchend").click(function(){
+                    $("div.searchHelp").css("display","none");
+                });
                 
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
@@ -146,7 +147,7 @@
                                     <input type="hidden" id="category" name="category" value="">
                                 </fieldset>
                             </form>
-                            <!-- <div class="searchHelp">
+                            <div class="searchHelp">
                                 <ul>
                                     <li>교육과정</li>
                                     <li>콘텐츠</li>
@@ -154,7 +155,7 @@
                                 </ul>
                                 <p>해당 교육과정이 없습니다.</p>
                                 <p class="searchend">검색도우미 끄기</p>
-                            </div> -->
+                            </div>
                         </div>
                         <ul class="utility">
 
@@ -270,11 +271,9 @@
                                         href="#"
                                         target="_self">훈련과정</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">훈련과정</a></li>
-                                            <li><a href="#">훈련과정</a></li>
-                                            <li><a href="#">훈련과정</a></li>
-                                            <li><a href="#">훈련과정</a></li>
-                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">국민내일배움카드 훈련과정</a></li>
+                                            <li><a href="#">기업 훈련과정</a></li>
+                                            <li><a href="#">중장년특화 훈련과정</a></li>
                                         </ul>
 
                                 </li>
@@ -284,11 +283,11 @@
                                         href="#"
                                         target="_self">고객센터</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">고객센터</a></li>
-                                            <li><a href="#">고객센터</a></li>
-                                            <li><a href="#">고객센터</a></li>
-                                            <li><a href="#">고객센터</a></li>
-                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">공지사항</a></li>
+                                            <li><a href="#">자주 묻는 질문</a></li>
+                                            <li><a href="#">1:1문의</a></li>
+                                            <li><a href="#">기관찾기</a></li>
+                                            <li><a href="#">제휴문의</a></li>
                                         </ul>
                                 </li>
 
@@ -297,11 +296,8 @@
                                         href="#"
                                         target="_self">이벤트</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">이벤트</a></li>
-                                            <li><a href="#">이벤트</a></li>
-                                            <li><a href="#">이벤트</a></li>
-                                            <li><a href="#">이벤트</a></li>
-                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">진행중 이벤트</a></li>
+                                            <li><a href="#">종료된 이벤트</a></li>
                                         </ul>
                                 </li>
 

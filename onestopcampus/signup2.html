@@ -30,20 +30,6 @@
        var flag = true;
             var len = 0;
             $(function(){
-                $('.nik_pwd').focusout(function(){
-                    var passwd = $("#passwd").val();
-                    var pwd2 = $("#pwd2").val();
-                    if(pwd =! "" || pwd2 != ""){
-                        if(passwd == pwd2){
-                            $('#next').removeAttr('disabled');
-                            $(".check").css("display","none");
-                        }else{
-                            $(".check").css("display","inline-block");
-                            $('#next').attr('disabled','disabled');
-                        }
-                    }
-                });
-                
                 $(".ic_arr").click(function(){
                     if(flag){
                         $(".category_contents").css("display","block");
@@ -65,14 +51,14 @@
                 });//nav end
 
 
-                // $("#gnb_search").click(function(){
-                //     $("div.searchHelp").css("display","block");
+                $("#gnb_search").click(function(){
+                    $("div.searchHelp").css("display","block");
                    
-                // });
+                });
 
-                // $(".searchend").click(function(){
-                //     $("div.searchHelp").css("display","none");
-                // });
+                $(".searchend").click(function(){
+                    $("div.searchHelp").css("display","none");
+                });
                 
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
@@ -109,7 +95,21 @@
             
         // });
         
-        
+        // $(function(){
+            
+        //     $("input").keyup(function(){
+        //         var pwd = $("#pwd").val();
+        //         var pwd2 = $("#pwd2").val();
+        //         if(pwd =! "" || pwd2 != ""){
+        //             if(pwd == pwd2){
+        //                 $(".next").removeAttr("disabled");
+        //             }else{
+        //                 $(".next").attr("disabled", "disabled");
+        //             }
+        //         }
+        //     });
+        // });// 미완성
+
         
 
         
@@ -195,7 +195,7 @@
                                 <input type="hidden" id="category" name="category" value="">
                             </fieldset>
                         </form>
-                        <!-- <div class="searchHelp">
+                        <div class="searchHelp">
                             <ul>
                                 <li>교육과정</li>
                                 <li>콘텐츠</li>
@@ -203,7 +203,7 @@
                             </ul>
                             <p>해당 교육과정이 없습니다.</p>
                             <p class="searchend">검색도우미 끄기</p>
-                        </div> -->
+                        </div>
                     </div>
                     <ul class="utility">
 
@@ -399,7 +399,7 @@
                         <div>
                             <label for="pwd" class="mainLabel"><span>*</span> 비밀번호</label>
                             <p>
-                                <input type="password" id="passwd" name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,24}$" class="nik_pwd" required>
+                                <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,24}$" class="nik_pwd" required>
                                 <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
                             </p>
                         </div>
@@ -561,7 +561,7 @@
                 </div>
                 <div class="btn">
                     <input type="submit" value="이전">
-                    <input type="submit" value="다음" id='next' disabled>
+                    <input type="submit" value="다음" class="next" disabled>
                 </div>
             </form>
 

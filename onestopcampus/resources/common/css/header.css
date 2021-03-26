@@ -63,10 +63,10 @@ nav.gnb_nav>ul#content_1depth>li>ul#content_2depth{
 	display:none;
 	position:absolute;
 	top:5rem;
-	right:-2rem;
+	left:-1rem;
 	padding-left:2rem;
 	padding-top:1rem;
-	width:15.1rem;
+	width:27rem;
 	height:30rem;
 	border:1px solid #999;
 	border-top:0 none;
@@ -77,9 +77,9 @@ nav.gnb_nav>ul#content_1depth>li>ul#content_2depth:before{
 	top:-1.1rem;
 	right:-0.1rem;
 	content:"";
-	width:15rem;
+	width:27rem;
 	height:2rem;
-	background:url("../imgs/arr_gnb_2depth_box.png") no-repeat 50% 0;
+	background:url("../imgs/arr_gnb_2depth_box2.png") no-repeat 120% 0;
 }
 nav.gnb_nav>ul#content_1depth>li:not(:nth-child(1))>ul#content_2depth{
 	
@@ -296,7 +296,7 @@ div.category_contents>ul>li.on>ul{
 	display:block;
 }
 
-.gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 2px; }
+.gnb_cate .ic_arr > span { width: 19px; height: 18px; position: absolute; left: 0; top: 4px; }
 
 .gnb_cate .ic_arr > span > span:before { content: ''; display: block; width: 18px; height: 1px; background-color: #000; position: absolute; left: 0; top: 12px; }
 

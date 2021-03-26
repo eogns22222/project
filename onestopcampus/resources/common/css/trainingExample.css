@@ -8,8 +8,6 @@ main>div{
 main>div>h1{
     margin-bottom:5rem;
     font-size:3rem;
-    text-align: center;
-    color:#000;
 }
 main>div>ul{
     display:flex;
@@ -35,7 +33,6 @@ main>div>ul>li:nth-child(1)>a{
 
 /*content1*/
 main>div>section.content1{
-    margin-bottom:6rem;
     padding:5rem 3rem;
     border:1px solid #ccc;
 }
@@ -61,13 +58,12 @@ main>div>section.content1>h1>i{
     vertical-align: middle;
 }
 main>div>section.content1>div{
-    position:relative;
     display:flex;
     justify-content: space-between;
 }
 main>div>section.content1>div>article{
     padding-top:3rem;
-    border-top:2px solid #ccc;
+    border-top:1px solid #ccc;
 }
 main>div>section.content1>div>article>table{
     font-size:1.4rem;
@@ -100,47 +96,16 @@ main>div>section.content1>div>article>table>tbody>tr>td>p{
     text-align: start;
 }
 main>div>section.content1>div>div{
-    position:absolute;
-    right:0;
-    bottom:0; 
-    padding-left:2rem;
-    padding-top:2rem;
     width:24rem;
-    border-left:2px solid #ccc;
 }
-main>div>section.content1>div>div>p{
-    margin-bottom:3rem;
-    font-size:1.4rem;
-    line-height: 2.2rem;
-    color:#000;
-}
-main>div>section.content1>div>div>p>i{
-    float: right;
-    font-size:2.2rem;
-    
-}
+main>div>section.content1>div>div>p{}
+main>div>section.content1>div>div>p>i{}
 main>div>section.content1>div>div>div{}
-main>div>section.content1>div>div>div>button{
-    width:10rem;
-    height:2.5rem;
-    
-    font-size:1.4rem;
-    border:1px solid #ccc;
-}
-main>div>section.content1>div>div>div>button:nth-child(1){
-    margin:0 0.5rem;
-    color:white;
-    background: #1428A0;
-}
+main>div>section.content1>div>div>div>button{}
 
 /*content2*/
-main>div>section.content2{
-    
-}
-main>div>section.content2>h1{
-    font-size:2.2rem;
-    color:#000;
-}
+main>div>section.content2{}
+main>div>section.content2>h1{}
 main>div>section.content2>div{}
 main>div>section.content2>div>div{}
 main>div>section.content2>div>div>p:nth-child(1){}

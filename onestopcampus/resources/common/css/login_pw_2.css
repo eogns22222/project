@@ -55,9 +55,6 @@ main div:nth-child(3)>form>p:nth-child(1)>input{
     margin-top: 80px;
     margin-left: 55px;
 }
-main div>form>p>input::placeholder{
-    padding-left:1rem;
-}
 main div:nth-child(3)>form>p:nth-child(2)>input{
     margin: 25px 0;
     margin-left: 20px;

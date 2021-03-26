@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>비밀번호 찾기</title>
-    <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
     <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
@@ -14,7 +13,7 @@
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <link rel="stylesheet" href="resources/common/css/common.css">
         <link rel="stylesheet" href="resources/common/css/sub01.css">
-        <link rel="stylesheet" href="resources/common/css/login_pw_2.css"><link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="resources/common/css/login_pw_3.css"><link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,62 +26,40 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             var enter = true
+            $(function () {
+                $(".gnb_nav")
+                    .children("ul.demo-menus")
+                    .children("li")
+                    .children("a")
+                    .mouseover(function () {
+                        $(this)
+                            .next()
+                            .addClass("is-active")
+                            .addClass("has-scroll");
 
-            $(function(){
-                $('.nik_pwd').focusout(function(){
-                    var passwd = $("#passwd").val();
-                    var pwd2 = $("#pwd2").val();
-                    if(pwd =! "" || pwd2 != ""){
-                        if(passwd == pwd2){
-                            $('#next').removeAttr('disabled');
-                            $(".check").css("display","none");
-                        }else{
-                            $('#next').attr('disabled','disabled');
-                            $(".check").css("display","block");
-                        }
-                    }
+                    })
+            });
+            $(function () {
+                $(".gnb_nav")
+                    .children("ul.demo-menus")
+                    .children("li")
+                    .children("a")
+                    .mouseleave(function () {
+                        $(this)
+                            .next()
+                            .removeClass("is-active")
+                            .removeClass("has-scroll");
+
+                    })
+            }); // gnbover
+
+            $(function () {
+                $(".ic_arr").click(function () {
+                    $(this)
+                        .children("#uiToggle-2")
+                        .css("display", "block");
                 });
             });
-            
-
-            var flag = true;
-            var len = 0;
-            $(function(){
-                $(".ic_arr").click(function(){
-                    if(flag){
-                        $(".category_contents").css("display","block");
-                        $("div.searchHelp").css("display","none");
-                        flag = false;
-                    }else{
-                        $(".category_contents").css("display","none");
-                        $("div.searchHelp").css("display","none");
-                        flag = true;
-                    }
-                    
-                });
-
-                $(".category_contents").children("ul").children("li").mouseover(function(){
-                    len = $(this).index();
-                    $(this).addClass("on").siblings().removeClass("on");
-                    $("div.searchHelp").css("display","none");
-                    // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
-                });//nav end
-
-
-                // $("#gnb_search").click(function(){
-                //     $("div.searchHelp").css("display","block");
-                   
-                // });
-
-                // $(".searchend").click(function(){
-                //     $("div.searchHelp").css("display","none");
-                // });
-                
-                // $("html").click(function(){
-                //     $("div.searchHelp").css("display","none");
-                // });
-
-            }); 
         </script>
 </head>
 <body>
@@ -92,10 +69,16 @@
             <div class="gnb__inner">
                 <ul class="utility">
                     <li>
-                        <a class="text_link" href="loginf" target="_self">로그인</a>
+                        <a
+                            class="text_link"
+                            href="/loginMemberMain?p_menu=MjYyI0dMT0JBTA==&amp;p_gubun=Qw=="
+                            target="_self">로그인</a>
                     </li>
                     <li>
-                        <a class="text_link" href="joinf" target="_self">회원가입</a>
+                        <a
+                            class="text_link"
+                            href="/memberJoinSetType?p_menu=MzEyI0dMT0JBTA==&amp;p_gubun=Qw=="
+                            target="_self">회원가입</a>
                     </li>
                     <li>
                         <a
@@ -104,7 +87,7 @@
                             target="_blank">마이페이지</a>
                     </li>
                     <!-- Quick Link -->
-
+                    
                 </ul>
             </div>
         </div>
@@ -114,8 +97,10 @@
             <div class="gnb_row" style="height: 37px;">
                 <div class="gnb__inner">
                     <h1 class="h1_logo">
-                        <a href="home">
-                            <img src="resources/common/imgs/logo_01.png" alt="원스톱캠퍼스">
+                        <a href="/main">
+                            <img
+                                src="resources/common/imgs/logo_01.png"
+                                alt="원스톱캠퍼스">
                         </a>
                     </h1>
                     <div class="gnb_search_fd" data-js="gnb__total-search">
@@ -157,15 +142,51 @@
                                 <input type="hidden" id="category" name="category" value="">
                             </fieldset>
                         </form>
-                        <!-- <div class="searchHelp">
-                            <ul>
-                                <li>교육과정</li>
-                                <li>콘텐츠</li>
-                                <li>자동완성 키워드</li>
-                            </ul>
-                            <p>해당 교육과정이 없습니다.</p>
-                            <p class="searchend">검색도우미 끄기</p>
-                        </div> -->
+                        <div class="search__auto" data-js="gnb__total-panel" data-related="1">
+                            <div class="search__auto-container" data-js="gnb__total-content">
+                                <div class="search__auto-content">
+                                    <p class="search__auto-tit">최근 검색키워드</p>
+                                    <p class="search__auto-empty">최근 검색어 내역이 없습니다.</p>
+                                </div>
+                                <div class="search__auto-content" data-js="related-list">
+                                    <p class="search__auto-tit">추천 검색키워드</p>
+                                    <ul class="search__auto-bestlist">
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#데이터</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#파이썬</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#머신러닝</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#LIVE</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#엑셀</span></button>
+                                        </li>
+                                        <li>
+                                            <button type="button" class="gnb__addbtn">
+                                                <span class="o-label__round o-label__round--chip">#링크드인러닝</span></button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="search__auto-foot">
+                                <button type="button" data-js="search__help-close" id="gnb__search--close">검색도우미 끄기</button>
+                                <div class="search__close-content" aria-describedby="gnb__search--close">
+                                    <p>검색도우미 기능을 다시 켤때는
+                                        <br>검색창에서
+                                        <span class="search__close-arrow">검색도우미 열기</span>를 클릭하세요</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <ul class="utility">
 
@@ -224,184 +245,512 @@
                                 <span></span>
                             </span>카테고리
                         </button>
-                        <div class="category_contents">
-                            <ul>
-                                <li class="on">
-                                    <a href="#">교원몰
-                                        <ul>
+                        <div
+                            class="gnb_cate__menu"
+                            data-opentype="tab"
+                            data-js="gnb_cate__panel"
+                            id="uiToggle-2"
+                            aria-hidden="true"
+                            style="display: none; top: 20px;">
+                            <div class="gnb_cate__menuinner" data-js="panel-cat">
+                                <div
+                                    class="scroll-wrapper gnb_cate__scroll-area scrollbar-inner"
+                                    style="position: relative;">
+                                    <div
+                                        class="gnb_cate__scroll-area scrollbar-inner scroll-content"
+                                        data-js="cate__scroll"
+                                        style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+                                        <ul class="gnb_cate__scroll-content gnb_cate__1depth" role="tablist">
                                             <li>
-                                                <a href="#">데스크탑</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item is-active"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="130"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130000000000000')"
+                                                    id="js-cate-1"
+                                                    role="tab">학습유형별</button>
                                             </li>
                                             <li>
-                                                <a href="#">정수기</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="101"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=MzQzI01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=101000000000000')"
+                                                    id="js-cate-2"
+                                                    role="tab">IT/프로그래밍</button>
                                             </li>
                                             <li>
-                                                <a href="#">스탠드정수기</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="128"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDIzI01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=128000000000000')"
+                                                    id="js-cate-3"
+                                                    role="tab">데이터사이언스</button>
                                             </li>
                                             <li>
-                                                <a href="#">공기청정기</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="104"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=MzA3I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=104000000000000')"
+                                                    id="js-cate-4"
+                                                    role="tab">비즈니스</button>
                                             </li>
                                             <li>
-                                                <a href="#">비데</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="103"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=Mzg5I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=103000000000000')"
+                                                    id="js-cate-5"
+                                                    role="tab">외국어</button>
                                             </li>
                                             <li>
-                                                <a href="#">연수기</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="102"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDI5I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=102000000000000')"
+                                                    id="js-cate-6"
+                                                    role="tab">자격/공인교육</button>
                                             </li>
                                             <li>
-                                                <a href="#">안마의자</a>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">제휴용
-                                        <ul>
-                                            <li>
-                                                <a href="#">데스크탑2</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="127"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDE5I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=127000000000000')"
+                                                    id="js-cate-7"
+                                                    role="tab">라이프/머니</button>
                                             </li>
                                             <li>
-                                                <a href="#">정수기2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">스탠드정수기2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">공기청정기2</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">비데</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">연수기</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">안마의자</a>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">파트너몰
-                                        <ul>
-                                            <li>
-                                                <a href="#">데스크탑3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">정수기3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">스탠드정수기3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">공기청정기</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">비데</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">연수기</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">안마의자</a>
-                                            </li>
-                                        </ul>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">임직원몰
-                                        <ul>
-                                            <li>
-                                                <a href="#">데스크탑4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">정수기4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">스탠드정수기4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">공기청정기4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">비데4</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">연수기</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">안마의자</a>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__category-anchor"
+                                                    data-cat="106"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDA4I0dMT0JBTA==&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=106000000000000')"
+                                                    id="js-cate-8"
+                                                    role="tab">국비무료교육</button>
                                             </li>
                                         </ul>
-                                    </a>
-                                </li>
-                            </ul>
+                                    </div>
+                                    <div class="scroll-element scroll-x" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="scroll-element scroll-y" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="gnb_cate__menuinner"
+                                data-js="panel-subcate"
+                                aria-labelledby="js-cate-1"
+                                role="tabpanel">
+                                <div
+                                    class="scroll-wrapper gnb_cate__scroll-area scrollbar-inner"
+                                    style="position: relative;">
+                                    <div
+                                        class="gnb_cate__scroll-area scrollbar-inner scroll-content"
+                                        data-js="cate__scroll"
+                                        style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+                                        <ul class="gnb_cate__scroll-content gnb_cate__1depth" role="tablist">
+                                            <li>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item is-active"
+                                                    data-js="gnb_cate__subcate-anchor"
+                                                    data-cat="130001"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001000000000')"
+                                                    id="js-cate-sub-1"
+                                                    role="tab">실시간 Live</button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__subcate-anchor"
+                                                    data-cat="130002"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130002000000000')"
+                                                    id="js-cate-sub-2"
+                                                    role="tab">온라인</button>
+                                            </li>
+                                            <li>
+                                                <button
+                                                    type="button"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__subcate-anchor"
+                                                    data-cat="130003"
+                                                    onclick="window.location.href=('/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130003000000000')"
+                                                    id="js-cate-sub-3"
+                                                    role="tab">오프라인</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="scroll-element scroll-x" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="scroll-element scroll-y" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="gnb_cate__menuinner"
+                                data-js="panel-menu"
+                                aria-labelledby="js-cate-sub-1"
+                                role="tabpanel">
+                                <div
+                                    class="scroll-wrapper gnb_cate__scroll-area scrollbar-inner"
+                                    style="position: relative;">
+                                    <div
+                                        class="gnb_cate__scroll-area scrollbar-inner scroll-content"
+                                        data-js="cate__scroll"
+                                        style="height: auto; margin-bottom: 0px; margin-right: 0px; max-height: 0px;">
+                                        <ul class="gnb_cate__scroll-content gnb_cate__1depth" role="tablist">
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001001000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">IT/프로그래밍</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001002000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">데이터사이언스</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001003000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">비즈니스</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001004000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">외국어</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001005000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">자격/공인교육</a>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    href="/course/em/corsList/corsListCommon?p_menu=NDI4I01BSU4=&amp;p_gubun=Qw==&amp;p_cate=Y&amp;param2=130001006000000"
+                                                    class="gnb_cate__item"
+                                                    data-js="gnb_cate__menu-anchor"
+                                                    data-cat="">라이프/머니</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="scroll-element scroll-x" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                    <div class="scroll-element scroll-y" style="">
+                                        <div class="scroll-element_outer">
+                                            <div class="scroll-element_size"></div>
+                                            <div class="scroll-element_track"></div>
+                                            <div class="scroll-bar"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <nav class="gnb_nav">
                         <!-- MENU::JSTL -->
-                        <ul class="demo-menus" id="content_1depth">
+                        <ul class="demo-menus">
                             <li>
-                                <a href="#" target="_self">훈련과정</a>
-                                <ul id="content_2depth">
-                                    <li>
-                                        <a href="#">훈련과정</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">훈련과정</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">훈련과정</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">훈련과정</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">훈련과정</a>
-                                    </li>
-                                </ul>
+                                <a
+                                    data-js="menu__anchor"
+                                    href="/course/em/corsList/corsListCommon?p_menu=OTQjTUFJTg==&amp;p_gubun=Qw==&amp;param2=102000000000000"
+                                    target="_self">훈련과정</a>
+
+                                <div data-js="menu__panel-content" style="">
+                                    <div
+                                        class="scroll-wrapper nav__2depth scrollbar-inner"
+                                        style="position: relative; height: 400px;">
+                                        <div
+                                            data-js="menu__panel"
+                                            class="nav__2depth scrollbar-inner scroll-content"
+                                            style="height: 400px; margin-bottom: 0px; margin-right: 0px;">
+                                            <ul>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=NDE2I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102023000000000"
+                                                        target="_self">ProDS</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MzI4I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102020000000000"
+                                                        target="_self">CCNA</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjA2I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102002000000000"
+                                                        target="_self">CISA</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjA4I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102004000000000"
+                                                        target="_self">CISSP</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MzM4I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102021000000000"
+                                                        target="_self">Cloudera</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjA5I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102005000000000"
+                                                        target="_self">CompTIA</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjEwI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102006000000000"
+                                                        target="_self">Elastic</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjI0I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102008000000000"
+                                                        target="_self">ITIL</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjEyI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102009000000000"
+                                                        target="_self">Microsoft</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjEzI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102010000000000"
+                                                        target="_self">ORACLE</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjE0I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102011000000000"
+                                                        target="_self">PMP</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjE2I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102012000000000"
+                                                        target="_self">RedHat</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjE3I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102013000000000"
+                                                        target="_self">SAP</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjE4I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102014000000000"
+                                                        target="_self">SAS</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjE5I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102015000000000"
+                                                        target="_self">VMware</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjIwI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102016000000000"
+                                                        target="_self">데이터분석</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjIxI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102017000000000"
+                                                        target="_self">리눅스재단</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=MjIzI01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102019000000000"
+                                                        target="_self">정보보안기사/산업기사</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=NDI5I01BSU4=&amp;p_gubun=Qw==&amp;param2=102000000000000&amp;param3=102024000000000"
+                                                        target="_self">정보처리기사/산업기사</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="scroll-element scroll-x" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-element scroll-y" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
 
                             </li>
 
                             <li>
-                                <a href="#" target="_self">고객센터</a>
-                                <ul id="content_2depth">
-                                    <li>
-                                        <a href="#">고객센터</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">고객센터</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">고객센터</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">고객센터</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">고객센터</a>
-                                    </li>
-                                </ul>
+                                <a
+                                    data-js="menu__anchor"
+                                    href="/course/em/corsList/corsListCommon?p_menu=NDE3I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000"
+                                    target="_self">고객센터</a>
+
+                                <div data-js="menu__panel-content" style="">
+                                    <div
+                                        class="scroll-wrapper nav__2depth scrollbar-inner"
+                                        style="position: relative; height: 101px;">
+                                        <div
+                                            data-js="menu__panel"
+                                            class="nav__2depth scrollbar-inner scroll-content"
+                                            style="height: 101px; margin-bottom: 0px; margin-right: 0px;">
+                                            <ul>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=NDE4I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127001000000000"
+                                                        target="_self">부동산/주식</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/course/em/corsList/corsListCommon?p_menu=NDE5I01BSU4=&amp;p_gubun=Qw==&amp;param2=127000000000000&amp;param3=127002000000000"
+                                                        target="_self">사이드잡/창업</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="scroll-element scroll-x" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-element scroll-y" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </li>
 
                             <li>
-                                <a href="#" target="_self">이벤트</a>
-                                <ul id="content_2depth">
-                                    <li>
-                                        <a href="#">이벤트</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">이벤트</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">이벤트</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">이벤트</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">이벤트</a>
-                                    </li>
-                                </ul>
+                                <a
+                                    data-js="menu__anchor"
+                                    href="/common/board/boardMstr/124387?p_menu=MzU2I01BSU4=&amp;p_gubun=Qw=="
+                                    target="_self">이벤트</a>
+
+                                <div data-js="menu__panel-content" style="">
+                                    <div
+                                        class="scroll-wrapper nav__2depth scrollbar-inner"
+                                        style="position: relative; height: 151px;">
+                                        <div
+                                            data-js="menu__panel"
+                                            class="nav__2depth scrollbar-inner scroll-content"
+                                            style="height: 151px; margin-bottom: 0px; margin-right: 0px;">
+                                            <ul>
+
+                                                <li>
+                                                    <a
+                                                        href="/common/board/boardMstr/124387?p_menu=MzU3I01BSU4=&amp;p_gubun=Qw=="
+                                                        target="_self">EVENT</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="/common/board/boardMstr/1000297?p_menu=MzU4I01BSU4=&amp;p_gubun=Qw=="
+                                                        target="_self">추천 클래스</a>
+                                                </li>
+
+                                                <li>
+                                                    <a
+                                                        href="https://www.multicampus.com/system/menu/iframe?p_url=L3B1Ymxpc2gvcGFnZXMvYWNhZGVteV9kYXRhc2NpZW5jZS5odG1s&amp;p_menu=MjY5I01BSU4=&amp;p_gubun=Qw==&amp;p_menu=MzY1I01BSU4=&amp;p_gubun=Qw=="
+                                                        target="_blank">Academy</a>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                        <div class="scroll-element scroll-x" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                        <div class="scroll-element scroll-y" style="">
+                                            <div class="scroll-element_outer">
+                                                <div class="scroll-element_size"></div>
+                                                <div class="scroll-element_track"></div>
+                                                <div class="scroll-bar"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
                             </li>
 
                         </ul>
@@ -423,13 +772,12 @@
         <div>
             <form action="">
                 <p>새 비밀번호
-                    <input type="password" name="nikname" id="passwd" class="nik_pwd"  pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,24}$" placeholder="새 비밀번호를 입력하세요." required>
+                    <input type="text" name="nikname" id="">
                 </p>
                 <p>새 비밀번호 확인
-                    <input type="password" name="idd" id="pwd2" class="nik_pwd" placeholder="새 비밀번호를 한번 더 입력하세요." required>
+                    <input type="text" name="id" id="">
                 </p>
-                <p class="check" style="display: none;">비밀번호가 일치하지 않습니다.</p>
-                <input type="submit" value="확인" id="next" disabled>
+                <input type="submit" value="확인">
             </form>
         </div>
     </main>

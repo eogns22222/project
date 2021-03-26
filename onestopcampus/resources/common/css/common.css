@@ -785,7 +785,7 @@
 
 .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide.active .item:before { border-color: rgba(33, 39, 125, 0); border-bottom-color: #21277d; border-width: 11px; margin-left: -11px; }
 
-.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide .item { height: 75px; padding: 20px 0px 0; text-align: center; background: #f2f3f8; }
+.portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide .item { height: 75px; padding: 20px 0px 0; text-align: center; }
 
 .portlet_wrap .portlet_row .b2cpromotionbig2 .slider-nav .slick-slide .item strong { font-size: 15px; color: #484bc0; }
 
