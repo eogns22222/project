@@ -49,18 +49,84 @@
                 });//nav end
 
 
-                $("#gnb_search").click(function(){
-                    $("div.searchHelp").css("display","block");
+                // $("#gnb_search").click(function(){
+                //     $("div.searchHelp").css("display","block");
                    
-                });
+                // });
 
-                $(".searchend").click(function(){
-                    $("div.searchHelp").css("display","none");
-                });
+                // $(".searchend").click(function(){
+                //     $("div.searchHelp").css("display","none");
+                // });
                 
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
                 // });
+                var banner = {idx:1,len5:$(".bannerImg").children("p").length,auto:setInterval(middle,5000),sTop:true}
+
+                function middle(){
+                    banner.idx++
+                    if(banner.idx > (banner.len5)-1){
+                        banner.idx = 0;
+                    }
+                    make();
+                }
+                function make(){
+                    $(".bannerImg").children("p").eq(banner.idx).addClass("on").
+                    siblings().removeClass("on");
+                    $(".btnpage").children("li").eq(banner.idx).addClass("on")
+                    .siblings().removeClass("on");
+                    $(".btnsubnav").children("ul").children("li").eq(banner.idx)
+                    .addClass("on").siblings().removeClass("on");
+                }
+                
+                $(".btnpage").children("li").click(function(){
+                    clearInterval(banner.auto);
+                    var len2 = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $(".bannerImg").children("p").eq(len2).addClass("on").
+                    siblings().removeClass("on");
+                    $(".btnsubnav").children("ul").children("li").eq(len2)
+                    .addClass("on").siblings().removeClass("on");
+                    banner.auto = setInterval(middle,5000);
+                });
+
+                $(".prev").click(function(){
+                    clearInterval(banner.auto);
+                    var len3 = $(".bannerImg").children("p.on").index();
+                    $(".bannerImg").children("p").eq(len3-1).addClass("on")
+                    .siblings().removeClass("on");
+                    $(".btnpage").children("li").eq(len3-1).addClass("on")
+                    .siblings().removeClass("on");
+                    $(".btnsubnav").children("ul").children("li").eq(len3-1)
+                    .addClass("on").siblings().removeClass("on");
+                    banner.auto = setInterval(middle,5000);
+                });
+                $(".next").click(function(){
+                    clearInterval(banner.auto);
+                    var len3 = $(".bannerImg").children("p.on").index();
+                    len3++
+                    if(len3 > 4){
+                        len3 = 0;
+                    }
+                    $(".bannerImg").children("p").eq(len3).addClass("on")
+                    .siblings().removeClass("on");
+                    $(".btnpage").children("li").eq(len3).addClass("on")
+                    .siblings().removeClass("on");
+                    $(".btnsubnav").children("ul").children("li").eq(len3)
+                    .addClass("on").siblings().removeClass("on");
+                    banner.auto = setInterval(middle,5000);
+                });
+                
+                $(".btnsubnav").children("ul").children("li").click(function(){
+                    clearInterval(banner.auto);
+                    var len4 = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $(".bannerImg").children("p").eq(len4).addClass("on").
+                    siblings().removeClass("on");
+                    $(".btnpage").children("li").eq(len4).addClass("on")
+                    .siblings().removeClass("on");
+                    banner.auto = setInterval(middle,5000);
+                });
 
             }); 
 
@@ -102,7 +168,7 @@
                 <div class="gnb_row" style="height: 37px;">
                     <div class="gnb__inner">
                         <h1 class="h1_logo">
-                            <a href="/main">
+                            <a href="home">
                                 <img
                                     src="resources/common/imgs/logo_01.png"
                                     alt="원스톱캠퍼스">
@@ -147,7 +213,7 @@
                                     <input type="hidden" id="category" name="category" value="">
                                 </fieldset>
                             </form>
-                            <div class="searchHelp">
+                            <!-- <div class="searchHelp">
                                 <ul>
                                     <li>교육과정</li>
                                     <li>콘텐츠</li>
@@ -155,7 +221,7 @@
                                 </ul>
                                 <p>해당 교육과정이 없습니다.</p>
                                 <p class="searchend">검색도우미 끄기</p>
-                            </div>
+                            </div> -->
                         </div>
                         <ul class="utility">
 
@@ -271,9 +337,11 @@
                                         href="#"
                                         target="_self">훈련과정</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">국민내일배움카드 훈련과정</a></li>
-                                            <li><a href="#">기업 훈련과정</a></li>
-                                            <li><a href="#">중장년특화 훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
+                                            <li><a href="#">훈련과정</a></li>
                                         </ul>
 
                                 </li>
@@ -283,11 +351,11 @@
                                         href="#"
                                         target="_self">고객센터</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">공지사항</a></li>
-                                            <li><a href="#">자주 묻는 질문</a></li>
-                                            <li><a href="#">1:1문의</a></li>
-                                            <li><a href="#">기관찾기</a></li>
-                                            <li><a href="#">제휴문의</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
+                                            <li><a href="#">고객센터</a></li>
                                         </ul>
                                 </li>
 
@@ -296,8 +364,11 @@
                                         href="#"
                                         target="_self">이벤트</a>
                                         <ul id="content_2depth">
-                                            <li><a href="#">진행중 이벤트</a></li>
-                                            <li><a href="#">종료된 이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
+                                            <li><a href="#">이벤트</a></li>
                                         </ul>
                                 </li>
 
@@ -324,714 +395,33 @@
 
                         <!-- s: content work -->
 
-                        <div class="portlet_row">
-                            <div class="portlet_cont">
-
-                                <!-- s: B2C 프로모션 빅포틀릿2 -->
-                                <div>
-                                    <div
-                                        class="b2cpromotionbig2 tuning_top p12"
-                                        id="b2cPromotionBigDiv_20190128111103000003">
-                                        <div
-                                            class="slider-for slick-initialized slick-slider slick-dotted"
-                                            id="b2cPromotionBig2PortletContent_20190128111103000003"
-                                            role="complementary">
-                                            <div aria-live="polite" aria-atomic="true" class="slick-ada screen--out">Item 5 of 7</div>
-                                            <div class="slick-list draggable">
-                                                <div class="slick-track" style="opacity: 1; width: 8372px;">
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="0"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide00"
-                                                        style="width: 1196px; position: relative; left: 0px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control00">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '77', 'https://www.multicampus.com/common/board/boardMstr/1000297?bltndSno=12529061', '4월 교육추천', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/uNothCKWW4zJ8OVH6cat/5yNBeDHq2V6SVrQaGF3cVpfXu"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="1"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide01"
-                                                        style="width: 1196px; position: relative; left: -1196px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control01">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '102', 'https://el.multicampus.com/de_common/mc/page/etc/classnow/index.html', 'HOT, 비대면교육', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/yAs9xX3AX3xoaMDtQZZk/QxLi3EBKgzPsFCSPTOHej8Srb"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="2"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide02"
-                                                        style="width: 1196px; position: relative; left: -2392px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control02">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '101', 'https://www.multicampus.com/common/board/boardMstr/1000297?bltndSno=12348629', '비즈니스 인기과정', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/iNsP8T7U47pkdyMoYXRt/sq5mOqNsvv653SSzadTs9rrlc"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="3"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide03"
-                                                        style="width: 1196px; position: relative; left: -3588px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control03">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '94', 'https://www.multicampus.com/em/enrolment/courseDetai?p_menu=NzUjU1VC&amp;p_gubun=Qw==&amp;corsCd=EA03YJ&amp;corsYr=2020&amp;corsDgrCd=10002', '똑똑한 주식투자', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/Lmyxp2bxEabaFEIg194k/bS4MLe2rwzz9aEMDxHhQd1IQ5"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-current slick-active"
-                                                        data-slick-index="4"
-                                                        aria-hidden="false"
-                                                        tabindex="0"
-                                                        role="tabpanel"
-                                                        id="slick-slide04"
-                                                        style="width: 1196px; position: relative; left: -4784px; top: 0px; z-index: 999; opacity: 1;"
-                                                        aria-describedby="slick-slide-control04">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '45', 'https://www.multicampus.com/common/board/boardMstr/1000297?bltndSno=10005686', 'AI 인재 되기', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="0"><img
-                                                                    src="/system/attach/image/VYB5TNmvlGrkqenpC369/xfDGvWbJmVY9sK8KJF56XVIVS"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="5"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide05"
-                                                        style="width: 1196px; position: relative; left: -5980px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control05">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '92', 'https://bit.ly/39yKC8U', 'K-Digital 무료취업교육', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/Mc7mnaJ4Pn3DOQhHsXH0/kD3bNx94zCOXWeBRzQT0injgZ"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide"
-                                                        data-slick-index="6"
-                                                        aria-hidden="true"
-                                                        tabindex="-1"
-                                                        role="tabpanel"
-                                                        id="slick-slide06"
-                                                        style="width: 1196px; position: relative; left: -7176px; top: 0px; z-index: 998; opacity: 0; transition: opacity 500ms ease 0s;"
-                                                        aria-describedby="slick-slide-control06">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <a
-                                                                    href="#none"
-                                                                    onclick="javascript:fnClickImage('_blank', '20190830152236000001', '106', 'https://www.multicampus.com/system/menu/iframe?p_url=aHR0cHM6Ly9lbC5tdWx0aWNhbXB1cy5jb20vZGVfY29tbW9uL2IyYy9ldmVudC8yMDIxLzAyLzAyMjRfMS8wMjI0XzEuaHRtbA==&amp;htmlHghtPixelSize=1300&amp;p_menu=NDMxI01BSU4=&amp;p_gubun=Qw==', '단체 수강할인', 'null', 'null', 'null', 'null', 'Y', 'Y'); return false;"
-                                                                    tabindex="-1"><img
-                                                                    src="/system/attach/image/gUy77uYy8OfcjPr4PO9h/PcsaQ7sPDdiDAio15k0BlCKLV"
-                                                                    alt=""></a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <ul class="slick-dots" role="tablist" style="">
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control00"
-                                                        aria-controls="slick-slide00"
-                                                        aria-label="Show slide 1 of 7">
-                                                        <span class="slick-dots__number">1</span></button>
-                                                </li>
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control01"
-                                                        aria-controls="slick-slide01"
-                                                        aria-label="Show slide 2 of 7">
-                                                        <span class="slick-dots__number">2</span></button>
-                                                </li>
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control02"
-                                                        aria-controls="slick-slide02"
-                                                        aria-label="Show slide 3 of 7">
-                                                        <span class="slick-dots__number">3</span></button>
-                                                </li>
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control03"
-                                                        aria-controls="slick-slide03"
-                                                        aria-label="Show slide 4 of 7">
-                                                        <span class="slick-dots__number">4</span></button>
-                                                </li>
-                                                <li class="slick-dots__item slick-active" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control04"
-                                                        aria-controls="slick-slide04"
-                                                        aria-label="Show slide 5 of 7"
-                                                        aria-selected="true">
-                                                        <span class="slick-dots__number">5</span></button>
-                                                </li>
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control05"
-                                                        aria-controls="slick-slide05"
-                                                        aria-label="Show slide 6 of 7">
-                                                        <span class="slick-dots__number">6</span></button>
-                                                </li>
-                                                <li class="slick-dots__item" role="presentation">
-                                                    <button
-                                                        type="button"
-                                                        class="slick-dots__anchor"
-                                                        role="tab"
-                                                        id="slick-slide-control06"
-                                                        aria-controls="slick-slide06"
-                                                        aria-label="Show slide 7 of 7">
-                                                        <span class="slick-dots__number">7</span></button>
-                                                </li>
-                                            </ul>
-                                            <ul class="page_btn">
-                                                <li class="hidden">페이지버튼</li>
-                                                <li><img src="resources/common/imgs/btn_left.png" alt="왼쪽으로"></li>
-                                                <li><img src="resources/common/imgs/btn_right.png" alt="오른쪽으로"></li>
-                                            </ul>
-                                        </div>
-                                        <button
-                                            type="button"
-                                            class="slick_play play"
-                                            id="b2cPromotionBig2Button_20190128111103000003">Pause</button>
-                                        <div
-                                            class="slider-nav cnt_7 slick-initialized slick-slider"
-                                            id="b2cPromotionBig2PortletButton_20190128111103000003"
-                                            role="complementary">
-                                            <div aria-live="polite" aria-atomic="true" class="slick-ada screen--out">Item 5 of 7</div>
-                                            <div class="slick-list draggable">
-                                                <div class="slick-track" style="opacity: 1; width: 35000px; left: -334px;">
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="0"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    4월 교육추천
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="1"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    HOT, 비대면교육
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="2"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    비즈니스 인기과정
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="3"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    똑똑한 주식투자
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide active slick-current slick-active"
-                                                        data-slick-index="4"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    AI 인재 되기
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="5"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    K-Digital 무료취업교육
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div
-                                                        class="slick-slide slick-active"
-                                                        data-slick-index="6"
-                                                        aria-hidden="false"
-                                                        tabindex="0">
-                                                        <div>
-                                                            <div class="item" style="width: 100%; display: inline-block;">
-                                                                <p>
-                                                                    단체 수강할인
-                                                                </p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- e: B2C 프로모션 빅포틀릿2 -->
-
-                                <script type="text/javascript">
-                                    Snap.VARS.IS_HTML = false;
-
-                                    var sitePotltMenuTyp = "M";
-                                    var potltStdilSeq = 1;
-
-                                    fn_setB2cPromotionBig2PortletData();
-
-                                    function fn_setB2cPromotionBig2PortletData() {
-
-                                        var paramData = {
-                                            potltStdilSeq: potltStdilSeq,
-                                            sitePotltMenuTyp: sitePotltMenuTyp
-                                        };
-
-                                        var ajaxOption = {
-                                            url: "/portlet/om/b2cPromotionBig2PortletData",
-                                            method: "POST",
-                                            handleResponse: fn_getB2cPromotionBig2PortletDataCallback,
-                                            paramData: paramData,
-                                            dataType: "json"
-                                        };
-
-                                        Snap.ajaxCall(ajaxOption);
-                                    }
-
-                                    function fn_getB2cPromotionBig2PortletDataCallback(data) {
-                                        var portletCount = data.portletContents.length;
-                                        var contentStatement = "";
-                                        var buttonStatement = "";
-
-                                        var b2cPromotionBigEl = $("#b2cPromotionBigDiv_20190128111103000003")
-                                            .parents(
-                                                "div"
-                                            )
-                                            .eq(2);
-
-                                        if (portletCount != 0) {
-                                            if (data.portletContents[0].potltBgColorCd != null) {
-                                                var b2cPromotionBigBgColor = "#" + data
-                                                    .portletContents[0]
-                                                    .potltBgColorCd;
-                                                $(b2cPromotionBigEl).css('background', b2cPromotionBigBgColor);
-                                            }
-
-                                            for (var i = 0; i < portletCount; i++) {
-                                                if (data.portletContents[i].cntntTyp == 'I') {
-                                                    if (data.portletContents[i].genLinkScNm == '_self') {
-                                                        if (data.portletContents[i].attchYn == 'Y') {
-                                                            contentStatement += "<div class='item'><a href='#none' onclick=\"javascript:fnClickImage('_self', '" +
-                                                                    data
-                                                                .portletContents[i]
-                                                                .potltNo + "', '" + data
-                                                                .portletContents[i]
-                                                                .potltBannSno + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannUrl + "', \'\', \'\', \'\', \'\', \'\', \'\', \'\'); return false;\"><img " +
-                                                                            "src='/system/attach/image/" + data
-                                                                .portletContents[i]
-                                                                .imgAttchFileId + "/" + data
-                                                                .portletContents[i]
-                                                                .momFileId + "' alt=''></a></div>";
-                                                        } else {
-                                                            contentStatement += "<div class='item'><a href='#none' onclick=\"javascript:fnClickImage('_self', '" +
-                                                                    data
-                                                                .portletContents[i]
-                                                                .potltNo + "', '" + data
-                                                                .portletContents[i]
-                                                                .potltBannSno + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannUrl + "', \'\', \'\', \'\', \'\', \'\', \'\', \'\'); return false;\"><img " +
-                                                                            "src='" + data
-                                                                .portletContents[i]
-                                                                .bannImgUrl + "' alt=''></a></div>";
-                                                        }
-                                                    } else {
-                                                        if (data.portletContents[i].attchYn == 'Y') {
-                                                            contentStatement += "<div class='item'><a href='#none' onclick=\"javascript:fnClickImage('_blank', " +
-                                                                    "'" + data
-                                                                .portletContents[i]
-                                                                .potltNo + "', '" + data
-                                                                .portletContents[i]
-                                                                .potltBannSno + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannUrl + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannNm + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppWidPixelPstn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppWidPixelSize + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppHghtPixelPstn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppHghtPixelSize + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppScrbrUseYn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppRsizePsbYn + "'); return false;\"><img src='/system/attach/image/" + data
-                                                                .portletContents[i]
-                                                                .imgAttchFileId + "/" + data
-                                                                .portletContents[i]
-                                                                .momFileId + "' alt=''></a></div>";
-                                                        } else {
-                                                            contentStatement += "<div class='item'><a href='#none' onclick=\"javascript:fnClickImage('_blank', " +
-                                                                    "'" + data
-                                                                .portletContents[i]
-                                                                .potltNo + "', '" + data
-                                                                .portletContents[i]
-                                                                .potltBannSno + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannUrl + "', '" + data
-                                                                .portletContents[i]
-                                                                .bannNm + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppWidPixelPstn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppWidPixelSize + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppHghtPixelPstn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppHghtPixelSize + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppScrbrUseYn + "', '" + data
-                                                                .portletContents[i]
-                                                                .ppRsizePsbYn + "'); return false;\"><img src='" + data
-                                                                .portletContents[i]
-                                                                .bannImgUrl + "' alt=''></a></div>";
-                                                        }
-                                                    }
-                                                } else if (data.portletContents[i].cntntTyp == 'C') {
-                                                    contentStatement += "<div class='item'>" + data
-                                                        .portletContents[i]
-                                                        .scrptCntnt + "</div>";
-                                                } else {
-                                                    contentStatement += "<div class='item'><p><iframe src='" + data
-                                                        .portletContents[i]
-                                                        .srnHtmlPathNm + "' width='1200' height='370' frameborder='0'></iframe></p></di" +
-                                                                "v>";
-                                                }
-
-                                                buttonStatement += "<div class=\"item\"><p> " + data
-                                                    .portletContents[i]
-                                                    .bannNm + " </p></div>";
-                                            }
-
-                                            $("#b2cPromotionBig2PortletContent_20190128111103000003").append(
-                                                contentStatement
-                                            );
-                                            $("#b2cPromotionBig2PortletButton_20190128111103000003").append(
-                                                buttonStatement
-                                            );
-                                        } else {
-                                            // $("#b2cPromotionBig2Button_" + "20190128111103000003").remove();
-                                            b2cPromotionBigEl.addClass("d-none");
-                                        }
-
-                                        fn_afterDrawB2cPromotionBig2Portlet(
-                                            data.portletContents[0].rolinGapTmHms,
-                                            "20190128111103000003"
-                                        );
-                                    }
-
-                                    //7) B2C 프로모션 빅포틀릿2 (스크립트)
-
-                                    function fn_afterDrawB2cPromotionBig2Portlet(rolinGapTmHms, sel) {
-                                        // if (('.b2cpromotionbig2 .slider-nav').length)
-                                        if (("#b2cPromotionBig2PortletButton_" + sel).length) {
-                                            // $('.b2cpromotionbig2 .slider-nav').addClass('cnt_' + $('.b2cpromotionbig2
-                                            // .slider-nav .item').length);
-                                            $("#b2cPromotionBig2PortletButton_" + sel).addClass(
-                                                'cnt_' + $('.b2cpromotionbig2 .slider-nav .item').length
-                                            );
-                                        }
-                                        // $('.b2cpromotionbig2 .slider-for').slick(
-                                        $("#b2cPromotionBig2PortletContent_" + sel).slick({
-                                            autoplay: true,
-                                            autoplaySpeed: (rolinGapTmHms * 1000),
-                                            slidesToShow: 1,
-                                            slidesToScroll: 1,
-                                            dots: true,
-                                            arrows: false, // 수정 190213 ver1 : arrows 속성 추가
-                                            fade: true,
-                                            // asNavFor: '.slider-nav'
-                                            asNavFor: "#b2cPromotionBig2PortletButton_" + sel,
-                                            pauseOnFocus: false, //dot 클릭후 autoplay 안되는 것 해결
-                                            pauseOnHover: false
-                                        });
-                                        // $('.b2cpromotionbig2 .slider-nav').slick(
-                                        $("#b2cPromotionBig2PortletButton_" + sel).slick({
-                                            autoplay: true,
-                                            autoplaySpeed: (rolinGapTmHms * 1000),
-                                            slidesToShow: 7, // 190107/채희진/최대개수 7개 변경
-                                            slidesToScroll: 1,
-                                            dots: false,
-                                            arrows: false,
-                                            focusOnSelect: true,
-                                            variableWidth: true,
-                                            // asNavFor: '.slider-for'
-                                            asNavFor: "#b2cPromotionBig2PortletContent_" + sel,
-                                            centerMode: false,
-                                            useTransform: false
-                                        });
-                                        // $('.b2cpromotionbig2 .slider-nav .slick-current').addClass('active');
-                                        $("#b2cPromotionBig2PortletButton_" + sel + ' .slick-current').addClass(
-                                            'active'
-                                        );
-                                        // $('.b2cpromotionbig2 .slider-nav').on('beforeChange', function(event, slick,
-                                        // currentSlide, nextSlide)
-                                        $("#b2cPromotionBig2PortletButton_" + sel).on(
-                                            'beforeChange',
-                                            function (event, slick, currentSlide, nextSlide) {
-                                                // var $slickSlide = $('.slider-nav .slick-slide');
-                                                var $slickSlide = $(
-                                                    "#b2cPromotionBig2PortletButton_" + sel + ' .slick-slide'
-                                                );
-                                                $slickSlide
-                                                    .eq(currentSlide)
-                                                    .removeClass('active');
-                                                $slickSlide
-                                                    .eq(nextSlide)
-                                                    .addClass('active');
-                                            }
-                                        );
-                                        // $(document).on('click', '.b2cpromotionbig2 .slick_play', function(e)
-                                        $(document).on('click', "#b2cPromotionBig2Button_" + sel, function (e) {
-                                            e.preventDefault();
-                                            e.stopPropagation();
-                                            var $this = $(this);
-                                            $this.toggleClass('play');
-                                            if ($this.hasClass('play')) {
-                                                // $('.slider-for').slick('slickPlay');
-                                                $("#b2cPromotionBig2PortletContent_" + sel).slick('slickPlay');
-                                                $this.text('Pause');
-                                            } else {
-                                                // $('.slider-for').slick('slickPause');
-                                                $("#b2cPromotionBig2PortletContent_" + sel).slick('slickPause');
-                                                $this.text('Play');
-                                            }
-                                        });
-                                    }
-
-                                    function fnClickImage(
-                                        type,
-                                        potltNo,
-                                        potltBannSno,
-                                        bannUrl,
-                                        bannNm,
-                                        ppWidPixelPstn,
-                                        ppWidPixelSize,
-                                        ppHghtPixelPstn,
-                                        ppHghtPixelSize,
-                                        ppScrbrUseYn,
-                                        ppRsizePsbYn
-                                    ) {
-                                        if (type == "_self") {
-                                            var paramData = {
-                                                potltNo: potltNo,
-                                                potltBannSno: potltBannSno,
-                                                bannUrl: bannUrl,
-                                                bannNm: bannNm,
-                                                ppWidPixelPstn: ppWidPixelPstn,
-                                                ppWidPixelSize: ppWidPixelSize,
-                                                ppHghtPixelPstn: ppHghtPixelPstn,
-                                                ppHghtPixelSize: ppHghtPixelSize,
-                                                ppScrbrUseYn: ppScrbrUseYn,
-                                                ppRsizePsbYn: ppRsizePsbYn
-                                            };
-
-                                            var ajaxOption = {
-                                                url: "/portlet/om/insertImageClickLog",
-                                                method: "POST",
-                                                handleResponse: fnClickB2CSelfImage,
-                                                paramData: paramData,
-                                                dataType: "json"
-                                            };
-
-                                            Snap.ajaxCall(ajaxOption);
-                                        } else {
-                                            var paramData = {
-                                                potltNo: potltNo,
-                                                potltBannSno: potltBannSno,
-                                                bannUrl: bannUrl,
-                                                bannNm: bannNm,
-                                                ppWidPixelPstn: ppWidPixelPstn,
-                                                ppWidPixelSize: ppWidPixelSize,
-                                                ppHghtPixelPstn: ppHghtPixelPstn,
-                                                ppHghtPixelSize: ppHghtPixelSize,
-                                                ppScrbrUseYn: ppScrbrUseYn,
-                                                ppRsizePsbYn: ppRsizePsbYn
-                                            };
-
-                                            var ajaxOption = {
-                                                url: "/portlet/om/insertImageClickLog",
-                                                method: "POST",
-                                                handleResponse: fnClickB2CBlankImage,
-                                                paramData: paramData,
-                                                dataType: "json"
-                                            };
-
-                                            Snap.ajaxCall(ajaxOption);
-                                        }
-                                    }
-
-                                    function fnClickB2CSelfImage(data) {
-                                        var pageTransferOption = {
-                                            method: "GET",
-                                            url: data
-                                                .paramData[0]
-                                                .bannUrl
-                                        };
-
-                                        Snap.pageTransfer(pageTransferOption);
-                                    }
-
-                                    function fnClickB2CBlankImage(data) {
-                                        var scrollbarOption = "yes";
-                                        var resizableOption = "yes";
-
-                                        if (data.paramData[0].ppScrbrUseYn == "N") {
-                                            scrollbarOption = "no";
-                                        }
-
-                                        if (data.paramData[0].ppRsizePsbYn == "N") {
-                                            resizableOption = "no";
-                                        }
-
-                                        var option = "";
-
-                                        option += "scrollbars=" + scrollbarOption + ", resizable=" + resizableOption;
-
-                                        if (data.paramData[0].ppWidPixelSize != "null") {
-                                            option += ", width=" + data
-                                                .paramData[0]
-                                                .ppWidPixelSize;
-                                        }
-
-                                        if (data.paramData[0].ppHghtPixelSize != "null") {
-                                            option += ", height=" + data
-                                                .paramData[0]
-                                                .ppHghtPixelSize;
-                                        }
-
-                                        if (data.paramData[0].ppWidPixelPstn != "null") {
-                                            option += ", left=" + data
-                                                .paramData[0]
-                                                .ppWidPixelPstn;
-                                        }
-
-                                        if (data.paramData[0].ppHghtPixelPstn != "null") {
-                                            option += ", right=" + data
-                                                .paramData[0]
-                                                .ppHghtPixelPstn;
-                                        }
-
-                                        if (scrollbarOption == "yes" && resizableOption == "yes") {
-                                            option += ", status=yes, menubar=yes, toolbar=yes, location=yes";
-                                        }
-
-                                        window.open(data.paramData[0].bannUrl, data.paramData[0].bannNm, option);
-                                    }
-                                </script>
-
+                        <div class="bannercontainer">
+                            <div class="bannerImg">
+                                <p>1<img src="" alt=""></p>
+                                <p class="on">2<img src="" alt=""></p>
+                                <p>3<img src="" alt=""></p>
+                                <p>4<img src="" alt=""></p>
+                                <p>5<img src="" alt=""></p>
+                            </div>
+                            <ul class="btnpage">
+                                <li></li>
+                                <li class="on"></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class="btnprevnext">
+                                <li class="prev"><img src="resources/common/imgs/btn_left.png" alt="prev"></li>
+                                <li class="next"><img src="resources/common/imgs/btn_right.png" alt="next"></li>
+                            </ul>
+                            <div class="btnsubnav">
+                                <ul>
+                                    <li>Hot Issue</li>
+                                    <li class="on">Hot Issue</li>
+                                    <li>Hot Issue</li>
+                                    <li>Hot Issue</li>
+                                    <li>Hot Issue</li>
+                                </ul>
                             </div>
                         </div>
 

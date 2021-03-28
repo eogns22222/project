@@ -1,13 +1,18 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>osc_회원가입</title>
-    <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="resources/common/css/reset.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>osc_회원가입</title>
+        <link
+            rel="shortcut icon"
+            type="image/x-con"
+            href="resources/common/imgs/favicon_24.png">
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="resources/common/css/reset.css">
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
         <link rel="stylesheet" href="resources/common/css/layout._indigo.css">
@@ -15,575 +20,697 @@
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <link rel="stylesheet" href="resources/common/css/common.css">
         <link rel="stylesheet" href="resources/common/css/sign2main.css">
-    <!-- <link rel="stylesheet" href="../common/css/common.css"> -->
-    <style>
-        html {
-                font-size:62.5%;
+        <!-- <link rel="stylesheet" href="../common/css/common.css"> -->
+        <style>
+            html {
+                font-size: 62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
-        }
-        main{
-            margin-bottom:80px;
-        }
-    </style>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-       var flag = true;
-            var len = 0;
+            }
+            main {
+                margin-bottom: 80px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
             $(function(){
-                $(".ic_arr").click(function(){
-                    if(flag){
-                        $(".category_contents").css("display","block");
-                        $("div.searchHelp").css("display","none");
-                        flag = false;
-                    }else{
-                        $(".category_contents").css("display","none");
-                        $("div.searchHelp").css("display","none");
-                        flag = true;
+                
+                $(".nik_pwd").focusout(function(){
+                    var pwssdd = $("#pwssdd").val();
+                    var pwssdd2 = $("#pwssdd2").val();
+                    if(pwssdd != "" || pwssdd2 != "" ){
+                        
+                        if(pwssdd == pwssdd2){
+                            $("#go").removeAttr('disabled');
+                            $(".check").css("display","none");
+                        }else{
+                            // alert("ddd");
+                            $(".check").css("display","inline-block");
+                            $("#go").attr('disabled','disabled');
+                        }
                     }
-                    
-                });
-
-                $(".category_contents").children("ul").children("li").mouseover(function(){
-                    len = $(this).index();
-                    $(this).addClass("on").siblings().removeClass("on");
-                    $("div.searchHelp").css("display","none");
-                    // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
-                });//nav end
-
-
-                $("#gnb_search").click(function(){
-                    $("div.searchHelp").css("display","block");
-                   
-                });
-
-                $(".searchend").click(function(){
-                    $("div.searchHelp").css("display","none");
                 });
                 
-                // $("html").click(function(){
-                //     $("div.searchHelp").css("display","none");
-                // });
+            });
 
-            }); 
+            var flag = true;
+            var len = 0;
+            $(function () {
+                $(".ic_arr").click(function () {
+                    if (flag) {
+                        $(".category_contents").css("display", "block");
+                        $("div.searchHelp").css("display", "none");
+                        flag = false;
+                    } else {
+                        $(".category_contents").css("display", "none");
+                        $("div.searchHelp").css("display", "none");
+                        flag = true;
+                    }
 
-            
-    </script>
-    <script>
-        //보이기
-        function fn_launch(){
-            $("#return2").css("display","none");
-            $("#return").css("display","inline-block");
-        }
-        // $("#return2").click(function(){
-        //     $("#return2").css("display","none");
-        //     $("#return").css("display","inline-block");
-        // });
-    </script>
-    <script>
+                });
 
-        // $(function(){
-           
-        //     $(".next").click(function(){
-        //         if(pwd == pwd2){
-        //             $(".check").css("display","none");
-                    
-        //         }else{
-        //             $(".check").css("display","inline-block");
-        //             $(this).attr("return false");
-        //         }
-        //     });
-            
-        // });
-        
-        // $(function(){
-            
-        //     $("input").keyup(function(){
-        //         var pwd = $("#pwd").val();
-        //         var pwd2 = $("#pwd2").val();
-        //         if(pwd =! "" || pwd2 != ""){
-        //             if(pwd == pwd2){
-        //                 $(".next").removeAttr("disabled");
-        //             }else{
-        //                 $(".next").attr("disabled", "disabled");
-        //             }
-        //         }
-        //     });
-        // });// 미완성
+                $(".category_contents")
+                    .children("ul")
+                    .children("li")
+                    .mouseover(function () {
+                        len = $(this).index();
+                        $(this)
+                            .addClass("on")
+                            .siblings()
+                            .removeClass("on");
+                        $("div.searchHelp").css("display", "none");
+                        // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
+                    }); //nav end
 
-        
+                // $("#gnb_search").click(function(){
+                // $("div.searchHelp").css("display","block"); });
+                // $(".searchend").click(function(){
+                // $("div.searchHelp").css("display","none"); }); $("html").click(function(){
+                // $("div.searchHelp").css("display","none"); });
 
-        
-    </script>
-</head>
-<body>
-    <header class="header">
-        <div class="gnb global is-ready">
-            <!-- Global Menu -->
-            <div class="gnb__inner">
-                <ul class="utility">
-                    <li>
-                        <a
-                            class="text_link"
-                            href="loginf"
-                            target="_self">로그인</a>
-                    </li>
-                    <li>
-                        <a
-                            class="text_link"
-                            href="joinf"
-                            target="_self">회원가입</a>
-                    </li>
-                    <li>
-                        <a
-                            class="text_link"
-                            href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
-                            target="_blank">마이페이지</a>
-                    </li>
-                    <!-- Quick Link -->
-                    
-                </ul>
-            </div>
-        </div>
+            });
+        </script>
+        <script>
+            //보이기
+            function fn_launch() {
+                $("#return2").css("display", "none");
+                $("#return").css("display", "inline-block");
+            }
+            // $("#return2").click(function(){     $("#return2").css("display","none");
+            // $("#return").css("display","inline-block"); });
+        </script>
+        <script>
 
-        <!-- MENU::JSTL -->
-        <div class="gnb type2 is-ready" data-opentype="box">
-            <div class="gnb_row" style="height: 37px;">
+            // $(function(){     $(".next").click(function(){         if(pwd == pwd2){
+            // $(".check").css("display","none");         }else{
+            // $(".check").css("display","inline-block");             $(this).attr("return
+            // false");         }     }); }); $(function(){     $("input").keyup(function(){
+            // var pwd = $("#pwd").val();         var pwd2 = $("#pwd2").val();
+            // if(pwd =! "" || pwd2 != ""){             if(pwd == pwd2){
+            // $(".next").removeAttr("disabled");             }else{
+            // $(".next").attr("disabled", "disabled");             }         }     });
+            // });// 미완성
+        </script>
+    </head>
+    <body>
+        <header class="header">
+            <div class="gnb global is-ready">
+                <!-- Global Menu -->
                 <div class="gnb__inner">
-                    <h1 class="h1_logo">
-                        <a href="/main">
-                            <img
-                                src="resources/common/imgs/logo_01.png"
-                                alt="원스톱캠퍼스">
-                        </a>
-                    </h1>
-                    <div class="gnb_search_fd" data-js="gnb__total-search">
-                        <form
-                            name="topSearchForm"
-                            id="topSearchForm"
-                            method="get"
-                            onsubmit="return srchKwd(this);"
-                            action="/search">
-                            <input
-                                type="hidden"
-                                id="top_siteAppntSrcwdNm"
-                                name="siteAppntSrcwdNm"
-                                value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
-                            <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
-                            <input type="hidden" name="kwd" value="">
-
-                            <fieldset>
-                                <legend class="screen--out">통합검색</legend>
-                                <label class="skip" for="gnb_search">검색어 입력</label>
-                                <input
-                                    type="text"
-                                    data-search-kwd="gnb_search"
-                                    id="gnb_search"
-                                    name="input_kwd"
-                                    role=""
-                                    class="inp_sch"
-                                    data-js="search__input"
-                                    value=""
-                                    autocomplete="off">
-                                <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
-                                    <span class="screen--out">검색어 초기화</span>
-                                </button>
-                                <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
-                                    <span class="screen--out">검색도우미</span>
-                                    <span class="screen--out" data-js="helper-status">켜기</span>
-                                </button>
-                                <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
-                                <input type="hidden" id="category" name="category" value="">
-                            </fieldset>
-                        </form>
-                        <div class="searchHelp">
-                            <ul>
-                                <li>교육과정</li>
-                                <li>콘텐츠</li>
-                                <li>자동완성 키워드</li>
-                            </ul>
-                            <p>해당 교육과정이 없습니다.</p>
-                            <p class="searchend">검색도우미 끄기</p>
-                        </div>
-                    </div>
                     <ul class="utility">
-
-                        <li class="gnb-utility" data-js="toggle">
-                            <button
-                                type="button"
-                                class="btn_gnb_cs"
-                                data-js="toggle__anchor"
-                                data-autoclose="true"
-                                aria-controls="uiToggle-1"
-                                aria-expanded="false"
-                                aria-label="열기">고객지원센터</button>
-                            <div
-                                class="list list--arrow list--bbs"
-                                data-js="toggle__panel"
-                                id="uiToggle-1"
-                                aria-hidden="true"
-                                style="display: none;">
-                                <!-- Util Menu::INFO1 -->
-                                <ul>
-                                    <li>
-                                        <a
-                                            class="list__link"
-                                            href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
-                                            target="_self">공지사항</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            class="list__link"
-                                            href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
-                                            target="_self">FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        <li>
+                            <a class="text_link" href="loginf" target="_self">로그인</a>
                         </li>
+                        <li>
+                            <a class="text_link" href="joinf" target="_self">회원가입</a>
+                        </li>
+                        <li>
+                            <a
+                                class="text_link"
+                                href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
+                                target="_blank">마이페이지</a>
+                        </li>
+                        <!-- Quick Link -->
 
                     </ul>
                 </div>
             </div>
-            <div class="gnb_row">
-                <div class="gnb__inner">
-                    <div
-                        class="gnb_cate"
-                        data-js="gnb_cate"
-                        data-maxheigt="466"
-                        data-cate-json="/site/menu/selectCategoryMenuList"
-                        data-ajaxtype="POST">
-                        <button
-                            type="button"
-                            class="ic_arr"
-                            data-js="gnb_cate__anchor"
-                            aria-controls="uiToggle-2"
-                            aria-expanded="false"
-                            aria-label="열기">
-                            <span>
-                                <span></span>
-                            </span>카테고리
-                        </button>
-                        <div class="category_contents">
-                            <ul>
-                                <li class="on"><a href="#">교원몰
-                                    <ul>
-                                        <li><a href="#">데스크탑</a></li>
-                                        <li><a href="#">정수기</a></li>
-                                        <li><a href="#">스탠드정수기</a></li>
-                                        <li><a href="#">공기청정기</a></li>
-                                        <li><a href="#">비데</a></li>
-                                        <li><a href="#">연수기</a></li>
-                                        <li><a href="#">안마의자</a></li>
-                                    </ul>
-                                </a></li>
-                                <li><a href="#">제휴용
-                                    <ul>
-                                        <li><a href="#">데스크탑2</a></li>
-                                        <li><a href="#">정수기2</a></li>
-                                        <li><a href="#">스탠드정수기2</a></li>
-                                        <li><a href="#">공기청정기2</a></li>
-                                        <li><a href="#">비데</a></li>
-                                        <li><a href="#">연수기</a></li>
-                                        <li><a href="#">안마의자</a></li>
-                                    </ul>
-                                </a></li>
-                                <li><a href="#">파트너몰
-                                    <ul>
-                                        <li><a href="#">데스크탑3</a></li>
-                                        <li><a href="#">정수기3</a></li>
-                                        <li><a href="#">스탠드정수기3</a></li>
-                                        <li><a href="#">공기청정기</a></li>
-                                        <li><a href="#">비데</a></li>
-                                        <li><a href="#">연수기</a></li>
-                                        <li><a href="#">안마의자</a></li>
-                                    </ul>
-                                </a></li>
-                                <li><a href="#">임직원몰
-                                    <ul>
-                                        <li><a href="#">데스크탑4</a></li>
-                                        <li><a href="#">정수기4</a></li>
-                                        <li><a href="#">스탠드정수기4</a></li>
-                                        <li><a href="#">공기청정기4</a></li>
-                                        <li><a href="#">비데4</a></li>
-                                        <li><a href="#">연수기</a></li>
-                                        <li><a href="#">안마의자</a></li>
-                                    </ul>
-                                </a></li>
-                            </ul>
+
+            <!-- MENU::JSTL -->
+            <div class="gnb type2 is-ready" data-opentype="box">
+                <div class="gnb_row" style="height: 37px;">
+                    <div class="gnb__inner">
+                        <h1 class="h1_logo">
+                            <a href="home">
+                                <img src="resources/common/imgs/logo_01.png" alt="원스톱캠퍼스">
+                            </a>
+                        </h1>
+                        <div class="gnb_search_fd" data-js="gnb__total-search">
+                            <form
+                                name="topSearchForm"
+                                id="topSearchForm"
+                                method="get"
+                                onsubmit="return srchKwd(this);"
+                                action="/search">
+                                <input
+                                    type="hidden"
+                                    id="top_siteAppntSrcwdNm"
+                                    name="siteAppntSrcwdNm"
+                                    value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
+                                <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
+                                <input type="hidden" name="kwd" value="">
+
+                                <fieldset>
+                                    <legend class="screen--out">통합검색</legend>
+                                    <label class="skip" for="gnb_search">검색어 입력</label>
+                                    <input
+                                        type="text"
+                                        data-search-kwd="gnb_search"
+                                        id="gnb_search"
+                                        name="input_kwd"
+                                        role=""
+                                        class="inp_sch"
+                                        data-js="search__input"
+                                        value=""
+                                        autocomplete="off">
+                                    <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
+                                        <span class="screen--out">검색어 초기화</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
+                                        <span class="screen--out">검색도우미</span>
+                                        <span class="screen--out" data-js="helper-status">켜기</span>
+                                    </button>
+                                    <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
+                                    <input type="hidden" id="category" name="category" value="">
+                                </fieldset>
+                            </form>
+                            <!-- <div class="searchHelp"> <ul> <li>교육과정</li> <li>콘텐츠</li> <li>자동완성 키워드</li>
+                            </ul> <p>해당 교육과정이 없습니다.</p> <p class="searchend">검색도우미 끄기</p> </div> -->
                         </div>
-                    </div>
-                    <nav class="gnb_nav">
-                        <!-- MENU::JSTL -->
-                        <ul class="demo-menus" id="content_1depth">
-                            <li>
-                                <a 
-                                    href="#"
-                                    target="_self">훈련과정</a>
-                                    <ul id="content_2depth">
-                                        <li><a href="#">훈련과정</a></li>
-                                        <li><a href="#">훈련과정</a></li>
-                                        <li><a href="#">훈련과정</a></li>
-                                        <li><a href="#">훈련과정</a></li>
-                                        <li><a href="#">훈련과정</a></li>
-                                    </ul>
+                        <ul class="utility">
 
-                            </li>
-
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_self">고객센터</a>
-                                    <ul id="content_2depth">
-                                        <li><a href="#">고객센터</a></li>
-                                        <li><a href="#">고객센터</a></li>
-                                        <li><a href="#">고객센터</a></li>
-                                        <li><a href="#">고객센터</a></li>
-                                        <li><a href="#">고객센터</a></li>
+                            <li class="gnb-utility" data-js="toggle">
+                                <button
+                                    type="button"
+                                    class="btn_gnb_cs"
+                                    data-js="toggle__anchor"
+                                    data-autoclose="true"
+                                    aria-controls="uiToggle-1"
+                                    aria-expanded="false"
+                                    aria-label="열기">고객지원센터</button>
+                                <div
+                                    class="list list--arrow list--bbs"
+                                    data-js="toggle__panel"
+                                    id="uiToggle-1"
+                                    aria-hidden="true"
+                                    style="display: none;">
+                                    <!-- Util Menu::INFO1 -->
+                                    <ul>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">공지사항</a>
+                                        </li>
+                                        <li>
+                                            <a
+                                                class="list__link"
+                                                href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
+                                                target="_self">FAQ</a>
+                                        </li>
                                     </ul>
-                            </li>
-
-                            <li>
-                                <a
-                                    href="#"
-                                    target="_self">이벤트</a>
-                                    <ul id="content_2depth">
-                                        <li><a href="#">이벤트</a></li>
-                                        <li><a href="#">이벤트</a></li>
-                                        <li><a href="#">이벤트</a></li>
-                                        <li><a href="#">이벤트</a></li>
-                                        <li><a href="#">이벤트</a></li>
-                                    </ul>
+                                </div>
                             </li>
 
                         </ul>
-                        <!-- MENU::JSTL END -->
-                    </nav>
+                    </div>
                 </div>
-            </div>
-            <span class="gnb__arrow" aria-hidden="true"></span></div>
+                <div class="gnb_row">
+                    <div class="gnb__inner">
+                        <div
+                            class="gnb_cate"
+                            data-js="gnb_cate"
+                            data-maxheigt="466"
+                            data-cate-json="/site/menu/selectCategoryMenuList"
+                            data-ajaxtype="POST">
+                            <button
+                                type="button"
+                                class="ic_arr"
+                                data-js="gnb_cate__anchor"
+                                aria-controls="uiToggle-2"
+                                aria-expanded="false"
+                                aria-label="열기">
+                                <span>
+                                    <span></span>
+                                </span>카테고리
+                            </button>
+                            <div class="category_contents">
+                                <ul>
+                                    <li class="on">
+                                        <a href="#">교원몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">제휴용
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기2</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">파트너몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기3</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">임직원몰
+                                            <ul>
+                                                <li>
+                                                    <a href="#">데스크탑4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">정수기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">스탠드정수기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">공기청정기4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">비데4</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">연수기</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">안마의자</a>
+                                                </li>
+                                            </ul>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <nav class="gnb_nav">
+                            <!-- MENU::JSTL -->
+                            <ul class="demo-menus" id="content_1depth">
+                                <li>
+                                    <a href="#" target="_self">훈련과정</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">훈련과정</a>
+                                        </li>
+                                    </ul>
 
-    </header>
-    <main>
-        <div>
-            <h1>원스톱캠퍼스 회원가입</h1>
-            <p><span class="hidden">기준선</span></p>
-            <ul>
-                <li><span>1</span>약관동의</li>
-                <li><span>2</span>본인확인</li>
-                <li><span>3</span>가입완료</li>
-            </ul>           
-        </div>
-        <section>
-            <h1>기본정보</h1>
-            <p><span>*</span> 필수항목입니다.</p>
-            <form action="" method="">
-                <div class="field">
-                    <div>
-                        <div>
-                            <label for="nm" class="mainLabel"><span>*</span> 이름</label>
-                            <p>
-                                <input type="text" id="nm" name="name" class="nik_pwd" required>
-                            </p>
-                        </div>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_self">고객센터</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">고객센터</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li>
+                                    <a href="#" target="_self">이벤트</a>
+                                    <ul id="content_2depth">
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">이벤트</a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                            </ul>
+                            <!-- MENU::JSTL END -->
+                        </nav>
                     </div>
-                    <div>
+                </div>
+                <span class="gnb__arrow" aria-hidden="true"></span></div>
+
+        </header>
+        <main>
+            <div>
+                <h1>원스톱캠퍼스 회원가입</h1>
+                <p>
+                    <span class="hidden">기준선</span></p>
+                <ul>
+                    <li>
+                        <span>1</span>약관동의</li>
+                    <li>
+                        <span>2</span>본인확인</li>
+                    <li>
+                        <span>3</span>가입완료</li>
+                </ul>
+            </div>
+            <section>
+                <h1>기본정보</h1>
+                <p>
+                    <span>*</span>
+                    필수항목입니다.</p>
+                <form action="" method="">
+                    <div class="field">
                         <div>
-                            <label for="nikname" class="mainLabel"><span>*</span> 아이디</label>
-                            <p>
-                                <input type="text" id="nikname" name="nikname" pattern="^([a-z0-9A-Z]){6,24}$" class="nik_pwd" required>
-                                <input type="submit" value="중복확인" class="btn2 btnCheck" style="background-color: #1428A0; " required>
-                                <span>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="pwd" class="mainLabel"><span>*</span> 비밀번호</label>
-                            <p>
-                                <input type="password" id="pwd" name="pwd" pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,24}$" class="nik_pwd" required>
-                                <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="pwd2" class="mainLabel"><span>*</span> 비밀번호 재입력</label>
-                            <p>
-                                <input type="password" id="pwd2" name="pwd2" class="nik_pwd nik_pwd2" required>
-                                <span class="check">비밀번호가 일치하지 않습니다.</span>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="birth_f_male">
-                        <div>
-                            <label for="yyy" class="mainLabel"><span>*</span> 생년월일/ 성별</label>
-                            <p>
-                                <select name="year" id="yyy">
-                                    <option value="year">년</option>
-                                    <option value="1990">1990</option>
-                                    <option value="1991">1991</option>
-                                    <option value="1992">1992</option>
-                                    <option value="1993">1993</option>
-                                    <option value="1994">1994</option>
-                                    <option value="1995">1995</option>
-                                    <option value="1996">1996</option>
-                                    <option value="1997">1997</option>
-                                    <option value="1998">1998</option>
-                                    <option value="1999">1999</option>
-                                    <option value="2000">2000</option>
-                                </select>
-                                <select name="month" id="mmm">
-                                    <option value="month">월</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                </select>
-                                <select name="date" id="ddd">
-                                    <option value="date">일</option>
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                    <option value="6">6</option>
-                                    <option value="7">7</option>
-                                    <option value="8">8</option>
-                                    <option value="9">9</option>
-                                    <option value="10">10</option>
-                                    <option value="11">11</option>
-                                    <option value="12">12</option>
-                                    <option value="13">13</option>
-                                    <option value="14">14</option>
-                                    <option value="15">15</option>
-                                    <option value="16">16</option>
-                                    <option value="17">17</option>
-                                    <option value="18">18</option>
-                                    <option value="19">19</option>
-                                    <option value="20">20</option>
-                                    <option value="21">21</option>
-                                    <option value="22">22</option>
-                                    <option value="23">23</option>
-                                    <option value="24">24</option>
-                                    <option value="25">25</option>
-                                    <option value="26">26</option>
-                                    <option value="27">27</option>
-                                    <option value="28">28</option>
-                                    <option value="29">29</option>
-                                    <option value="30">30</option>
-                                    <option value="31">31</option>
-                                </select>
-                                <input type="radio" name="f_male" id="man" required>
-                                <label for="f_male">남</label>
-                                <input type="radio" name="f_male" id="woman" required>
-                                <label for="f_male">여</label>
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="user_name" class="mainLabel"><span>*</span> 이메일</label>
-                            <p>
-                                <input type="text" id="user_name" name="user_name" required>
-                                <label for="user_email">@</label>
-                                <input type="text" id="user_email" name="user_email" required>
-                                <select name="user_email" id="user_email">
-                                    <option value="write">직접입력</option>
-                                </select>
-                                <input type="button" value="재전송" class="btn2  btnCheck" style="background-color: #1428A0;"  id="return">
-                                <input type="button" value="인증번호전송" class="btn2" onclick="fn_launch()"style="background-color: #1428A0;"  id="return2">
-                                
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="email_check" class="mainLabel"><span>*</span> 이메일 인증</label>
-                            <p>
-                                <input type="email" id="email_check" name="email_check"  required>
-                                <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="phone" class="mainLabel">연락처</label>
-                            <p>
-                                <select name="phone" id="phone">
-                                    <option value="010">010</option>
-                                </select>
-                                <label for="phoneNumber1">-</label>
-                                <input type="tel" id="" name="phoneNumber1">
-                                <label for="phoneNumber2">-</label>
-                                <input type="tel" id="" name="phoneNumber2">
-                            </p>
-                        </div>
-                    </div>
-                    <div>
-                        <div>
-                            <label for="zipcode" class="mainLabel">우편번호</label>
                             <div>
-                                <p class="address_zip">
-                                    <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
-                                    <input type="submit" value="우편번호검색" class="btn2" style="background-color: #B3B3B3;">
-                                </p>
+                                <label for="nm" class="mainLabel">
+                                    <span>*</span>
+                                    이름</label>
                                 <p>
-                                    <input type="text" id="address" name="address" placeholder="법원로 128">
+                                    <input type="text" id="nm" name="name" class="nik_pwd" required="required">
                                 </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="nikname" class="mainLabel">
+                                    <span>*</span>
+                                    아이디</label>
                                 <p>
-                                    <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
+                                    <input
+                                        type="text"
+                                        id="nikname"
+                                        name="nikname"
+                                        pattern="^([a-z0-9A-Z]){6,24}$"
+                                        class="nik_pwd"
+                                        required="required">
+                                    <input
+                                        type="submit"
+                                        value="중복확인"
+                                        class="btn2 btnCheck"
+                                        style="background-color: #1428A0; "
+                                        required="required">
+                                    <span>아이디 입력시 영문(소/대문자 구분)가 숫자를 조합하여 6~24자 이내로 입력하세요.</span>
                                 </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="pwd" class="mainLabel">
+                                    <span>*</span>
+                                    비밀번호</label>
                                 <p>
-                                    <input type="text" id="Reference" name="Reference" placeholder="참고항목">
+                                    <input
+                                        type="password"
+                                        name="pwd"
+                                        pattern="([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9]){8,24}"
+                                        class="nik_pwd"
+                                        required="required" id="pwssdd">
+                                    <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
                                 </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="pwd2" class="mainLabel">
+                                    <span>*</span>
+                                    비밀번호 재입력</label>
                                 <p>
-                                    <input type="text" id="" name="Detailed" placeholder="상세주소">
+                                    <input
+                                        type="password"
+                                        name="pwd2"
+                                        class="nik_pwd nik_pwd2"
+                                        required="required" id="pwssdd2">
+                                    <span class="check">비밀번호가 일치하지 않습니다.</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="birth_f_male">
+                            <div>
+                                <label for="yyy" class="mainLabel">
+                                    <span>*</span>
+                                    생년월일/ 성별</label>
+                                <p>
+                                    <select name="year" id="yyy">
+                                        <option value="year">년</option>
+                                        <option value="1990">1990</option>
+                                        <option value="1991">1991</option>
+                                        <option value="1992">1992</option>
+                                        <option value="1993">1993</option>
+                                        <option value="1994">1994</option>
+                                        <option value="1995">1995</option>
+                                        <option value="1996">1996</option>
+                                        <option value="1997">1997</option>
+                                        <option value="1998">1998</option>
+                                        <option value="1999">1999</option>
+                                        <option value="2000">2000</option>
+                                    </select>
+                                    <select name="month" id="mmm">
+                                        <option value="month">월</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                    </select>
+                                    <select name="date" id="ddd">
+                                        <option value="date">일</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                        <option value="7">7</option>
+                                        <option value="8">8</option>
+                                        <option value="9">9</option>
+                                        <option value="10">10</option>
+                                        <option value="11">11</option>
+                                        <option value="12">12</option>
+                                        <option value="13">13</option>
+                                        <option value="14">14</option>
+                                        <option value="15">15</option>
+                                        <option value="16">16</option>
+                                        <option value="17">17</option>
+                                        <option value="18">18</option>
+                                        <option value="19">19</option>
+                                        <option value="20">20</option>
+                                        <option value="21">21</option>
+                                        <option value="22">22</option>
+                                        <option value="23">23</option>
+                                        <option value="24">24</option>
+                                        <option value="25">25</option>
+                                        <option value="26">26</option>
+                                        <option value="27">27</option>
+                                        <option value="28">28</option>
+                                        <option value="29">29</option>
+                                        <option value="30">30</option>
+                                        <option value="31">31</option>
+                                    </select>
+                                    <input type="radio" name="f_male" id="man" required="required">
+                                    <label for="f_male">남</label>
+                                    <input type="radio" name="f_male" id="woman" required="required">
+                                    <label for="f_male">여</label>
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="user_name" class="mainLabel">
+                                    <span>*</span>
+                                    이메일</label>
+                                <p>
+                                    <input type="text" id="user_name" name="user_name" required="required">
+                                    <label for="user_email">@</label>
+                                    <input type="text" id="user_email" name="user_email" required="required">
+                                    <select name="user_email" id="user_email">
+                                        <option value="write">직접입력</option>
+                                    </select>
+                                    <input
+                                        type="button"
+                                        value="재전송"
+                                        class="btn2  btnCheck"
+                                        style="background-color: #1428A0;"
+                                        id="return">
+                                    <input
+                                        type="button"
+                                        value="인증번호전송"
+                                        class="btn2"
+                                        onclick="fn_launch()"
+                                        style="background-color: #1428A0;"
+                                        id="return2">
+
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="email_check" class="mainLabel">
+                                    <span>*</span>
+                                    이메일 인증</label>
+                                <p>
+                                    <input type="email" id="email_check" name="email_check" required="required">
+                                    <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="phone" class="mainLabel">연락처</label>
+                                <p>
+                                    <select name="phone" id="phone">
+                                        <option value="010">010</option>
+                                    </select>
+                                    <label for="phoneNumber1">-</label>
+                                    <input type="tel" id="" name="phoneNumber1">
+                                    <label for="phoneNumber2">-</label>
+                                    <input type="tel" id="" name="phoneNumber2">
+                                </p>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="zipcode" class="mainLabel">우편번호</label>
+                                <div>
+                                    <p class="address_zip">
+                                        <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
+                                        <input
+                                            type="submit"
+                                            value="우편번호검색"
+                                            class="btn2"
+                                            style="background-color: #B3B3B3;">
+                                    </p>
+                                    <p>
+                                        <input type="text" id="address" name="address" placeholder="법원로 128">
+                                    </p>
+                                    <p>
+                                        <input type="text" id="Lot address" name="Lot address" placeholder="지번주소">
+                                    </p>
+                                    <p>
+                                        <input type="text" id="Reference" name="Reference" placeholder="참고항목">
+                                    </p>
+                                    <p>
+                                        <input type="text" id="" name="Detailed" placeholder="상세주소">
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <label for="RecommenderId" class="mainLabel">추천인 ID</label>
+                                <p>
+                                    <input type="text" id="RecommenderId" name="RecommenderId">
+                                    <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
                                 </p>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <div>
-                            <label for="RecommenderId" class="mainLabel">추천인 ID</label>
-                            <p>
-                                <input type="text" id="RecommenderId" name="RecommenderId">
-                                <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
-                            </p>
-                        </div>
+                    <div class="btn">
+                        <input type="submit" value="이전">
+                        <input type="submit" value="다음" id="go" disabled>
                     </div>
-                </div>
-                <div class="btn">
-                    <input type="submit" value="이전">
-                    <input type="submit" value="다음" class="next" disabled>
-                </div>
-            </form>
+                </form>
 
-        </section>
-    </main>
-    <footer>
-        <div>
-            <h1><a href="#"><img src="resources/common/imgs/logo_01.png" alt="로고"></a></h1>
+            </section>
+        </main>
+        <footer>
             <div>
-                <ul>
-                    <li class="hidden">하단 유틸메뉴</li>
-                    <li>이용약관</li>
-                    <li>개인정보 처리방침</li>
-                    <li>이메일주소 무단수집거부</li>
-                    <li>제휴문의</li>
-                </ul>
-                <address class="hidden">
-                    <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612 <span>고객센터:02 - 6269 - 0631</span></p>
-                    <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
-                </address>
+                <h1>
+                    <a href="#"><img src="resources/common/imgs/logo_01.png" alt="로고"></a>
+                </h1>
+                <div>
+                    <ul>
+                        <li class="hidden">하단 유틸메뉴</li>
+                        <li>이용약관</li>
+                        <li>개인정보 처리방침</li>
+                        <li>이메일주소 무단수집거부</li>
+                        <li>제휴문의</li>
+                    </ul>
+                    <address class="hidden">
+                        <p>(주) 아이이에이 서울특별시 송파구 법원로 128 A-1612
+                            <span>고객센터:02 - 6269 - 0631</span></p>
+                        <p>Copyright ⓒ2020 IEA. All rights reserved.</p>
+                    </address>
+                </div>
             </div>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>
