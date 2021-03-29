@@ -1,0 +1,132 @@
+main{
+    
+}
+main>div{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:120rem;
+    margin-top:8rem;
+}
+main>div>div.subnav{
+    
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul{}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+   
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li>ul>li:nth-child(2)>a{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>a{}
+main>div>div.subnav>nav>ul>li>ul{
+    
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul:nth-child()
+main>div>div.subnav>nav>ul>li>ul>li{
+    
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+
+/**/
+
+main>div>div.scrap{}
+main>div>div.scrap>h1{
+    margin-bottom:5.5rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.scrap>form{
+    padding:4rem 10rem;
+    margin-bottom:3rem;
+    border:1px solid #ccc;
+}
+main>div>div.scrap>form>label{
+    margin-right:8rem;
+    font-size:1.5rem;
+    color:#000;
+}
+main>div>div.scrap>form>select{
+    margin-right:4rem;
+    width:23rem;
+    height:4rem;
+    border:1px solid #ccc;
+}
+main>div>div.scrap>form>select>option{}
+main>div>div.scrap>form>input{
+    font-size:1.5rem;
+    width:11rem;
+    height:4rem;
+    border:1px solid #ccc;
+}
+main>div>div.scrap>form>input:nth-child(3){
+    margin-right:3rem;
+    width:23rem;
+}
+main>div>div.scrap>form>input:nth-child(4){
+    background:#1428A0;
+    color:white;
+}
+main>div>div.scrap>div{
+    
+}
+main>div>div.scrap>div>ul{
+    border-top:1px solid #999;
+}
+main>div>div.scrap>div>ul>li{
+    padding:2.6rem 0 2.6rem 3rem;
+    border-bottom:1px solid #ccc;
+}
+
+main>div>div.scrap>div>ul>li>a{
+    position:relative;
+    display:block;
+    color:#666;
+}
+main>div>div.scrap>div>ul>li>a:hover{
+
+}
+main>div>div.scrap>div>ul>li>a>p{
+    font-size:1.4rem;
+    line-height:2.5rem;
+}
+main>div>div.scrap>div>ul>li>a>p:nth-child(2){
+    color:#000;
+    font-size:1.8rem;
+}
+
+main>div>div.scrap>div>ul>li>a>p>span{
+    margin-left:0.5rem;
+    padding-left:0.5rem;
+    border-left:1px solid #999;
+    line-height: 1.4rem;
+}
+main>div>div.scrap>div>ul>li>a>p.exit{
+    position:absolute;
+    top:2rem;
+    right:2rem;
+    cursor: pointer;
+}

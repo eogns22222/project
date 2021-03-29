@@ -479,7 +479,6 @@ div.category_contents>ul>li.on>ul{
 
 .gnb.type2 .gnb_search_fd .btn_gnb_search { display: inline-block; position: absolute; right: 0; bottom: 0px; }
 
-.gnb.type2 .utility { position: absolute; right: 0; top: 50%; -webkit-transform: translateY(-50%); transform: translateY(-50%); }
 
 .gnb.type2 .gnb_cate { display: -webkit-box; display: -ms-flexbox; display: flex; margin: 0;  top: 50%; left: 0; position: absolute; -webkit-transform: translateY(-50%); transform: translateY(-50%); z-index: 1; }
 

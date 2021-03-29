@@ -29,9 +29,13 @@ main>section>div>form>input{
     height:50px;
     background:#1428A0;
     color:white;
+    border:0 none;
+    font-size:1.8rem;
 }
 main>section>div>form>p>input{
     width:100%;
+    font-size:1.6rem;
+    border:0 none;
 }
 main>section>div>ul{
     display:flex;

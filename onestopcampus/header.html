@@ -12,13 +12,12 @@
         <link rel="stylesheet" href="resources/common/css/cus0001.css">
         <link rel="stylesheet" href="resources/common/css/layout._indigo.css">
         <link rel="stylesheet" href="resources/common/css/header.css">
-        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
-        <link rel="stylesheet" href="resources/common/css/common.css">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -110,17 +109,7 @@
                             method="get"
                             onsubmit="return srchKwd(this);"
                             action="/search">
-                            <input
-                                type="hidden"
-                                id="top_siteAppntSrcwdNm"
-                                name="siteAppntSrcwdNm"
-                                value="Live 강의듣고 &quot;갤럭시Tab 평생소장&quot;">
-                            <input type="hidden" id="top_siteRalSrcwdNm" name="siteRalSrcwdNm" value="갤럭시탭">
-                            <input type="hidden" name="kwd" value="">
-
                             <fieldset>
-                                <legend class="screen--out">통합검색</legend>
-                                <label class="skip" for="gnb_search">검색어 입력</label>
                                 <input
                                     type="text"
                                     data-search-kwd="gnb_search"
@@ -131,15 +120,7 @@
                                     data-js="search__input"
                                     value=""
                                     autocomplete="off">
-                                <button type="button" class="btn_gnb_search--reset" data-js="gnb__search-reset">
-                                    <span class="screen--out">검색어 초기화</span>
-                                </button>
-                                <button type="button" class="btn_gnb_search--open" data-js="gnb__search-open">
-                                    <span class="screen--out">검색도우미</span>
-                                    <span class="screen--out" data-js="helper-status">켜기</span>
-                                </button>
                                 <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
-                                <input type="hidden" id="category" name="category" value="">
                             </fieldset>
                         </form>
                         <!-- <div class="searchHelp">
@@ -152,42 +133,7 @@
                             <p class="searchend">검색도우미 끄기</p>
                         </div> -->
                     </div>
-                    <ul class="utility">
-
-                        <li class="gnb-utility" data-js="toggle">
-                            <button
-                                type="button"
-                                class="btn_gnb_cs"
-                                data-js="toggle__anchor"
-                                data-autoclose="true"
-                                aria-controls="uiToggle-1"
-                                aria-expanded="false"
-                                aria-label="열기">고객지원센터</button>
-                            <div
-                                class="list list--arrow list--bbs"
-                                data-js="toggle__panel"
-                                id="uiToggle-1"
-                                aria-hidden="true"
-                                style="display: none;">
-                                <!-- Util Menu::INFO1 -->
-                                <ul>
-                                    <li>
-                                        <a
-                                            class="list__link"
-                                            href="/common/board/boardMstr/124386?p_menu=MSNJTkZPMQ==&amp;p_gubun=Qw=="
-                                            target="_self">공지사항</a>
-                                    </li>
-                                    <li>
-                                        <a
-                                            class="list__link"
-                                            href="/st/om/faq/faqList/EC/CUS0001?p_menu=MyNJTkZPMQ==&amp;p_gubun=Qw=="
-                                            target="_self">FAQ</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-
-                    </ul>
+                   
                 </div>
             </div>
             <div class="gnb_row">

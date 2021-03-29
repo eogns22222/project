@@ -1,27 +1,27 @@
-main{
+main>div{
     margin:0 auto;
     width:60rem;
 }
-main>div{
+main>div>div{
     position:relative;
     margin:0 auto;
     margin-top:7.5rem;
     width:30rem;
     text-align: center;
 }
-main>div>h1{
+main>div>div>h1{
     margin-bottom:5rem;
     font-size:3rem;
     color:#000;
 
 }
-main>div>p{
+main>div>div>p{
     margin:0 auto;
     width:23rem;
     border:1px solid #E2E2E2;
 }
 
-main>div>ul{
+main>div>div>ul{
     position:absolute;
     bottom:-4rem;
     left:0;
@@ -30,14 +30,14 @@ main>div>ul{
     width:30rem;
     
 }
-main>div>ul>li{
+main>div>div>ul>li{
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     font-size:1.5rem;
 }
-main>div>ul>li>span{
+main>div>div>ul>li>span{
    margin-bottom:1rem;
    width:3rem;
    height:3rem;
@@ -45,41 +45,41 @@ main>div>ul>li>span{
    line-height: 3rem;
    background-color:rgb(219, 218, 218);
 }
-main>div>ul>li:nth-child(2)>span{
+main>div>div>ul>li:nth-child(2)>span{
     background-color:#1428A0;
     color:white;
     width:4rem;
     height:4rem;
     line-height: 4rem;
 }
-main>p{
+main>div>p{
     color:#000;
 }
-main>p:nth-child(2){
+main>div>p:nth-child(2){
     margin-top:13rem;
     margin-bottom:4rem;
     text-align: center;
 }
-main>p:nth-child(3){
+main>div>p:nth-child(3){
     margin-bottom:9rem;
     font-size:4rem;
     text-align: center;
 }
-main>p>strong{
+main>div>p>strong{
     font-size:4.5rem;
     color:#1428A0;
 }
-main>p>img{}
-main>table{
+main>div>p>img{}
+main>div>table{
     margin-bottom:10rem;
     width:100%;
     border-top:2px solid #999;
 }
-main>table>tbody{}
-main>table>tbody>tr{
+main>div>table>tbody{}
+main>div>table>tbody>tr{
     border-bottom:1px solid #ccc;
 }
-main>table>tbody>tr>th{
+main>div>table>tbody>tr>th{
     width:18.7rem;
     padding-left:1rem;
     font-size:1.5rem;
@@ -89,14 +89,14 @@ main>table>tbody>tr>th{
     font-weight:700;
     border-right:1px solid #ccc;
 }
-main>table>tbody>tr>td{
+main>div>table>tbody>tr>td{
     font-size:1.4rem;
     padding-left:1rem;
 }
-main>table>tbody>tr:nth-child(2)>td{
+main>div>table>tbody>tr:nth-child(2)>td{
     color:#1428A0;
 }
-main>button{
+main>div>button{
     display:block;
     margin: 0 auto;
     margin-bottom:20rem;
