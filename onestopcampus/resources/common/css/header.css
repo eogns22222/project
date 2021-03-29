@@ -221,7 +221,7 @@ div.category_contents{
 	left:0;
 	width:32rem;
 	height:35rem;
-	border:1px solid #ccc;
+	border:1px solid #000;
 	background:white;
 }
 div.category_contents>ul{
@@ -237,20 +237,9 @@ div.category_contents>ul>li{
 	
 }
 div.category_contents>ul>li>a{
-	position:relative;
 	display:block;
 	line-height: 5rem;
 }
-
-div.category_contents>ul>li>a:before{
-	content:"";
-	position:absolute;
-	bottom:0;
-	left:-3.1rem;
-	width:16rem;
-	border-bottom:1px solid #ccc;
-}
-
 div.category_contents>ul>li>ul{
 	display:none;
 }
