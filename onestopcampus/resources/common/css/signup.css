@@ -17,7 +17,7 @@ main>section>div.container1{
 main>section>div.container1>h1{
     margin-bottom:5rem;
     font-size:3rem;
-
+    color:#000;
 }
 main>section>div.container1>p{
     margin:0 auto;
@@ -81,49 +81,94 @@ main>section>p:before{
     height:1rem;
     color:red;
 }
-main>section>div.container2{
+main>section>form>div.container2{
     border-top:2px solid #999;
 }
-main>section>div.container2>table{
+main>section>form>div.container2>table{
     width:100%;
 }
-main>section>div.container2>table>tbody{
+main>section>form>div.container2>table>tbody{
     width:100%;
 }
-main>section>div.container2>table>tbody>tr{
+main>section>form>div.container2>table>tbody>tr{
     border-bottom:1px solid #ccc;
 }
-main>section>div.container2>table>tbody>tr>td.top{
+main>section>form>div.container2>table>tbody>tr>td.top{
     font-size:1.5rem;
     line-height: 4.5rem;
 }
-main>section>div.container2>table>tbody>tr>td.tit{
+main>section>form>div.container2>table>tbody>tr>td.tit{
     position:relative;
     padding-left:2rem;
     font-size:1.5rem;
     line-height: 4.5rem;
 }
-main>section>div.container2>table>tbody>tr>td>input{
+main>section>form>div.container2>table>tbody>tr>td>input{
     width:1.5rem;
     height:1.5rem;
 }
-main>section>div.container2>table>tbody>tr>td.tit>label{
+main>section>form>div.container2>table>tbody>tr>td.tit>label{
     
 }
-main>section>div.container2>table>tbody>tr>td.top>label{
+main>section>form>div.container2>table>tbody>tr>td.top>label{
     color:#000;
 }
-main>section>div.container2>table>tbody>tr>td.tit>p{
+main>section>form>div.container2>table>tbody>tr>td.tit>p{
     position:absolute;
     top:1.5rem;
     right:2rem;
+    cursor: pointer;
 }
 /* txt */
-main>section>div.container2>table>tbody>tr>td.txt{
+main>section>form>div.container2>table>tbody>tr>td.txt{
     font-size:1.4rem;
 }
-main>section>div>table>tbody>tr>td.txt>div{}
-main>section>div>table>tbody>tr>td.txt>div>p{}
-main>section>div>table>tbody>tr>td.txt>div>dl{}
-main>section>div>table>tbody>tr>td.txt>div>dl>dt{}
-main>section>div>table>tbody>tr>td.txt>div>dl>dd{}
+main>section>form>div.container2>table>tbody>tr>td.txt>div{
+    display:none;
+    padding:2rem 0;
+    height:20rem;
+    overflow-y:scroll;
+    background:#f2f2f2;
+}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>p{
+    padding-left:2rem;
+}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl{
+    line-height: 2.5rem;    
+}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.first{
+    padding-left:4rem;
+    padding-bottom:1rem;
+}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.first>dt{}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.first>dd{}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.second{
+    padding-left:6rem;
+    padding-bottom:1rem;
+}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.second>dt{}
+main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.second>dd{}
+
+main>section>form>div.btn2{
+    display:flex;
+    justify-content: center;
+    margin:8rem 0 15rem 0;
+
+}
+main>section>form>div.btn2>button{
+    margin:0 1rem;
+    width:15rem;
+    height:4rem;
+    font-size:1.5rem ;
+    border:1px solid #999;
+}
+main>section>form>div.btn2>input{
+    margin:0 1rem;
+    width:15rem;
+    height:4rem;
+    font-size:1.5rem ;
+}
+main>section>form>div.btn2>input.next{
+    background:#1428A0;
+    color:white;
+}

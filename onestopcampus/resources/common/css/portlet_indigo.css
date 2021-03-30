@@ -97,6 +97,7 @@ div#section__opice{
     display:flex;
     justify-content: space-between;
     margin:100px auto;
+    padding:2rem 0;
     width:1196px;
     border-top:1px solid #e6e6e6;
     border-bottom:1px solid #e6e6e6;

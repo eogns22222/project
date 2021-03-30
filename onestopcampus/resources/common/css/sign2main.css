@@ -12,7 +12,7 @@ main>div>div{
 main>div>div>h1{
     margin-bottom:5rem;
     font-size:3rem;
-
+    color:#000;
 }
 main>div>div>p{
     margin:0 auto;
@@ -76,7 +76,7 @@ main>div>section>form>div.field{
 main>div>section>form>div.field>div{
     height:100%;
 }
-main>div>section>form>div.field>div:not(:nth-child(9)){
+main>div>section>form>div.field>div{
     border-bottom:1px solid #dad7d7;
 }
 main>div>section>form>div.field>div>div{

@@ -91,7 +91,7 @@ main>div>div.scrap>form>input:nth-child(4){
     color:white;
 }
 main>div>div.scrap>div{
-    
+    margin-bottom:10rem;
 }
 main>div>div.scrap>div>ul{
     border-top:1px solid #999;
