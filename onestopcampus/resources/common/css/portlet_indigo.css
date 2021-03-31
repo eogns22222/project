@@ -69,6 +69,80 @@
 .portlet_wrap .slick-dots, .netplex_detail_popup .slick-dots { position: absolute; display: block; width: 100%; height: 26px; padding: 0; margin: 0; list-style: none; text-align: center; }
 
 .portlet_wrap .slick-dots li, .netplex_detail_popup .slick-dots li { position: relative; display: inline-block; width: 8px; height: 8px; margin: 0 3.5px; padding: 0; cursor: pointer; -webkit-transition: all 0.3s; transition: all 0.3s; }
+
+div#contentcontainer{
+    margin:0 auto;
+    margin-top:8.5rem;
+    width:120rem;
+}
+div#contentcontainer>section{
+    width:120rem;
+}
+div#contentcontainer>section>h1{
+    margin-bottom:1rem;
+    font-size:2.2rem;
+    color:#000;
+}
+div#contentcontainer>section>div{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:9rem;
+
+}
+div#contentcontainer>section>div>a{
+    position:relative;
+    width:22rem;
+    height:22rem;
+}
+
+div#contentcontainer>section>div>a>ul{}
+div#contentcontainer>section>div>a>ul:nth-child(2){
+    display:none;
+    position:absolute; z-index: 10;
+    top:0;
+    left:0;
+    width:46.5rem;
+    height:35rem;
+    background:rgb(233, 190, 190);
+    
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(1){
+    width:46.5rem;
+    height:27.6rem;
+    background: rgb(128, 81, 81);    
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(2){
+    margin-top:2rem;
+    margin-left:2rem;
+    font-size:1.8rem;
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(3){
+    margin-top:1rem;
+    margin-left:2rem;
+    font-size:1.8rem;
+}
+div#contentcontainer>section>div>a:last-child>ul:nth-child(2){
+    left:-24.5rem;
+}
+div#contentcontainer>section>div>a>ul>li{
+    font-size:1.4rem;
+    
+}
+div#contentcontainer>section>div>a>ul>li:nth-child(1){
+    width:22rem;
+    height:17rem;
+    background:#ccc;
+}
+div#contentcontainer>section>div>a>ul>li:nth-child(2){
+    color:#1428A0;
+    line-height: 2rem;
+}
+div#contentcontainer>section>div>a>ul>li:nth-child(3){
+    color:#1428A0;
+    line-height: 2rem;
+}
+div#contentcontainer>section>div>a>ul>li>img{}
+
 div#aside_bottom{
     margin-top: 70px;
 }
@@ -83,6 +157,19 @@ div#aside_bottom>div>aside{
     justify-content: space-between;
     margin:0 auto;
     width:1196px;
+}
+div#aside_bottom>div>aside>a{
+    display:inline-block;
+    width:58rem;
+    height:18rem;
+    overflow: hidden;
+    
+}
+div#aside_bottom>div>aside>a:nth-child(1){
+    background:rgb(179, 240, 161);
+}
+div#aside_bottom>div>aside>a:nth-child(2){
+    background:rgb(150, 213, 255);
 }
 
 div#aside_bottom>ul.slickdotss{
@@ -145,7 +232,7 @@ div#section__opice>section>ul>li>time{
 div#section__opice>section>a.more{
     display:block;
     position:absolute;
-    top:20px;
+    top:0;
     right:20px;
     background:url(../imgs/btn_right2.png) no-repeat 0 0;
     background-size:50%;
@@ -168,7 +255,42 @@ footer>div{
     margin:0 auto;
 }
 footer>div>h1{}
-footer>div>div{}
+footer>div>div{
+    position:relative;
+    
+
+}
+footer>div>div>div{
+    display:none;
+    position:absolute; z-index: 9999;
+    bottom:1rem;
+    left:0;
+    padding:6rem 4rem;
+    width:50rem;
+    height:20rem;
+    background:rgb(224, 222, 222);
+}
+footer>div>div>div>h1{
+    margin-bottom:5rem;
+    font-size:2rem;
+}
+footer>div>div>div>p:nth-child(2){
+    margin-bottom:5rem;
+    font-size:1.5rem;
+    line-height: 2.5rem;
+    color:#666;
+}
+footer>div>div>div>p:nth-child(3){
+    font-size:1.5rem;
+    color:#666;
+    text-align: end;
+}
+footer>div>div>div>p:nth-child(4){
+    position:absolute;
+    top:2rem;
+    right:2rem;
+    cursor: pointer;
+}
 footer>div>div>ul{
     display:flex;
     margin-bottom:40px;
@@ -176,6 +298,7 @@ footer>div>div>ul{
 footer>div>div>ul>li{
     position:relative;
     font-size:13px;
+    cursor: pointer;
 }
 footer>div>div>ul>li:not(:nth-child(2)){
     padding:0 10px;
@@ -3730,7 +3853,7 @@ div.bannercontainer>div.btnsubnav>ul{
 div.bannercontainer>div.btnsubnav>ul>li{
     flex: 1 1 auto;
     line-height:4rem;
-    font-size:2rem;
+    font-size:1.7rem;
     text-align: center;
     cursor: pointer;
 }

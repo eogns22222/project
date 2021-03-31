@@ -1,0 +1,224 @@
+main>div{
+    margin:0 auto;
+    margin-bottom: 10rem;
+    display:flex;
+    justify-content: space-between;
+    margin-top:8rem;
+    width:120rem;
+}
+main>div>div.subnav{
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul>li:nth-child(1){
+    color:#000;
+}
+/**/
+main>div>div.notice>h1{
+    margin-bottom:5.4rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.notice>ul.notice_list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width:100%;
+    text-align: center;
+}
+main>div>div.notice>ul.notice_list>li.on{
+    background-color: #1428A0;
+}
+main>div>div.notice>ul.notice_list>li{
+    width:47.3rem;
+    height:4rem;
+    text-align: center;
+    line-height: 4rem;
+    cursor: pointer;
+    color:#000;
+}
+main>div>div.notice>ul.notice_list>li.on{
+    color:#fff;
+    
+}
+main>div>div.notice>div.container>div.content>div{
+    margin:2.7rem 0 4rem 0;
+    padding:0 2.9rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:11.8rem;
+    border:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>div>p{
+    margin-left:3.2rem;
+    color:#000;
+}
+main>div>div.notice>div.container>div.content>div>form{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:80%;
+}
+main>div>div.notice>div.container>div.content>div>form>select{
+    width:23rem;
+    height:3.5rem;
+    border:1px solid #999;
+    cursor: pointer;
+    font-size: 1.4rem;
+}
+main>div>div.notice>div.container>div.content>div>form>select>option{
+    padding: 1.3rem 1.3rem;
+    color:#999;
+    font-size: 1.4rem;
+}
+main>div>div.notice>div.container>div.content>div>form>input{
+    padding-left: 1.4rem;
+    width:23rem;
+    height:3.5rem;
+    font-size: 1.4rem;
+    border:1px solid #999;
+    cursor: pointer;
+    
+}
+main>div>div.notice>div.container>div.content>div>form>button{
+    width:11rem;
+    height:4rem;
+    color:#fff;
+    background-color: #1428A0;
+    border:1px solid #1428A0;
+}
+
+main>div>div.notice>div.container>div.content>article>p{
+    float: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#000;
+}
+main>div>div.notice>div.container>div.content>article>p>span{
+    font-weight: 600;
+    color:#1428A0;
+}
+main>div>div.notice>div.container>div.content>article>ul{
+    display: flex;
+    justify-content:flex-end;
+    align-items: right;
+}
+main>div>div.notice>div.container>div.content>article>ul>li>select{
+    margin: 0 1.2rem;
+    width:10rem;
+    height:2.5rem;
+    font-size: 1.4rem;
+    border:1px solid #999;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>ul>li>select>option{
+    padding: 0.7rem;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>ul>li>button{
+    display: block;
+    width:6rem;
+    height:2.5rem;
+    border:1px solid #999;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>table{
+    margin-top: 1.2rem;
+    font-size: 1.4rem;
+    font-weight: 500;
+    color:#000;
+    border-top:1px solid #E6E6E6;
+    border-bottom:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>article>table>thead{
+    border-bottom:1px solid #E6E6E6;
+    background-color:#F2F2F2;
+}
+main>div>div.notice>div.container>div.content>article>table>thead>tr>th{
+    height:5.5rem;
+    vertical-align: middle;
+}
+main>div>div.notice>div.container>div.content>article>table>thead>tr>th:not(:last-of-type){
+    border-right:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>article>table>tbody>tr{
+    border-bottom:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>article>table>tbody>tr>td:not(:last-of-type){
+    border-right:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>article>table>tbody>tr>td{
+    padding: 1.5rem 2.5rem;
+    width:11rem;
+    text-align: center;
+    vertical-align:middle;
+}
+main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.text{
+    width:40rem;
+    text-align: left;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.time{
+    width:13rem;
+    text-align: left;
+}
+main>div>div.notice>div.container>div.content>article>div.btn_page{
+    margin: 2.5rem 0;
+    padding-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom:1px solid #E6E6E6;
+}
+main>div>div.notice>div.container>div.content>article>div.btn_page>p>img{
+    vertical-align:bottom;
+    width:0.9rem;
+    height:1.5rem;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>div.btn_page>ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li{
+    margin: 0 1rem;
+}
+main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li.on{
+    padding-bottom: 0.3rem;
+    font-weight: 500;
+    color:#000;
+    text-align: center;
+    border-bottom:1px solid #000;
+}
+
+
+
+
+
+/**/
+main>div>div.notice>div.container>div.on{
+display: block;
+}
+main>div>div.notice>div.container>div{
+    display: none;
+}
+

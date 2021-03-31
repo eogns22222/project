@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -120,6 +120,15 @@
                     var len6 = $(this).index();
                     $(this).addClass("on").siblings().removeClass("on");
                     $("#aside_bottom").children("div").eq(len6).addClass("on").siblings().removeClass("on");
+                });//하단 배너 끝
+
+                $(".contcont").children("a").mouseover(function(){
+                    // $(this).css("position","relative");
+                    $(this).children("ul").eq(1).stop(true,true).fadeIn();
+                });
+                $(".contcont").children("a").mouseleave(function(){
+                    // $(this).css("position","relative");
+                    $(this).children("ul").eq(1).stop(true,true).fadeOut();
                 });
 
             }); 
@@ -136,23 +145,17 @@
                     style="background-image: url(&quot;https://www.multicampus.com/img/saas/main/bg/CUS0001/000002_20190712_seripro_bg_20190717134222.jpg&quot;); background-repeat: no-repeat; background-position: center top;">
                     <!-- s:content_area -->
                     <div class="portlet_wrap">
-                        <!-- s:lnb -->
-
-                        <!-- e:lnb -->
-
-                        <!-- s:content -->
-
-                        <!-- s: content work -->
+                        
 
                         <div class="bannercontainer">
                             <div class="bannerImg">
-                                <p><img src="resources/common/imgs/bannerImg1.jpg" alt=""></p>
-                                <p class="on"><img src="resources/common/imgs/bannerImg2.jpg" alt=""></p>
-                                <p><img src="resources/common/imgs/bannerImg3.jpg" alt=""></p>
-                                <p><img src="resources/common/imgs/bannerImg4.jpg" alt=""></p>
-                                <p><img src="resources/common/imgs/bannerImg5.jpg" alt=""></p>
-                                <p><img src="resources/common/imgs/bannerImg6.jpg" alt=""></p>
-                                <p><img src="resources/common/imgs/bannerImg7.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg1.jpg" alt="강림직업전문학교"></p>
+                                <p class="on"><img src="resources/common/imgs/bannerImg2.jpg" alt="글로벌산업교육원"></p>
+                                <p><img src="resources/common/imgs/bannerImg3.jpg" alt="대신기술능력개발원"></p>
+                                <p><img src="resources/common/imgs/bannerImg4.jpg" alt="대우직업능력개발원"></p>
+                                <p><img src="resources/common/imgs/bannerImg5.jpg" alt="은곡직업전문학교"></p>
+                                <p><img src="resources/common/imgs/bannerImg6.jpg" alt="한국IT전문학교"></p>
+                                <p><img src="resources/common/imgs/bannerImg7.jpg" alt="한국정보교육원"></p>
                             </div>
                             <ul class="btnpage">
                                 <li></li>
@@ -169,13 +172,13 @@
                             </ul>
                             <div class="btnsubnav">
                                 <ul>
-                                    <li>Hot Issue</li>
-                                    <li class="on">Hot Issue</li>
-                                    <li>Hot Issue</li>
-                                    <li>Hot Issue</li>
-                                    <li>Hot Issue</li>
-                                    <li>Hot Issue</li>
-                                    <li>Hot Issue</li>
+                                    <li>강림직업전문학교</li>
+                                    <li class="on">글로벌산업교육원</li>
+                                    <li>대신기술능력개발원</li>
+                                    <li>대우직업능력개발원</li>
+                                    <li>은곡직업전문학교</li>
+                                    <li>한국IT전문학교</li>
+                                    <li>한국정보교육원</li>
                                 </ul>
                             </div>
                             <div class="btnenrolment">
@@ -203,1949 +206,202 @@
                             </div>
                         </div>
 
-                        <div class="portlet_row">
-                            <div class="portlet_cont">
-
-                                <link
-                                    rel="stylesheet"
-                                    href="https://www.multicampus.com/css/3rd/jquery.mCustomScrollbar.css">
-                                <script
-                                    charset="utf-8"
-                                    src="https://www.multicampus.com/js/3rd/jquery.mCustomScrollbar.min.js"></script>
-                                <div
-                                    id="20190829143806000001"
-                                    class="netplexcuration p12"
-                                    data-js="modal-group">
-                                    <h2 id="netplexTitle" class="ptl_title">NOW, 인기 클래스</h2>
-                                    <div class="nex_wrap" data-index="0">
-                                        <div class="nex_slider">
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AG/FA00AG_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] DBMS 이론과 실무 활용"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] DBMS 이론과 실무 활용"
-                                                                class="text_link"
-                                                                id="20190829143806000001netplexCurationPageTrans_0"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00AG"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10106">[Live] DBMS 이론과 실무 활용</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190829143806000001netplexCurationPageTrans_3_0"
-                                                            data-crtnno="CM02"
-                                                            data-corscd="FA00AG"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10106"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AG/FA00AG_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] DBMS 이론과 실무 활용"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190829143806000001netplexCurationPageTrans_2_0"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00AG"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10106">[Live] DBMS 이론과 실무 활용</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 98;">
-                                                                    <select
-                                                                        id="sel-course-period0"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00AG_10106_2021_CM02">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA00AG_10105_2021_CM02">
-                                                                            2021.05.31 ~ 2021.06.04</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--1"
-                                                                        aria-owns="combobox__list--1"
-                                                                        aria-activedescendant="combobox__item--1-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--1"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--1"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--1-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00AG_10106_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--1-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00AG_10105_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.31 ~ 2021.06.04</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=오라클&amp;category=">#오라클</a>
-                                                                <a href="/search?kwd= DB&amp;category="># DB</a>
-                                                                <a href="/search?kwd= db DBMS&amp;category="># db DBMS</a>
-                                                                <a href="/search?kwd= dbms&amp;category="># dbms</a>
-                                                                <a href="/search?kwd= 데이터베이스&amp;category="># 데이터베이스</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AO/FA00AO_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 업무에 바로쓰는 네트워크 기술"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 업무에 바로쓰는 네트워크 기술"
-                                                                class="text_link"
-                                                                id="20190829143806000001netplexCurationPageTrans_1"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00AO"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10103">[Live] 업무에 바로쓰는 네트워크 기술</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190829143806000001netplexCurationPageTrans_3_1"
-                                                            data-crtnno="CM02"
-                                                            data-corscd="FA00AO"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10103"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AO/FA00AO_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 업무에 바로쓰는 네트워크 기술"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190829143806000001netplexCurationPageTrans_2_1"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00AO"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10103">[Live] 업무에 바로쓰는 네트워크 기술</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 97;">
-                                                                    <select
-                                                                        id="sel-course-period1"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00AO_10103_2021_CM02">
-                                                                            2021.04.05 ~ 2021.04.07</option>
-                                                                        <option value="FA00AO_10104_2021_CM02">
-                                                                            2021.05.10 ~ 2021.05.12</option>
-                                                                        <option value="FA00AO_10105_2021_CM02">
-                                                                            2021.06.14 ~ 2021.06.16</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--2"
-                                                                        aria-owns="combobox__list--2"
-                                                                        aria-activedescendant="combobox__item--2-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.07</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--2"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--2"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--2-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00AO_10103_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.07</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--2-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00AO_10104_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.12</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--2-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA00AO_10105_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.14 ~ 2021.06.16</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=네트워크 기술&amp;category=">#네트워크 기술</a>
-                                                                <a href="/search?kwd= CISCO&amp;category="># CISCO</a>
-                                                                <a href="/search?kwd= TCP&amp;category="># TCP</a>
-                                                                <a href="/search?kwd=IP&amp;category=">#IP</a>
-                                                                <a href="/search?kwd= TCP/IP&amp;category="># TCP/IP</a>
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <div class="star_info">
-                                                                    <span class="star_title">평점</span>
-                                                                    <i class="o-icon__star o-icon__star--90"></i><span class="star_score"><span>별점</span>4.7</span></div>
-                                                                <div class="review_info">
-                                                                    <span class="review_title">수강후기</span><span class="review_num">337</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00MD/FA00MD_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 업무에 바로 쓰는 SQL 활용실습"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 업무에 바로 쓰는 SQL 활용실습"
-                                                                class="text_link"
-                                                                id="20190829143806000001netplexCurationPageTrans_2"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00MD"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] 업무에 바로 쓰는 SQL 활용실습</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190829143806000001netplexCurationPageTrans_3_2"
-                                                            data-crtnno="CM02"
-                                                            data-corscd="FA00MD"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10102"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00MD/FA00MD_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 업무에 바로 쓰는 SQL 활용실습"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190829143806000001netplexCurationPageTrans_2_2"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA00MD"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] 업무에 바로 쓰는 SQL 활용실습</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 96;">
-                                                                    <select
-                                                                        id="sel-course-period2"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00MD_10102_2021_CM02">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA00MD_10103_2021_CM02">
-                                                                            2021.04.19 ~ 2021.04.23</option>
-                                                                        <option value="FA00MD_10104_2021_CM02">
-                                                                            2021.05.10 ~ 2021.05.14</option>
-                                                                        <option value="FA00MD_10105_2021_CM02">
-                                                                            2021.05.24 ~ 2021.05.28</option>
-                                                                        <option value="FA00MD_10106_2021_CM02">
-                                                                            2021.06.07 ~ 2021.06.11</option>
-                                                                        <option value="FA00MD_10107_2021_CM02">
-                                                                            2021.06.21 ~ 2021.06.25</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--3"
-                                                                        aria-owns="combobox__list--3"
-                                                                        aria-activedescendant="combobox__item--3-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--3"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--3"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--3-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00MD_10102_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--3-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00MD_10103_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.19 ~ 2021.04.23</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--3-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA00MD_10104_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--3-3"
-                                                                                    data-id="3"
-                                                                                    data-val="FA00MD_10105_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.24 ~ 2021.05.28</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--3-4"
-                                                                                    data-id="4"
-                                                                                    data-val="FA00MD_10106_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.07 ~ 2021.06.11</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--3-5"
-                                                                                    data-id="5"
-                                                                                    data-val="FA00MD_10107_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.21 ~ 2021.06.25</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=SQL&amp;category=">#SQL</a>
-                                                                <a href="/search?kwd= sql&amp;category="># sql</a>
-                                                                <a href="/search?kwd= DB&amp;category="># DB</a>
-                                                                <a href="/search?kwd= db&amp;category="># db</a>
-                                                                <a href="/search?kwd= 데이터베이스&amp;category="># 데이터베이스</a>
-                                                                <a href="/search?kwd= 오라클&amp;category="># 오라클</a>
-                                                                <a href="/search?kwd= oracle&amp;category="># oracle</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA005W/FA005W_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] [저녁반] 데이터 분석을 위한 기본 기술 Class"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] [저녁반] 데이터 분석을 위한 기본 기술 Class"
-                                                                class="text_link"
-                                                                id="20190829143806000001netplexCurationPageTrans_3"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA005W"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] [저녁반] 데이터 분석을 위한 기본 기술 Class</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190829143806000001netplexCurationPageTrans_3_3"
-                                                            data-crtnno="CM02"
-                                                            data-corscd="FA005W"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10102"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA005W/FA005W_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] [저녁반] 데이터 분석을 위한 기본 기술 Class"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190829143806000001netplexCurationPageTrans_2_3"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="FA005W"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] [저녁반] 데이터 분석을 위한 기본 기술 Class</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 95;">
-                                                                    <select
-                                                                        id="sel-course-period3"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA005W_10102_2021_CM02">
-                                                                            2021.04.07 ~ 2021.04.28</option>
-                                                                        <option value="FA005W_10103_2021_CM02">
-                                                                            2021.06.16 ~ 2021.07.07</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--4"
-                                                                        aria-owns="combobox__list--4"
-                                                                        aria-activedescendant="combobox__item--4-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.07 ~ 2021.04.28</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--4"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--4"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--4-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA005W_10102_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.07 ~ 2021.04.28</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--4-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA005W_10103_2021_CM02"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.16 ~ 2021.07.07</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=데이터&amp;category=">#데이터</a>
-                                                                <a href="/search?kwd= 수집&amp;category="># 수집</a>
-                                                                <a href="/search?kwd= 저장&amp;category="># 저장</a>
-                                                                <a href="/search?kwd= 분석&amp;category="># 분석</a>
-                                                                <a href="/search?kwd= 파이썬&amp;category="># 파이썬</a>
-                                                                <a href="/search?kwd= 크롤링&amp;category="># 크롤링</a>
-                                                                <a href="/search?kwd= SQL&amp;category="># SQL</a>
-                                                                <a href="/search?kwd= mongoDB&amp;category="># mongoDB</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/EA0359/EA0359_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="데이터 사이언스 첫걸음 패키지"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">이러닝</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="데이터 사이언스 첫걸음 패키지"
-                                                                class="text_link"
-                                                                id="20190829143806000001netplexCurationPageTrans_4"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="EA0359"
-                                                                data-corsyr="2020"
-                                                                data-corsdgrcd="10002">데이터 사이언스 첫걸음 패키지</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190829143806000001netplexCurationPageTrans_3_4"
-                                                            data-crtnno="CM02"
-                                                            data-corscd="EA0359"
-                                                            data-corsyr="2020"
-                                                            data-corsdgrcd="10002"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/EA0359/EA0359_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="데이터 사이언스 첫걸음 패키지"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">이러닝</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190829143806000001netplexCurationPageTrans_2_4"
-                                                                data-crtnno="CM02"
-                                                                data-corscd="EA0359"
-                                                                data-corsyr="2020"
-                                                                data-corsdgrcd="10002">데이터 사이언스 첫걸음 패키지</a>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=데이터사이언스&amp;category=">#데이터사이언스</a>
-                                                                <a href="/search?kwd= 데이터&amp;category="># 데이터</a>
-                                                                <a href="/search?kwd= 통계&amp;category="># 통계</a>
-                                                                <a href="/search?kwd= 파이썬&amp;category="># 파이썬</a>
-                                                                <a href="/search?kwd= 이러닝&amp;category="># 이러닝</a>
-                                                                <a href="/search?kwd= 패키지&amp;category="># 패키지</a>
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <div class="star_info">
-                                                                    <span class="star_title">평점</span>
-                                                                    <i class="o-icon__star o-icon__star--80"></i><span class="star_score"><span>별점</span>4</span></div>
-                                                                <div class="review_info">
-                                                                    <span class="review_title">수강후기</span><span class="review_num">1</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                        <div id="contentcontainer">
+                            <section>
+                                <h1>카테고리</h1>
+                                <div class="contcont">
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>집합</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
                                 </div>
-                               
-                            </div>
-                        </div>
-
-                        <div class="portlet_row">
-                            <div class="portlet_cont">
-
-                                <link
-                                    rel="stylesheet"
-                                    href="https://www.multicampus.com/css/3rd/jquery.mCustomScrollbar.css">
-                                <script
-                                    charset="utf-8"
-                                    src="https://www.multicampus.com/js/3rd/jquery.mCustomScrollbar.min.js"></script>
-                                <div
-                                    id="20190209160022000003"
-                                    class="netplexcuration p12"
-                                    data-js="modal-group">
-                                    <h2 id="netplexTitle" class="ptl_title">IT/프로그래밍 클래스</h2>
-                                    <div class="nex_wrap" data-index="0">
-                                        <div class="nex_slider">
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00K3/FA00K3_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 실전! 초보자를 위한 UNIX 실무"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 실전! 초보자를 위한 UNIX 실무"
-                                                                class="text_link"
-                                                                id="20190209160022000003netplexCurationPageTrans_0"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00K3"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] 실전! 초보자를 위한 UNIX 실무</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190209160022000003netplexCurationPageTrans_3_0"
-                                                            data-crtnno="CM01"
-                                                            data-corscd="FA00K3"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10102"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00K3/FA00K3_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 실전! 초보자를 위한 UNIX 실무"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190209160022000003netplexCurationPageTrans_2_0"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00K3"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10102">[Live] 실전! 초보자를 위한 UNIX 실무</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 94;">
-                                                                    <select
-                                                                        id="sel-course-period0"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00K3_10102_2021_CM01">
-                                                                            2021.04.12 ~ 2021.04.16</option>
-                                                                        <option value="FA00K3_10103_2021_CM01">
-                                                                            2021.05.10 ~ 2021.05.14</option>
-                                                                        <option value="FA00K3_10104_2021_CM01">
-                                                                            2021.05.31 ~ 2021.06.04</option>
-                                                                        <option value="FA00K3_10105_2021_CM01">
-                                                                            2021.06.28 ~ 2021.07.02</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--5"
-                                                                        aria-owns="combobox__list--5"
-                                                                        aria-activedescendant="combobox__item--5-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.12 ~ 2021.04.16</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--5"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--5"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--5-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00K3_10102_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.12 ~ 2021.04.16</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--5-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00K3_10103_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--5-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA00K3_10104_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.31 ~ 2021.06.04</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--5-3"
-                                                                                    data-id="3"
-                                                                                    data-val="FA00K3_10105_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.28 ~ 2021.07.02</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=Unix&amp;category=">#Unix</a>
-                                                                <a href="/search?kwd= UNIX&amp;category="># UNIX</a>
-                                                                <a href="/search?kwd= 유닉스&amp;category="># 유닉스</a>
-                                                                <a href="/search?kwd= 유닉스 실무&amp;category="># 유닉스 실무</a>
-                                                                <a href="/search?kwd= 유닉스 기본교육&amp;category="># 유닉스 기본교육</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00CG/FA00CG_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[On+Live] ACA 포토샵 5일 취득 족집게 패키지"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[On+Live] ACA 포토샵 5일 취득 족집게 패키지"
-                                                                class="text_link"
-                                                                id="20190209160022000003netplexCurationPageTrans_1"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00CG"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[On+Live] ACA 포토샵 5일 취득 족집게 패키지</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190209160022000003netplexCurationPageTrans_3_1"
-                                                            data-crtnno="CM01"
-                                                            data-corscd="FA00CG"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10104"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00CG/FA00CG_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[On+Live] ACA 포토샵 5일 취득 족집게 패키지"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190209160022000003netplexCurationPageTrans_2_1"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00CG"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[On+Live] ACA 포토샵 5일 취득 족집게 패키지</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 93;">
-                                                                    <select
-                                                                        id="sel-course-period1"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00CG_10104_2021_CM01">
-                                                                            2021.04.12 ~ 2021.04.17</option>
-                                                                        <option value="FA00CG_10105_2021_CM01">
-                                                                            2021.05.10 ~ 2021.05.15</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--6"
-                                                                        aria-owns="combobox__list--6"
-                                                                        aria-activedescendant="combobox__item--6-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.12 ~ 2021.04.17</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--6"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--6"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--6-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00CG_10104_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.12 ~ 2021.04.17</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--6-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00CG_10105_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.15</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=포토샵&amp;category=">#포토샵</a>
-                                                                <a href="/search?kwd= 디자인&amp;category="># 디자인</a>
-                                                                <a href="/search?kwd= ACA&amp;category="># ACA</a>
-                                                                <a href="/search?kwd= 자격&amp;category="># 자격</a>
-                                                                <a href="/search?kwd= 어도비자격&amp;category="># 어도비자격</a>
-                                                                <a href="/search?kwd= UXUI&amp;category="># UXUI</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AI/FA00AI_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] Django(장고) 기반의 파이썬 웹프로그래밍"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] Django(장고) 기반의 파이썬 웹프로그래밍"
-                                                                class="text_link"
-                                                                id="20190209160022000003netplexCurationPageTrans_2"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00AI"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10101">[Live] Django(장고) 기반의 파이썬 웹프로그래밍</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190209160022000003netplexCurationPageTrans_3_2"
-                                                            data-crtnno="CM01"
-                                                            data-corscd="FA00AI"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10101"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00AI/FA00AI_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] Django(장고) 기반의 파이썬 웹프로그래밍"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190209160022000003netplexCurationPageTrans_2_2"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00AI"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10101">[Live] Django(장고) 기반의 파이썬 웹프로그래밍</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 92;">
-                                                                    <select
-                                                                        id="sel-course-period2"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00AI_10101_2021_CM01">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA00AI_10103_2021_CM01">
-                                                                            2021.06.14 ~ 2021.06.18</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--7"
-                                                                        aria-owns="combobox__list--7"
-                                                                        aria-activedescendant="combobox__item--7-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--7"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--7"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--7-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00AI_10101_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--7-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00AI_10103_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.14 ~ 2021.06.18</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=웹&amp;category=">#웹</a>
-                                                                <a href="/search?kwd= 백엔드&amp;category="># 백엔드</a>
-                                                                <a href="/search?kwd= 파이썬&amp;category="># 파이썬</a>
-                                                                <a href="/search?kwd= Python&amp;category="># Python</a>
-                                                                <a href="/search?kwd= 장고&amp;category="># 장고</a>
-                                                                <a href="/search?kwd= 쟝고&amp;category="># 쟝고</a>
-                                                                <a href="/search?kwd= 파이썬웹&amp;category="># 파이썬웹</a>
-                                                                <a href="/search?kwd= Pythonweb&amp;category="># Pythonweb</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA008K/FA008K_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] DevOps를 위한 도커와 쿠버네티스"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] DevOps를 위한 도커와 쿠버네티스"
-                                                                class="text_link"
-                                                                id="20190209160022000003netplexCurationPageTrans_3"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA008K"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[Live] DevOps를 위한 도커와 쿠버네티스</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190209160022000003netplexCurationPageTrans_3_3"
-                                                            data-crtnno="CM01"
-                                                            data-corscd="FA008K"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10104"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA008K/FA008K_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] DevOps를 위한 도커와 쿠버네티스"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190209160022000003netplexCurationPageTrans_2_3"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA008K"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[Live] DevOps를 위한 도커와 쿠버네티스</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 91;">
-                                                                    <select
-                                                                        id="sel-course-period3"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA008K_10104_2021_CM01">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA008K_10105_2021_CM01">
-                                                                            2021.05.10 ~ 2021.05.14</option>
-                                                                        <option value="FA008K_10106_2021_CM01">
-                                                                            2021.06.07 ~ 2021.06.11</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--8"
-                                                                        aria-owns="combobox__list--8"
-                                                                        aria-activedescendant="combobox__item--8-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--8"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--8"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--8-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA008K_10104_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--8-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA008K_10105_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--8-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA008K_10106_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.07 ~ 2021.06.11</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=컨테이너&amp;category=">#컨테이너</a>
-                                                                <a href="/search?kwd= container&amp;category="># container</a>
-                                                                <a href="/search?kwd= docker&amp;category="># docker</a>
-                                                                <a href="/search?kwd= K8s&amp;category="># K8s</a>
-                                                                <a href="/search?kwd= kuber&amp;category="># kuber</a>
-                                                                <a href="/search?kwd= kubernetes&amp;category="># kubernetes</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00A4/FA00A4_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] [저녁반] 4주 완성! - 자바 프로그래밍 Class 2"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] [저녁반] 4주 완성! - 자바 프로그래밍 Class 2"
-                                                                class="text_link"
-                                                                id="20190209160022000003netplexCurationPageTrans_4"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00A4"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10101">[Live] [저녁반] 4주 완성! - 자바 프로그래밍 Class ...</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190209160022000003netplexCurationPageTrans_3_4"
-                                                            data-crtnno="CM01"
-                                                            data-corscd="FA00A4"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10101"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00A4/FA00A4_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] [저녁반] 4주 완성! - 자바 프로그래밍 Class 2"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190209160022000003netplexCurationPageTrans_2_4"
-                                                                data-crtnno="CM01"
-                                                                data-corscd="FA00A4"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10101">[Live] [저녁반] 4주 완성! - 자바 프로그래밍 Class 2</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 90;">
-                                                                    <select
-                                                                        id="sel-course-period4"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00A4_10101_2021_CM01">
-                                                                            2021.04.06 ~ 2021.04.29</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--9"
-                                                                        aria-owns="combobox__list--9"
-                                                                        aria-activedescendant="combobox__item--9-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.06 ~ 2021.04.29</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--9"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--9"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--9-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00A4_10101_2021_CM01"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.06 ~ 2021.04.29</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=java&amp;category=">#java</a>
-                                                                <a href="/search?kwd= Java&amp;category="># Java</a>
-                                                                <a href="/search?kwd= Programming&amp;category="># Programming</a>
-                                                                <a href="/search?kwd= 자바&amp;category="># 자바</a>
-                                                                <a href="/search?kwd= 프로그래밍&amp;category="># 프로그래밍</a>
-                                                                <a href="/search?kwd= 자바 프로그래밍&amp;category="># 자바 프로그래밍</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </section>
+                            <section>
+                                <h1>카테고리</h1>
+                                <div class="contcont">
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>스마트</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
                                 </div>
-                               
-                            </div>
-                        </div>
-
-                        
-
-                        <div class="portlet_row">
-                            <div class="portlet_cont">
-
-                                <link
-                                    rel="stylesheet"
-                                    href="https://www.multicampus.com/css/3rd/jquery.mCustomScrollbar.css">
-                                <script
-                                    charset="utf-8"
-                                    src="https://www.multicampus.com/js/3rd/jquery.mCustomScrollbar.min.js"></script>
-                                <div
-                                    id="20190902160527000002"
-                                    class="netplexcuration p12"
-                                    data-js="modal-group">
-                                    <h2 id="netplexTitle" class="ptl_title">데이터사이언스 클래스</h2>
-                                    <div class="nex_wrap" data-index="0">
-                                        <div class="nex_slider">
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA004R/FA004R_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 원샷! 파이썬을 활용한 웹 크롤링과 데이터 분석"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 원샷! 파이썬을 활용한 웹 크롤링과 데이터 분석"
-                                                                class="text_link"
-                                                                id="20190902160527000002netplexCurationPageTrans_0"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA004R"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10107">[Live] 원샷! 파이썬을 활용한 웹 크롤링과 데이터 분 ...</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190902160527000002netplexCurationPageTrans_3_0"
-                                                            data-crtnno="CM04"
-                                                            data-corscd="FA004R"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10107"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA004R/FA004R_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 원샷! 파이썬을 활용한 웹 크롤링과 데이터 분석"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190902160527000002netplexCurationPageTrans_2_0"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA004R"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10107">[Live] 원샷! 파이썬을 활용한 웹 크롤링과 데이터 분석</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 89;">
-                                                                    <select
-                                                                        id="sel-course-period0"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA004R_10107_2021_CM04">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA004R_10108_2021_CM04">
-                                                                            2021.05.10 ~ 2021.05.14</option>
-                                                                        <option value="FA004R_10109_2021_CM04">
-                                                                            2021.06.14 ~ 2021.06.18</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--10"
-                                                                        aria-owns="combobox__list--10"
-                                                                        aria-activedescendant="combobox__item--10-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--10"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--10"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--10-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA004R_10107_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--10-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA004R_10108_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--10-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA004R_10109_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.14 ~ 2021.06.18</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=웹크롤링&amp;category=">#웹크롤링</a>
-                                                                <a href="/search?kwd= 스크래핑&amp;category="># 스크래핑</a>
-                                                                <a href="/search?kwd= 크롤러&amp;category="># 크롤러</a>
-                                                                <a href="/search?kwd= 수집&amp;category="># 수집</a>
-                                                                <a href="/search?kwd= 추출&amp;category="># 추출</a>
-                                                                <a href="/search?kwd= 파이썬&amp;category="># 파이썬</a>
-                                                                <a href="/search?kwd= python&amp;category="># python</a>
-                                                                <a href="/search?kwd= 데이터분석&amp;category="># 데이터분석</a>
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <div class="star_info">
-                                                                    <span class="star_title">평점</span>
-                                                                    <i class="o-icon__star o-icon__star--100"></i><span class="star_score"><span>별점</span>4.8</span></div>
-                                                                <div class="review_info">
-                                                                    <span class="review_title">수강후기</span><span class="review_num">82</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA0067/FA0067_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] R좀 R려줘! R 데이터 분석 with Cloud"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] R좀 R려줘! R 데이터 분석 with Cloud"
-                                                                class="text_link"
-                                                                id="20190902160527000002netplexCurationPageTrans_1"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA0067"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[Live] R좀 R려줘! R 데이터 분석 with Cloud</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190902160527000002netplexCurationPageTrans_3_1"
-                                                            data-crtnno="CM04"
-                                                            data-corscd="FA0067"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10104"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA0067/FA0067_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] R좀 R려줘! R 데이터 분석 with Cloud"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190902160527000002netplexCurationPageTrans_2_1"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA0067"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10104">[Live] R좀 R려줘! R 데이터 분석 with Cloud</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 88;">
-                                                                    <select
-                                                                        id="sel-course-period1"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA0067_10104_2021_CM04">
-                                                                            2021.04.05 ~ 2021.04.09</option>
-                                                                        <option value="FA0067_10105_2021_CM04">
-                                                                            2021.06.07 ~ 2021.06.11</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--11"
-                                                                        aria-owns="combobox__list--11"
-                                                                        aria-activedescendant="combobox__item--11-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.05 ~ 2021.04.09</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--11"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--11"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--11-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA0067_10104_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.05 ~ 2021.04.09</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--11-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA0067_10105_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.07 ~ 2021.06.11</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=R&amp;category=">#R</a>
-                                                                <a href="/search?kwd= 데이터분석&amp;category="># 데이터분석</a>
-                                                                <a href="/search?kwd= 빅데이터&amp;category="># 빅데이터</a>
-                                                                <a href="/search?kwd= BigData&amp;category="># BigData</a>
-                                                                <a href="/search?kwd= Data Scientist&amp;category="># Data Scientist</a>
-                                                                <a href="/search?kwd= cloud&amp;category="># cloud</a>
-                                                                <a href="/search?kwd= 데이터마이닝&amp;category="># 데이터마이닝</a>
-                                                                <a href="/search?kwd= 텍스트마이닝&amp;category="># 텍스트마이닝</a>
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <div class="star_info">
-                                                                    <span class="star_title">평점</span>
-                                                                    <i class="o-icon__star o-icon__star--100"></i><span class="star_score"><span>별점</span>4.9</span></div>
-                                                                <div class="review_info">
-                                                                    <span class="review_title">수강후기</span><span class="review_num">5</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA006B/FA006B_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 실전! Tensorflow로 배우는 딥러닝"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 실전! Tensorflow로 배우는 딥러닝"
-                                                                class="text_link"
-                                                                id="20190902160527000002netplexCurationPageTrans_2"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA006B"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10105">[Live] 실전! Tensorflow로 배우는 딥러닝</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190902160527000002netplexCurationPageTrans_3_2"
-                                                            data-crtnno="CM04"
-                                                            data-corscd="FA006B"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10105"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA006B/FA006B_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 실전! Tensorflow로 배우는 딥러닝"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190902160527000002netplexCurationPageTrans_2_2"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA006B"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10105">[Live] 실전! Tensorflow로 배우는 딥러닝</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 87;">
-                                                                    <select
-                                                                        id="sel-course-period2"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA006B_10105_2021_CM04">
-                                                                            2021.04.12 ~ 2021.04.14</option>
-                                                                        <option value="FA006B_10106_2021_CM04">
-                                                                            2021.05.24 ~ 2021.05.26</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--12"
-                                                                        aria-owns="combobox__list--12"
-                                                                        aria-activedescendant="combobox__item--12-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.12 ~ 2021.04.14</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--12"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--12"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--12-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA006B_10105_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.12 ~ 2021.04.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--12-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA006B_10106_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.24 ~ 2021.05.26</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=Tensorflow&amp;category=">#Tensorflow</a>
-                                                                <a href="/search?kwd= 텐서플로우&amp;category="># 텐서플로우</a>
-                                                                <a href="/search?kwd=텐서플로&amp;category=">#텐서플로</a>
-                                                                <a href="/search?kwd=&amp;category=">#</a>
-                                                            </div>
-                                                            <div class="item_info">
-                                                                <div class="star_info">
-                                                                    <span class="star_title">평점</span>
-                                                                    <i class="o-icon__star o-icon__star--90"></i><span class="star_score"><span>별점</span>4.5</span></div>
-                                                                <div class="review_info">
-                                                                    <span class="review_title">수강후기</span><span class="review_num">74</span></div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00GF/FA00GF_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 핵심! 빅데이터 분석 전문가"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">집합</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="[Live] 핵심! 빅데이터 분석 전문가"
-                                                                class="text_link"
-                                                                id="20190902160527000002netplexCurationPageTrans_3"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA00GF"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10106">[Live] 핵심! 빅데이터 분석 전문가</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190902160527000002netplexCurationPageTrans_3_3"
-                                                            data-crtnno="CM04"
-                                                            data-corscd="FA00GF"
-                                                            data-corsyr="2021"
-                                                            data-corsdgrcd="10106"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/FA00GF/FA00GF_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="[Live] 핵심! 빅데이터 분석 전문가"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">집합</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190902160527000002netplexCurationPageTrans_2_3"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="FA00GF"
-                                                                data-corsyr="2021"
-                                                                data-corsdgrcd="10106">[Live] 핵심! 빅데이터 분석 전문가</a>
-                                                            <div class="detail_period">
-                                                                <span>학습기간</span>
-                                                                <div
-                                                                    class="combobox-wrap combobox combobox--basic"
-                                                                    data-js="combobox"
-                                                                    style="z-index: 86;">
-                                                                    <select
-                                                                        id="sel-course-period3"
-                                                                        title="학습기간 선택"
-                                                                        class="combobox combobox--basic is-ready"
-                                                                        tabindex="-1">
-                                                                        <option value="FA00GF_10106_2021_CM04">
-                                                                            2021.04.12 ~ 2021.04.16</option>
-                                                                        <option value="FA00GF_10107_2021_CM04">
-                                                                            2021.05.10 ~ 2021.05.14</option>
-                                                                        <option value="FA00GF_10108_2021_CM04">
-                                                                            2021.06.07 ~ 2021.06.11</option>
-                                                                    </select>
-                                                                    <div
-                                                                        class="combobox__button"
-                                                                        tabindex="0"
-                                                                        role="combobox"
-                                                                        aria-autocomplete="list"
-                                                                        title="학습기간 선택"
-                                                                        id="combobox__button--13"
-                                                                        aria-owns="combobox__list--13"
-                                                                        aria-activedescendant="combobox__item--13-0"
-                                                                        aria-expanded="true">
-                                                                        <span class="combobox__status" data-id="0">
-                                                                            2021.04.12 ~ 2021.04.16</span></div>
-                                                                    <div class="combobox__scroll" style="max-height: 200px;">
-                                                                        <div class="combobox__scrollinner scrollbar-inner">
-                                                                            <ul
-                                                                                class="combobox__list"
-                                                                                id="combobox__list--13"
-                                                                                role="listbox"
-                                                                                aria-labelledby="combobox__button--13"
-                                                                                aria-expanded="false">
-                                                                                <li
-                                                                                    class="combobox__item is-active"
-                                                                                    id="combobox__item--13-0"
-                                                                                    data-id="0"
-                                                                                    data-val="FA00GF_10106_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.04.12 ~ 2021.04.16</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--13-1"
-                                                                                    data-id="1"
-                                                                                    data-val="FA00GF_10107_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.05.10 ~ 2021.05.14</li>
-                                                                                <li
-                                                                                    class="combobox__item"
-                                                                                    id="combobox__item--13-2"
-                                                                                    data-id="2"
-                                                                                    data-val="FA00GF_10108_2021_CM04"
-                                                                                    title=""
-                                                                                    role="option"
-                                                                                    tabindex="0">
-                                                                                    2021.06.07 ~ 2021.06.11</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=빅데이터 분석&amp;category=">#빅데이터 분석</a>
-                                                                <a href="/search?kwd= 빅데이터&amp;category="># 빅데이터</a>
-                                                                <a href="/search?kwd= BIGDATA&amp;category="># BIGDATA</a>
-                                                                <a href="/search?kwd= BigData&amp;category="># BigData</a>
-                                                                <a href="/search?kwd= 영화&amp;category="># 영화</a>
-                                                                <a href="/search?kwd= 사례&amp;category="># 사례</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="thum_item">
-                                                <dl>
-                                                    <dt>
-                                                        <div class="img"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/EB15H4/EB15H4_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="머신러닝/딥러닝 마스터 패키지"></div>
-                                                    </dt>
-                                                    <dd>
-                                                        <p>
-                                                            <span class="p_cate">이러닝</span></p>
-                                                        <p>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                title="머신러닝/딥러닝 마스터 패키지"
-                                                                class="text_link"
-                                                                id="20190902160527000002netplexCurationPageTrans_4"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="EB15H4"
-                                                                data-corsyr="2020"
-                                                                data-corsdgrcd="10002">머신러닝/딥러닝 마스터 패키지</a>
-                                                        </p>
-                                                    </dd>
-                                                </dl>
-                                                <div class="item_wrap">
-                                                    <div class="item_img">
-                                                        <a
-                                                            href="javascript:void(0);"
-                                                            class="item_img_link"
-                                                            id="20190902160527000002netplexCurationPageTrans_3_4"
-                                                            data-crtnno="CM04"
-                                                            data-corscd="EB15H4"
-                                                            data-corsyr="2020"
-                                                            data-corsdgrcd="10002"><img
-                                                            src="https://webcachecdn.multicampus.com/prd/pv00/EB15H4/EB15H4_PV_TN_IM_1.jpg"
-                                                            onerror="this.src='https://www.multicampus.com/img/common/noimage.jpg';"
-                                                            alt="머신러닝/딥러닝 마스터 패키지"></a>
-                                                    </div>
-                                                    <div class="item_detail">
-                                                        <div class="item_title">
-                                                            <span class="cate">이러닝</span>
-                                                            <a
-                                                                href="javascript:void(0);"
-                                                                class="title"
-                                                                id="20190902160527000002netplexCurationPageTrans_2_4"
-                                                                data-crtnno="CM04"
-                                                                data-corscd="EB15H4"
-                                                                data-corsyr="2020"
-                                                                data-corsdgrcd="10002">머신러닝/딥러닝 마스터 패키지</a>
-                                                            <div class="keyword_list">
-                                                                <a href="/search?kwd=머신러닝&amp;category=">#머신러닝</a>
-                                                                <a href="/search?kwd= AI&amp;category="># AI</a>
-                                                                <a href="/search?kwd=딥러닝&amp;category=">#딥러닝</a>
-                                                                <a href="/search?kwd= 빅데이터&amp;category="># 빅데이터</a>
-                                                            </div>
-                                                            <div class="item_info"></div>
-                                                        </div>
-                                                        <div class="item_more">
-                                                            <p></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+                            </section>
+                            <section>
+                                <h1>카테고리</h1>
+                                <div class="contcont">
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
+                                    <a href="">
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                        <ul>
+                                            <li><img src="" alt=""></li>
+                                            <li>온라인</li>
+                                            <li>콘텐츠명</li>
+                                        </ul>
+                                    </a>
                                 </div>
-                               
-
-                            </div>
+                            </section>
                         </div>
 
                         <div id="aside_bottom">
@@ -2225,15 +481,9 @@
                                 </ul>
                             </section>
                         </div>
-                        <!-- e: content work -->
-
-                        <!-- s: quick menu -->
                         
-                        <!-- e: quick menu -->
-
-                        <!-- e:content -->
                     </div>
-                    <!-- e:content_area -->
+                    
                 </div>
             </section>
 
