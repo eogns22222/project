@@ -162,7 +162,7 @@ main>div>section>form>div.field>div:nth-child(9)>div>div>p:nth-child(1)>input:nt
 }
 main>div>section>form>div.field>div:nth-child(10)>div>label+p>input{
     margin-right:0.7rem;
-    color:white;
+    color:#000;
 }
 main>div>section>form>div.field>div>div>label>span{
     color:red;

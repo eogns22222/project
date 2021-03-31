@@ -1,0 +1,224 @@
+main{
+    
+}
+main>div{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:120rem;
+    margin-top:8rem;
+}
+main>div>div.subnav{
+    
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul{}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+   
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>a{}
+main>div>div.subnav>nav>ul>li>ul{
+    
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul:nth-child()
+main>div>div.subnav>nav>ul>li>ul>li{
+    
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+main>div>div.subnav>nav>ul>li>ul>li.on>a{
+    color:#000;
+}
+
+/*  */
+main>div>div.lecture{}
+main>div>div.lecture>h1{
+    margin-bottom:5rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.lecture>form{}
+main>div>div.lecture>form>h2{
+    margin-bottom:3.5rem;
+    font-size:2.2rem;
+    color:#000;
+}
+main>div>div.lecture>form>div{
+    
+    border-top:1px solid #999;
+}
+main>div>div.lecture>form>div>table{}
+main>div>div.lecture>form>div>table>tbody{}
+main>div>div.lecture>form>div>table>tbody>tr{
+    display:block;
+    padding:1rem 0;
+    border-bottom:1px solid #ccc;
+}
+main>div>div.lecture>form>div>table>tbody>tr>th{
+    padding-left:3rem;
+    width:20rem;
+    font-size:1.5rem;
+    line-height: 3.5rem;
+    color:#000;
+    text-align: start;
+    border-right:1px solid #ccc;
+}
+main>div>div.lecture>form>div>table>tbody>tr>th.tit{
+    position:relative;
+}
+main>div>div.lecture>form>div>table>tbody>tr>th.tit:before{
+    content:"*";
+    position:absolute;
+    top:1rem;
+    left:2rem;
+    width:1rem;
+    height:1rem;
+    color:red;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td{
+    padding-left:1rem;
+    padding-top:1rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p{
+    font-size:1.4rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.addresscont>p{
+    padding-bottom:1rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.addresscont>p>input{
+    width:47rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.addresscont>p>input::placeholder{
+    padding-left:1rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p>input{
+    font-size:1.4rem;
+    border:1px solid #ccc;
+    width:8.5rem;
+    height:2.5rem;
+    vertical-align: bottom;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>span{
+    
+    vertical-align: 7px;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon2>p>input{
+    width:19.5rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon2>p>button{
+    margin-left:1rem;
+    width:5rem;
+    background:#1428A0;
+    color:white;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>input{
+    width:11rem;
+    vertical-align: bottom;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>input.btn2{
+    background:#1428A0;
+    color:white;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>input.btnCheck{
+    display:none;
+    width:7rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>select{
+    width:10rem;
+    height:2.5rem;
+    vertical-align: bottom;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.emailcon>p>button{
+    margin-left:1rem;
+    width:10rem;
+    height:2.5rem;
+    background:#1428A0;
+    color:white;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p.address>input{
+    vertical-align: bottom;
+    width:14.5rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p.address>button{
+    vertical-align: bottom;
+    margin-left:1rem;
+    width:9.5rem;
+    height:2.5rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p>input.nik_nm{
+    width:15rem;
+    height:2.5rem;
+    border:0 none;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.phonenam>p>select{
+    font-size:1.4rem;
+    border:1px solid #ccc;
+    width:8.5rem;
+    height:2.5rem;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.agree>p>input{
+    margin-top:1rem;
+    width:1.8rem;
+    height:1.8rem;
+    vertical-align:-4px;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.agree>p>label{
+    font-size:1.4rem;
+    line-height: 3rem;
+    color:#666;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td.agree>p.check{
+    float: right;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p>select{
+    font-size:1.4rem;
+    border:1px solid #ccc;
+}
+
+main>div>div.lecture>form>div>table>tbody>tr>td>p>button{
+    width:9.5rem;
+    height:2.5rem;
+    font-size:1.4rem;
+    border:1px solid #ccc;
+}
+main>div>div.lecture>form>div>table>tbody>tr>td>p>label{
+    font-size:1.5rem;
+    color:#000;
+}
+main>div>div.lecture>form>p{
+    margin:5rem 0 10rem 0;
+    text-align: center;
+}
+main>div>div.lecture>form>p>input{
+    margin:0 auto;
+    font-size:1.4rem;
+    width:15.4rem;
+    height:4rem;
+    background:#1428A0;
+    color:white;
+    
+}
+
+
+

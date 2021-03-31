@@ -152,7 +152,7 @@ main>section>form>div.container2>table>tbody>tr>td.txt>div>dl.second>dd{}
 main>section>form>div.btn2{
     display:flex;
     justify-content: center;
-    margin:8rem 0 15rem 0;
+    margin:8rem 0 15rem 0; 
 
 }
 main>section>form>div.btn2>button{

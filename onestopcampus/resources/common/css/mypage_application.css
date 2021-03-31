@@ -1,11 +1,10 @@
-main{
-    margin:0 auto;
-    width:120rem;
-}
 main>div{
+    margin:0 auto;
+    margin-bottom:15rem;
     display:flex;
     justify-content: space-between;
     margin-top:8rem;
+    width:120rem;
 }
 main>div>div.subnav{
     
@@ -22,7 +21,6 @@ main>div>div.subnav>h1{
 main>div>div.subnav>nav{
     padding-left:1rem;
 }
-main>div>div.subnav>nav>ul{}
 main>div>div.subnav>nav>ul>li{
     font-size:1.6rem;
     line-height: 4rem;
@@ -30,47 +28,47 @@ main>div>div.subnav>nav>ul>li{
 main>div>div.subnav>nav>ul:nth-child(1)>li{
     color:#000;
 }
-main>div>div.subnav>nav>ul>li>a{}
 main>div>div.subnav>nav>ul>li>ul{
-    
     border-top:1px solid #ccc;
 }
-main>div>div.subnav>nav>ul>li>ul:nth-child()
 main>div>div.subnav>nav>ul>li>ul>li{
-    
     font-size:1.4rem;
     line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li>ul>li:nth-child(1)>a{
+    color:#000;
 }
 main>div>div.subnav>nav>ul>li>ul>li>a{
     padding-left:1.5rem;
 }
 
 /*  */
-main>div>div.lecture{}
 main>div>div.lecture>h1{
     margin-bottom:5.4rem;
     font-size:3rem;
     color:#000;
     text-align: center;
 }
-main>div>div.lecture>ul{
+main>div>div.lecture>ul.lecture_list{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width:100%;
     text-align: center;
 }
-main>div>div.lecture>ul>li.on{
+main>div>div.lecture>ul.lecture_list>li.on{
     background-color: #1428A0;
 }
-main>div>div.lecture>ul>li{
+main>div>div.lecture>ul.lecture_list>li{
     width:47.3rem;
     height:4rem;
     text-align: center;
     line-height: 4rem;
+    cursor: pointer;
 }
-main>div>div.lecture>ul>li.on{
+main>div>div.lecture>ul.lecture_list>li.on{
     color:#fff;
+    
 }
 main>div>div.lecture>div.container>div.content>div{
     margin:2.7rem 0;
@@ -96,16 +94,21 @@ main>div>div.lecture>div.container>div.content>div>form>select{
     width:23rem;
     height:3.5rem;
     border:1px solid #999;
+    cursor: pointer;
+    font-size: 1.4rem;
 }
 main>div>div.lecture>div.container>div.content>div>form>select>option{
     padding: 1.3rem 1.3rem;
     color:#999;
+    font-size: 1.4rem;
 }
 main>div>div.lecture>div.container>div.content>div>form>input{
     padding-left: 1.4rem;
     width:23rem;
     height:3.5rem;
+    font-size: 1.4rem;
     border:1px solid #999;
+    cursor: pointer;
     
 }
 main>div>div.lecture>div.container>div.content>div>form>button{

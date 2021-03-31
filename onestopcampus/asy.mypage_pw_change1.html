@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.png">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="resources/common/css/reset.css">
+        <!--common-->
+        <link rel="stylesheet" href="resources/common/css/common_indigo.css">
+        <!---->
+        <link rel="stylesheet" href="resources/common/css/mypage_pw_change1.css">
+        <!--common-->
+        <link rel="import" href="header.html">
+        <link rel="import" href="footer.html">
+        <style>
+            html {
+                font-size:62.5%;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+            iframe{
+                width:100%;
+            }
+            
+            iframe.hea{
+                height:18.5rem;
+            }
+            iframe.foo{
+                height:30rem;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script>
+        </script>
+</head>
+<body>
+    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <main>
+        <div>
+            <div class="subnav">
+                <h1>마이페이지</h1>
+                <nav>
+                    <ul>
+                        <li>나의 강의실
+                            <ul>
+                                <li><a href="#">- 수강신청이력</a></li>
+                                <li><a href="#">- 스크랩</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li><a href="">1:1 문의내역</a></li>
+                    </ul>
+                    <ul> 
+                        <li>회원정보
+                            <ul>
+                                <li><a href="#">- 정보변경</a></li>
+                                <li><a href="#">- 비밀번호 변경</a></li>
+                                <li><a href="#">- 회원탈퇴</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="change">
+                <h1>정보변경</h1> 
+                <div class="wrap">
+                    <p>- onestopcampus는 회원님의 개인정보를 신중히 취급하여, 회원님의 동의 없이 기재하신 회원정보가 공개되지 않습니다.</p>
+                    <p>- 개인정보를 안정하게 보호하기 위해 비밀번호를 다시 한번 입력해주세요.</p>
+                </div>
+                <h2>비밀번호(재확인) 인증</h2>
+                <form action="pw_change" method="post">
+                    <table>
+                        <tbody>
+                            <tr height="50">
+                                <td>아이디</td>
+                                <td>iea123</td>
+                            </tr>
+                            <tr height="50">
+                                <td>비밀번호</td>
+                                <td><input type="text" name="" id="" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <input type="submit" value="확인">
+                </form>
+            </div>
+        </div>
+    </main>
+    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+</body>
+</html>

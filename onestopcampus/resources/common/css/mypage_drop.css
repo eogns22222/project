@@ -1,0 +1,100 @@
+main>div{
+    margin:0 auto;
+    margin-bottom: 10rem;
+    display:flex;
+    justify-content: space-between;
+    margin-top:8rem;
+    width:120rem;
+}
+main>div>div.subnav{
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul{
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul>li{
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(3)>li>ul>li:nth-child(3)>a{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+/**/
+main>div>div.drop>h1{
+    margin-bottom:5.4rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.drop>dl{
+    padding: 4rem 4rem 1.8rem 4rem;
+    border:1px solid #999;
+    color:#000;
+}
+main>div>div.drop>dl>dt{
+    margin-bottom: 1rem;
+    padding-left: 1.3rem;
+    font-size: 2.2rem;
+    font-weight: 500;
+    line-height: 4.3rem;
+    color:#000;
+    width:88.1rem;
+    border-bottom:1px solid #F2F2F2;
+}
+main>div>div.drop>dl>dt>span{
+    color:#1428A0;
+}
+main>div>div.drop>dl>dd{
+    font-size: 1.4rem;
+    line-height: 4.2rem;
+    color:#4D4D4D;
+}
+main>div>div.drop>div.wrap{
+    width:100%;
+    background-color: #F5F7FF;
+}
+main>div>div.drop>div.wrap>dl{
+    padding: 3.2rem 4.3rem;
+}
+main>div>div.drop>div.wrap>dl>dt{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 4.3rem;
+    color:#000;
+}
+main>div>div.drop>div.wrap>dl>dd{
+    font-size: 1.4rem;
+    line-height: 3rem;
+    color:#4D4D4D;
+}
+main>div>div.drop>button{
+    margin: 0 auto;
+    margin-top: 10rem;
+    display: block;
+    width:15rem;
+    height:4rem;
+    color:#fff;
+    background-color: #1428A0;
+}
+

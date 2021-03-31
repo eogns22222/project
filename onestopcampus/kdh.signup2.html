@@ -64,6 +64,7 @@
             function fn_launch() {
                 $("#return2").css("display", "none");
                 $("#return").css("display", "inline-block");
+                $(".concont").css("display","block");
             }
             // $("#return2").click(function(){     $("#return2").css("display","none");
             // $("#return").css("display","inline-block"); });
@@ -129,7 +130,7 @@
                                             class="nik_pwd"
                                             required="required">
                                         <input
-                                            type="submit"
+                                            type="button"
                                             value="중복확인"
                                             class="btn2 btnCheck"
                                             style="background-color: #1428A0; "
@@ -147,7 +148,7 @@
                                         <input
                                             type="password"
                                             name="pwd"
-                                            pattern="([a-zA-Z0-9].*[!,@,#,$,%,^,&,*,?,_,~])|([!,@,#,$,%,^,&,*,?,_,~].*[a-zA-Z0-9]){8,24}"
+                                            pattern="^(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#$%^&*()_-+=[]{}~?:;`|/]).{8,24}$"
                                             class="nik_pwd"
                                             required="required" id="pwssdd">
                                         <span>특수문자,영문,숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</span>
@@ -274,14 +275,14 @@
                                     </p>
                                 </div>
                             </div>
-                            <div>
+                            <div style="display:none;" class="concont">
                                 <div>
                                     <label for="email_check" class="mainLabel">
                                         <span>*</span>
                                         이메일 인증</label>
                                     <p>
                                         <input type="email" id="email_check" name="email_check" required="required">
-                                        <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
+                                        <input type="button" value="확인" class="btn2" style="background-color: #1428A0;">
                                     </p>
                                 </div>
                             </div>
@@ -306,7 +307,7 @@
                                         <p class="address_zip">
                                             <input type="text" id="zipcode" name="zipcode" placeholder="우편번호">
                                             <input
-                                                type="submit"
+                                                type="button"
                                                 value="우편번호검색"
                                                 class="btn2"
                                                 style="background-color: #B3B3B3;">
@@ -325,13 +326,13 @@
                                     <label for="RecommenderId" class="mainLabel">추천인 ID</label>
                                     <p>
                                         <input type="text" id="RecommenderId" name="RecommenderId">
-                                        <input type="submit" value="확인" class="btn2" style="background-color: #1428A0;">
+                                        <input type="button" value="확인" class="btn2" style="background-color: #1428A0; color:white;" >
                                     </p>
                                 </div>
                             </div>
                         </div>
                         <div class="btn">
-                            <input type="submit" value="이전">
+                            <input type="button" value="이전">
                             <input type="submit" value="다음" id="go" disabled>
                         </div>
                     </form>

@@ -1,0 +1,105 @@
+main>div{
+    margin:0 auto;
+    margin-bottom: 2rem;
+    display:flex;
+    justify-content: space-between;
+    margin-top:8rem;
+    width:120rem;
+}
+main>div>div.subnav{
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul{
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul>li{
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(3)>li>ul>li:nth-child(1)>a{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+
+/*  */
+main>div>div.change>h1{
+    margin-bottom:5.4rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.change>div.wrap{
+    padding:3.2rem 5.7rem;
+    width:94.6rem;
+    height:11.8rem;
+    background-color: #F5F7FF;
+}
+main>div>div.change>div.wrap>p{
+    color:#000;
+}
+main>div>div.change>div.wrap>p:first-of-type{
+    margin-bottom: 1.5rem;
+}
+/**/
+main>div>div.change>h2{
+    margin-top: 5rem;
+    font-size: 2.2rem;
+    font-weight: 600;
+    color:#000;
+}
+main>div>div.change>form{
+    margin-bottom: 10.5rem;
+}
+main>div>div.change>form>table{
+    margin-top: 3.7rem;
+    margin-bottom: 10.8rem;
+    width:100%;
+    border-top:2px solid #999;
+}
+main>div>div.change>form>table>tbody>tr{
+    font-size: 1.5rem;
+    line-height: 5rem;
+    border-bottom:1px solid #ccc;
+}
+main>div>div.change>form>table>tbody>tr>td{
+    padding-left: 1.8rem;
+}
+main>div>div.change>form>table>tbody>tr>td:first-of-type{
+    width:20rem;
+    color:#000;
+    border-right:1px solid #ccc ;
+}
+main>div>div.change>form>table>tbody>tr>td>input{
+    border:1px solid #999;
+    cursor: pointer;
+}
+main>div>div.change>form>input{
+    display: block;
+    margin: 0 auto;
+    width:15rem;
+    height:4rem;
+    text-align: center;
+    color:#fff;
+    background-color: #1428A0;
+}
+

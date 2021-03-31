@@ -1,0 +1,161 @@
+main>div{
+    margin:0 auto;
+    margin-bottom:15rem;
+    display:flex;
+    justify-content: space-between;
+    margin-top:8rem;
+    width:120rem;
+}
+main>div>div.subnav{
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul{
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul>li{
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li>ul>li:nth-child(1)>a{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+
+/*  */
+main>div>div.details{
+    width:100%;
+}
+main>div>div.details>h1{
+    margin-bottom:5.4rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.details>h2{
+    padding-bottom: 2.8rem;
+    font-size:2.2rem;
+    font-weight: 500;
+    color:#000;
+    text-align: left;
+    width:100%;
+    border-bottom:1px solid #E6E6E6;
+}
+main>div>div.details>form>div.support>h2{
+    padding-top: 2.5rem;
+    margin: 2.4rem 0;
+    font-size: 1.7rem;
+    font-weight: 500;
+    color:#000;
+}
+main>div>div.details>form>div.support>table{
+    width:100%;
+    border-top:1px solid #808080;
+}
+main>div>div.details>form>div.support>table>tbody{}
+main>div>div.details>form>div.support>table>tbody>tr{
+    border-bottom:1px solid #F2F2F2;
+}
+main>div>div.details>form>div.support>table>tbody>tr>th{
+    padding: 2rem 0;
+    padding-left: 1.5rem;
+    width:20rem;
+    text-align: left;
+    color:#000;
+    border-right:1px solid #F2F2F2;
+}
+main>div>div.details>form>div.support>table>tbody>tr>th.left{
+    border-left:1px solid #F2F2F2;
+}
+main>div>div.details>form>div.support>table>tbody>tr>td{
+    padding-left: 1.5rem;
+    width:27rem;
+    color:#4D4D4D;
+}
+/**/
+main>div>div.details>form>div.SupportCheck{
+    margin-bottom:4.9rem;
+}
+
+main>div>div.details>form>div.SupportCheck>h2{
+    padding-top: 2.5rem;
+    margin: 2.4rem 0;
+    font-size:1.7rem;
+    color:#000;
+    font-weight: 600;
+} 
+main>div>div.details>form>div.SupportCheck>div{
+    border-bottom:1px solid #ccc;
+}
+main>div>div.details>form>div.SupportCheck>div:nth-child(2){
+    border-top:2px solid #999;
+}
+main>div>div.details>form>div.SupportCheck>div>p{
+    display:inline-block;
+    padding: 1rem 0;
+    padding-left:2rem;
+    padding-right: 7rem;
+    width:72rem;
+    font-size:1.4rem;
+    line-height:3rem;
+    color:#000;
+    border-right:1px solid #ccc;
+    
+}
+main>div>div.details>form>div.SupportCheck>div>input:nth-child(2){
+    margin-left:6rem;
+}
+
+main>div>div.details>form>div.SupportCheck>div>label{
+    font-size:1.4rem;
+    color:#000;
+}
+main>div>div.details>form>div.SupportCheck>div>label:nth-child(3){
+    margin-right:8rem;
+}
+main>div>div.details>form>div.SupportCheck>div>div.center{
+    padding-bottom: -6rem;
+}
+main>div>div.details>form>div.SupportCheck>div>div.center>input:nth-child(2){
+    margin-left:6rem;
+}
+
+main>div>div.details>form>div.SupportCheck>div>div.center>label{
+    font-size:1.4rem;
+    color:#000;
+}
+main>div>div.details>form>div.SupportCheck>div>div.center>label:nth-child(3){
+    margin-right:8rem;
+}
+main>div>div.details>form>div.SupportCheck>div>div#show{
+    width:85rem;
+    border-right:1px solid #ccc;
+}
+main>div>div.details>form>input{
+    display: block;
+    margin: 0 auto;
+    width:15rem;
+    height:4rem;
+    color:#fff;
+    background-color: #1428A0;
+    cursor: pointer;
+}
