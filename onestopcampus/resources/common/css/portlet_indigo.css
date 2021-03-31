@@ -72,25 +72,32 @@
 div#aside_bottom{
     margin-top: 70px;
 }
-div#aside_bottom>aside{
+div#aside_bottom>div{
+    display:none;
+}
+div#aside_bottom>div.on{
+    display:block;
+}
+div#aside_bottom>div>aside{
     display:flex;
     justify-content: space-between;
     margin:0 auto;
     width:1196px;
 }
-div#aside_bottom>ul.slick-dotss{
+
+div#aside_bottom>ul.slickdotss{
     display:flex;
     justify-content: center;
     align-items: center;
     margin-top:20px;
 }
-div#aside_bottom>ul.slick-dotss>li.slick-dots__items {
+div#aside_bottom>ul.slickdotss>li.slick-dotsitems {
     margin:0 5px;
     width:10px; height:10px; background:#c2c4cc;
     border-radius: 10px;
     cursor: pointer;
 }
-div#aside_bottom>ul.slick-dotss>li.on{
+div#aside_bottom>ul.slickdotss>li.on{
     width:15px; background:#1428A0;
 }
 div#section__opice{
@@ -3682,7 +3689,7 @@ div.bannercontainer>ul.btnpage{
     display:flex;
     position:absolute;
     top:28rem;
-    left:calc(50% - 90px);
+    left:calc(50% - 130px);
     z-index: 10;
 }
 div.bannercontainer>ul.btnpage>li{
@@ -3730,4 +3737,28 @@ div.bannercontainer>div.btnsubnav>ul>li{
 div.bannercontainer>div.btnsubnav>ul>li.on{
     border-bottom:1px solid #1428A0;
     color:#1428A0;
+}
+div.bannercontainer>div.btnenrolment{
+    position:absolute; z-index: 1000;
+    bottom:7.5rem;
+    left:4rem;
+}
+div.bannercontainer>div.btnenrolment>ul{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:18.5rem;
+    height:2.5rem;
+    background:#4d4d4d;
+}
+div.bannercontainer>div.btnenrolment>ul.on{
+    display:block;
+}
+div.bannercontainer>div.btnenrolment>ul>li{
+    line-height: 2.5rem;
+    text-align: center;
+}
+div.bannercontainer>div.btnenrolment>ul>li>a{
+    color:#fff;
 }

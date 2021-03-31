@@ -55,6 +55,8 @@
                     .siblings().removeClass("on");
                     $(".btnsubnav").children("ul").children("li").eq(banner.idx)
                     .addClass("on").siblings().removeClass("on");
+                    $(".btnenrolment").children("ul").eq(banner.idx)
+                    .addClass("on").siblings().removeClass("on");
                 }
                 
                 $(".btnpage").children("li").click(function(){
@@ -64,6 +66,8 @@
                     $(".bannerImg").children("p").eq(len2).addClass("on").
                     siblings().removeClass("on");
                     $(".btnsubnav").children("ul").children("li").eq(len2)
+                    .addClass("on").siblings().removeClass("on");
+                    $(".btnenrolment").children("ul").eq(len2)
                     .addClass("on").siblings().removeClass("on");
                     banner.auto = setInterval(middle,5000);
                 });
@@ -77,13 +81,15 @@
                     .siblings().removeClass("on");
                     $(".btnsubnav").children("ul").children("li").eq(len3-1)
                     .addClass("on").siblings().removeClass("on");
+                    $(".btnenrolment").children("ul").eq(len3-1)
+                    .addClass("on").siblings().removeClass("on");
                     banner.auto = setInterval(middle,5000);
                 });
                 $(".next").click(function(){
                     clearInterval(banner.auto);
                     var len3 = $(".bannerImg").children("p.on").index();
                     len3++
-                    if(len3 > 4){
+                    if(len3 > 6){
                         len3 = 0;
                     }
                     $(".bannerImg").children("p").eq(len3).addClass("on")
@@ -91,6 +97,8 @@
                     $(".btnpage").children("li").eq(len3).addClass("on")
                     .siblings().removeClass("on");
                     $(".btnsubnav").children("ul").children("li").eq(len3)
+                    .addClass("on").siblings().removeClass("on");
+                    $(".btnenrolment").children("ul").eq(len3)
                     .addClass("on").siblings().removeClass("on");
                     banner.auto = setInterval(middle,5000);
                 });
@@ -103,7 +111,15 @@
                     siblings().removeClass("on");
                     $(".btnpage").children("li").eq(len4).addClass("on")
                     .siblings().removeClass("on");
+                    $(".btnenrolment").children("ul").eq(len4)
+                    .addClass("on").siblings().removeClass("on");
                     banner.auto = setInterval(middle,5000);
+                });//상단 배너 끝
+
+                $(".slickdotss").children().click(function(){
+                    var len6 = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $("#aside_bottom").children("div").eq(len6).addClass("on").siblings().removeClass("on");
                 });
 
             }); 
@@ -130,15 +146,19 @@
 
                         <div class="bannercontainer">
                             <div class="bannerImg">
-                                <p>1<img src="" alt=""></p>
-                                <p class="on">2<img src="" alt=""></p>
-                                <p>3<img src="" alt=""></p>
-                                <p>4<img src="" alt=""></p>
-                                <p>5<img src="" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg1.jpg" alt=""></p>
+                                <p class="on"><img src="resources/common/imgs/bannerImg2.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg3.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg4.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg5.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg6.jpg" alt=""></p>
+                                <p><img src="resources/common/imgs/bannerImg7.jpg" alt=""></p>
                             </div>
                             <ul class="btnpage">
                                 <li></li>
                                 <li class="on"></li>
+                                <li></li>
+                                <li></li>
                                 <li></li>
                                 <li></li>
                                 <li></li>
@@ -154,6 +174,31 @@
                                     <li>Hot Issue</li>
                                     <li>Hot Issue</li>
                                     <li>Hot Issue</li>
+                                    <li>Hot Issue</li>
+                                    <li>Hot Issue</li>
+                                </ul>
+                            </div>
+                            <div class="btnenrolment">
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기1</a></li>
+                                </ul>
+                                <ul class="on">
+                                    <li><a href="#">수강신청 바로가기2</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기3</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기4</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기5</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기6</a></li>
+                                </ul>
+                                <ul>
+                                    <li><a href="#">수강신청 바로가기7</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -806,317 +851,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script type="text/javascript">
-                                    $(document).ready(function () {
-                                        Snap.VARS.IS_HTML = false;
-
-                                        var sitePotltMenuTyp = "M";
-                                        var potltStdilSeq = 2;
-                                        var potletNo = "20190829143806000001";
-                                        var baseUrl = "https://www.multicampus.com";
-                                        var sel = $('#' + potletNo);
-                                        var isAnonymous = true;
-                                        var netplexCuration;
-
-                                        //모달 (넷플릭스형 큐레이션)
-                                        $(sel).modal({
-                                            src: '#netplexDetailPopup',
-                                            auto: true,
-                                            type: 'group',
-                                            group: '[data-js="modal-group__anchor"]',
-                                            onAfterOpen: function () {
-                                                // 스크롤 탭
-                                                $(document).on('click', '.netplex_detail_popup .scroll_tab a', function (e) {
-                                                    e.preventDefault();
-                                                    e.stopPropagation();
-                                                    var $this = $(this);
-                                                    var href = $this.attr('href');
-                                                    var target = $this
-                                                        .closest('div')
-                                                        .find('.mCustomScrollbar');
-                                                    $this
-                                                        .closest('li')
-                                                        .addClass('active')
-                                                        .siblings('li')
-                                                        .removeClass('active');
-                                                    if (target.length) 
-                                                        target.mCustomScrollbar('scrollTo', href);
-                                                    }
-                                                );
-                                            }
-                                        });
-
-                                        fn_setNetplexCurationData();
-
-                                        function fn_setNetplexCurationData() {
-                                            var paramData = {
-                                                potltStdilSeq: potltStdilSeq,
-                                                sitePotltMenuTyp: sitePotltMenuTyp
-                                            };
-
-                                            var ajaxOption = {
-                                                url: "/portlet/om/netplexCurationPortletData",
-                                                method: "POST",
-                                                handleResponse: fn_getNetplexCurationDataCallback,
-                                                paramData: paramData,
-                                                dataType: "json"
-                                            };
-
-                                            Snap.ajaxCall(ajaxOption);
-                                        }
-
-                                        function fn_getNetplexCurationDataCallback(data) {
-                                            var el = $(sel)
-                                                .parents("div")
-                                                .eq(1);
-                                            netplexCuration = data.netplexCuration;
-                                            var curationInfo = data.curationInfo;
-                                            var count = netplexCuration != null
-                                                ? netplexCuration.length
-                                                : 0;
-                                            var statement = "";
-
-                                            if (count == 0) {
-                                                $(el).addClass("d-none");
-                                            } else {
-                                                var starPoint = '별점';
-                                                var averagePoint = '평점';
-                                                var moreInfo = '더보기';
-                                                var crtnNo;
-
-                                                if (curationInfo[0].potltNmExpsrYn == "Y") {
-                                                    if (curationInfo[0].potltNmPstn != null) {
-                                                        $(sel.find("#netplexTitle")).removeClass();
-                                                        $(sel.find("#netplexTitle")).addClass(curationInfo[0].potltNmPstn);
-                                                    }
-                                                    $(sel.find("#netplexTitle")).html(curationInfo[0].potltNm);
-                                                }
-                                                if (curationInfo[0].potltBgColorCd != null) {
-                                                    var bgColor = "#" + curationInfo[0].potltBgColorCd;
-                                                    $(el).css('background', bgColor);
-                                                }
-
-                                                if (isAnonymous) {
-                                                    crtnNo = curationInfo[0].rplcCrtnNo;
-                                                } else {
-                                                    crtnNo = curationInfo[0].crtnNo;
-                                                }
-
-                                                if (count > 5) {
-                                                    count = 5;
-                                                }
-                                                for (var j = 0; j < count; j++) {
-                                                    var corsNm = netplexCuration[j].corsNm;
-                                                    var detailCorsNm = netplexCuration[j].corsNm;
-                                                    statement = statement + "<div class='thum_item'><dl><dt>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<div class='img'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></div>';
-                                                    statement += "</dt><dd><p><span class='p_cate'>" + netplexCuration[j].lrnTyp +
-                                                            "</span></p>";
-                                                    var corsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 50);
-                                                    statement += "<p><a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' cla" +
-                                                            "ss='text_link' id='" + potletNo + "netplexCurationPageTrans_" + j + "' data-cr" +
-                                                            "tnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "' data-cor" +
-                                                            "syr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                            netplexCuration[j].corsDgrCd + "'>" + corsNm + "</a></p></dd></dl>";
-                                                    //상세시작
-                                                    statement += "<div class='item_wrap'><div class='item_img'>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span class='info'>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<a href='javascript:void(0);' class='item_img_link' id='" + potletNo + "netple" +
-                                                            "xCurationPageTrans_3_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                            netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                            "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></a></div>';
-                                                    statement += "<div class='item_detail'><div class='item_title'>";
-                                                    statement += "<span class='cate'>" + netplexCuration[j].lrnTyp + "</span>";
-                                                    var detailCorsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 80);
-                                                    if (detailCorsNm.substr(detailCorsNm.length - 3, 3) == '...') {
-                                                        statement += "<a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' class=" +
-                                                                "'title' id='" + potletNo + "netplexCurationPageTrans_2_" + j +
-                                                                "' data-crtnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "'" +
-                                                                " data-corsyr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                                netplexCuration[j].corsDgrCd + "'>" + detailCorsNm + "</a>";
-                                                    } else {
-                                                        statement += "<a href='javascript:void(0);' class='title' id='" + potletNo + "netplexCuratio" +
-                                                                "nPageTrans_2_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                                netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                                "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>" +
-                                                                netplexCuration[j].corsNm + "</a>";
-                                                    }
-                                                    if (netplexCuration[j].lrnTypCd == "CF" && netplexCuration[j].dtm != null && netplexCuration[j].dtm.length > 0) {
-                                                        statement += "<div class='detail_period'>";
-                                                        statement += "<span>학습기간</span>";
-                                                        statement += "<div class='combobox-wrap' data-js='combobox'>";
-                                                        statement += "     <select id='sel-course-period" + j + "' title='학습기간 선택' class='combobox c" +
-                                                                "ombobox--basic initial'>";
-                                                        console.log(netplexCuration[j].dtm.length);
-                                                        var cnt = netplexCuration[j].dtm.length;
-                                                        for (var k = 0; k < cnt; k++) {
-                                                            statement += "        <option value='" + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .code + "_" + crtnNo + "'> " + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .name + "</option>";
-                                                        }
-                                                        statement += "  </select>";
-                                                        statement += " </div>";
-                                                        statement += "</div>";
-                                                    }
-
-                                                    statement += "<div class='keyword_list'>";
-                                                    if (netplexCuration[j].srchKwrdCntnt != null) {
-                                                        var srchKwrdCntnt = netplexCuration[j].srchKwrdCntnt;
-                                                        var kwrd = srchKwrdCntnt.split(',');
-                                                        var kwrdSize = kwrd.length;
-                                                        if (kwrd.length > 8) {
-                                                            kwrdSize = 8;
-                                                        }
-                                                        for (var k = 0; k < kwrdSize; k++) {
-                                                            statement += "<a href='/search?kwd=" + kwrd[k] + "&category='>#" + kwrd[k] + "</a>";
-                                                        }
-                                                    }
-                                                    statement += "</div>";
-                                                    statement += "<div class='item_info'>";
-                                                    if (netplexCuration[j].evalScore != 0) {
-                                                        statement += "<div class='star_info'><span class='star_title'>" + averagePoint + "</span><i " +
-                                                                "class='o-icon__star o-icon__star--" + (
-                                                            netplexCuration[j].imgEvalScore
-                                                        ) + "'></i>";
-                                                        statement += "<span class='star_score'><span>" + starPoint + "</span>" +
-                                                                netplexCuration[j].evalScore + "</span></div>";
-                                                    }
-                                                    if (netplexCuration[j].eplogCnt != 0) {
-                                                        statement += "<div class='review_info'>";
-                                                        statement += "<span class='review_title'>수강후기</span>";
-                                                        statement += "<span class='review_num'>" + netplexCuration[j].eplogCnt + "</span>";
-                                                        statement += "</div>";
-                                                    }
-                                                    statement += "</div></div>";
-                                                    statement += "<div class='item_more'><p>";
-                                                    //[2019.09.27_이미지 혹은 태그가 들어갈 때 오류가 있어 제거]
-                                                    /*                 if (netplexCuration[j].prdtIntroCntnt != null) {
-                                var detail = Snap.byteEllipsis(netplexCuration[j].prdtIntroCntnt, 230);
-                                statement += detail;
-                            } */
-                                                    statement += "</p></div></div></div></div>";
-                                                }
-                                                $(sel.find(".nex_slider")).append(statement);
-
-                                                var $combobox = $('[data-js="combobox"]');
-                                                $combobox.combobox();
-                                            }
-
-                                            // 수정 190320 rev2 넷플릭스형 큐레이션 (오버이벤트)  190112/채희진/수정
-                                            $(document)
-                                                .on('mouseenter', '.netplexcuration .thum_item', function () {
-                                                    var time = 200;
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_wrap');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'visible');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                right: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                left: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    }
-                                                })
-                                                .on('mouseleave', '.netplexcuration .thum_item', function () {
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_row');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'hidden');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({right: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({left: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    }
-                                                });
-
-                                            $("[id^=" + potletNo + "netplexCurationPageTrans_]").on("click", function () {
-                                                var paramData = {
-                                                    corsCd: String($(this).data("corscd")),
-                                                    corsYr: $(this).data("corsyr"),
-                                                    corsDgrCd: $(this).data("corsdgrcd"),
-                                                    crtnNo: $(this).data("crtnno")
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                            $("[id^=" + potletNo + "netplexCurationDetail]").on("click", function () {
-                                                $('#loading').show();
-                                                var temp = $(this).attr("id");
-                                                var tempId = "#" + temp;
-                                                var selectCorsCd = String($("#" + temp).data("corscd"));
-                                                var selectCorsYr = String($("#" + temp).data("corsyr"));
-                                                var selectCorsDgrCd = String($("#" + temp).data("corsdgrcd"));
-                                                Snap.openModal("/portlet/om/netplexCurationService", {
-                                                    corsCd: selectCorsCd,
-                                                    corsYr: selectCorsYr,
-                                                    corsDgrCd: selectCorsDgrCd
-                                                }, function () {});
-                                            });
-
-                                            $("[id^=sel-course-period]").on("change", function () {
-                                                var codeSplit = $(this)
-                                                    .val()
-                                                    .split('_');
-                                                var corsCd = codeSplit[0];
-                                                var corsDgrCd = codeSplit[1];
-                                                var corsYr = codeSplit[2];
-                                                var crtnNo = codeSplit[3];
-
-                                                var paramData = {
-                                                    corsCd: corsCd,
-                                                    corsYr: corsYr,
-                                                    corsDgrCd: corsDgrCd,
-                                                    crtnNo: crtnNo
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                        }
-                                    }());
-                                </script>
-
+                               
                             </div>
                         </div>
 
@@ -1782,317 +1517,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script type="text/javascript">
-                                    $(document).ready(function () {
-                                        Snap.VARS.IS_HTML = false;
-
-                                        var sitePotltMenuTyp = "M";
-                                        var potltStdilSeq = 3;
-                                        var potletNo = "20190209160022000003";
-                                        var baseUrl = "https://www.multicampus.com";
-                                        var sel = $('#' + potletNo);
-                                        var isAnonymous = true;
-                                        var netplexCuration;
-
-                                        //모달 (넷플릭스형 큐레이션)
-                                        $(sel).modal({
-                                            src: '#netplexDetailPopup',
-                                            auto: true,
-                                            type: 'group',
-                                            group: '[data-js="modal-group__anchor"]',
-                                            onAfterOpen: function () {
-                                                // 스크롤 탭
-                                                $(document).on('click', '.netplex_detail_popup .scroll_tab a', function (e) {
-                                                    e.preventDefault();
-                                                    e.stopPropagation();
-                                                    var $this = $(this);
-                                                    var href = $this.attr('href');
-                                                    var target = $this
-                                                        .closest('div')
-                                                        .find('.mCustomScrollbar');
-                                                    $this
-                                                        .closest('li')
-                                                        .addClass('active')
-                                                        .siblings('li')
-                                                        .removeClass('active');
-                                                    if (target.length) 
-                                                        target.mCustomScrollbar('scrollTo', href);
-                                                    }
-                                                );
-                                            }
-                                        });
-
-                                        fn_setNetplexCurationData();
-
-                                        function fn_setNetplexCurationData() {
-                                            var paramData = {
-                                                potltStdilSeq: potltStdilSeq,
-                                                sitePotltMenuTyp: sitePotltMenuTyp
-                                            };
-
-                                            var ajaxOption = {
-                                                url: "/portlet/om/netplexCurationPortletData",
-                                                method: "POST",
-                                                handleResponse: fn_getNetplexCurationDataCallback,
-                                                paramData: paramData,
-                                                dataType: "json"
-                                            };
-
-                                            Snap.ajaxCall(ajaxOption);
-                                        }
-
-                                        function fn_getNetplexCurationDataCallback(data) {
-                                            var el = $(sel)
-                                                .parents("div")
-                                                .eq(1);
-                                            netplexCuration = data.netplexCuration;
-                                            var curationInfo = data.curationInfo;
-                                            var count = netplexCuration != null
-                                                ? netplexCuration.length
-                                                : 0;
-                                            var statement = "";
-
-                                            if (count == 0) {
-                                                $(el).addClass("d-none");
-                                            } else {
-                                                var starPoint = '별점';
-                                                var averagePoint = '평점';
-                                                var moreInfo = '더보기';
-                                                var crtnNo;
-
-                                                if (curationInfo[0].potltNmExpsrYn == "Y") {
-                                                    if (curationInfo[0].potltNmPstn != null) {
-                                                        $(sel.find("#netplexTitle")).removeClass();
-                                                        $(sel.find("#netplexTitle")).addClass(curationInfo[0].potltNmPstn);
-                                                    }
-                                                    $(sel.find("#netplexTitle")).html(curationInfo[0].potltNm);
-                                                }
-                                                if (curationInfo[0].potltBgColorCd != null) {
-                                                    var bgColor = "#" + curationInfo[0].potltBgColorCd;
-                                                    $(el).css('background', bgColor);
-                                                }
-
-                                                if (isAnonymous) {
-                                                    crtnNo = curationInfo[0].rplcCrtnNo;
-                                                } else {
-                                                    crtnNo = curationInfo[0].crtnNo;
-                                                }
-
-                                                if (count > 5) {
-                                                    count = 5;
-                                                }
-                                                for (var j = 0; j < count; j++) {
-                                                    var corsNm = netplexCuration[j].corsNm;
-                                                    var detailCorsNm = netplexCuration[j].corsNm;
-                                                    statement = statement + "<div class='thum_item'><dl><dt>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<div class='img'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></div>';
-                                                    statement += "</dt><dd><p><span class='p_cate'>" + netplexCuration[j].lrnTyp +
-                                                            "</span></p>";
-                                                    var corsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 50);
-                                                    statement += "<p><a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' cla" +
-                                                            "ss='text_link' id='" + potletNo + "netplexCurationPageTrans_" + j + "' data-cr" +
-                                                            "tnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "' data-cor" +
-                                                            "syr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                            netplexCuration[j].corsDgrCd + "'>" + corsNm + "</a></p></dd></dl>";
-                                                    //상세시작
-                                                    statement += "<div class='item_wrap'><div class='item_img'>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span class='info'>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<a href='javascript:void(0);' class='item_img_link' id='" + potletNo + "netple" +
-                                                            "xCurationPageTrans_3_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                            netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                            "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></a></div>';
-                                                    statement += "<div class='item_detail'><div class='item_title'>";
-                                                    statement += "<span class='cate'>" + netplexCuration[j].lrnTyp + "</span>";
-                                                    var detailCorsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 80);
-                                                    if (detailCorsNm.substr(detailCorsNm.length - 3, 3) == '...') {
-                                                        statement += "<a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' class=" +
-                                                                "'title' id='" + potletNo + "netplexCurationPageTrans_2_" + j +
-                                                                "' data-crtnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "'" +
-                                                                " data-corsyr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                                netplexCuration[j].corsDgrCd + "'>" + detailCorsNm + "</a>";
-                                                    } else {
-                                                        statement += "<a href='javascript:void(0);' class='title' id='" + potletNo + "netplexCuratio" +
-                                                                "nPageTrans_2_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                                netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                                "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>" +
-                                                                netplexCuration[j].corsNm + "</a>";
-                                                    }
-                                                    if (netplexCuration[j].lrnTypCd == "CF" && netplexCuration[j].dtm != null && netplexCuration[j].dtm.length > 0) {
-                                                        statement += "<div class='detail_period'>";
-                                                        statement += "<span>학습기간</span>";
-                                                        statement += "<div class='combobox-wrap' data-js='combobox'>";
-                                                        statement += "     <select id='sel-course-period" + j + "' title='학습기간 선택' class='combobox c" +
-                                                                "ombobox--basic initial'>";
-                                                        console.log(netplexCuration[j].dtm.length);
-                                                        var cnt = netplexCuration[j].dtm.length;
-                                                        for (var k = 0; k < cnt; k++) {
-                                                            statement += "        <option value='" + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .code + "_" + crtnNo + "'> " + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .name + "</option>";
-                                                        }
-                                                        statement += "  </select>";
-                                                        statement += " </div>";
-                                                        statement += "</div>";
-                                                    }
-
-                                                    statement += "<div class='keyword_list'>";
-                                                    if (netplexCuration[j].srchKwrdCntnt != null) {
-                                                        var srchKwrdCntnt = netplexCuration[j].srchKwrdCntnt;
-                                                        var kwrd = srchKwrdCntnt.split(',');
-                                                        var kwrdSize = kwrd.length;
-                                                        if (kwrd.length > 8) {
-                                                            kwrdSize = 8;
-                                                        }
-                                                        for (var k = 0; k < kwrdSize; k++) {
-                                                            statement += "<a href='/search?kwd=" + kwrd[k] + "&category='>#" + kwrd[k] + "</a>";
-                                                        }
-                                                    }
-                                                    statement += "</div>";
-                                                    statement += "<div class='item_info'>";
-                                                    if (netplexCuration[j].evalScore != 0) {
-                                                        statement += "<div class='star_info'><span class='star_title'>" + averagePoint + "</span><i " +
-                                                                "class='o-icon__star o-icon__star--" + (
-                                                            netplexCuration[j].imgEvalScore
-                                                        ) + "'></i>";
-                                                        statement += "<span class='star_score'><span>" + starPoint + "</span>" +
-                                                                netplexCuration[j].evalScore + "</span></div>";
-                                                    }
-                                                    if (netplexCuration[j].eplogCnt != 0) {
-                                                        statement += "<div class='review_info'>";
-                                                        statement += "<span class='review_title'>수강후기</span>";
-                                                        statement += "<span class='review_num'>" + netplexCuration[j].eplogCnt + "</span>";
-                                                        statement += "</div>";
-                                                    }
-                                                    statement += "</div></div>";
-                                                    statement += "<div class='item_more'><p>";
-                                                    //[2019.09.27_이미지 혹은 태그가 들어갈 때 오류가 있어 제거]
-                                                    /*                 if (netplexCuration[j].prdtIntroCntnt != null) {
-                                var detail = Snap.byteEllipsis(netplexCuration[j].prdtIntroCntnt, 230);
-                                statement += detail;
-                            } */
-                                                    statement += "</p></div></div></div></div>";
-                                                }
-                                                $(sel.find(".nex_slider")).append(statement);
-
-                                                var $combobox = $('[data-js="combobox"]');
-                                                $combobox.combobox();
-                                            }
-
-                                            // 수정 190320 rev2 넷플릭스형 큐레이션 (오버이벤트)  190112/채희진/수정
-                                            $(document)
-                                                .on('mouseenter', '.netplexcuration .thum_item', function () {
-                                                    var time = 200;
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_wrap');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'visible');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                right: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                left: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    }
-                                                })
-                                                .on('mouseleave', '.netplexcuration .thum_item', function () {
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_row');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'hidden');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({right: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({left: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    }
-                                                });
-
-                                            $("[id^=" + potletNo + "netplexCurationPageTrans_]").on("click", function () {
-                                                var paramData = {
-                                                    corsCd: String($(this).data("corscd")),
-                                                    corsYr: $(this).data("corsyr"),
-                                                    corsDgrCd: $(this).data("corsdgrcd"),
-                                                    crtnNo: $(this).data("crtnno")
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                            $("[id^=" + potletNo + "netplexCurationDetail]").on("click", function () {
-                                                $('#loading').show();
-                                                var temp = $(this).attr("id");
-                                                var tempId = "#" + temp;
-                                                var selectCorsCd = String($("#" + temp).data("corscd"));
-                                                var selectCorsYr = String($("#" + temp).data("corsyr"));
-                                                var selectCorsDgrCd = String($("#" + temp).data("corsdgrcd"));
-                                                Snap.openModal("/portlet/om/netplexCurationService", {
-                                                    corsCd: selectCorsCd,
-                                                    corsYr: selectCorsYr,
-                                                    corsDgrCd: selectCorsDgrCd
-                                                }, function () {});
-                                            });
-
-                                            $("[id^=sel-course-period]").on("change", function () {
-                                                var codeSplit = $(this)
-                                                    .val()
-                                                    .split('_');
-                                                var corsCd = codeSplit[0];
-                                                var corsDgrCd = codeSplit[1];
-                                                var corsYr = codeSplit[2];
-                                                var crtnNo = codeSplit[3];
-
-                                                var paramData = {
-                                                    corsCd: corsCd,
-                                                    corsYr: corsYr,
-                                                    corsDgrCd: corsDgrCd,
-                                                    crtnNo: crtnNo
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                        }
-                                    }());
-                                </script>
-
+                               
                             </div>
                         </div>
 
@@ -2718,339 +2143,56 @@
                                         </div>
                                     </div>
                                 </div>
-                                <script type="text/javascript">
-                                    $(document).ready(function () {
-                                        Snap.VARS.IS_HTML = false;
-
-                                        var sitePotltMenuTyp = "M";
-                                        var potltStdilSeq = 8;
-                                        var potletNo = "20190902160527000002";
-                                        var baseUrl = "https://www.multicampus.com";
-                                        var sel = $('#' + potletNo);
-                                        var isAnonymous = true;
-                                        var netplexCuration;
-
-                                        //모달 (넷플릭스형 큐레이션)
-                                        $(sel).modal({
-                                            src: '#netplexDetailPopup',
-                                            auto: true,
-                                            type: 'group',
-                                            group: '[data-js="modal-group__anchor"]',
-                                            onAfterOpen: function () {
-                                                // 스크롤 탭
-                                                $(document).on('click', '.netplex_detail_popup .scroll_tab a', function (e) {
-                                                    e.preventDefault();
-                                                    e.stopPropagation();
-                                                    var $this = $(this);
-                                                    var href = $this.attr('href');
-                                                    var target = $this
-                                                        .closest('div')
-                                                        .find('.mCustomScrollbar');
-                                                    $this
-                                                        .closest('li')
-                                                        .addClass('active')
-                                                        .siblings('li')
-                                                        .removeClass('active');
-                                                    if (target.length) 
-                                                        target.mCustomScrollbar('scrollTo', href);
-                                                    }
-                                                );
-                                            }
-                                        });
-
-                                        fn_setNetplexCurationData();
-
-                                        function fn_setNetplexCurationData() {
-                                            var paramData = {
-                                                potltStdilSeq: potltStdilSeq,
-                                                sitePotltMenuTyp: sitePotltMenuTyp
-                                            };
-
-                                            var ajaxOption = {
-                                                url: "/portlet/om/netplexCurationPortletData",
-                                                method: "POST",
-                                                handleResponse: fn_getNetplexCurationDataCallback,
-                                                paramData: paramData,
-                                                dataType: "json"
-                                            };
-
-                                            Snap.ajaxCall(ajaxOption);
-                                        }
-
-                                        function fn_getNetplexCurationDataCallback(data) {
-                                            var el = $(sel)
-                                                .parents("div")
-                                                .eq(1);
-                                            netplexCuration = data.netplexCuration;
-                                            var curationInfo = data.curationInfo;
-                                            var count = netplexCuration != null
-                                                ? netplexCuration.length
-                                                : 0;
-                                            var statement = "";
-
-                                            if (count == 0) {
-                                                $(el).addClass("d-none");
-                                            } else {
-                                                var starPoint = '별점';
-                                                var averagePoint = '평점';
-                                                var moreInfo = '더보기';
-                                                var crtnNo;
-
-                                                if (curationInfo[0].potltNmExpsrYn == "Y") {
-                                                    if (curationInfo[0].potltNmPstn != null) {
-                                                        $(sel.find("#netplexTitle")).removeClass();
-                                                        $(sel.find("#netplexTitle")).addClass(curationInfo[0].potltNmPstn);
-                                                    }
-                                                    $(sel.find("#netplexTitle")).html(curationInfo[0].potltNm);
-                                                }
-                                                if (curationInfo[0].potltBgColorCd != null) {
-                                                    var bgColor = "#" + curationInfo[0].potltBgColorCd;
-                                                    $(el).css('background', bgColor);
-                                                }
-
-                                                if (isAnonymous) {
-                                                    crtnNo = curationInfo[0].rplcCrtnNo;
-                                                } else {
-                                                    crtnNo = curationInfo[0].crtnNo;
-                                                }
-
-                                                if (count > 5) {
-                                                    count = 5;
-                                                }
-                                                for (var j = 0; j < count; j++) {
-                                                    var corsNm = netplexCuration[j].corsNm;
-                                                    var detailCorsNm = netplexCuration[j].corsNm;
-                                                    statement = statement + "<div class='thum_item'><dl><dt>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<div class='img'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></div>';
-                                                    statement += "</dt><dd><p><span class='p_cate'>" + netplexCuration[j].lrnTyp +
-                                                            "</span></p>";
-                                                    var corsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 50);
-                                                    statement += "<p><a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' cla" +
-                                                            "ss='text_link' id='" + potletNo + "netplexCurationPageTrans_" + j + "' data-cr" +
-                                                            "tnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "' data-cor" +
-                                                            "syr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                            netplexCuration[j].corsDgrCd + "'>" + corsNm + "</a></p></dd></dl>";
-                                                    //상세시작
-                                                    statement += "<div class='item_wrap'><div class='item_img'>";
-                                                    if (netplexCuration[j].otsYn == 'Y') {
-                                                        statement += "<span class='info'>" + netplexCuration[j].otsLrnNm + "</span>";
-                                                    }
-                                                    statement += "<a href='javascript:void(0);' class='item_img_link' id='" + potletNo + "netple" +
-                                                            "xCurationPageTrans_3_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                            netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                            "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>";
-                                                    statement += '<img src="' + netplexCuration[j].thumbLinkUrl + '" onerror="this.src=\'' +
-                                                            baseUrl + '/img/common/noimage.jpg\';" alt="' + netplexCuration[j].corsNm + '"/' +
-                                                            '></a></div>';
-                                                    statement += "<div class='item_detail'><div class='item_title'>";
-                                                    statement += "<span class='cate'>" + netplexCuration[j].lrnTyp + "</span>";
-                                                    var detailCorsNm = Snap.byteEllipsis(netplexCuration[j].corsNm, 80);
-                                                    if (detailCorsNm.substr(detailCorsNm.length - 3, 3) == '...') {
-                                                        statement += "<a href='javascript:void(0);' title='" + netplexCuration[j].corsNm + "' class=" +
-                                                                "'title' id='" + potletNo + "netplexCurationPageTrans_2_" + j +
-                                                                "' data-crtnno='" + crtnNo + "' data-corscd='" + netplexCuration[j].corsCd + "'" +
-                                                                " data-corsyr='" + netplexCuration[j].corsYr + "' data-corsdgrcd='" +
-                                                                netplexCuration[j].corsDgrCd + "'>" + detailCorsNm + "</a>";
-                                                    } else {
-                                                        statement += "<a href='javascript:void(0);' class='title' id='" + potletNo + "netplexCuratio" +
-                                                                "nPageTrans_2_" + j + "' data-crtnno='" + crtnNo + "' data-corscd='" +
-                                                                netplexCuration[j].corsCd + "' data-corsyr='" + netplexCuration[j].corsYr + "' " +
-                                                                "data-corsdgrcd='" + netplexCuration[j].corsDgrCd + "'>" +
-                                                                netplexCuration[j].corsNm + "</a>";
-                                                    }
-                                                    if (netplexCuration[j].lrnTypCd == "CF" && netplexCuration[j].dtm != null && netplexCuration[j].dtm.length > 0) {
-                                                        statement += "<div class='detail_period'>";
-                                                        statement += "<span>학습기간</span>";
-                                                        statement += "<div class='combobox-wrap' data-js='combobox'>";
-                                                        statement += "     <select id='sel-course-period" + j + "' title='학습기간 선택' class='combobox c" +
-                                                                "ombobox--basic initial'>";
-                                                        console.log(netplexCuration[j].dtm.length);
-                                                        var cnt = netplexCuration[j].dtm.length;
-                                                        for (var k = 0; k < cnt; k++) {
-                                                            statement += "        <option value='" + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .code + "_" + crtnNo + "'> " + netplexCuration[j]
-                                                                .dtm[k]
-                                                                .name + "</option>";
-                                                        }
-                                                        statement += "  </select>";
-                                                        statement += " </div>";
-                                                        statement += "</div>";
-                                                    }
-
-                                                    statement += "<div class='keyword_list'>";
-                                                    if (netplexCuration[j].srchKwrdCntnt != null) {
-                                                        var srchKwrdCntnt = netplexCuration[j].srchKwrdCntnt;
-                                                        var kwrd = srchKwrdCntnt.split(',');
-                                                        var kwrdSize = kwrd.length;
-                                                        if (kwrd.length > 8) {
-                                                            kwrdSize = 8;
-                                                        }
-                                                        for (var k = 0; k < kwrdSize; k++) {
-                                                            statement += "<a href='/search?kwd=" + kwrd[k] + "&category='>#" + kwrd[k] + "</a>";
-                                                        }
-                                                    }
-                                                    statement += "</div>";
-                                                    statement += "<div class='item_info'>";
-                                                    if (netplexCuration[j].evalScore != 0) {
-                                                        statement += "<div class='star_info'><span class='star_title'>" + averagePoint + "</span><i " +
-                                                                "class='o-icon__star o-icon__star--" + (
-                                                            netplexCuration[j].imgEvalScore
-                                                        ) + "'></i>";
-                                                        statement += "<span class='star_score'><span>" + starPoint + "</span>" +
-                                                                netplexCuration[j].evalScore + "</span></div>";
-                                                    }
-                                                    if (netplexCuration[j].eplogCnt != 0) {
-                                                        statement += "<div class='review_info'>";
-                                                        statement += "<span class='review_title'>수강후기</span>";
-                                                        statement += "<span class='review_num'>" + netplexCuration[j].eplogCnt + "</span>";
-                                                        statement += "</div>";
-                                                    }
-                                                    statement += "</div></div>";
-                                                    statement += "<div class='item_more'><p>";
-                                                    //[2019.09.27_이미지 혹은 태그가 들어갈 때 오류가 있어 제거]
-                                                    /*                 if (netplexCuration[j].prdtIntroCntnt != null) {
-                                var detail = Snap.byteEllipsis(netplexCuration[j].prdtIntroCntnt, 230);
-                                statement += detail;
-                            } */
-                                                    statement += "</p></div></div></div></div>";
-                                                }
-                                                $(sel.find(".nex_slider")).append(statement);
-
-                                                var $combobox = $('[data-js="combobox"]');
-                                                $combobox.combobox();
-                                            }
-
-                                            // 수정 190320 rev2 넷플릭스형 큐레이션 (오버이벤트)  190112/채희진/수정
-                                            $(document)
-                                                .on('mouseenter', '.netplexcuration .thum_item', function () {
-                                                    var time = 200;
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_wrap');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'visible');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                right: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .show()
-                                                            .animate({
-                                                                left: '0',
-                                                                opacity: '1'
-                                                            }, {
-                                                                duration: time,
-                                                                queue: false
-                                                            });
-                                                    }
-                                                })
-                                                .on('mouseleave', '.netplexcuration .thum_item', function () {
-                                                    var $this = $(this);
-                                                    var $thumItem = $this.closest('.thum_item');
-                                                    var $portletRow = $this.closest('.portlet_row');
-                                                    var $portletWrap = $this.closest('.portlet_wrap');
-                                                    if (!$portletRow.next('.portlet_row').length) 
-                                                        $portletWrap.css('overflow', 'hidden');
-                                                    if ($thumItem.index() % 5 === 4) {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({right: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    } else {
-                                                        $thumItem
-                                                            .find('.item_wrap')
-                                                            .css({left: '-15px', opacity: '0'})
-                                                            .hide();
-                                                    }
-                                                });
-
-                                            $("[id^=" + potletNo + "netplexCurationPageTrans_]").on("click", function () {
-                                                var paramData = {
-                                                    corsCd: String($(this).data("corscd")),
-                                                    corsYr: $(this).data("corsyr"),
-                                                    corsDgrCd: $(this).data("corsdgrcd"),
-                                                    crtnNo: $(this).data("crtnno")
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                            $("[id^=" + potletNo + "netplexCurationDetail]").on("click", function () {
-                                                $('#loading').show();
-                                                var temp = $(this).attr("id");
-                                                var tempId = "#" + temp;
-                                                var selectCorsCd = String($("#" + temp).data("corscd"));
-                                                var selectCorsYr = String($("#" + temp).data("corsyr"));
-                                                var selectCorsDgrCd = String($("#" + temp).data("corsdgrcd"));
-                                                Snap.openModal("/portlet/om/netplexCurationService", {
-                                                    corsCd: selectCorsCd,
-                                                    corsYr: selectCorsYr,
-                                                    corsDgrCd: selectCorsDgrCd
-                                                }, function () {});
-                                            });
-
-                                            $("[id^=sel-course-period]").on("change", function () {
-                                                var codeSplit = $(this)
-                                                    .val()
-                                                    .split('_');
-                                                var corsCd = codeSplit[0];
-                                                var corsDgrCd = codeSplit[1];
-                                                var corsYr = codeSplit[2];
-                                                var crtnNo = codeSplit[3];
-
-                                                var paramData = {
-                                                    corsCd: corsCd,
-                                                    corsYr: corsYr,
-                                                    corsDgrCd: corsDgrCd,
-                                                    crtnNo: crtnNo
-                                                };
-
-                                                Snap.beforeDetailCors(paramData);
-                                            });
-
-                                        }
-                                    }());
-                                </script>
+                               
 
                             </div>
                         </div>
 
                         <div id="aside_bottom">
-                            <aside id="aside__">
-                               <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
-                               <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
-                            </aside>
-                            <ul class="slick-dotss" role="tablist" style="">
-                                <li class="slick-dots__items" >
+                            <div class="on">
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
+                                    <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
+                                    <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
+                                    <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
+                                    <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/asidebanner01.jpg" alt=""></a>
+                                    <a href="#"><img src="resources/common/imgs/asidebanner02.jpg" alt=""></a>
+                                </aside>
+                            </div>
+                            <ul class="slickdotss" role="tablist">
+                                <li class="slick-dotsitems on" >
                                     
                                 </li>
-                                <li class="slick-dots__items" >
+                                <li class="slick-dotsitems" >
                                     
                                 </li>
-                                <li class="slick-dots__items" >
+                                <li class="slick-dotsitems" >
                                     
                                 </li>
-                                <li class="slick-dots__items on" >
+                                <li class="slick-dotsitems " >
                                     
                                 </li>
-                                <li class="slick-dots__items" >
+                                <li class="slick-dotsitems" >
                                     
                                 </li>
                                 
