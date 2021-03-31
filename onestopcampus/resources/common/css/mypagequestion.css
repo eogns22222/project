@@ -55,7 +55,9 @@ main>div>div.subnav>nav>ul>li>ul>li.on>a{
 }
 
 /*  */
-main>div>div.lecture{}
+main>div>div.lecture{
+    border-bottom:1px solid #999;
+}
 main>div>div.lecture>h1{
     margin-bottom:5rem;
     font-size:3rem;
