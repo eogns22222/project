@@ -1,0 +1,131 @@
+main{
+    
+}
+main>div{
+    display:flex;
+    justify-content: space-between;
+    margin:0 auto;
+    width:120rem;
+    margin-top:8rem;
+    margin-bottom:15rem;
+}
+main>div>div.subnav{
+    
+    margin-right:3rem;
+    width:20rem;
+}
+main>div>div.subnav>h1{
+    padding-left:1rem;
+    font-size:1.8rem;
+    color:#000;
+    line-height: 4rem;
+    border-bottom:2px solid #1428A0;
+}
+main>div>div.subnav>nav{
+    padding-left:1rem;
+}
+main>div>div.subnav>nav>ul{}
+main>div>div.subnav>nav>ul>li{
+    font-size:1.6rem;
+    line-height: 4rem;
+   
+}
+main>div>div.subnav>nav>ul:nth-child(1)>li{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>a{}
+main>div>div.subnav>nav>ul>li.on>a{
+    color:#000;
+}
+main>div>div.subnav>nav>ul>li>ul{
+    
+    border-top:1px solid #ccc;
+}
+main>div>div.subnav>nav>ul>li>ul:nth-child()
+main>div>div.subnav>nav>ul>li>ul>li{
+    
+    font-size:1.4rem;
+    line-height: 4rem;
+}
+main>div>div.subnav>nav>ul>li>ul>li>a{
+    padding-left:1.5rem;
+}
+main>div>div.subnav>nav>ul>li>ul>li.on>a{
+    color:#000;
+}
+
+/*  */
+main>div>div.lecture{}
+main>div>div.lecture>h1{
+    margin-bottom:5rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.lecture>p{
+    margin-bottom:5.5rem;
+    text-align: center;
+}
+main>div>div.lecture>button{
+    float: right;
+    margin-bottom:1rem;
+    width:10rem;
+    height:2.5rem;
+    background:#1428A0;
+    color:white;
+}
+main>div>div.lecture>div{
+    clear: both;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+}
+main>div>div.lecture>div>table{}
+main>div>div.lecture>div>table>tbody{}
+main>div>div.lecture>div>table>tbody>tr{}
+main>div>div.lecture>div>table>tbody>tr>th{
+    padding:2rem 0;
+    background:#f2f2f2;
+    border-bottom:1px solid #ccc;
+
+}
+main>div>div.lecture>div>table>tbody>tr>th.con1{
+    width:10rem;
+}
+main>div>div.lecture>div>table>tbody>tr>th.con2{
+    width:15rem;
+}
+main>div>div.lecture>div>table>tbody>tr>th.con3{
+    width:40rem;
+}
+main>div>div.lecture>div>table>tbody>tr>th.con4{
+    width:15rem;
+}
+main>div>div.lecture>div>table>tbody>tr>th.con5{
+    width:15rem;
+}
+main>div>div.lecture>div>table>tbody>tr>th:not(:last-child){
+    border-right:1px solid #ccc;
+}
+main>div>div.lecture>div>table>tbody>tr>td.first{
+    text-align: center;
+}
+main>div>div.lecture>div>table>tbody>tr>td.second{
+    text-align: center;
+}
+main>div>div.lecture>div>table>tbody>tr>td.tirth{
+    padding-left:1rem;
+}
+main>div>div.lecture>div>table>tbody>tr>td.four{
+    text-align: center;
+}
+main>div>div.lecture>div>table>tbody>tr>td.five{
+    text-align: center;
+}
+main>div>div.lecture>div>table>tbody>tr>td{
+    padding:2rem 0;
+    
+}
+main>div>div.lecture>div>table>tbody>tr>td:not(:last-child){
+    border-right:1px solid #ccc;
+}
+main>div>div.lecture>div>table>tbody>tr>td>a{}

@@ -214,6 +214,10 @@ main>div>div.sub_nav>div>article>div>ul>li>a{
     font-size: 1.8rem;
     color:white;
     line-height: 4.5rem;
+    
+}
+main>div>div.sub_nav>div>article>div>ul>li.content1>a{
+    color:#000;
 }
 main>div>div.sub_nav>div>article>div>ul:nth-child(2)>li>a{
     background:#999;

@@ -140,12 +140,12 @@ main>div>section.content1>div.process>div>div>div{
     display:flex;
     justify-content: space-between;
 }
-main>div>section.content1>div.process>div>div>div>button{
+main>div>section.content1>div.process>div>div>div>a>button{
     width:10.5rem;
     height:2.5rem;
     border:1px solid #ccc;
 }
-main>div>section.content1>div.process>div>div>div>button:nth-child(1){
+main>div>section.content1>div.process>div>div>div>a>button:nth-child(1){
     background:#1428A0;
     color:white;
 }
