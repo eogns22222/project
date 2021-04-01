@@ -3,31 +3,14 @@ main>div{
     margin-bottom: 10rem;
     display:flex;
     justify-content: space-between;
-    margin-top:8rem;
+    
     width:120rem;
 }
-main>div>div.subnav{
-    margin-right:3rem;
-    width:20rem;
-}
-main>div>div.subnav>h1{
-    padding-left:1rem;
-    font-size:1.8rem;
-    color:#000;
-    line-height: 4rem;
-    border-bottom:2px solid #1428A0;
-}
-main>div>div.subnav>nav{
-    padding-left:1rem;
-}
-main>div>div.subnav>nav>ul>li{
-    font-size:1.6rem;
-    line-height: 4rem;
-}
-main>div>div.subnav>nav>ul>li:nth-child(1){
-    color:#000;
-}
+
 /**/
+main>div>div.notice{
+    margin-top:8rem;
+}
 main>div>div.notice>h1{
     margin-bottom:5.4rem;
     font-size:3rem;
@@ -45,7 +28,7 @@ main>div>div.notice>ul.notice_list>li.on{
     background-color: #1428A0;
 }
 main>div>div.notice>ul.notice_list>li{
-    width:47.3rem;
+    flex: 1 1 auto;
     height:4rem;
     text-align: center;
     line-height: 4rem;

@@ -3,31 +3,13 @@ main>div{
     margin-bottom: 10rem;
     display:flex;
     justify-content: space-between;
-    margin-top:8rem;
     width:120rem;
 }
-main>div>div.subnav{
-    margin-right:3rem;
-    width:20rem;
-}
-main>div>div.subnav>h1{
-    padding-left:1rem;
-    font-size:1.8rem;
-    color:#000;
-    line-height: 4rem;
-    border-bottom:2px solid #1428A0;
-}
-main>div>div.subnav>nav{
-    padding-left:1rem;
-}
-main>div>div.subnav>nav>ul>li{
-    font-size:1.6rem;
-    line-height: 4rem;
-}
-main>div>div.subnav>nav>ul>li:nth-child(3){
-    color:#000;
-}
+
 /**/
+main>div>div.ask{
+    margin-top:8rem;
+}
 main>div>div.ask>h1{
     margin-bottom:2.2rem;
     font-size:3rem;
