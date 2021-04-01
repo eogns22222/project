@@ -6,40 +6,7 @@ main>div{
     margin-top:8rem;
     width:120rem;
 }
-main>div>div.subnav{
-    margin-right:3rem;
-    width:20rem;
-}
-main>div>div.subnav>h1{
-    padding-left:1rem;
-    font-size:1.8rem;
-    color:#000;
-    line-height: 4rem;
-    border-bottom:2px solid #1428A0;
-}
-main>div>div.subnav>nav{
-    padding-left:1rem;
-}
-main>div>div.subnav>nav>ul>li{
-    font-size:1.6rem;
-    line-height: 4rem;
-}
-main>div>div.subnav>nav>ul:nth-child(1)>li{
-    color:#000;
-}
-main>div>div.subnav>nav>ul>li>ul{
-    border-top:1px solid #ccc;
-}
-main>div>div.subnav>nav>ul>li>ul>li{
-    font-size:1.4rem;
-    line-height: 4rem;
-}
-main>div>div.subnav>nav>ul:nth-child(1)>li>ul>li:nth-child(1)>a{
-    color:#000;
-}
-main>div>div.subnav>nav>ul>li>ul>li>a{
-    padding-left:1.5rem;
-}
+
 
 /*  */
 main>div>div.details>h1{

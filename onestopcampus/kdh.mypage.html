@@ -15,21 +15,23 @@
         <!--common-->
         <link rel="import" href="header.html">
         <link rel="import" href="footer.html">
+        <link rel="import" href="kdh.mypagesubnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
+            
             
             iframe.hea{
+                width:100%;
                 height:18.5rem;
             }
             iframe.foo{
+                width:100%;
                 height:30rem;
             }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -40,31 +42,7 @@
     <iframe src="./header.html" class="hea" scrolling="no"></iframe>
     <main>
         <div>
-            <div class="subnav">
-                <h1>마이페이지</h1>
-                <nav>
-                    <ul>
-                        <li>나의 강의실
-                            <ul>
-                                <li><a href="#">- 수강신청이력</a></li>
-                                <li><a href="#">- 스크랩</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <ul>
-                        <li><a href="">1:1 문의내역</a></li>
-                    </ul>
-                    <ul> 
-                        <li>회원정보
-                            <ul>
-                                <li><a href="#">- 정보변경</a></li>
-                                <li><a href="#">- 비밀번호 변경</a></li>
-                                <li><a href="#">- 회원탈퇴</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
-            </div>
+            <iframe src="./kdh.mypagesubnav.html" scrolling="no" class="sub"></iframe>
             <div class="lecture">
                 <h1>나의 강의실</h1>
                 <div>
@@ -97,21 +75,21 @@
                                 </tr>
                                 <tr>
                                     <td>3</td>
-                                    <td>컴퓨터기초실무(한글+엑셀+파워포인트)</td>
+                                    <td><a href="#">컴퓨터기초실무(한글+엑셀+파워포인트)</a></td>
                                     <td>명진디지털직업전문학교</td>
                                     <td>2021-03-19 ~ 2021-04-22</td>
                                     <td><span>신청중</span></td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
-                                    <td>디지털 포렌식 전문가 2급 자격 대비반</td>
+                                    <td><a href="#">디지털 포렌식 전문가 2급 자격 대비반</a></td>
                                     <td>한양대학교 산업협력단</td>
                                     <td>2020-04-05 ~ 2020-06-15</td>
                                     <td><span>수강완료</span></td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
-                                    <td>데이터기반 인공지능 시스템 엔지니어 양성 과정</td>
+                                    <td><a href="#"> 데이터기반 인공지능 시스템 엔지니어 양성 과정</a></td>
                                     <td>멀티캠퍼스</td>
                                     <td>2019-08-14 ~ 2019-11-28</td>
                                     <td><span>수강완료</span></td>

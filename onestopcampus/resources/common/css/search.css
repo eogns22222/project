@@ -148,14 +148,13 @@ main>div>div>article>div.contents_sub>ul>li:nth-child(2){
     font-size:2rem;
     color:#000;
 }
-main>div>div>article>div.contents_sub>button{
-    display:block;
-    margin:0 auto;
+main>div>div>article>div.contents_sub>a>button{
+    display:inline-block;
     width:10rem;
     height:2.5rem;
     border:1px solid #999999;
 }
-main>div>div>article>div.contents_sub>button:nth-child(2){
+main>div>div>article>div.contents_sub>a>button:nth-child(2){
     margin-bottom:1rem;
 }
 
