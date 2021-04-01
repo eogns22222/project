@@ -101,25 +101,43 @@ div#contentcontainer>section>div>a>ul:nth-child(2){
     position:absolute; z-index: 10;
     top:0;
     left:0;
-    width:46.5rem;
-    height:35rem;
-    background:rgb(233, 190, 190);
+    background:white;
+    border: 1px solid #ccc;
     
 }
 div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(1){
     width:46.5rem;
-    height:27.6rem;
-    background: rgb(128, 81, 81);    
+    height:100%; 
 }
 div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(2){
-    margin-top:2rem;
-    margin-left:2rem;
+    margin-top:3rem;
+    margin-left:4rem;
     font-size:1.8rem;
 }
 div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(3){
     margin-top:1rem;
-    margin-left:2rem;
+    margin-left:4rem;
+    font-size:2.2rem;
+    color:#000;
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(4){
+    margin-top:3rem;
+    margin-left:4rem;
     font-size:1.8rem;
+    color:#000;
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(5){
+    margin-top:3rem;
+    margin-left:4rem;
+    font-size:1.8rem;
+    line-height: 3rem;
+    color:#666;
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:last-child{
+    margin-bottom:3rem;
+}
+div#contentcontainer>section>div>a>ul:nth-child(2)>li:nth-child(4)>span{
+    margin-left:3rem;
 }
 div#contentcontainer>section>div>a:last-child>ul:nth-child(2){
     left:-24.5rem;
@@ -138,10 +156,12 @@ div#contentcontainer>section>div>a>ul>li:nth-child(2){
     line-height: 2rem;
 }
 div#contentcontainer>section>div>a>ul>li:nth-child(3){
-    color:#1428A0;
     line-height: 2rem;
 }
-div#contentcontainer>section>div>a>ul>li>img{}
+div#contentcontainer>section>div>a>ul:nth-child(1)>li>img{
+    width:22rem;
+    height:17rem;
+}
 
 div#aside_bottom{
     margin-top: 70px;
