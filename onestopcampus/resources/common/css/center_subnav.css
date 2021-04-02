@@ -18,10 +18,13 @@ main>div>div.subnav>h1{
 main>div>div.subnav>nav{
     padding-left:1rem;
 }
-main>div>div.subnav>nav>ul>li{
+main>div>div.subnav>nav>ul>li>a{
+    display: block;
     font-size:1.6rem;
     line-height: 4rem;
+    color:#000;
 }
-main>div>div.subnav>nav>ul>li:nth-child(1){
+
+main>div>div.subnav>nav>ul>li:nth-child(1)>a{
     color:#000;
 }

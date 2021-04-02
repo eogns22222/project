@@ -37,6 +37,7 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#test2").css("color","#000");
                 var flag = true;
                 $('.category').click(function(){
                     if(flag){
@@ -45,7 +46,7 @@
                         flag = false;
                     }else{
                         $('.overflow').stop().slideUp();
-                        $(".imgimg").attr("src","resources/common/imgs/slide3.png");
+                        $(".imgimg").attr("src","resources/common/imgs/slide2.png");
                         flag = true;
                     }
                     
@@ -58,7 +59,7 @@
     <iframe src="header.html" class="hea" scrolling="no"></iframe>
     <main>
         <div>
-            <iframe src="asy.center.subnav.html" scrolling="no"></iframe>
+            <iframe src="./asy.center.subnav.html" scrolling="no"></iframe>
             <div class="asked">
                 <h1>자주묻는 질문</h1> 
                 <p>자주 묻는 질문(FAQ)을 이용하시면 빠르게 궁금증을 해결하실 수 있습니다. 원하시는 내용을 얻지 못하시면 1:1 문의를 이용하시기 바랍니다.</p>
