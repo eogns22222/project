@@ -34,15 +34,18 @@ main>div>form>div>div.second>p{
 main>div>form>div>div.second>p:nth-child(1){
     margin-bottom:1rem;
 }
+main>div>form>div>div.second>p:nth-child(1)>span{
+    float:right;
+    color:#000;
+}
 main>div>form>div>div.second>p>span{
     color:#1428A0;
 }
 main>div>form>div>div.second>div{
-    height:4rem;
     border-top:2px solid #000;
     border-bottom:1px solid #ccc;
 }
-main>div>form>div>div.second>div>label{
+main>div>form>div>div.second>div>p>label{
     display:inline-block;
     width:30rem;
     height:4rem;
@@ -51,7 +54,7 @@ main>div>form>div>div.second>div>label{
     background:#f2f2f2;
     text-align: center;
 }
-main>div>form>div>div.second>div>input{
+main>div>form>div>div.second>div>p>input{
     padding-left:1rem;
     width:48rem;
     font-size:1.5rem;
@@ -64,6 +67,10 @@ main>div>form>div>div.second>p:nth-child(3){
     font-size:1.3rem;
 }
 /*  */
+main>div>form>div>a{
+    display:block;
+    margin-bottom:5rem;
+}
 main>div>form>div>a>button{
     display:block;
     margin:0 auto;

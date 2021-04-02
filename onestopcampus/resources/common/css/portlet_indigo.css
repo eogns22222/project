@@ -3852,8 +3852,9 @@ div.bannercontainer>ul.btnpage>li.on{
 div.bannercontainer>ul.btnprevnext{
     display:flex;
     justify-content: space-between;
+    align-items: center;
     position:absolute;
-    top:calc(50% - 50px);
+    top:calc(50% - 30px);
     left:0;
     padding:0 1rem;
     width:100%;
@@ -3871,7 +3872,7 @@ div.bannercontainer>div.btnsubnav>ul{
     border-bottom:1px solid #ccc;
 }
 div.bannercontainer>div.btnsubnav>ul>li{
-    flex: 1 1 auto;
+    flex: 1 1 0;
     line-height:4rem;
     font-size:1.7rem;
     text-align: center;
@@ -3880,28 +3881,4 @@ div.bannercontainer>div.btnsubnav>ul>li{
 div.bannercontainer>div.btnsubnav>ul>li.on{
     border-bottom:1px solid #1428A0;
     color:#1428A0;
-}
-div.bannercontainer>div.btnenrolment{
-    position:absolute; z-index: 1000;
-    bottom:7.5rem;
-    left:4rem;
-}
-div.bannercontainer>div.btnenrolment>ul{
-    display:none;
-    position:absolute;
-    top:0;
-    left:0;
-    width:18.5rem;
-    height:2.5rem;
-    background:#4d4d4d;
-}
-div.bannercontainer>div.btnenrolment>ul.on{
-    display:block;
-}
-div.bannercontainer>div.btnenrolment>ul>li{
-    line-height: 2.5rem;
-    text-align: center;
-}
-div.bannercontainer>div.btnenrolment>ul>li>a{
-    color:#fff;
 }
