@@ -9,24 +9,37 @@ main>div{
 /**/
 main>div>div.asked{
     margin-top:8rem;
+    margin: 0 auto;
+    text-align: center;
+    width:100%;
 }
 main>div>div.asked>h1{
+    width:100vw;
     margin-bottom:2.2rem;
-    font-size:3rem;
+    font-size:3.5rem;
     color:#000;
     text-align: center;
 }
 main>div>div.asked>p{
+    width:100vw;
     text-align: center;
     font-size: 1.5rem;
+    line-height: 2.3rem;
     margin-bottom: 4.7rem;
+    word-break:keep-all;
 }
 main>div>div.asked>div:first-of-type{
     margin-bottom: 1.9rem;
 }
 /*div.srh*/
+main>div>div.asked>div.srh{
+    margin: 0 auto;
+    width:100%;
+}
 main>div>div.asked>div.srh>form{
-    padding: 4.2rem 9rem;
+    margin: 1rem 1rem;
+    padding: 4.2rem 0;
+    width:93vw;
     border:1px solid #E6E6E6;
 }
 main>div>div.asked>div.srh>form>div:first-of-type{
@@ -34,19 +47,23 @@ main>div>div.asked>div.srh>form>div:first-of-type{
 }
 main>div>div.asked>div.srh>form>div{
     display: flex;
-    justify-content:left;
+    justify-content:space-around;
     align-items: center;
+    flex-direction: column;
+
 }
 main>div>div.asked>div.srh>form>div>label{
+    margin-bottom: 2rem;
     display: inline-block;
     width:10.5rem;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: 500;
     color:#000;
 }
 main>div>div.asked>div.srh>form>div>select{
+    margin: 1rem 0;
     padding-left: 1rem;
-    width:47rem;
+    width:80vw;
     height:3.5rem;
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 1.4rem;
@@ -54,13 +71,12 @@ main>div>div.asked>div.srh>form>div>select{
     border:1px solid #999;
 }
 main>div>div.asked>div.srh>form>div>select.width{
-    width:20rem;
+    width:80vw;
     border:1px solid #999;
 }
 
 main>div>div.asked>div.srh>form>div>input{
-    margin-left: 3.6rem;
-    width:23.5rem;
+    width:80vw;
     height:3.5rem;
     border:1px solid #999;
 }
@@ -71,7 +87,7 @@ main>div>div.asked>div.srh>form>div>input::placeholder{
     color:#999;
 }
 main>div>div.asked>div.srh>form>div>button{
-    margin-left: 3.2rem;
+    margin-top: 2rem;
     float: right;
     display: block;
     width:11rem;
@@ -82,6 +98,8 @@ main>div>div.asked>div.srh>form>div>button{
 
 /*div.list*/
 main>div>div.asked>div.list{
+    margin-top: 2rem;
+    width:93vw;
     padding-bottom: 0.8rem;
     border-bottom: 1px solid #808080;
 }
@@ -98,12 +116,13 @@ main>div>div.asked>div.list>p>span{
 main>div>div.asked>div.list>ul{
     display: flex;
     justify-content:flex-end;
-    align-items: right;
+    align-items: center;
+    width:80vw;
 }
 main>div>div.asked>div.list>ul>li>select{
     margin: 0 1.2rem;
     width:10rem;
-    height:2.5rem;
+    height:2.5rem; 
     font-size: 1.4rem;
     border:1px solid #999;
     cursor: pointer;
@@ -123,11 +142,13 @@ main>div>div.asked>div.list>ul>li>button{
 main>div>div.asked>div.category{
     position: relative;
     margin-top: 1.5rem;
+    width:93vw;
     border-bottom: 1px solid #F4F4F4;
 }
 main>div>div.asked>div.category>dl{
     padding: 1.7rem 0;
-    height:9rem;
+    width:93vw;
+    /*height:9rem;*/
     cursor: pointer;
 }
 main>div>div.asked>div.category>dl>a{
@@ -155,39 +176,42 @@ main>div>div.asked>div.category>dl>a>dd{
     padding:0 0.6rem;
     font-size: 1.8rem;
     font-weight: 600;
+    text-align: left;
     color:#000;
 }
 main>div>div.asked>div.category>img{
     position: absolute;
-    top:4rem;
-    right:3rem;
+    top:2.8vw;
+    right:4vw;
     cursor: pointer;
 }
 /*div.overflow*/
 main>div>div.asked>div.overflow{
     display:none;
-    width:70rem;
-    height:68rem;
+    width:93vw;
+    height:auto;
     background-color: #F5F7FF;
 }
 main>div>div.asked>div.overflow>div.text{
-    padding: 3.5rem 0;
+    padding: 3.5rem 3.5rem;
     height:100%;
 }
 main>div>div.asked>div.overflow>div.text>div.a{
-    float: left;
-    width:10rem;
-    height:100%;
-    font-size: 2rem;
+    margin-bottom: 3rem;
+    width:85vw;
+    height:100%; 
+    font-size: 3rem;
     font-weight: 600;
     vertical-align:top;
-    text-align: center;
+    text-align: left;
     color:#1428A0;
 }
 main>div>div.asked>div.overflow>div.text>p{
     margin-bottom: 2.4rem;
-    font-size: 1.4rem;
+    width:85vw;
+    font-size: 1.6rem;
     line-height: 1.9rem;
+    text-align: left;
     color:#000;
 }
 

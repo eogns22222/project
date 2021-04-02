@@ -120,6 +120,7 @@ main>div>div.asked>div.overflow>img{
     width:1.5rem;
     height:1.5rem;
     object-fit: cover;
+    cursor: pointer;
 }
 main>div>div.asked>div.overflow>div.text{
     clear: both;

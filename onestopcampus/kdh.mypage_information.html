@@ -75,7 +75,9 @@
                 $("#return2").css("display", "none");
                 $("#return").css("display", "inline-block");
                 $("#emailcheck").css("display","block");
+                $("#authKey").attr("required","required");
             }
+
         </script>
 </head>
 <body>
@@ -127,8 +129,8 @@
                                     <th class="tit">이메일</th>
                                     <td class="emailcon">
                                         <p>
-                                            <input type="text" id="email1"> <span>@</span> 
-                                            <input type="text" id="email2">
+                                            <input type="text" id="email1" required> <span>@</span> 
+                                            <input type="text" id="email2" required>
                                             <select name="emailurl" id="email3" onchange="myfunction(this.value)">
                                                 <option value="직접입력">직접입력</option>
                                                 <option value="naver.com">naver.com</option>
@@ -146,7 +148,7 @@
                                             value="인증번호전송"
                                             class="btn2"
                                             onclick="fn_launch()"
-                                            id="return2">
+                                            id="return2"  required>
                                         </p>
                                     </td>
                                 </tr>
@@ -154,7 +156,7 @@
                                     <th class="tit">이메일 인증</th>
                                     <td class="emailcon2">
                                         <p>
-                                            <input type="text">
+                                            <input type="text" id="authKey">
                                             <button type="button">확인</button>
                                         </p>
                                     </td>
@@ -164,7 +166,7 @@
                                     <td class="agree">
                                         <p>한국고용정보원은 회원 및 구직자를 대상으로 고용노동부에서 제공하는 소식 등 이메일 및 문자 서비스를 제공하고 있습니다.</p>
                                         <p class="check">
-                                            <input type="checkbox" name="checkbox" required>
+                                            <input type="checkbox" name="checkbox">
                                             <label for="">이메일·문자 수신 동의에 동의합니다.</label>
                                         </p>
                                     </td>

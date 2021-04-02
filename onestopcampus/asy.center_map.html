@@ -40,14 +40,13 @@
                 $("#test4").css("color","#000");
                 var flag = true;
                 $('.category').click(function(){
-                    if(flag){
+                
                         $('.overflow').stop().slideDown();
-                        flag = false;
-                    }else{
-                        $('.overflow').stop().slideUp();
-                        flag = true;
-                    }
                     
+                });
+                $(".exit").click(function(){
+                    $('.overflow').stop().slideUp();
+                        
                 });
                 
             });
@@ -75,7 +74,7 @@
                     <img src="resources/common/imgs/map.png" alt="슬라이드" class="imgimg">
                 </div><!--div.category-->
                 <div class="overflow">
-                    <img src="resources/common/imgs/exit.png" alt="닫기버튼">
+                    <img src="resources/common/imgs/exit.png" alt="닫기버튼" class="exit">
                     <div class="text">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.24422655671!2d127.02218761496219!3d37.50215757981004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x357ca158c8d916fd%3A0xfbd237c1e7f1a4d6!2z7J207KCg7JWE7J207YuwKElUKeyVhOy5tOuNsOuvuO2VmeybkA!5e0!3m2!1sko!2skr!4v1617322928955!5m2!1sko!2skr" width="716" height="366" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>

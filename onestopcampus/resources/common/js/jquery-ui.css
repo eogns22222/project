@@ -2,3 +2,50 @@
 * http://jqueryui.com
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
+div#ui-datepicker-div{
+    width:25rem;
+    height:20rem;
+    border:1px solid #999;
+    background: white;
+}
+div#ui-datepicker-div>div{
+    display:flex;
+    justify-content: start;
+    align-items: center;
+    padding:2rem 2rem;
+    height:3rem;
+    background:#f2f2f2;
+}
+div#ui-datepicker-div>div>a{
+    display:block;
+    font-size:1.5rem;
+    
+}
+div#ui-datepicker-div>div>a:nth-child(1){
+    flex: 1 1 2rem;
+}
+div#ui-datepicker-div>div>a:nth-child(2){
+    flex: 1 1 2rem;
+}
+div#ui-datepicker-div>div>a>span{}
+div#ui-datepicker-div>div>div{}
+div#ui-datepicker-div>div>div>span{}
+div#ui-datepicker-div>table{
+    width:250px;
+}
+div#ui-datepicker-div>table>thead{
+}
+div#ui-datepicker-div>table>thead>tr{
+}
+div#ui-datepicker-div>table>thead>tr>th{}
+div#ui-datepicker-div>table>thead>tr>th>span{}
+div#ui-datepicker-div>table>tbody{
+}
+div#ui-datepicker-div>table>tbody>tr{
+}
+div#ui-datepicker-div>table>tbody>tr>td{
+    
+}
+div#ui-datepicker-div>table>tbody>tr>td>a{
+    margin-left:10px;
+}
