@@ -1,0 +1,7 @@
+main>div{
+    margin:0 auto;
+    margin-bottom: 10rem;
+    display:flex;
+    justify-content: space-between;
+    width:120rem;
+}
