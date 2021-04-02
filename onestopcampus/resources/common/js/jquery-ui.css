@@ -13,6 +13,7 @@ div#ui-datepicker-div>div{
     justify-content: start;
     align-items: center;
     padding:2rem 2rem;
+    margin-bottom:1rem;
     height:3rem;
     background:#f2f2f2;
 }
@@ -34,18 +35,22 @@ div#ui-datepicker-div>table{
     width:250px;
 }
 div#ui-datepicker-div>table>thead{
+    margin-bottom:2rem;
 }
 div#ui-datepicker-div>table>thead>tr{
+    
 }
-div#ui-datepicker-div>table>thead>tr>th{}
+div#ui-datepicker-div>table>thead>tr>th{
+    line-height: 4rem;
+}
 div#ui-datepicker-div>table>thead>tr>th>span{}
 div#ui-datepicker-div>table>tbody{
 }
 div#ui-datepicker-div>table>tbody>tr{
 }
 div#ui-datepicker-div>table>tbody>tr>td{
-    
+    text-align: center;
 }
 div#ui-datepicker-div>table>tbody>tr>td>a{
-    margin-left:10px;
+    
 }
