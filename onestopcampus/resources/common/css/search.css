@@ -54,14 +54,12 @@ main>div>div>ul>li:nth-child(1){
 }
 main>div>div>ul>li:nth-child(1)>a{
     color:white;
-    
 }
 main>div>div>ul>li>a{
     display:block;
     width:100%;
     height:100%;
     text-align: center;
-    font-size:1.5rem;
     line-height: 4.5rem;
 }
 main>div>div>ul>li>a>i{}
@@ -172,5 +170,4 @@ main>div>div>article>p.noneArea{
     width:30rem;
     height:1.6rem;
     background:none;
-    font-size: 1.5rem;
 }

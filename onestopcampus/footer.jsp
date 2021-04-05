@@ -1,4 +1,4 @@
-<!-- <%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%> -->
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -9,8 +9,7 @@
     <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.ico">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/common/css/reset.css">
-        <link rel="stylesheet" media="all and (min-width: 769px)" href="resources/common/css/portlet_indigo.css">
-        <link rel="stylesheet" media="all and (min-width: 460px) and (max-width: 768px)" href="resources/common/css/footer_mobile.css">
+        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
         <style>
             html {
                 font-size:62.5%;

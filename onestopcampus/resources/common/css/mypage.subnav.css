@@ -1,42 +1,42 @@
 
 
-div.mypagesubnav>div.subnav{
+main>div>div.subnav{
     margin-right:3rem;
     width:20rem;
 }
-div.mypagesubnav>div.subnav>h1{
+main>div>div.subnav>h1{
     padding-left:1rem;
     font-size:1.8rem;
     color:#000;
     line-height: 4rem;
     border-bottom:2px solid #1428A0;
 }
-div.mypagesubnav>div.subnav>nav{
+main>div>div.subnav>nav{
     padding-left:1rem;
 }
-div.mypagesubnav>div.subnav>nav>ul{}
-div.mypagesubnav>div.subnav>nav>ul>li{
+main>div>div.subnav>nav>ul{}
+main>div>div.subnav>nav>ul>li{
     font-size:1.6rem;
     line-height: 4rem;
     color:#000;
 }
-div.mypagesubnav>div.subnav>nav>ul:nth-child(1)>li{
+main>div>div.subnav>nav>ul:nth-child(1)>li{
     
 }
-div.mypagesubnav>div.subnav>nav>ul>li>a{
+main>div>div.subnav>nav>ul>li>a{
     color:#000;
 }
-div.mypagesubnav>div.subnav>nav>ul>li>ul{
+main>div>div.subnav>nav>ul>li>ul{
     
     border-top:1px solid #ccc;
 }
-div.mypagesubnav>div.subnav>nav>ul>li>ul:nth-child()
-div.mypagesubnav>div.subnav>nav>ul>li>ul>li{
+main>div>div.subnav>nav>ul>li>ul:nth-child()
+main>div>div.subnav>nav>ul>li>ul>li{
     
     font-size:1.4rem;
     line-height: 4rem;
 }
-div.mypagesubnav>div.subnav>nav>ul>li>ul>li>a{
+main>div>div.subnav>nav>ul>li>ul>li>a{
     padding-left:1.5rem;
     color:#666;
 }

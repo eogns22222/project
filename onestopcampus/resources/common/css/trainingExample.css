@@ -24,7 +24,6 @@ main>div>ul>li{
     flex: 1 1 auto;
     height:4.5rem;
     text-align: center;
-    font-size: 1.5rem;
     line-height: 4.5rem;
     border-bottom:1px solid #ccc;
     cursor: pointer;

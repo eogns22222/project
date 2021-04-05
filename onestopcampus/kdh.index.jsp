@@ -149,7 +149,7 @@
 
                         <div class="bannercontainer">
                             <div class="bannerImg">
-                                <p><a href="#"><img src="resources/common/imgs/bannerimg1.jpg" alt="open"></a></p>
+                                <p><a href="#"><img src="resources/common/imgs/bannerImg1.jpg" alt="open"></a></p>
                                 <p class="on"><a href="#"><img src="resources/common/imgs/bannerImg7.jpg" alt="한국정보교육원"></a></p>
                                 <p><a href="#"><img src="resources/common/imgs/bannerImg3.jpg" alt="대신기술능력개발원"></a></p>
                                 <p><a href="#"><img src="resources/common/imgs/bannerImg4.jpg" alt="대우직업능력개발원"></a></p>
@@ -464,6 +464,7 @@
                     
                 </div>
             </section>
+
         </main>
         <jsp:include page="footer.jsp"></jsp:include>
         </body>
