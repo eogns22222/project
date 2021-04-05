@@ -1,0 +1,145 @@
+main>div{
+    margin:0 auto;
+    margin-bottom: 10rem;
+    display:flex;
+    justify-content: space-between;
+    width:120rem;
+}
+
+/**/
+main>div>div.asked{
+    margin-top:8rem;
+}
+main>div>div.asked>h1{
+    margin-bottom:2.2rem;
+    font-size:3rem;
+    color:#000;
+    text-align: center;
+}
+main>div>div.asked>p{
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 4.7rem;
+}
+main>div>div.asked>div:first-of-type{
+    margin-bottom: 1.9rem;
+}
+/*form*/
+main>div>div.asked>form{
+    margin-bottom: 5.2rem;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+main>div>div.asked>form>input{
+    padding: 1rem 0;
+    padding-left: 1.7rem;
+    width:44.4rem;
+    height:3.5rem;
+    font-family: 'Noto Sans KR', sans-serif;
+    border:1px solid #999;
+}
+main>div>div.asked>form>input::placeholder{
+    color:#999;
+}
+main>div>div.asked>form>button{
+    margin-left: 3.3rem;
+    display: block;
+    width:11rem;
+    height:4rem;
+    color:#fff;
+    background-color: #1428A0;
+}
+/*div.list*/
+main>div>div.asked>div.list{
+    border-bottom:1px solid #808080;
+}
+main>div>div.asked>div.list>p{
+    padding-bottom: 1.5rem;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color:#000;
+
+}
+main>div>div.asked>div.list>p>span{
+    font-weight: 600;
+    color:#1428A0;
+}
+
+/*div.category*/
+main>div>div.asked>div.category{
+    clear: both;
+    position: relative;
+    margin-top: 1.5rem;
+    border-bottom: 1px solid #F4F4F4;
+
+}
+main>div>div.asked>div.category>dl{
+    padding: 1.7rem 0;
+    padding-left: 2.8rem;
+    padding-right: 12rem;
+    width:90rem;
+    height:9rem;
+    cursor: pointer;
+}
+main>div>div.asked>div.category>dl>dt{
+    position: relative;
+    text-align: left;
+    padding-left: 0.6rem;
+    padding-right: 0.6rem;
+    padding-bottom: 1.6rem;
+    font-size: 1.8rem;
+    color:#000;
+}
+main>div>div.asked>div.category>dl>dd{
+    clear: both;
+    padding:0 0.6rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color:#999;
+}
+main>div>div.asked>div.category>img{
+    position: absolute;
+    top:2rem;
+    right:3rem;
+    cursor: pointer;
+}
+/*div.overflow*/
+main>div>div.asked>div.overflow{
+    display:none;
+    width:90rem;
+    height:48rem;
+    background-color: #F5F7FF;
+}
+main>div>div.asked>div.overflow>img{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 3rem;
+    float: right;
+    width:1.5rem;
+    height:1.5rem;
+    object-fit: cover;
+    cursor: pointer;
+}
+main>div>div.asked>div.overflow>div.text{
+    clear: both;
+    margin: 4rem 9rem;
+}
+main>div>div.asked>div.overflow>div.text>div.a{
+    float: left;
+    width:10rem;
+    height:100%;
+    font-size: 2rem;
+    font-weight: 600;
+    vertical-align:top;
+    text-align: center;
+    color:#1428A0;
+}
+main>div>div.asked>div.overflow>div.text>p{
+    margin-bottom: 2.4rem;
+    font-size: 1.4rem;
+    line-height: 1.9rem;
+    color:#000;
+}
+

@@ -1,0 +1,175 @@
+@charset "UTF-8";
+
+/*global메뉴 - 국비무료교육 : 디자인 말풍선 모집중*/
+.gnb.global .utility > li:nth-last-child(2) {
+    position: relative;
+    vertical-align: top;
+}
+.gnb.global .utility li .text_link{
+    position:relative;
+}
+.gnb.global .utility li:not(:last-child) .text_link:before{
+    content:"";
+    position:absolute;
+    top:0rem;
+    right:-1.8rem;
+    border-right:1px solid rgb(165, 162, 162);
+    width:0;
+    height:1.5rem;
+}
+
+
+/*gnb메뉴 1번쨰 - 이러닝 : 디자인 말풍선 pick*/
+/*.gnb.type2 .gnb_nav>ul>li:nth-child(1)>a {
+    color: #FE6B00;
+}
+.gnb.type2 .gnb_nav>ul>li:nth-child(1)>a:before {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 30px;
+    background: url(../img/ico-pick.png);
+    right: -43px;
+    top: -27px !important;
+    display: inline-block;
+}
+.gnb.type2 .gnb_row:first-child {
+    border-bottom: 0;
+}
+.gnb.type2 .gnb_row:nth-child(2) {
+    border-top: 1px solid #d9d9d9;
+}*/
+
+/*gnb메뉴 1번쨰 - 이러닝 : 디자인 도트*/
+/*.gnb.type2 .gnb_nav>ul>li:nth-child(1)>a:before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: #fe6b00;
+    right: -5px;
+    top: -3px !important;
+    display: inline-block;
+    border-radius: 50%;
+}*/
+
+/*gnb메뉴 1번쨰 - Class now*/
+/*.gnb.type2 .gnb_nav>ul>li:nth-child(1)>a:before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: url(../img/ico-classnow.png) no-repeat 0 0;
+    display: inline-block;
+    position: absolute;
+    top: 4px !important;
+    left: -21px;
+}*/
+
+/*gnb메뉴 2번째 - LIVE*/
+/*.gnb.type2 .gnb_nav>ul>li:nth-child(1) {
+    margin-right: 83px;
+}
+.gnb.type2 .gnb_nav>ul>li:nth-child(2)>a:before {
+    content: '';
+    width: 27px;
+    height: 21px;
+    background: url(../img/ico-live.png);
+    display: inline-block;
+    position: absolute;
+    top: 2px !important;
+    left: -33px;
+}*/
+
+/*gnb메뉴 7번쨰 - 국비무료교육 : 디자인 말풍선 모집중*/
+/*.gnb.type2 .gnb_nav>ul>li:nth-child(7)>a:before {
+    content: '';
+    position: absolute;
+    width: 46px;
+    height: 28px;
+    background: url(../img/ico-recruit.png);
+    right: -43px;
+    top: -26px !important;
+    display: inline-block;
+}
+.gnb.type2 .gnb_row:first-child {
+    border-bottom: 0;
+}
+.gnb.type2 .gnb_row:nth-child(2) {
+    border-top: 1px solid #d9d9d9;
+}*/
+
+/*퀵메뉴*/
+.quickmenu {
+    /*이미지 사이즈*/
+    width: 24px;
+    height: 65px;
+}
+.quickmenu.is-active {
+	width: 180px;
+	height: 210px;
+}
+.quickmenu__menu {
+    background: url(../img/quickmenu/quickmenu.jpg) no-repeat 50% 50%;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: content-box;
+}
+.quickmenu__tit {
+    font-size: 0;
+    background: none;
+    padding-left: 0;
+    padding-bottom: 0;
+}
+.quickmenu__menu {
+    padding: 0;
+}
+.quickmenu__menu ul {
+    height: 100%;
+}
+.quickmenu__menu ul li {
+    padding-top: 0;
+    height: 100%;
+}
+.quickmenu__menu ul li a {
+    font-size: 0;
+    height: 100%;
+    display: block;
+}
+
+/*팝업 - 딤드있는 중앙 위치 팝업*/
+.layerPop:before { content: ''; display: block; background: rgba(0, 0, 0, 0.75); position: fixed; top: 0; right: 0; bottom: 0; left: 0; }
+.layerPop .pop_temp__wrap { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); }
+.layerPop .pop_temp__wrap { background-color: transparent; border: 1px solid transparent; }
+.layerPop .pop_temp__wrap .pop_temp_scroll { max-height: calc(100% - 40px) }
+.layerPop .pop_temp__wrap .pop_temp__foot { background-color: transparent; }
+.layerPop .pop_temp__wrap .pop_temp__foot .btn_close__wrap { border-top: 1px solid transparent; padding: 5px 0px; }
+.layerPop .pop_temp__wrap .pop_temp__foot .btn_close__wrap .pop_checkbox_area label,
+.layerPop .pop_temp__wrap .pop_temp__foot .btn_close__wrap .o-input-wrap--selection label { color: #fff; }
+.layerPop .pop_temp__wrap .pop_temp__foot .btn_close__wrap .pop_close { color: #fff; border: 1px solid transparent; min-width: auto; padding: 0; }
+.layerPop .pop_temp__wrap .o-input--checkbox + label:before { background: transparent; }
+.layerPop .pop_temp__wrap .o-input--checkbox:checked + label:before { border-color: #cdcdcd; }
+.layerPop .pop_temp__wrap .o-input--checkbox + label:hover:before { border-color: #cdcdcd; }
+.layerPop .pop_temp__foot .btn_close__wrap .pop_close:hover,
+.layerPop .pop_temp__foot .btn_close__wrap .pop_close:focus { background-color: transparent; }
+
+/* 20201216 */
+.gnb.type2 .gnb_cate {border-right: 0 none;}
+.gnb.type2 .gnb_cate + .gnb_nav {padding-left: 145px;}
+.gnb.type2 .gnb_nav > ul > li:first-child {margin-right: 20px; }
+.gnb.type2 .gnb_nav > ul > li:first-child > a {position: relative;   margin-right: 27px; 
+    
+}
+.gnb.type2 .gnb_nav > ul > li > a{
+    
+}
+/* .gnb.type2 .gnb_nav > ul > li > a:hover+div{
+    display:block;
+} */
+.gnb.type2 .gnb_nav > ul > li:first-child > a:before,
+.gnb.type2 .gnb_nav > ul > li:first-child > a:after {}
+.gnb.type2 .gnb_nav > ul > li:first-child > a:after {}
+.gnb.type2 .gnb_nav > ul > li:first-child > a:before {}
+
+/* 20201223 */
+.footer .b2b .fo_comp_wrap ul li.end img {margin-top: -7px;}

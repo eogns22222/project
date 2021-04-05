@@ -1,40 +1,147 @@
+.mobile{
+    display:block;
+}
+.web{
+	display:none;
+}
 header{
-    width:76.8rem;
+    height:12rem;
+}
+header>div.curtain{
+    display:none;
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-color:black;
+    opacity: 0.5;
 }
 header>div.global{
-    width:40rem;
+    display:none;
+    position:absolute; z-index: 999;
+    top:0;
+    right:0;
+    height:6rem;
+    transition: all 1s ease;
 }
 header>div.global>div.gnb__inner{
+    
     display:flex;
-    justify-content:flex-end;
-    width:40rem;
+    padding-left:2.5rem;
+    padding-right:2.5rem;
+    width:45rem;
+    background:white;
+    border-bottom:1px solid #ccc;
 }
 header>div.global>div.gnb__inner>ul.utility{
     display: flex;
     
 }
-header>div.globa>div.gnb__inner>ul.utility>li{}
+header>div.global>div.gnb__inner>ul.utility>li{
+    position:relative;
+    margin-right:2rem;
+    line-height: 6rem;
+}
+header>div.global>div.gnb__inner>ul.utility>li:not(:last-child):before{
+    content:"";
+    position: absolute;
+    top:2.5rem;
+    right:-1rem;
+    width:0;
+    height:1rem;
+    border-right:1px solid #999;
+}
 header>div.global>div.gnb__inner>ul.utility>li>a{
     color:#000;
     font-size:1.4rem;
+}
+header>div.global>div.gnb__inner>p{
+    position:absolute;
+    top:calc(50% - 10px);
+    right:2rem;
+    cursor: pointer;
 }
 
 /*  */
 header>div.type2{}
 header>div.type2>div.gnb_row{}
 header>div.type2>div.gnb_row>div.gnb__inner{}
-header>div.type2>div.gnb_row>div.gnb__inner>h1{}
+header>div.type2>div.gnb_row>div.gnb__inner>h1{
+    padding:1rem 0 1rem 2rem;
+    border-bottom:1px solid #999;
+}
 header>div.type2>div.gnb_row>div.gnb__inner>h1>a{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset>input{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset>button{}
+header>div.type2>div.gnb_row>div.gnb__inner>div.menu{
+    position:absolute;
+    display:flex;
+    align-items:center ;
+    top:1.5rem;
+    right:2rem;
+    width:3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+header>div.type2>div.gnb_row>div.gnb__inner>div.menu>p{
+    position:relative;
+    display:block;
+    width:3rem;
+    height: 0.3rem;
+    background:#000;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.menu>p:before{
+    content:"";
+    position:absolute;
+    top:1rem;
+    right:0;
+    width:3rem;
+    height: 0.3rem;
+    background:#000;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.menu>p:after{
+    content:"";
+    position:absolute;
+    top:-1rem;
+    right:0;
+    width:3rem;
+    height: 0.3rem;
+    background:#000;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd{
+    
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form{
+    border-bottom:1px solid #999;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset{
+    width:95vw;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset>input{
+    padding-left:2.5rem;
+    width:100%;
+    font-size:3rem;
+    line-height:6rem;
+    border:0 none;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset>input::placeholder{
+    font-size:1.5rem;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_search_fd>form>fieldset>button{
+    border:0 none;
+    background:none;
+    cursor: pointer;
+}
 /*  */
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate{}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>button{}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>span{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents{}
+header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents{
+    
+}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>ul{}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>ul>li{}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>ul>li>a{}
@@ -42,11 +149,39 @@ header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>u
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>ul>li>ul>li{}
 header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.category_contents>ul>li>ul>li>a{}
 /*  */
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul>li{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul>li>a{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul>li>ul{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul>li>ul>li{}
-header>div.type2>div.gnb_row>div.gnb__inner>div.gnb_cate>div.gnb_nav>ul>li>ul>li>a{}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav{
+    display:none;
+    position:absolute; z-index: 999;
+    top:6.3rem;
+    right:0;
+    width:45rem;
+    height:100%;
+    background:white ;
+    transition: all 1s ease;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul{}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li{
+    position:relative;
+    
+    font-size:1.5rem;
+    line-height:5rem ;
+    border-bottom:1px solid #ccc;
+    cursor: pointer;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li>p{
+    position:absolute;
+    top:0;
+    right:1rem;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li>a{
+    display:block;
+    padding:0 2.5rem;
+    color:#000;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li>ul{
+    display:none;
+    padding-left:5rem;
+}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li>ul>li{}
+header>div.type2>div.gnb_row>div.gnb__inner>nav.gnb_nav>ul>li>ul>li>a{}
 header>div.type2>span{}

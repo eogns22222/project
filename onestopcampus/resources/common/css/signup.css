@@ -115,7 +115,7 @@ main>section>form>div.container2>table>tbody>tr>td.top>label{
 }
 main>section>form>div.container2>table>tbody>tr>td.tit>p{
     position:absolute;
-    top:1.5rem;
+    top:0;
     right:2rem;
     cursor: pointer;
 }

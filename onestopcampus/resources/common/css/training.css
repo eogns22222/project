@@ -42,23 +42,31 @@ main>div>div.trainingzone>div>form>p>input{
     width:16rem;
     height:3.5rem;
 }
+main>div>div.trainingzone>div>form>p>input::placeholder{
+    color:#000;
+}
 main>div>div.trainingzone>div>form>p:nth-child(1)>input{
     width:24.8rem;
     margin-right:0.2rem;
     
 }
-main>div>div.trainingzone>div>form>p>input::placeholder{
+main>div>div.trainingzone>div>form>p.black>select{
     color:#000;
 }
 main>div>div.trainingzone>div>form>p>select{
+    margin-right:0.5rem;
     border:1px solid #999;
     font-size:1.5rem;
+    color:#999;
     width:19rem;
     height:3.5rem;
 }
-main>div>div.trainingzone>div>form>p>select>option{}
+main>div>div.trainingzone>div>form>p>select>option{
+    color:#999;
+}
 main>div>div.trainingzone>div>form>p>label{
     margin-right:5rem;
+    font-size:1.5rem;
 }
 main>div>div.trainingzone>div>form>p>button{
     margin-right:1rem;
@@ -74,7 +82,6 @@ main>div>div.trainingzone>div>form>div>input{
     margin:0 0.5rem;
     width:15rem;
     height:4rem;
-    border:1px solid #999;
     
 }
 main>div>div.trainingzone>div>form>div>input:nth-child(2){
@@ -123,6 +130,7 @@ main>div>div.sub_nav>div>ul>li>a{
     width:100%;
     height:100%;
     text-align: center;
+    font-size:1.5rem;
     line-height: 4.5rem;
 }
 main>div>div.sub_nav>div>ul>li>a>i{}
