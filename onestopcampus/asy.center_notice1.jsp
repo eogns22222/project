@@ -13,28 +13,24 @@
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/center_notice1.css">
+        
         <!--common-->
         
-        <link rel="import" href="asy.center.subnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 $("#test1").css("color","#000");
+                
                 $(".notice_list").children("li").click(function() {
                     var idx = $(this).index();
                     $(".notice_list").children("li").removeClass("on");
@@ -47,12 +43,13 @@
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="notice">
                 <h1>공지/ 행사안내</h1>
+                <p>onestopcampus 공지 및 행사 내용을 알려드립니다.</p>
                 <ul class="notice_list">
                     <li class="on">공지사항</li>
                     <li>행사안내</li>
@@ -90,7 +87,6 @@
                                     <tr>
                                     <th>번호</th>
                                     <th>제목</th>
-                                    <th>첨부</th>
                                     <th>작성자</th>
                                     <th>등록일</th>
                                     <th>조회수</th>
@@ -100,7 +96,6 @@
                                     <tr>
                                         <td class="number">10</td>
                                         <td class="text">[공지]시스템 작업 안내 및 출결처리 협조 요청</td>
-                                        <td class="img"><img src="resources/common/imgs/clip.png" alt="첨부_이미지"></td>
                                         <td class="name">홍길동</td>
                                         <td class="time"><time datetime="2021-03-22">2021-03-22</time></td>
                                         <td class="check">130</td>
@@ -201,6 +196,6 @@
             </div>
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

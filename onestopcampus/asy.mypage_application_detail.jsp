@@ -21,14 +21,7 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -40,7 +33,7 @@
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
             <jsp:include page="kdh.mypagesubnav.jsp"></jsp:include>
@@ -208,6 +201,6 @@
             </div><!--details_end-->
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

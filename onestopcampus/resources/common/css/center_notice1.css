@@ -1,211 +1,479 @@
-main>div{
-    margin:0 auto;
-    margin-bottom: 10rem;
-    display:flex;
-    justify-content: space-between;
+@media screen and (min-width: 769px) {
+    .web{
+        display:block;
+    }
+    .mobile{
+        display:none;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        width:120rem;
+    }
     
-    width:120rem;
-}
-
-/**/
-main>div>div.notice{
-    margin-top:8rem;
-}
-main>div>div.notice>h1{
-    margin-bottom:5.4rem;
-    font-size:3rem;
-    color:#000;
-    text-align: center;
-}
-main>div>div.notice>ul.notice_list{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width:100%;
-    text-align: center;
-}
-main>div>div.notice>ul.notice_list>li.on{
-    background-color: #1428A0;
-}
-main>div>div.notice>ul.notice_list>li{
-    flex: 1 1 auto;
-    height:4rem;
-    text-align: center;
-    line-height: 4rem;
-    cursor: pointer;
-    color:#000;
-    font-size:1.5rem;
-}
-main>div>div.notice>ul.notice_list>li.on{
-    color:#fff;
+    /**/
+    main>div{
+        position: relative;
+    }
+    main>div>iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
     
-}
-main>div>div.notice>div.container>div.content>div{
-    margin:2.7rem 0 4rem 0;
-    padding:0 2.9rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:100%;
-    height:11.8rem;
-    border:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>div>p{
-    margin-left:3.2rem;
-    color:#000;
-    font-size:1.5rem;
-}
-main>div>div.notice>div.container>div.content>div>form{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width:80%;
-}
-main>div>div.notice>div.container>div.content>div>form>select{
-    width:23rem;
-    height:3.5rem;
-    border:1px solid #999;
-    cursor: pointer;
-    font-size: 1.4rem;
-}
-main>div>div.notice>div.container>div.content>div>form>select>option{
-    padding: 1.3rem 1.3rem;
-    color:#999;
-    font-size: 1.4rem;
-}
-main>div>div.notice>div.container>div.content>div>form>input{
-    padding-left: 1.4rem;
-    width:23rem;
-    height:3.5rem;
-    font-size: 1.4rem;
-    border:1px solid #999;
-    cursor: pointer;
+    main>div>div.notice{
+        margin-left: 2rem;
+        margin-top:8rem;
+    }
+    main>div>div.notice>h1{
+        margin-bottom:2.2rem;
+        font-size:3rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.notice>p{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 4.7rem;
+    }
+    main>div>div.notice>ul.notice_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        text-align: center;
+    }
+    main>div>div.notice>ul.notice_list>li.on{
+        background-color: #1428A0;
+    }
+    main>div>div.notice>ul.notice_list>li{
+        flex: 1 1 auto;
+        height:4rem;
+        text-align: center;
+        font-size: 1.6rem;
+        line-height: 4rem;
+        cursor: pointer;
+        color:#000;
+    }
+    main>div>div.notice>ul.notice_list>li.on{
+        color:#fff;
+        
+    }
+    main>div>div.notice>div.container>div.content>div{
+        margin:2.7rem 0 4rem 0;
+        padding:0 2.9rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:100%;
+        height:11.8rem;
+        border:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>div>p{
+        margin-left:3.2rem;
+        font-size: 1.5rem;
+        color:#000;
+    }
+    main>div>div.notice>div.container>div.content>div>form{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:80%;
+    }
+    main>div>div.notice>div.container>div.content>div>form>select{
+        width:23rem;
+        height:3.5rem;
+        border:1px solid #999;
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+    main>div>div.notice>div.container>div.content>div>form>select>option{
+        padding: 1.3rem 1.3rem;
+        color:#999;
+        font-size: 1.4rem;
+    }
+    main>div>div.notice>div.container>div.content>div>form>input{
+        padding-left: 1.4rem;
+        width:23rem;
+        height:3.5rem;
+        font-size: 1.4rem;
+        border:1px solid #999;
+        cursor: pointer;
+        
+    }
+    main>div>div.notice>div.container>div.content>div>form>button{
+        width:11rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
     
-}
-main>div>div.notice>div.container>div.content>div>form>button{
-    width:11rem;
-    height:4rem;
-    color:#fff;
-    background-color: #1428A0;
-    border:1px solid #1428A0;
-}
-
-main>div>div.notice>div.container>div.content>article>p{
-    float: left;
-    font-size: 1.5rem;
-    font-weight: 500;
-    color:#000;
-}
-main>div>div.notice>div.container>div.content>article>p>span{
-    font-weight: 600;
-    color:#1428A0;
-}
-main>div>div.notice>div.container>div.content>article>ul{
-    display: flex;
-    justify-content:flex-end;
-    align-items: right;
-}
-main>div>div.notice>div.container>div.content>article>ul>li>select{
-    margin: 0 1.2rem;
-    width:10rem;
-    height:2.5rem;
-    font-size: 1.4rem;
-    border:1px solid #999;
-    cursor: pointer;
-}
-main>div>div.notice>div.container>div.content>article>ul>li>select>option{
-    padding: 0.7rem;
-    cursor: pointer;
-}
-main>div>div.notice>div.container>div.content>article>ul>li>button{
+    main>div>div.notice>div.container>div.content>article>p{
+        float: left;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color:#000;
+    }
+    main>div>div.notice>div.container>div.content>article>p>span{
+        font-weight: 600;
+        color:#1428A0;
+    }
+    main>div>div.notice>div.container>div.content>article>ul{
+        display: flex;
+        justify-content:flex-end;
+        align-items: right;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>select{
+        margin: 0 1.2rem;
+        width:10rem;
+        height:2.5rem;
+        font-size: 1.4rem;
+        border:1px solid #999;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>select>option{
+        padding: 0.7rem;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>button{
+        display: block;
+        width:6rem;
+        height:2.5rem;
+        border:1px solid #999;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>table{
+        margin-top: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color:#000;
+        border-top:1px solid #E6E6E6;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead{
+        border-bottom:1px solid #E6E6E6;
+        background-color:#d1d1d1;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead>tr>th{
+        height:5.5rem;
+        vertical-align: middle;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead>tr>th:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr{
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td{
+        padding: 1.5rem 2.5rem;
+        width:11rem;
+        text-align: center;
+        vertical-align:middle;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.text{
+        width:40rem;
+        text-align: left;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.time{
+        width:13rem;
+        text-align: left;
+    }
+    /*페이지 버튼*/
+    /*
+    main>div>div.notice>div.container>div.content>article>div.btn_page{
+        margin: 2.5rem 0;
+        padding-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>p>img{
+        vertical-align:bottom;
+        width:0.9rem;
+        height:1.5rem;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li{
+        margin: 0 1rem;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li.on{
+        padding-bottom: 0.3rem;
+        font-weight: 500;
+        color:#000;
+        text-align: center;
+        border-bottom:1px solid #000;
+    }*/
+    
+    
+    
+    
+    
+    /**/
+    main>div>div.notice>div.container>div.on{
     display: block;
-    width:6rem;
-    height:2.5rem;
-    border:1px solid #999;
-    cursor: pointer;
+    }
+    main>div>div.notice>div.container>div{
+        display: none;
+    }
 }
-main>div>div.notice>div.container>div.content>article>table{
-    margin-top: 1.2rem;
-    font-size: 1.4rem;
-    font-weight: 500;
-    color:#000;
-    border-top:1px solid #E6E6E6;
-    border-bottom:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>article>table>thead{
-    border-bottom:1px solid #E6E6E6;
-    background-color:#F2F2F2;
-}
-main>div>div.notice>div.container>div.content>article>table>thead>tr>th{
-    height:5.5rem;
-    vertical-align: middle;
-}
-main>div>div.notice>div.container>div.content>article>table>thead>tr>th:not(:last-of-type){
-    border-right:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>article>table>tbody>tr{
-    border-bottom:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>article>table>tbody>tr>td:not(:last-of-type){
-    border-right:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>article>table>tbody>tr>td{
-    padding: 1.5rem 2.5rem;
-    width:11rem;
-    text-align: center;
-    vertical-align:middle;
-}
-main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.text{
-    width:40rem;
-    text-align: left;
-    cursor: pointer;
-}
-main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.time{
-    width:13rem;
-    text-align: left;
-}
-/*페이지 버튼*/
-/*
-main>div>div.notice>div.container>div.content>article>div.btn_page{
-    margin: 2.5rem 0;
-    padding-bottom: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-bottom:1px solid #E6E6E6;
-}
-main>div>div.notice>div.container>div.content>article>div.btn_page>p>img{
-    vertical-align:bottom;
-    width:0.9rem;
-    height:1.5rem;
-    cursor: pointer;
-}
-main>div>div.notice>div.container>div.content>article>div.btn_page>ul{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-}
-main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li{
-    margin: 0 1rem;
-}
-main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li.on{
-    padding-bottom: 0.3rem;
-    font-weight: 500;
-    color:#000;
-    text-align: center;
-    border-bottom:1px solid #000;
-}*/
 
 
 
-
-
-/**/
-main>div>div.notice>div.container>div.on{
-display: block;
+@media screen and (max-width: 768px) {
+    .web{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    /**/
+    main>div>iframe{
+        width: 100%;
+    }
+    main>div>div.notice{
+        padding:0 2rem;
+        padding-top:8rem;
+        margin: 0 auto;
+        width:100%;
+    }
+    main>div>div.notice>h1{
+        margin-bottom:2.2rem;
+        width:100%;
+        font-size:3.5rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.notice>p{
+        width:100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.notice>ul.notice_list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width:100%;
+        text-align: center;
+    }
+    main>div>div.notice>ul.notice_list>li.on{
+        background-color: #1428A0;
+    }
+    main>div>div.notice>ul.notice_list>li{
+        flex: 1 1 auto;
+        height:4rem;
+        text-align: center;
+        font-size: 1.7rem;
+        line-height: 4rem;
+        cursor: pointer;
+        color:#000;
+    }
+    main>div>div.notice>ul.notice_list>li.on{
+        color:#fff;
+        
+    }
+    main>div>div.notice>div.container>div.content>div{
+        margin:2.7rem 0 4rem ;
+        padding:0 1rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width:100%;
+        border:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>div>p{
+        width:100%;
+        /* margin-left:3.2rem; */
+        font-size: 1.8rem;
+        color:#000;
+    }
+    main>div>div.notice>div.container>div.content>div>form{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        width:92vw;
+    }
+    main>div>div.notice>div.container>div.content>div>form>select{
+        margin: 1rem 0;
+        width:70vw; 
+        height:3.5rem;
+        border:1px solid #999;
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+    main>div>div.notice>div.container>div.content>div>form>select>option{
+        padding: 1.3rem 1.3rem;
+        color:#999;
+        font-size: 1.4rem;
+    }
+    main>div>div.notice>div.container>div.content>div>form>input{
+        padding-left: 1.4rem;
+        width:70vw;
+        height:3.5rem;
+        font-size: 1.4rem;
+        border:1px solid #999;
+        cursor: pointer;
+        
+    }
+    main>div>div.notice>div.container>div.content>div>form>button{
+        margin: 1rem 0;
+        width:11rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article{
+        margin: 0 auto;
+        width:100%;
+    }
+    main>div>div.notice>div.container>div.content>article>p{
+        float: left;
+        font-size: 1.5rem;
+        font-weight: 500;
+        color:#000;
+    }
+    main>div>div.notice>div.container>div.content>article>p>span{
+        font-weight: 600;
+        color:#1428A0;
+    }
+    main>div>div.notice>div.container>div.content>article>ul{
+        display: flex;
+        justify-content:flex-end;
+        align-items: right;
+        width:100%;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>select{
+        margin: 0 1.2rem;
+        /* width:10rem; */
+        height:2.5rem;
+        font-size: 1.4rem;
+        border:1px solid #999;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>select>option{
+        padding: 0.7rem;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>ul>li>button{
+        display: block;
+        width:6rem;
+        height:2.5rem;
+        border:1px solid #999;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>table{
+        margin: 0 auto;
+        margin-top: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color:#000;
+        width:100%;
+        border-top:1px solid #E6E6E6;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead{
+        border-bottom:1px solid #E6E6E6;
+        background-color:#d1d1d1;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead>tr>th{
+        height:5.5rem;
+        vertical-align: middle;
+    }
+    main>div>div.notice>div.container>div.content>article>table>thead>tr>th:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr{
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td{
+        padding: 0.7rem 0.7rem;
+        /* width:11rem; */
+        line-height: 2rem;
+        height:5rem;
+        text-align: center;
+        vertical-align:middle;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.text{
+        width:45vw;
+        text-align: left;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>table>tbody>tr>td.time{
+        width:12vw;
+        text-align: left;
+    }
+    /*페이지 버튼*/
+    /*
+    main>div>div.notice>div.container>div.content>article>div.btn_page{
+        margin: 2.5rem 0;
+        padding-bottom: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>p>img{
+        vertical-align:bottom;
+        width:0.9rem;
+        height:1.5rem;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li{
+        margin: 0 1rem;
+    }
+    main>div>div.notice>div.container>div.content>article>div.btn_page>ul>li.on{
+        padding-bottom: 0.3rem;
+        font-weight: 500;
+        color:#000;
+        text-align: center;
+        border-bottom:1px solid #000;
+    }*/
+    
+    /**/
+    main>div>div.notice>div.container>div.on{
+    display: block;
+    }
+    main>div>div.notice>div.container>div{
+        display: none;
+    }
+    
+    
 }
-main>div>div.notice>div.container>div{
-    display: none;
-}
-

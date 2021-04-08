@@ -1,85 +1,221 @@
-main>div{
-    margin:0 auto;
-    margin-bottom: 10rem;
-    display:flex;
-    justify-content: space-between;
-    width:120rem;
+@media screen and (min-width: 769px) {
+    .web{
+        display:block;
+    }
+    .mobile{
+        display:none;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        width:120rem;
+    }
+    
+    /**/
+    main>div{
+        position: relative;
+    }
+    main>div>iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    main>div>div.ask{
+        margin-top:8rem;
+        margin-left: 2rem;
+    }
+    main>div>div.ask>h1{
+        margin-bottom:2.2rem;
+        font-size:3rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.ask>p{
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.ask>form>article{
+        border-top:1px solid #999;
+        border-bottom:1px solid #999;
+    }
+    main>div>div.ask>form>article.answer{
+        margin-bottom: 9.5rem;
+    }
+    main>div>div.ask>form>h2{
+        margin:4.8rem 0 3.5rem 0;
+        font-size: 2.2rem;
+        font-weight: 500;
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody>tr{
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>th{
+        padding: 2.2rem 0;
+        padding-left: 1.3rem;
+        width:18rem;
+        font-size: 1.5rem;
+        text-align: left;
+        border-bottom:1px solid #d1d1d1;
+        border-right:1px solid #d1d1d1;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>th.top{
+        vertical-align: top;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td{
+        padding:1.6rem 1.6rem;
+        width:75.2rem;
+        font-size: 1.4rem;
+        border-bottom:1px solid #d1d1d1;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>input{
+        width:100%;
+        vertical-align: top;
+        font-size: 1.4rem;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>input::placeholder{
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td.height{
+        height:15rem;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td.height>textarea{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.4rem;
+        width:100%;
+        height:100%;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>textarea::placeholder{
+        color:#000;
+    }
+    main>div>div.ask>form>button{
+        margin: 0 auto;
+        display: block;
+        width:15rem;
+        height: 4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    
 }
 
-/**/
-main>div>div.ask{
-    margin-top:8rem;
-}
-main>div>div.ask>h1{
-    margin-bottom:2.2rem;
-    font-size:3rem;
-    color:#000;
-    text-align: center;
-}
-main>div>div.ask>p{
-    text-align: center;
-    margin-bottom: 5rem;
-    font-size:1.5rem;
-}
-main>div>div.ask>form>article{
-    border-top:1px solid #999;
-    border-bottom:1px solid #999;
-}
-main>div>div.ask>form>article.answer{
-    margin-bottom: 9.5rem;
-}
-main>div>div.ask>form>h2{
-    margin:4.8rem 0 3.5rem 0;
-    font-size: 2.2rem;
-    font-weight: 500;
-    color:#000;
-}
-main>div>div.ask>form>article>table>tbody>tr{
-    color:#000;
-}
-main>div>div.ask>form>article>table>tbody>tr>th{
-    padding: 2.2rem 0;
-    padding-left: 1.3rem;
-    width:18rem;
-    text-align: left;
-    border-bottom:1px solid #F2F2F2;
-    border-right:1px solid #F2F2F2;
-    font-size:1.5rem;
-}
-main>div>div.ask>form>article>table>tbody>tr>th.top{
-    vertical-align: top;
-}
-main>div>div.ask>form>article>table>tbody>tr>td{
-    padding:1.6rem 1.6rem;
-    width:75.2rem;
-    font-size: 1.4rem;
-    border-bottom:1px solid #F2F2F2;
-}
-main>div>div.ask>form>article>table>tbody>tr>td>input{
-    width:100%;
-    vertical-align: top;
-    font-size: 1.4rem;
-}
-main>div>div.ask>form>article>table>tbody>tr>td>input::placeholder{
-    color:#000;
-}
-main>div>div.ask>form>article>table>tbody>tr>td.height{
-    height:15rem;
-}
-main>div>div.ask>form>article>table>tbody>tr>td.height>textarea{
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 1.4rem;
-    width:100%;
-    height:100%;
-}
-main>div>div.ask>form>article>table>tbody>tr>td>textarea::placeholder{
-    color:#000;
-}
-main>div>div.ask>form>button{
-    margin: 0 auto;
-    display: block;
-    width:15rem;
-    height: 4rem;
-    color:#fff;
-    background-color: #1428A0;
+
+@media screen and (max-width: 768px) {
+    .web{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    /**/
+    
+    main>div>div.ask{
+        padding:0 2rem;
+        margin: 0 auto;
+        margin-top:8rem;
+        text-align: center;
+        width:100%;
+    }
+    main>div>div.ask>h1{
+        width:100%;
+        margin-bottom:2.2rem;
+        font-size:3.5rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.ask>p{
+        width:100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    
+    main>div>div.ask>form>article{
+        margin: 0 auto;
+        width:100%;
+        border-top:1px solid #999;
+        border-bottom:1px solid #999;
+    }
+    main>div>div.ask>form>article.answer{
+        margin-bottom: 8rem;
+    }
+    main>div>div.ask>form>h2{
+        margin:4.8rem 0 3.5rem 0;
+        font-size: 2.2rem;
+        font-weight: 500;
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody{
+        width:100%;
+    }
+    main>div>div.ask>form>article>table>tbody>tr{
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>th{
+        padding: 2.2rem 0;
+        padding-left: 1rem;
+        min-width:7rem;
+        font-size: 1.5rem;
+        text-align: left;
+        border-bottom:1px solid #d1d1d1;
+        border-right:1px solid #d1d1d1;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>th.top{
+        vertical-align: top;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td{
+        padding:1.6rem 1.6rem;
+        width:70vw;
+        font-size: 1.4rem;
+        border-bottom:1px solid #d1d1d1;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>input{
+        width:70vw;
+        vertical-align: top;
+        font-size: 1.4rem;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>input::placeholder{
+        color:#000;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td.height{
+        height:15rem;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td.height>textarea{
+        font-family: 'Noto Sans KR', sans-serif;
+        font-size: 1.4rem;
+        width:70vw;
+        height:100%;
+    }
+    main>div>div.ask>form>article>table>tbody>tr>td>textarea::placeholder{
+        color:#000;
+    }
+    main>div>div.ask>form>button{
+        margin: 0 auto;
+        display: block;
+        width:15rem;
+        height: 4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    
 }

@@ -21,25 +21,16 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
-
     
     <script>
-       
+       $(function(){
+            $("#h1_logo2").append("수강신청").css({"font-size":"20px","line-height":"50px","color":"#000"});
+       });
     </script>
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
             <div>

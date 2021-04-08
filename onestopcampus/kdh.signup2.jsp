@@ -26,20 +26,28 @@
             main {
                 margin-bottom: 80px;
             }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("회원가입").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
+                $(".numnum").focusout(function(){
+                    var numlen = $("#numlen").val().length;
+                    var numlen2 = $("#numlen2").val().length;
+                    var numlen3 = numlen + numlen2;
+                    if(numlen3 < 8){
+                        $("#go").attr("disabled","disabled");
+                        $("#telchek").css("display","inline-block");
+                    }
+                    if(numlen3 == 8){
+                        $("#go").removeAttr("disabled","disabled");
+                        $("#telchek").css("display","none");
+                    }
+                        
+                    
+                });
+                
                 
                 $(".nik_pwd").focusout(function(){
                     var pwssdd = $("#pwssdd").val();
@@ -56,6 +64,9 @@
                         }
                     }
                 });
+
+                    
+                   
                 
             });
         </script>
@@ -83,7 +94,7 @@
         </script>
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
                 <div>
@@ -178,17 +189,6 @@
                                     <p>
                                         <select name="year" id="yyy">
                                             <option value="year">년</option>
-                                            <option value="1990">1990</option>
-                                            <option value="1991">1991</option>
-                                            <option value="1992">1992</option>
-                                            <option value="1993">1993</option>
-                                            <option value="1994">1994</option>
-                                            <option value="1995">1995</option>
-                                            <option value="1996">1996</option>
-                                            <option value="1997">1997</option>
-                                            <option value="1998">1998</option>
-                                            <option value="1999">1999</option>
-                                            <option value="2000">2000</option>
                                         </select>
                                         <select name="month" id="mmm">
                                             <option value="month">월</option>
@@ -294,9 +294,11 @@
                                             <option value="010">010</option>
                                         </select>
                                         <label for="phoneNumber1">-</label>
-                                        <input type="tel" id="" name="phoneNumber1">
+                                        <input type="tel" id="numlen" class="numnum" name="phoneNumber1">
                                         <label for="phoneNumber2">-</label>
-                                        <input type="tel" id="" name="phoneNumber2">
+                                        <input type="tel" id="numlen2" class="numnum" name="phoneNumber2">
+                                        <input type="hidden" id="numlen3" name="phoneNumber2">
+                                        <span id="telchek" style="display:none; color:red;">ex> 010-1234-1234 양식으로 입력해주세요</span>
                                     </p>
                                 </div>
                             </div>

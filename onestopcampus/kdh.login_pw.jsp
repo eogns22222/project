@@ -22,40 +22,31 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
           $(function(){
+            $("#h1_logo2").append("비밀번호 찾기").css({"font-size":"20px","line-height":"50px","color":"#000"});
 
             $(".popup").click(function(){
-                $(".curtain").css("display","block");
-                $(".pop").css("display","block");
+                $(".curtain2").css("display","block");
+                $(".pop2").css("display","block");
 
             });
 
             $(".exit").click(function(){
-                $(".curtain").css("display","none");
-                $(".pop").css("display","none");
+                $(".curtain2").css("display","none");
+                $(".pop2").css("display","none");
             });
 
           });
         </script>
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
-        <p class="curtain"><span class="hidden">인증팝업배경</span></p>
-        <div class="pop">
+        <p class="curtain2"><span class="hidden">인증팝업배경</span></p>
+        <div class="pop2">
             <span class="hidden">인증팝업</span>
             <p class="topline"></p>
             <div>

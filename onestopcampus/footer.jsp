@@ -9,7 +9,8 @@
     <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.ico">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/common/css/reset.css">
-        <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
+    <link rel="stylesheet" href="resources/common/css/footer.css">
+        
         <style>
             html {
                 font-size:62.5%;
@@ -37,7 +38,7 @@
             <div>
                 <div class="pop">
                     <h1>이메일 수집거부</h1>
-                    <p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그랜이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되느 것을 거부하며, 이를 위반 시 정보통신망 법에 의해 처벌됩니다.</p>
+                    <p>본 웹사이트에 게시된 이메일 주소가 전자우편 수집 프로그랜이나 그 밖의 기술적 장치를 이용하여 무단으로 수집되는 것을 거부하며, 이를 위반 시 정보통신망 법에 의해 처벌됩니다.</p>
                     <p>게시일 : 2021년 3월 1일</p>
                     <p class="btnexit"><img src="resources/common/imgs/exit.png" alt="닫기"></p>
                 </div>

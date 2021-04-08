@@ -16,29 +16,20 @@
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="preconnect" href="https://fonts.gstatic.com">
          <!--common-->
-         <link rel="import" href="header.html">
-         <link rel="import" href="footer.html">
+         
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
             
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
 
             $(function(){
+                $("#h1_logo2").append("비밀번호 찾기").css({"font-size":"20px","line-height":"50px","color":"#000"});
                 
                 $(".pwwwd").focusout(function(){
                     var pwssdd = $("#pwssdd").val();
@@ -61,7 +52,7 @@
         </script>
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <h1>비밀번호 찾기</h1>
         <div>

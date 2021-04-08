@@ -1,17 +1,20 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%><!DOCTYPE html>
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
 <html lang="ko">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.2,maximum-scale=0.22,user-scalable=no">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0.6,maximum-scale=0.6,user-scalable=no">
         <title>원스톱캠퍼스메인</title>
         <link rel="shortcut icon" type="image/x-con" href="resources/common/imgs/favicon_24.ico">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/common/js/swiper-4.4.1/dist/css/swiper.css">
         <link rel="stylesheet" href="resources/common/css/reset.css">
         <!--common-->
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/portlet_indigo.css">
+        
 
         <!--common-->
         
@@ -21,16 +24,92 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
             
-            iframe.hea{
-                height:18.5rem;
+            section.mobile {
+                position: relative;
+                margin-bottom:250px;
+            background: white;
+            font-size: 14px;
+            color:#000;
+            padding-top: 80px;
+            box-sizing: border-box;
             }
-            iframe.foo{
-                height:30rem;
+            ul.tit{
+            z-index: 1000;
+            display:flex;
+            justify-content: space-between;
+            position:absolute;
+            left:calc(50% - 120px);
+            top:30px;
+            width:250px;
+            font-size: 20px;
             }
+            ul.tit>li{
+                position:relative;
+                font-size:15px;
+                cursor: pointer;
+            }
+            ul.tit>li:not(:last-child):before{
+                content:"";
+                position:absolute;
+                top:0;
+                right:-13px;
+                width:0;
+                height:15px;
+                border-right:1px solid #999;
+            }
+            .swiper-container {
+                position:absolute;
+                top:80px;
+                left:0;
+                padding:0 2rem;
+                width: 100%;
+            height: 210px;
+            background: white;
+            }
+            .swiper-container.on{
+                z-index: 10;
+            }
+            .swiper-slide {
+            display:flex;
+            justify-content: space-between;
+            font-size: 18px;
+            /* background: #fff; */
+
+            /* Center slide text vertically */
+            /* display: -webkit-box; */
+            /* display: -ms-flexbox; */
+            /* display: -webkit-flex; */
+            /* display: flex; */
+            /* -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;*/
+            justify-content:space-between;
+            /*-webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;*/
+            align-items: center; 
+            }
+            .swiper-slide img{
+            width:30vw;
+
+            }
+            .swiper-slide ul>li{
+                font-size:1.5rem;
+            }
+            .swiper-slide ul>li:nth-child(2){
+                color:#1428A0;
+            }
+            /* section>ul.tit{
+            z-index: 1000;
+            position:absolute;
+            left:0;
+            bottom:0;
+            text-align: center;
+            } */
+    
+    
+  
             div:focus{outline: none;}
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -121,6 +200,12 @@
                     $("#aside_bottom").children("div").eq(len6).addClass("on").siblings().removeClass("on");
                 });//하단 배너 끝
 
+                $(".slickdotssM").children().click(function(){
+                    var len6M = $(this).index();
+                    $(this).addClass("on").siblings().removeClass("on");
+                    $("#aside_bottomM").children("div").eq(len6M).addClass("on").siblings().removeClass("on");
+                });//모바일 하단 배너 끝
+
                 $(".contcont").children("a").mouseover(function(){
                     // $(this).css("position","relative");
                     $(this).children("ul").eq(1).stop(true,true).fadeIn();
@@ -129,7 +214,14 @@
                     // $(this).css("position","relative");
                     $(this).children("ul").eq(1).stop(true,true).fadeOut();
                 });
+                // 훈련컨텐츠 호버 이벤트 끝
 
+                $(".tit").children("li").click(function(){
+                    var containerLen = $(this).index();
+
+                    $(".swiper-container").eq(containerLen).addClass("on")
+                    .siblings().removeClass("on");
+                });
             }); 
 
             
@@ -165,11 +257,11 @@
                                 <li></li>
                                 <li></li>
                             </ul>
-                            <ul class="btnprevnext">
-                                <li class="prev"><img src="resources/common/imgs/btn_left.png" alt="prev"></li>
-                                <li class="next"><img src="resources/common/imgs/btn_right.png" alt="next"></li>
+                            <ul class="btnprevnext web">
+                                <li class="prev web"><img src="resources/common/imgs/btn_left.png" alt="prev"></li>
+                                <li class="next web"><img src="resources/common/imgs/btn_right.png" alt="next"></li>
                             </ul>
-                            <div class="btnsubnav">
+                            <div class="btnsubnav web">
                                 <ul>
                                     <li> open </li>
                                     <li class="on">한국정보교육원</li>
@@ -181,7 +273,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div id="contentcontainer">
+                        <div id="contentcontainer" class="web">
                             <section>
                                 <h1>카테고리</h1>
                                 <div class="contcont">
@@ -408,8 +500,178 @@
                                 </div>
                             </section>
                         </div>
+                        <section class="mobile">
+                            <ul class="tit">
+                                <li>카테고리1</li>
+                                <li>카테고리2</li>
+                                <li>카테고리3</li>
+                            </ul>
+                            <!-- Swiper -->
+                            <div class="swiper-container on">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail01.jpg" alt=""></li>
+                                                <li>집합</li>
+                                                <li>Desktop_바리스타</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail02.jpg" alt=""></li>
+                                                <li>집합</li>
+                                                <li>sw</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail03.jpg" alt=""></li>
+                                                <li>집합</li>
+                                                <li>가구제작</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail04.jpg" alt=""></li>
+                                                <li>집합</li>
+                                                <li>디자인</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail05.jpg" alt=""></li>
+                                                <li>집합</li>
+                                                <li>반응형</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail06.jpg" alt=""></li>
+                                                <li>스마트</li>
+                                                <li>보안</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail07.jpg" alt=""></li>
+                                                <li>스마트</li>
+                                                <li>사무,회계</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail08.jpg" alt=""></li>
+                                                <li>스마트</li>
+                                                <li>상담</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail09.jpg" alt=""></li>
+                                                <li>스마트</li>
+                                                <li>유튜브</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail10.jpg" alt=""></li>
+                                                <li>스마트</li>
+                                                <li>자바-웹-03</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail11.jpg" alt=""></li>
+                                                <li>온라인</li>
+                                                <li>캐드</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail12.jpg" alt=""></li>
+                                                <li>온라인</li>
+                                                <li>클라우드</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail13.jpg" alt=""></li>
+                                                <li>온라인</li>
+                                                <li>sns</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail01.jpg" alt=""></li>
+                                                <li>온라인</li>
+                                                <li>Desktop_바리스타</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="#">
+                                            <ul>
+                                                <li><img src="resources/common/imgs/sumnail02.jpg" alt=""></li>
+                                                <li>온라인</li>
+                                                <li>sw</li>
+                                            </ul>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- Swiper JS -->
+                        <script src="resources/common/js/swiper-4.4.1/dist/js/swiper.min.js"></script>
 
-                        <div id="aside_bottom">
+                        <!-- Initialize Swiper -->
+                        <script>
+                            var swiper = new Swiper('.swiper-container', {
+                            slidesPerView: 3,
+                            spaceBetween: 30,
+                            freeMode: true,
+                            pagination: {
+                                el: '.swiper-pagination',
+                                clickable: true,
+                            },
+                            });
+                        </script>
+
+                        <div id="aside_bottom" class="web">
                             <div class="on">
                                 <aside id="aside__">
                                     <a href="#"><img src="resources/common/imgs/bottombanner1.jpg" alt="onestopcampus open"></a>
@@ -431,12 +693,48 @@
                                 </li>
                             </ul>
                         </div>
+                        <div id="aside_bottomM" class="mobile">
+                            <div class="on">
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/bottombanner1.jpg" alt="onestopcampus open"></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/bottombanner2.jpg" alt="추천인 이벤트"></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/bottombanner3.jpg" alt="원스톱 이벤트"></a>
+                                </aside>
+                            </div>
+                            <div>
+                                <aside id="aside__">
+                                    <a href="#"><img src="resources/common/imgs/bottombanner4.jpg" alt="sns 이벤트"></a>
+                                </aside>
+                            </div>
+                            <ul class="slickdotssM" role="tablist">
+                                <li class="slick-dotsitemsM on" >
+                                    
+                                </li>
+                                <li class="slick-dotsitemsM" >
+                                    
+                                </li>
+                                <li class="slick-dotsitemsM " >
+                                    
+                                </li>
+                                <li class="slick-dotsitemsM" >
+                                    
+                                </li>
+                            </ul>
+                        </div>
 
                         <div id="section__opice">
                             <section>
                                 <h1>공지사항<span><img src="" alt=""></span></h1>
                                 <ul>
-                                    <li><a href="#">[공지] 카드결제 일시 중단 안내</a><time datetime="2021-03-17">2021-03-17</time></li>
+                                    <li><a href="#">[공지] 카드결제 일시 중단 안내 카드결제 일시 중단 안내 카드결제 일시 중단 안내</a><time datetime="2021-03-17">2021-03-17</time></li>
                                     <li><a href="#">[공지] 씨티카드 전산작업 안내</a><time datetime="2021-03-13">2021-03-13</time></li>
                                     <li><a href="#">[안내] 고객센터 서비스 일시중단</a><time datetime="2020-12-09">2020-12-09</time></li>
                                 </ul>
@@ -445,8 +743,8 @@
                             <section>
                                 <h1>이벤트<span><img src="" alt=""></span></h1>
                                 <ul>
-                                    <li><a href="#">[03/03-03/31] 3월 휴대폰제휴 이벤트</a><time datetime="2021-03-17">2021-03-17</time></li>
-                                    <li><a href="#">[03/03-03/31] VIP ZONE 이달의 책(..</a><time datetime="2021-03-13">2021-03-13</time></li>
+                                    <li><a href="#">[03/03-03/31] 3월 휴대폰제휴 이벤트 3월 휴대폰제휴 이벤트 3월 휴대폰제휴 이벤트</a><time datetime="2021-03-17">2021-03-17</time></li>
+                                    <li><a href="#">[03/03-03/31] VIP ZONE 이달의 책 VIP ZONE 이달의 책 VIP ZONE 이달의 책(.</a><time datetime="2021-03-13">2021-03-13</time></li>
                                     <li><a href="#">[03/03-03/31] ★3월출첵★ 치킨부터..</a><time datetime="2020-12-09">2021-12-09</time></li>
                                 </ul>
                                 <a href="#" class="more"><span class="hidden">더보기</span></a>
@@ -463,8 +761,7 @@
                     
                 </div>
             </section>
-
         </main>
-        <iframe src="./footer.html" class="foo"scrolling="no"></iframe>
+        <jsp:include page="footer.jsp"></jsp:include>
         </body>
     </html>

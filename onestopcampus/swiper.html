@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Swiper demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="resources/common/css/reset.css">
+  <link rel="stylesheet" href="resources/common/js/swiper-4.4.1/dist/css/swiper.css">
+
+  <!-- Demo styles -->
+  <style>
+    section {
+        position: relative;
+      height: 100%;
+      background: white;
+      font-size: 14px;
+      color:#000;
+      padding-top: 80px;
+      box-sizing: border-box;
+    }
+    ul.tit{
+      z-index: 1000;
+      display:flex;
+      position:absolute;
+      left:18%;
+      top:30px;
+      font-size: 20px;
+    }
+    .swiper-container {
+        position:absolute;
+        top:80px;
+        left:0;
+        width: 100%;
+      height: 210px;
+      background: white;
+    }
+    .swiper-slide {
+      display:flex;
+      justify-content: space-between;
+      font-size: 18px;
+      /* background: #fff; */
+
+      /* Center slide text vertically */
+      /* display: -webkit-box; */
+      /* display: -ms-flexbox; */
+      /* display: -webkit-flex; */
+      /* display: flex; */
+      /* -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;*/
+      justify-content:space-between;
+      /*-webkit-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;*/
+      align-items: center; 
+    }
+    .swiper-slide img{
+      width:100vw;
+
+    }
+    section>ul{
+      z-index: 1000;
+      position:absolute;
+      left:0;
+      bottom:0;
+      text-align: center;
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <section>
+    <ul class="tit">
+        <li>카테고리1</li>
+        <li>카테고리2</li>
+        <li>카테고리3</li>
+    </ul>
+    <!-- Swiper -->
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#"><img src="resources/common/imgs/bottombanner1.jpg" alt="onestopcampus open"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="resources/common/imgs/bottombanner2.jpg" alt="추천인 이벤트"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="resources/common/imgs/bottombanner3.jpg" alt="원스톱 이벤트"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="resources/common/imgs/bottombanner4.jpg" alt="sns 이벤트"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Swiper JS -->
+  <script src="resources/common/js/swiper-4.4.1/dist/js/swiper.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      freeMode: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+</html>

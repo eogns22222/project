@@ -13,36 +13,30 @@
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/center_one_ask2.css">
+        
         <!--common-->
         
-        <link rel="import" href="asy.center.subnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
                 $("#test3").css("color","#000");
             });
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="./asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="ask">
                 <h1>1:1문의</h1> 
                 <p>원스톱캠퍼스(onestopcampus) 서비스 이용에 대하여 궁금한 점이나 문의사항을 등록해주시면 빠른 시간 내에 답변해 드리겠습니다.</p>
@@ -89,6 +83,6 @@
             </div>
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

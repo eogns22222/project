@@ -8,8 +8,8 @@
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="resources/common/css/reset.css">
-    <link rel="stylesheet" media="all and (min-width: 769px)" href="resources/common/css/center_subnav.css">
-    <link rel="stylesheet" media="all and (min-width: 460px) and (max-width: 768px)" href="resources/common/css/center_subnav_mobile.css">
+    <link rel="stylesheet" href="resources/common/css/center_subnav.css">
+    
     <style>
         html {
             font-size:62.5%;
@@ -18,22 +18,22 @@
     </style>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
-        $(function(){
-            var flag = true;
-            $('.subnav').click(function(){
-                if(flag){
-                    $('.slide').stop().slideDown();
-                    $("img").attr("src","resources/common/imgs/slide.png");
-                    flag = false;
-                }else{
-                    $('.slide').stop().slideUp();
-                    $("img").attr("src","resources/common/imgs/slide2.png");
-                    flag = true;
-                }
+        // $(function(){
+        //     var flag = true;
+        //     $('.subnav').click(function(){
+        //         if(flag){
+        //             $('.slide').stop().slideDown();
+        //             $("img").attr("src","resources/common/imgs/slide.png");
+        //             flag = false;
+        //         }else{
+        //             $('.slide').stop().slideUp();
+        //             $("img").attr("src","resources/common/imgs/slide2.png");
+        //             flag = true;
+        //         }
                 
-            });
+        //     });
             
-        });
+        // });
     </script>
 </head>
 <body>

@@ -1,5 +1,13 @@
 @charset "UTF-8";
-
+#mobile{
+	display:none;
+}
+.mobile{
+	display:none;
+}
+.web{
+	display:block;
+}
 .portlet_wrap { position: relative; }
 
 .wrapper { overflow-x: hidden; min-width: 1200px; }

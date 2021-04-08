@@ -14,8 +14,6 @@
        <!---->
        <link rel="stylesheet" href="resources/common/css/training.css">
          <!--common-->
-         <link rel="import" href="header.html">
-         <link rel="import" href="footer.html">
         <style>
             html {
                 font-size:62.5%;
@@ -23,16 +21,6 @@
             }
             main {
                 margin-bottom: 80px;
-            }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
             }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -56,6 +44,8 @@
         <script type="text/javascript">
 
             $(function(){
+
+                $("#h1_logo2").append("훈련과정").css({"font-size":"20px","line-height":"50px","color":"#000"});
             
                 $("#startdate").datepicker({
             
@@ -87,7 +77,7 @@
             
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
                 <div class="trainingzone">
@@ -140,7 +130,7 @@
                 <div class="sub_nav">
                     <div class="">
                         <ul>
-                            <li><a href="#">전체(<i>0</i>)</a></li>
+                            <li class="on"><a href="#">전체(<i>0</i>)</a></li>
                             <li><a href="#">집체(<i>0</i>)</a></li>
                             <li><a href="#">온라인(<i>0</i>)</a></li>
                             <li><a href="#">혼합(<i>0</i>)</a></li>

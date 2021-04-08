@@ -13,23 +13,15 @@
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/center_map.css">
+        
         <!--common-->
         
-        <link rel="import" href="asy.center.subnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
             input::placeholder {color:#000;}
             input::-webkit-input-placeholder {color:#000;}
             input:-ms-input-placeholder {color:#000;}
@@ -37,26 +29,40 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
+
                 $("#test4").css("color","#000");
                 var flag = true;
                 $('.category').click(function(){
-                
+                    if(flag){
                         $('.overflow').stop().slideDown();
-                    
+                        flag = false;
+                    }else{
+                        $('.overflow').stop().slideUp();
+                        flag = true;
+                    }
                 });
-                $(".exit").click(function(){
-                    $('.overflow').stop().slideUp();
-                        
+
+                $('.overflow>img').click(function(){
+                    if(flag){
+                        $('.overflow').stop().slideDown();
+                        flag = false;
+                    }else{
+                        $('.overflow').stop().slideUp();
+                        flag = true;
+                    }
+                    
                 });
                 
             });
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="./asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="asked">
                 <h1>기관찾기</h1> 
                 <form action="">
@@ -82,6 +88,6 @@
             </div><!--asked end-->
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

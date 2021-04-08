@@ -13,34 +13,31 @@
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/center_notice2.css">
+        
         <!--common-->
         
-        <link rel="import" href="asy.center.subnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            $("#test1").css("color","#000");
+            $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
+                $("#test1").css("color","#000");
+            });
+            
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="./asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="notice">
                 <h1>공지/ 행사안내</h1> 
                 <p>onestopcampus 공지 및 행사 내용을 알려드립니다.</p>
@@ -96,6 +93,6 @@
             </div><!--notice end-->
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

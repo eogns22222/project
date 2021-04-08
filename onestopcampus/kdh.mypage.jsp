@@ -23,14 +23,7 @@
             }
             
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
             
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -39,7 +32,7 @@
         </script>
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
             <jsp:include page="kdh.mypagesubnav.jsp"></jsp:include>

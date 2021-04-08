@@ -24,14 +24,7 @@
             }
             
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
@@ -59,7 +52,7 @@
         
 </head>
 <body>
-    <jsp:include page="header.jsp"></jsp:include>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
             <jsp:include page="kdh.mypagesubnav.jsp"></jsp:include>
@@ -104,24 +97,7 @@
                             </p>
                         </div>
                     </div>
-                    <article>
-                        <div class="cont1">
-                            <dl>
-                                <dt>비밀번호는 개인정보보호 관련으로 중요한 정보이오니 타인에게 공개되지 않도록 신중하게 작성하시고, 반드시 기억하시기 바랍니다.</dt>
-                                <dd>-  새로운 비밀번호는 특수문자, 영문(대/소문자), 숫자 3가지를 조합하여 8~24자 이내로 입력하시기 바랍니다.</dd>
-                                <dd>- 특수문자 중 ^ , _ , [ , ] , ’ , - , &lt; , &gt; 은 사용하실 수 없습니다.</dd>
-                                <dd>-  '  '(공백)은 사용하실 수 없습니다.</dd>
-                            </dl>
-                        </div>
-                        <div class="cont2">
-                            <dl>
-                                <dt>다음과 같은 비밀번호는 피해 주십시오.</dt>
-                                <dd>-  아이디와 같은 비밀번호</dd>
-                                <dd>-  주민등록번호, 생일, 학번, 전화번호 등 개인정보와 관련된 숫자</dd>
-                                <dd>-  연속되거나 동일 반복되는 숫자</dd>
-                            </dl>
-                        </div>
-                    </article>
+                    
                     <p><input type="submit" value="변경하기" id="go" disabled></p>
                 </form>
             </div>

@@ -22,14 +22,7 @@
                 font-family: 'Noto Sans KR', sans-serif;
             }
             
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
             input::placeholder {color:#000;}
             input::-webkit-input-placeholder {color:#000;}
             input:-ms-input-placeholder {color:#000;}
@@ -37,13 +30,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 $("#test5").css("color","#000");
                 $("#submit_btn").click(function(){
                     var email1 = $("#email1").val();
                     var email2 = $("#email2").val();
                     var email4 = email1 + "@" + email2; 
                     $("#emailsum").val(email4) ;
-                    alert( $("#emailsum").val());
+                    // alert( $("#emailsum").val());
                 });
 
                 $("#phone3").focusout(function(){
@@ -55,7 +50,7 @@
                     // alert(phone);
                     // alert(phone2);
                     // alert(phone3);
-                    alert($("#phonenum").val());
+                    // alert($("#phonenum").val());
                 });// 연락처
 
                 $("#Registration3").focusout(function(){
@@ -67,7 +62,7 @@
                     // alert(phone);
                     // alert(phone2);
                     // alert(phone3);
-                    alert($("#ymd").val());
+                    // alert($("#ymd").val());
                 });// 연락처
 
             });
@@ -84,10 +79,10 @@
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="partner">
                 <h1>제휴문의</h1>
                 <form action="">
@@ -270,6 +265,6 @@
             </div>
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

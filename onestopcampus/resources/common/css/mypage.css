@@ -103,7 +103,7 @@ main>div>div.lecture>div>div.content>table>tbody>tr>th{
     padding:2rem 0;
     font-size:1.4rem;
     border-bottom:1px solid #ccc;
-    background:#F2F2F2;
+    background:#d1d1d1;
 
 }
 main>div>div.lecture>div>div.content>table>tbody>tr>th:not(:last-child){

@@ -1,0 +1,216 @@
+@media screen and (min-width: 769px) {
+    .web{
+        display:block;
+    }
+    .mobile{
+        display:none;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        width:120rem;
+    }
+    
+    /**/
+    main>div{
+        position: relative;
+    }
+    main>div>div.ask{
+        margin: 0 auto;
+        margin-top:8rem;
+    }
+    main>div>div.ask>h1{
+        margin-bottom:2.2rem;
+        font-size:3rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.ask>p{
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.ask>article{
+        margin-bottom: 20rem;
+    }
+    main>div>div.ask>article>a{
+        display: block;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>a>button{
+        margin-bottom: 1.5rem;
+        float: right;
+        display: block;
+        text-align: center;
+        width:15rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table{
+        clear: both;
+        margin-top: 1.2rem;
+        width:100%;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color:#000;
+        border-top:1px solid #E6E6E6;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>thead{
+        
+        border-bottom:1px solid #E6E6E6;
+        background-color:#d1d1d1;
+    }
+    main>div>div.ask>article>table>thead>tr>th{
+        height:5.5rem; 
+        vertical-align: middle;
+    }
+    main>div>div.ask>article>table>thead>tr>th:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr{
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr>td:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr>td{
+        padding: 1.5rem 2.5rem;
+        width:11rem;
+        font-size: 1.4rem;
+        text-align: center;
+        vertical-align:middle;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.channel{
+        width:15rem;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.title{
+        width:45rem;
+        text-align: left;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.date{
+        width:13rem;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .web{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    /**/
+    
+    main>div>div.ask{
+        padding:0 2rem;
+        margin: 0 auto;
+        margin-top:8rem;
+        text-align: center;
+        width:100%;
+    
+    }
+    main>div>div.ask>h1{
+        margin-bottom:2.2rem;
+        font-size:3.5rem;
+        color:#000;
+        text-align: center;
+        width:100%;
+    }
+    main>div>div.ask>p{
+        width:100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.ask>article{
+        margin: 0 auto;
+        margin-bottom: 20rem;
+        width:100%;
+    }
+    main>div>div.ask>article>a{
+        display: block;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>a>button{
+        margin-bottom: 1.5rem;
+        float: right;
+        display: block;
+        text-align: center;
+        width:15rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table{
+        clear: both;
+        margin-top: 1.2rem;
+        font-size: 1.4rem;
+        font-weight: 500;
+        color:#000;
+        border-top:1px solid #E6E6E6;
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>thead{
+        border-bottom:1px solid #E6E6E6;
+        background-color:#d1d1d1;
+    }
+    main>div>div.ask>article>table>thead>tr>th{
+        height:5.5rem; 
+        vertical-align: middle;
+    }
+    main>div>div.ask>article>table>thead>tr>th:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr{
+        border-bottom:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr>td:not(:last-of-type){
+        border-right:1px solid #E6E6E6;
+    }
+    main>div>div.ask>article>table>tbody>tr>td{
+        padding: 1.4rem 1.4rem;
+        /* width:11rem; */
+        height:5.5rem;
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        text-align: center;
+        vertical-align:middle;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.channel{
+        /* width:15rem; */
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.title{
+        /* width:45rem; */
+        text-align: left;
+        cursor: pointer;
+    }
+    main>div>div.ask>article>table>tbody>tr>td.date{
+        /* width:13rem; */
+        text-align: center;
+    }
+}

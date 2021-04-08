@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
         <link rel="stylesheet" href="resources/common/css/search.css">
+        
         <!--common-->
         
         <style>
@@ -23,29 +24,22 @@
             main {
                 margin-bottom: 80px;
             }
-            iframe{
-                width:100%;
-            }
             
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
-            
+            $(function(){
+                $("#h1_logo2").append("통합검색").css({"font-size":"20px","line-height":"50px","color":"#000"});
+            });
         </script>
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
-                <p class="searchcheck">홈<img src="resources/common/imgs/btn_right.png" alt="다음">검색결과</p>
-                <h1><strong>"입력값"</strong> 검색결과</h1>
-                <p class="searchcheck2">"입력값"에 대한 검색결과 총 <i>0</i>건이 검색 되었습니다.</p>
+                <p class="searchcheck web">홈<img src="resources/common/imgs/btn_right.png" alt="다음">검색결과</p>
+                <h1 class="web"><strong>"입력값"</strong> 검색결과</h1>
+                <p class="searchcheck2 web">"입력값"에 대한 검색결과 총 <i>0</i>건이 검색 되었습니다.</p>
                 <div class="">
                     <ul>
                         <li><a href="#">전체(<i>0</i>)</a></li>
@@ -65,7 +59,6 @@
                                 </ul>
                                 <ul>
                                     <li><span>훈련기간</span>2021-03-17 - 2021-08-05 (1회차)</li>
-                                    <li><span>일자리정보</span>-</li>
                                 </ul>
                             </div>
                         </div>

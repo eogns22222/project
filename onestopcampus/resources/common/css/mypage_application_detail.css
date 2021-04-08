@@ -35,27 +35,27 @@ main>div>div.details>form>div.support>table{
     width:100%;
     border-top:1px solid #808080;
 }
-main>div>div.details>form>div.support>table>tbody{}
+
 main>div>div.details>form>div.support>table>tbody>tr{
-    border-bottom:1px solid #F2F2F2;
+    border-bottom:1px solid #d1d1d1;
 }
 main>div>div.details>form>div.support>table>tbody>tr>th{
     padding: 2rem 0;
     padding-left: 1.5rem;
     width:20rem;
+    font-size: 1.5rem;
     text-align: left;
     color:#000;
-    border-right:1px solid #F2F2F2;
-    font-size:1.5rem;
+    border-right:1px solid #d1d1d1;
 }
 main>div>div.details>form>div.support>table>tbody>tr>th.left{
-    border-left:1px solid #F2F2F2;
+    border-left:1px solid #d1d1d1;
 }
 main>div>div.details>form>div.support>table>tbody>tr>td{
     padding-left: 1.5rem;
+    font-size: 1.4rem;
     width:27rem;
     color:#4D4D4D;
-    font-size:1.5rem;
 }
 /**/
 main>div>div.details>form>div.SupportCheck{
@@ -88,7 +88,7 @@ main>div>div.details>form>div.SupportCheck>div>p{
     
 }
 main>div>div.details>form>div.SupportCheck>div>input:nth-child(2){
-    margin-left:3rem;
+    margin-left:4rem;
 }
 
 main>div>div.details>form>div.SupportCheck>div>label{

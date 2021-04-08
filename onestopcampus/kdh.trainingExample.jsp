@@ -26,23 +26,15 @@
             main {
                 margin-bottom: 80px;
             }
-            iframe{
-                width:100%;
-            }
             
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
         <script>
             
             $(function () {
-               
+                $("#h1_logo2").append("훈련과정").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 var sflag = true;
                 var sflag2 = true;
                 $(".slide").click(function () {
@@ -119,7 +111,7 @@
 
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
                 <h1 class="trainingNik on">훈련과정 보기</h1>
@@ -140,7 +132,7 @@
                         </h1>
                         <div>
                             <article>
-                                <table>
+                                <table class="web">
                                     <tbody>
                                         <tr>
                                             <th>
@@ -201,6 +193,86 @@
                                             <td>
                                                 <p>인천고용센터</p>
                                             </td>
+                                            <th>
+                                                <p>담당자 이메일</p>
+                                            </th>
+                                            <td>
+                                                <p>mjschool83@naver.com</p>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <table class="mobile">
+                                    <tbody>
+                                        <tr>
+                                            <th>
+                                                <p>훈련기관 직종별 취업률</p>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                <div class="prog">
+                                                    <div class="progs" id="progressing">54%</div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>NCS직무분류</p>
+                                            </th>
+                                            <td>
+                                                <p>사무행정(02020302)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>훈련유형</p>
+                                            </th>
+                                            <td>
+                                                <p>실업자계좌제</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>훈련기간</p>
+                                            </th>
+                                            <td>
+                                                <p>2021-03-19 ~ 2021-04-22 (4회차)</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>훈련시간</p>
+                                            </th>
+                                            <td>
+                                                <p>25일, 총100시간</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>담당자 전화번호</p>
+                                            </th>
+                                            <td>
+                                                <p>032-882-3908</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>담당자 성명</p>
+                                            </th>
+                                            <td>
+                                                <p>최다은</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>
+                                                <p>주관부처</p>
+                                            </th>
+                                            <td>
+                                                <p>인천고용센터</p>
+                                            </td>
+                                        </tr>
+                                        <tr>
                                             <th>
                                                 <p>담당자 이메일</p>
                                             </th>
@@ -392,6 +464,10 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="btn">
+                                <button>훈련내용보기</button>
+                                <button>이수제도보기</button>
+                            </p>
                         </div>
                         <div>
                             <h1>훈련과정 문의</h1>
@@ -428,11 +504,11 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <p class="btn">
+                                <button>훈련내용보기</button>
+                                <button>이수제도보기</button>
+                            </p>
                         </div>
-                    </div>
-                    <div class="btn">
-                        <button>훈련내용보기</button>
-                        <button>이수제도보기</button>
                     </div>
                 </section>
             </div>

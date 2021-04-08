@@ -29,11 +29,11 @@
                 $(".ic_arr").click(function(){
                     if(flag){
                         $(".category_contents").css("display","block");
-                        $("div.searchHelp").css("display","none");
+                        
                         flag = false;
                     }else{
                         $(".category_contents").css("display","none");
-                        $("div.searchHelp").css("display","none");
+                        
                         flag = true;
                     }
                     
@@ -42,9 +42,16 @@
                 $(".category_contents").children("ul").children("li").mouseover(function(){
                     len = $(this).index();
                     $(this).addClass("on").siblings().removeClass("on");
-                    $("div.searchHelp").css("display","none");
+                    
                     // $(this).children().eq(len).addClass("on").siblings().removeClass("on");
-                });//nav end
+                });
+                
+                $("#content_1depth").children("li").mouseover(function(){
+                    $(".category_contents").css("display","none");
+                    flag = true;
+                });
+                
+                //nav end
 
 
                 // $("#gnb_search").click(function(){
@@ -59,12 +66,47 @@
                 // $("html").click(function(){
                 //     $("div.searchHelp").css("display","none");
                 // });
+                var flagslide = true;  
+                $("#content_1depth").children().click(function(){
+                    var _this = $(this);
+
+                    if(flagslide){
+                        $(this).children("#content_2depth").slideDown()
+                        ;
+                        $(this).children("p").children().attr("src","resources/common/imgs/slide.png");
+                        flagslide = false; 
+                    }else{
+                        $(this).children("#content_2depth").slideUp()
+                        ;
+                        $(this).children("p").children().attr("src","resources/common/imgs/slide2.png");
+                        flagslide = true; 
+                    }
+
+                    
+
+                    $(this).children("a").css("background","#d1d1d1")
+                    .parent("li").siblings().children("a").css("background","white");
+
+                    
+                    
+                });
+                $(".menu").click(function(){
+                    $(".global").css("display","block");
+                    $(".gnb_nav").css("display","block");
+                    $(".curtain").css("display","block");
+                });
+                $(".btn_exit").click(function(){
+                    $(".global").css("display","none");
+                    $(".gnb_nav").css("display","none");
+                    $(".curtain").css("display","none");
+                });
 
             }); 
         </script>
 </head>
 <body>
     <header class="header">
+        <div class="curtain mobile"></div>
         <div class="gnb global is-ready">
             <!-- Global Menu -->
             <div class="gnb__inner">
@@ -87,9 +129,10 @@
                             href="/cs/map/mapMain?p_menu=MzY0I0dMT0JBTA==&amp;p_gubun=Qw=="
                             target="_blank">마이페이지</a>
                     </li>
-                    <!-- Quick Link -->
                     
+                    <!-- Quick Link -->
                 </ul>
+                <p class="btn_exit mobile"><img src="resources/common/imgs/exit.png" alt="닫기"></p>
             </div>
         </div>
 
@@ -104,6 +147,7 @@
                                 alt="원스톱캠퍼스">
                         </a>
                     </h1>
+                    <div class="menu"><p class="mobile"><span></span></p></div>
                     <div class="gnb_search_fd" data-js="gnb__total-search">
                         <form
                             name="topSearchForm"
@@ -121,8 +165,9 @@
                                     class="inp_sch"
                                     data-js="search__input"
                                     value=""
-                                    autocomplete="off">
-                                <button type="button" class="btn_gnb_search" data-js="search__submit">검색</button>
+                                    autocomplete="off"
+                                    placeholder="검색어를 입력하세요.">
+                                <button type="button" class="btn_gnb_search" data-js="search__submit"><img src="resources/common/imgs/search.png" alt="검색" class="mobile"><span class="web">검색</span> </button>
                             </fieldset>
                         </form>
                         <!-- <div class="searchHelp">
@@ -141,7 +186,7 @@
             <div class="gnb_row">
                 <div class="gnb__inner">
                     <div
-                        class="gnb_cate"
+                        class="gnb_cate web"
                         data-js="gnb_cate"
                         data-maxheigt="466"
                         data-cate-json="/site/menu/selectCategoryMenuList"
@@ -210,6 +255,7 @@
                         <!-- MENU::JSTL -->
                         <ul class="demo-menus" id="content_1depth">
                             <li>
+                                <p class="mobile"><img src="resources/common/imgs/slide2.png" alt="슬라이드"></p>
                                 <a 
                                     href="#"
                                     target="_self">훈련과정</a>
@@ -218,12 +264,12 @@
                                         <li><a href="#">훈련과정</a></li>
                                         <li><a href="#">훈련과정</a></li>
                                         <li><a href="#">훈련과정</a></li>
-                                        <li><a href="#">훈련과정</a></li>
                                     </ul>
-
+                                    
                             </li>
 
                             <li>
+                                <p class="mobile" id="mobile"><img src="resources/common/imgs/slide2.png" alt="슬라이드"></p>
                                 <a
                                     href="#"
                                     target="_self">고객센터</a>
@@ -232,16 +278,15 @@
                                         <li><a href="#">고객센터</a></li>
                                         <li><a href="#">고객센터</a></li>
                                         <li><a href="#">고객센터</a></li>
-                                        <li><a href="#">고객센터</a></li>
                                     </ul>
                             </li>
 
                             <li>
+                                <p class="mobile"><img src="resources/common/imgs/slide2.png" alt="슬라이드"></p>
                                 <a
                                     href="#"
                                     target="_self">이벤트</a>
                                     <ul id="content_2depth">
-                                        <li><a href="#">이벤트</a></li>
                                         <li><a href="#">이벤트</a></li>
                                         <li><a href="#">이벤트</a></li>
                                         <li><a href="#">이벤트</a></li>

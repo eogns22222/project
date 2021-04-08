@@ -21,16 +21,7 @@
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe{
-                width:100%;
-            }
             
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
@@ -62,7 +53,8 @@
         <script type="text/javascript">
 
             $(function(){
-            
+                $("#h1_logo2").append("수강신청").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 $("#startdate").datepicker({
             
                     showOn: "both",
@@ -91,7 +83,7 @@
         </script>
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
                 <h1>훈련과정 수강신청</h1>
@@ -137,7 +129,8 @@
                     <tr height="40">
                         <td>연락처</td>
                         <td>
-                            <select name="phone" id="phonenom">
+                            <select name="phone" id="phonenom" required>
+                                <option value="선택"  selected>선택</option>
                                 <option value="010">010</option>
                                 <option value="011">011</option>
                                 <option value="017">017</option>
@@ -160,8 +153,12 @@
                     <tr height="40">
                         <td>최종학력</td>
                         <td>
-                            <select name="grade" id="recommender">
-                                <option value="선택">선택</option>
+                            <select name="grade" id="recommender" required>
+                                <option value="선택"  selected>선택</option>
+                                <option value="고등학교 졸업">고등학교 졸업</option>
+                                <option value="대학교(2,3) 졸업">대학교(2,3) 졸업</option>
+                                <option value="대학교(4년) 졸업">대학교(4년) 졸업</option>
+                                <option value="대학원 졸업">대학원 졸업</option>
                             </select>
                             <p>학력정보는 통계의 목적으로만 활용이 되며, 훈련기관을 포함한 외부의 제공되지 않습니다.</p>
                         </td>
@@ -169,11 +166,11 @@
                     <tr height="40">
                         <td>고용형태</td>
                         <td>
-                            <input type="radio" name="finaleducation" id="finaleducation">
+                            <input type="radio" name="finaleducation" id="finaleducation" required>
                             <label for="finaleducation">실업자</label>
-                            <input type="radio" name="finaleducation" id="employee">
+                            <input type="radio" name="finaleducation" id="employee" required>
                             <label for="employee">근로자</label>
-                            <input type="radio" name="finaleducation" id="unpaid">
+                            <input type="radio" name="finaleducation" id="unpaid" required>
                             <label for="unpaid">무급휴직자</label>
                         </td>
                     </tr>
@@ -183,31 +180,31 @@
                     <div>
                         
                         <p>
-                            <input type="radio" name="targetofsupport" value="실업자">
+                            <input type="radio" name="targetofsupport" value="실업자" required>
                             <label for="targetofsupport">실업자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="근로자">
+                            <input type="radio" name="targetofsupport" value="근로자" required>
                             <label for="targetofsupport">근로자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="무급휴직자">
+                            <input type="radio" name="targetofsupport" value="무급휴직자" required>
                             <label for="targetofsupport">무급휴직자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="자영업자">
+                            <input type="radio" name="targetofsupport" value="자영업자" required>
                             <label for="targetofsupport">자영업자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="고보미가입근로자">
+                            <input type="radio" name="targetofsupport" value="고보미가입근로자" required>
                             <label for="targetofsupport">고보미가입근로자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="특수형태근로종사자">
+                            <input type="radio" name="targetofsupport" value="특수형태근로종사자" required>
                             <label for="targetofsupport">특수형태근로종사자</label>
                         </p>
                         <p>
-                            <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자">
+                            <input type="radio" name="targetofsupport" value="지방관서의 장이 인정하는 자" required>
                             <label for="targetofsupport">지방관서의 장이 인정하는 자</label>
                         </p>
                         
@@ -217,67 +214,67 @@
                     <h2>신청자격 확인</h2>
                     <div>
                         <p>1. 신청일 현재 공무원 또는 사립학교 교직원으로 재직 중입니까?</p>
-                        <input type="radio" name="qualification1" value="false">
+                        <input type="radio" name="qualification1" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification1" value="true">
+                        <input type="radio" name="qualification1" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>2. 「외국인근로자의 고용 등에 관한 법률」을 적용받는 외국인(E-9, H-2, F4, H2 등 임의적용자)입니까?</p>
-                        <input type="radio" name="qualification2" value="false">
+                        <input type="radio" name="qualification2" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification2" value="true">
+                        <input type="radio" name="qualification2" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>3. 연 매출 1억 5천만원 이상인 자영업자(사업자등록증이 여러 개일경우 합산한 금액)입니까?</p>
-                        <input type="radio" name="qualification3" value="false">
+                        <input type="radio" name="qualification3" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification3" value="true">
+                        <input type="radio" name="qualification3" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>4. 최근 연 4천8백만원 이상인 부동산 임대 공급자(합산)입니까?</p>
-                        <input type="radio" name="qualification4" value="false">
+                        <input type="radio" name="qualification4" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification4" value="true">
+                        <input type="radio" name="qualification4" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>5. 월 평균임금(소득) 300만원 이상인 대규모기업근로자(만 45세 미만)· 특수형태근로종사자입니까?</p>
-                        <input type="radio" name="qualification5" value="false">
+                        <input type="radio" name="qualification5" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification5" value="true">
+                        <input type="radio" name="qualification5" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>6. 「국민기초생활보장법」 제9조에 따라 생계급여를 수급받는 일반수급자입니까?</p>
-                        <input type="radio" name="qualification6" value="false">
+                        <input type="radio" name="qualification6" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification6" value="true">
+                        <input type="radio" name="qualification6" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>7. 국민내일배움카드 부정행위에 따른 훈련 수강 또는 지원·융자 제한기간 중에 있거나, 지원금 등의 반환명령을 받고 그 납부의 의무를 이행하지
                         않은 사실이 있습니까?</p>
-                        <input type="radio" name="qualification7" value="false">
+                        <input type="radio" name="qualification7" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification7" value="true">
+                        <input type="radio" name="qualification7" value="true" required>
                         <label for="">아니오</label>
                     </div>
 
                     <div>
                         <p>8. 정부(지방자치단체포함)로부터 훈련비 등을 지원받는 훈련과정 수강하고 있거나 수강할 계획이 있습니까?</p>
                         
-                        <input type="radio" name="qualification8" value="false" onclick="show();">
+                        <input type="radio" name="qualification8" value="false" onclick="show();" required>
                         <label for="">예</label> 
-                        <input type="radio" name="qualification8" value="true" onclick="hide();">
+                        <input type="radio" name="qualification8" value="true" onclick="hide();" required>
                         <label for="">아니오</label> 
                         <div id="show" style="display: none">
                             <table>
@@ -295,15 +292,15 @@
 
                     <div>
                         <p>9. 최종학년 졸업예정자 아닌 재학생입니까?</p>
-                        <input type="radio" name="qualification9" value="false">
+                        <input type="radio" name="qualification9" value="false" required>
                         <label for="">예</label>
-                        <input type="radio" name="qualification9" value="true">
+                        <input type="radio" name="qualification9" value="true" required>
                         <label for="">아니오</label>
                     </div>
                 </div>
                 <p class="caution">※ 본인은 위와같이 신청자격 관련사항을 확인하였으며, 위의 내용에 거짓이 있을 경우에는 <em>직업능력 개발계좌의 발급이 취소되고, 수강 또는 지원·융자의 제한, 지원받은 훈련비용의 반환 및 추가징수 등의 행정처분</em>을 받을 수 있다는 것을 모두 이해하였습니다. </p>
                 <p class="checkBox">
-                    <input type="checkbox" name="check" id="check">
+                    <input type="checkbox" name="check" id="check" required>
                     <label for="check">확인</label>
                 </p>
                 <section>

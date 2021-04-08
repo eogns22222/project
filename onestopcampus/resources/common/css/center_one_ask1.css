@@ -1,128 +1,307 @@
-main>div{
-    margin:0 auto;
-    margin-bottom: 10rem;
-    display:flex;
-    justify-content: space-between;
-    width:120rem;
+@media screen and (min-width: 769px) {
+    .web{
+        display:block;
+    }
+    .mobile{
+        display:none;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        width:120rem;
+    }
+    
+    /**/
+    main>div{
+        position: relative;
+    }
+    main>div>iframe{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    main>div>div.ask{
+        margin: 0 auto;
+        margin-top:8rem;
+        margin-left:2rem;
+    }
+    main>div>div.ask>h1{
+        margin-bottom:2.2rem;
+        font-size:3rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.ask>p{
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.ask>section{
+        margin-bottom: 5rem;
+    }
+    main>div>div.ask>section>h2{
+        margin-bottom: 1.3rem;
+        text-align: left;
+        font-size: 2.2rem;
+        color:#000;
+    }
+    main>div>div.ask>section>p{
+        position: relative;
+        float: right;
+        font-size: 1.5rem;
+    }
+    main>div>div.ask>section>p::before{
+        content: "*";
+        position: absolute;
+        top:0;
+        right:10rem;
+        width:1rem;
+        height:1rem;
+        color:red;
+    }
+    
+    main>div>div.ask>section>form>table{  
+        margin-top: 3.8rem;
+        margin-bottom: 10rem;
+        display: block;  
+        border-top:1px solid #808080;
+        border-bottom:1px solid #808080;
+    }
+    main>div>div.ask>section>form>table>tbody>tr{
+        display: inline-block;
+    
+        border-bottom:1px solid #d1d1d1;
+        width:100%;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>th{
+        position: relative;
+        padding:2rem 0;
+        padding-left: 2rem;
+        width:18rem;
+        font-size: 1.5rem;
+        text-align: left;
+        border-right:1px solid #d1d1d1;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>th.center{
+    
+        height:29.4rem;
+        vertical-align:top;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>th>span{
+        color:red;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td{
+        padding-left: 0.8rem;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>input{
+        padding: 0.5rem 0;
+        padding-left: 0.8rem;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        width:31rem;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>Select{
+        font-family: 'Noto Sans KR', sans-serif;
+        padding: 0.5rem 0;
+        padding-left: 0.8rem;
+        width:31rem;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        color:#999;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>td>Select>option{
+        font-family: 'Noto Sans KR', sans-serif;
+        color:#999;
+        font-size: 1.4rem;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>td>p>textarea{
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left: 20rem;
+        margin: 1.2rem 0;
+        padding: 1.1rem 1rem;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        width:68rem;
+        color:#000;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>span{
+        display: block;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+    }
+    main>div>div.ask>section>form>input{
+        display: block;
+        margin: 0 auto;
+        width:15rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    
 }
 
-/**/
-main>div>div.ask{
-    margin-top:8rem;
-}
-main>div>div.ask>h1{
-    margin-bottom:2.2rem;
-    font-size:3rem;
-    color:#000;
-    text-align: center;
-}
-main>div>div.ask>p{
-    text-align: center;
-    margin-bottom: 4.7rem;
-    font-size:1.5rem;
-}
-main>div>div.ask>section{
-    margin-bottom: 5rem;
-}
-main>div>div.ask>section>h2{
-    margin-bottom: 1.3rem;
-    text-align: left;
-    font-size: 2.2rem;
-    color:#000;
-}
-main>div>div.ask>section>p{
-    position: relative;
-    float: right;
-    font-size: 1.5rem;
-}
-main>div>div.ask>section>p::before{
-    content: "*";
-    position: absolute;
-    top:0;
-    right:10rem;
-    width:1rem;
-    height:1rem;
-    color:red;
-}
 
-main>div>div.ask>section>form>table{  
-    margin-top: 3.8rem;
-    margin-bottom: 10rem;
-    display: block;  
-    border-top:1px solid #808080;
-    border-bottom:1px solid #808080;
+@media screen and (max-width: 768px) {
+    .web{
+        display:none;
+    }
+    .mobile{
+        display:block;
+    }
+    main>div{
+        margin:0 auto;
+        margin-bottom: 10rem;
+        display:flex;
+        justify-content: space-between;
+        flex-direction: column;
+        width:100%;
+    }
+    
+    /**/
+    
+    main>div>div.ask{
+        padding:0 2rem;
+        margin: 0 auto;
+        margin-top:8rem;
+        text-align: center;
+        width:100%;
+    }
+    main>div>div.ask>h1{
+        width:100%;
+        margin-bottom:2.2rem;
+        font-size:3.5rem;
+        color:#000;
+        text-align: center;
+    }
+    main>div>div.ask>p{
+        width:100%;
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 2.3rem;
+        margin-bottom: 4.7rem;
+        word-break:keep-all;
+    }
+    main>div>div.ask>section{
+        margin: 0 auto;
+        margin-bottom: 5rem;
+        width:100%;
+    }
+    main>div>div.ask>section>h2{
+        margin-left: 1rem;
+        margin-bottom: 1.3rem;
+        text-align: left;
+        font-size: 2.2rem;
+        color:#000;
+    }
+    main>div>div.ask>section>p{
+        margin-right: 2.4rem;
+        position: relative;
+        float: right;
+        font-size: 1.5rem;
+    }
+    main>div>div.ask>section>p::before{
+        content: "*";
+        position: absolute;
+        top:0;
+        right:10rem;
+        width:1rem;
+        height:1rem;
+        color:red;
+    }
+    
+    main>div>div.ask>section>form>table{  
+        margin-top: 3.8rem;
+        margin-bottom: 8rem;
+        display: block;  
+        width:100%;
+        border-top:1px solid #808080;
+        border-bottom:1px solid #808080;
+    }
+    main>div>div.ask>section>form>table>tbody>tr{
+        display: inline-block;
+        border-bottom:1px solid #d1d1d1;
+        width:100%;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>th{
+        position: relative;
+        padding:2rem 0;
+        padding-left: 1rem;
+        width:18vw;
+        font-size: 1.5rem;
+        text-align: left;
+        border-right:1px solid #d1d1d1;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>th.center{
+        /* height:29.4rem; */
+        vertical-align:top;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>th>span{
+        color:red;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td{
+        padding-left: 0.8rem;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>input{
+        padding: 0.5rem 0;
+        padding-left: 0.8rem;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        width:70vw;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>Select{
+        font-family: 'Noto Sans KR', sans-serif;
+        padding: 0.5rem 0;
+        padding-left: 0.8rem;
+        width:70vw;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        color:#999;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>td>Select>option{
+        font-family: 'Noto Sans KR', sans-serif;
+        color:#999;
+        font-size: 1.4rem;
+    }
+    
+    main>div>div.ask>section>form>table>tbody>tr>td>p>textarea{
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-left: 20rem;
+        margin: 1.2rem 0;
+        padding: 1.1rem 1rem;
+        border:1px solid #999;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        width:70vw;
+        color:#000;
+    }
+    main>div>div.ask>section>form>table>tbody>tr>td>span{
+        display: block;
+        text-align: left;
+        font-size: 1.4rem;
+        margin-bottom: 0.3rem;
+    }
+    main>div>div.ask>section>form>input{
+        display: block;
+        margin: 0 auto;
+        width:15rem;
+        height:4rem;
+        color:#fff;
+        background-color: #1428A0;
+        cursor: pointer;
+    }
+    
+    
 }
-main>div>div.ask>section>form>table>tbody>tr{
-    display: inline-block;
-    font-size:1.5rem;
-    border-bottom:1px solid #F2F2F2;
-    width:100%;
-}
-main>div>div.ask>section>form>table>tbody>tr>th{
-    position: relative;
-    padding:2rem 0;
-    padding-left: 2rem;
-    width:18rem;
-    text-align: left;
-    border-right:1px solid #F2F2F2;
-}
-
-main>div>div.ask>section>form>table>tbody>tr>th.center{
-
-    height:29.4rem;
-    vertical-align:top;
-}
-main>div>div.ask>section>form>table>tbody>tr>th>span{
-    color:red;
-}
-main>div>div.ask>section>form>table>tbody>tr>td{
-    padding-left: 0.8rem;
-}
-main>div>div.ask>section>form>table>tbody>tr>td>input{
-    padding: 0.5rem 0;
-    padding-left: 0.8rem;
-    border:1px solid #999;
-    font-size: 1.4rem;
-    width:31rem;
-}
-main>div>div.ask>section>form>table>tbody>tr>td>Select{
-    font-family: 'Noto Sans KR', sans-serif;
-    padding: 0.5rem 0;
-    padding-left: 0.8rem;
-    width:31rem;
-    border:1px solid #999;
-    font-size: 1.4rem;
-    color:#999;
-}
-
-main>div>div.ask>section>form>table>tbody>tr>td>Select>option{
-    font-family: 'Noto Sans KR', sans-serif;
-    color:#999;
-    font-size: 1.4rem;
-}
-
-main>div>div.ask>section>form>table>tbody>tr>td>p>textarea{
-    font-family: 'Noto Sans KR', sans-serif;
-    margin-left: 20rem;
-    margin: 1.2rem 0;
-    padding: 1.1rem 1rem;
-    border:1px solid #999;
-    font-size: 1.4rem;
-    line-height: 2.4rem;
-    width:68rem;
-    color:#000;
-}
-main>div>div.ask>section>form>table>tbody>tr>td>span{
-    display: block;
-    font-size: 1.4rem;
-    margin-bottom: 0.3rem;
-}
-main>div>div.ask>section>form>input{
-    display: block;
-    margin: 0 auto;
-    width:15rem;
-    height:4rem;
-    color:#fff;
-    background-color: #1428A0;
-}
-

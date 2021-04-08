@@ -22,20 +22,12 @@
             main{
                 margin-bottom:80px;
             }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("회원가입").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 var btnplag =true;
                 $(".btn").click(function(){
                     if(btnplag){
@@ -65,7 +57,7 @@
         </script>
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <section>
                 

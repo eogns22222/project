@@ -25,16 +25,6 @@
             main {
                 margin-bottom: 80px;
             }
-            iframe{
-                width:100%;
-            }
-            
-            iframe.hea{
-                height:18.5rem;
-            }
-            iframe.foo{
-                height:30rem;
-            }
         </style>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         
@@ -56,7 +46,9 @@
         <script type="text/javascript">
 
             $(function(){
-            
+
+                $("#h1_logo2").append("훈련과정").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 $("#startdate").datepicker({
             
                     showOn: "both",
@@ -78,7 +70,11 @@
             
                     buttonText: "Select date"
             
-                });
+                });//datepicker
+
+                $(".weeknext").click(function(){
+                    $("#startdate").val() + 7;
+                });// 1주일 버튼 미완성
             
             });
             
@@ -87,7 +83,7 @@
             
     </head>
     <body>
-        <jsp:include page="header.jsp"></jsp:include>
+        <jsp:include page="header.sub.jsp"></jsp:include>
         <main>
             <div>
                 <div class="trainingzone">
@@ -126,9 +122,9 @@
                             <p>
                                 <label for="startdate">개강일자</label>
                                 <input type="text" name="startdate" id="startdate"placeholder="20210319"> - <input type="text" name="enddate" id="enddate"placeholder="20210419">
-                                <button>1주일</button>
-                                <button>1개월</button>
-                                <button>3개월</button>
+                                <button type="button" class="weeknext">1주일</button>
+                                <button class="one_monthnext">1개월</button>
+                                <button class="three_monthnext">3개월</button>
                             </p>
                             <div>
                                 <input type="submit" value="조건 초기화">
@@ -140,7 +136,7 @@
                 <div class="sub_nav">
                     <div class="">
                         <ul>
-                            <li><a href="#">전체(<i>0</i>)</a></li>
+                            <li class="on"><a href="#">전체(<i>0</i>)</a></li>
                             <li><a href="#">집체(<i>0</i>)</a></li>
                             <li><a href="#">온라인(<i>0</i>)</a></li>
                             <li><a href="#">혼합(<i>0</i>)</a></li>

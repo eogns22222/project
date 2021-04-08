@@ -12,24 +12,16 @@
         <!--common-->
         <link rel="stylesheet" href="resources/common/css/common_indigo.css">
         <!---->
-        <link rel="stylesheet" media="all and (min-width: 769px)" href="resources/common/css/center_question.css" />
-        <link rel="stylesheet" media="all and (min-width: 460px) and (max-width: 768px)" href="resources/common/css/center_question_mobile.css" />
+        <link rel="stylesheet" href="resources/common/css/center_question.css">
+        
         <!--common-->
         
-        <link rel="import" href="asy.center.subnav.html">
         <style>
             html {
                 font-size:62.5%;
                 font-family: 'Noto Sans KR', sans-serif;
             }
-            iframe.hea{
-                width:100%;
-                height:18.5rem;
-            }
-            iframe.foo{
-                width:100%;
-                height:30rem;
-            }
+            
             input::placeholder {color:#000;}
             input::-webkit-input-placeholder {color:#000;}
             input:-ms-input-placeholder {color:#000;}
@@ -37,6 +29,8 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script>
             $(function(){
+                $("#h1_logo2").append("고객센터").css({"font-size":"20px","line-height":"50px","color":"#000"});
+
                 $("#test2").css("color","#000");
                 var flag = true;
                 $('.category').click(function(){
@@ -56,10 +50,10 @@
         </script>
 </head>
 <body>
-    <iframe src="header.html" class="hea" scrolling="no"></iframe>
+    <jsp:include page="header.sub.jsp"></jsp:include>
     <main>
         <div>
-            <iframe src="./asy.center.subnav.html" scrolling="no"></iframe>
+            <jsp:include page="asy.center.subnav.jsp"></jsp:include>
             <div class="asked">
                 <h1>자주묻는 질문</h1> 
                 <p>자주 묻는 질문(FAQ)을 이용하시면 빠르게 궁금증을 해결하실 수 있습니다. 원하시는 내용을 얻지 못하시면 1:1 문의를 이용하시기 바랍니다.</p>
@@ -146,6 +140,6 @@
             </div><!--asked end-->
         </div>
     </main>
-    <iframe src="footer.html" class="foo" scrolling="no"></iframe>
+   <jsp:include page="footer.jsp"></jsp:include>
 </body>
 </html>

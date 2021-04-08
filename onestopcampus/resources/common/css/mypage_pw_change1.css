@@ -16,17 +16,16 @@ main>div>div.change>h1{
 }
 main>div>div.change>div.wrap{
     padding:3.2rem 5.7rem;
-    width:100%;
+    width:94.6rem;
     height:11.8rem;
     background-color: #F5F7FF;
 }
 main>div>div.change>div.wrap>p{
+    font-size: 1.5rem;
     color:#000;
-    font-size:1.5rem;
 }
 main>div>div.change>div.wrap>p:first-of-type{
     margin-bottom: 1.5rem;
-    font-size:1.5rem;
 }
 /**/
 main>div>div.change>h2{
